@@ -99,6 +99,7 @@ function displayRow(group: Result[], contests: Map<string, Contest>, placementOv
 }
 
 function placeLabel(result: Result, placementOverrides?: Map<string, number>): string {
+  if (result.status === 'guest' || result.status === 'guests') return '-';
   const place = placementOverrides?.get(result.id) ?? result.place;
   return place ? `#${place}` : '-';
 }
@@ -163,6 +164,8 @@ function romanGrade(grade?: string): string {
   switch (grade) {
     case '9':
       return 'IX';
+    case '8':
+      return 'VIII';
     case '10':
       return 'X';
     case '11':

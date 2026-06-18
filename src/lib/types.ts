@@ -146,6 +146,7 @@ export interface Result {
   medal?: Medal;
   prize?: string;
   qualification?: string;
+  status?: string;
   sourceId: string;
   anonymous: boolean;
 }

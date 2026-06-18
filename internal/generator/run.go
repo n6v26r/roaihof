@@ -66,7 +66,7 @@ func BuildDataset(root string) (*Dataset, error) {
 			ID:      "onia-2026-national",
 			Title:   "ONIA 2026 national + Lot",
 			Status:  "partial",
-			Detail:  "Imported from the official ONIA national JSON, LotNational identity list, and platform final leaderboards for the two Lot rounds.",
+			Detail:  "Imported from the official ONIA national JSON, public national participant sheet/profile recovery for anonymous IX-XII rows, LotNational identity list, and platform final leaderboards for the two Lot rounds.",
 			URL:     "https://olimpiada-ai.ro/ro/rezultate/nationala",
 			Checked: checked,
 		},
@@ -114,7 +114,7 @@ func BuildDataset(root string) (*Dataset, error) {
 			ID:      "mlcompete-2026-usernames",
 			Title:   "ONIA 2026 mlcompete usernames",
 			Status:  "ok",
-			Detail:  "Imported public final leaderboard usernames from ONIA 2026 national and Lot mlcompete pages; profile pairings are added only when they match a known real name without ambiguity.",
+			Detail:  "Imported public final leaderboard usernames from ONIA 2026 national and Lot mlcompete pages; profile-backed pairings are added only when they match a known real name without ambiguity.",
 			URL:     "https://platform.olimpiada-ai.ro/ro/competitions/17?tab=final",
 			Checked: checked,
 		},
@@ -139,12 +139,15 @@ func BuildDataset(root string) (*Dataset, error) {
 			ID:     "onia-2026",
 			Title:  "ONIA 2026",
 			Status: "partial",
-			Detail: "Partial: only medal information is tracked so far.",
+			Detail: "Partial: 23 national rows remain anonymous.",
 			URL:    "https://olimpiada-ai.ro/ro/rezultate/nationala",
 		},
 	)
 
-	if err := b.importONIANational(filepath.Join(root, "data/raw/onia/rezultate-nationala-2026.json")); err != nil {
+	if err := b.importONIANational(
+		filepath.Join(root, "data/raw/onia/rezultate-nationala-2026.json"),
+		filepath.Join(root, "data/manual/onia-2026-national-recovery.json"),
+	); err != nil {
 		return nil, err
 	}
 	if err := b.importMLCompeteUsernames(filepath.Join(root, "data/manual/onia-platform-leaderboards.json")); err != nil {

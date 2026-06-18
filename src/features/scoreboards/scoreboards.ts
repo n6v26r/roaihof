@@ -35,9 +35,9 @@ export function buildScoreboards(data: Dataset): Scoreboard[] {
 
   const onia2026National = data.results.filter((result) => result.circuit === 'ONIA' && result.year === 2026 && result.stage === 'national');
   add('onia-2026-nationala-full', 'ONIA', 2026, 'Națională', 'national', 'toate clasele', onia2026National);
-  add('onia-2026-ix-x', 'ONIA', 2026, 'IX-X', 'national', 'IX-X', onia2026National.filter((result) => result.grade === '9' || result.grade === '10'));
+  add('onia-2026-ix-x', 'ONIA', 2026, 'IX-X', 'national', 'IX-X', onia2026National.filter((result) => result.grade === '9' || result.grade === '10' || (result.grade === '8' && (result.status === 'guest' || result.status === 'guests'))));
   add('onia-2026-xi-xii', 'ONIA', 2026, 'XI-XII', 'national', 'XI-XII', onia2026National.filter((result) => result.grade === '11' || result.grade === '12'));
-  for (const grade of ['9', '10', '11', '12']) {
+  for (const grade of ['8', '9', '10', '11', '12']) {
     add(`onia-2026-clasa-${grade}`, 'ONIA', 2026, `Clasa ${grade}`, 'national', `clasa ${grade}`, onia2026National.filter((result) => result.grade === grade));
   }
   add('onia-2026-lot', 'ONIA', 2026, 'Lot', 'lot', 'Lot', data.results.filter((result) => result.circuit === 'ONIA' && result.year === 2026 && result.stage === 'lot'));
@@ -140,6 +140,7 @@ export function scoreboardOrder(scoreboard: Scoreboard): number {
   if (title === 'national ranking') return 0;
   if (title === 'ix-x') return 1;
   if (title === 'xi-xii') return 2;
+  if (title === 'clasa 8') return 7;
   if (title.startsWith('clasa')) return 3 + Number(title.replace('clasa ', '')) - 9;
   if (title === 'lot') return 10;
   if (title === 'teoretică') return 0;

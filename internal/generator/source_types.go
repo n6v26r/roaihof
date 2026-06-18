@@ -37,6 +37,35 @@ type oniaNationalRow struct {
 	Medalie    *string   `json:"Medalie"`
 }
 
+type oniaNationalRecoveryFile struct {
+	Sources   []Source                  `json:"sources"`
+	Guests    []oniaNationalGuestRow    `json:"guests"`
+	Recovered []oniaNationalRecoveryRow `json:"recovered"`
+}
+
+type oniaNationalGuestRow struct {
+	Grade        string    `json:"grade"`
+	Name         string    `json:"name"`
+	School       string    `json:"school"`
+	County       string    `json:"county"`
+	Username     string    `json:"username"`
+	UserID       string    `json:"userId"`
+	PlatformRank int       `json:"platformRank"`
+	Score        flexFloat `json:"score"`
+	Status       string    `json:"status"`
+}
+
+type oniaNationalRecoveryRow struct {
+	Grade    string    `json:"grade"`
+	Place    int       `json:"place"`
+	Score    flexFloat `json:"score"`
+	Username string    `json:"username"`
+	UserID   string    `json:"userId"`
+	Name     string    `json:"name"`
+	School   string    `json:"school"`
+	County   string    `json:"county"`
+}
+
 type oniaLotRow struct {
 	Pozitie      int       `json:"Pozitie"`
 	Nume         string    `json:"Nume"`

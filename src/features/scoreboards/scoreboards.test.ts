@@ -5,7 +5,8 @@ import {
   buildScoreboards,
   placementOverridesForScoreboard,
   scoreboardDetailTag,
-  scoreboardOfficialLinks
+  scoreboardOfficialLinks,
+  scoreboardOrder
 } from './scoreboards';
 
 describe('scoreboards', () => {
@@ -25,6 +26,30 @@ describe('scoreboards', () => {
 
   it('does not repeat class titles as scoreboard detail tags', () => {
     expect(scoreboardDetailTag(scoreboards.get('roai-2025-clasa-9')!)).toBeUndefined();
+  });
+
+  it('builds an ONIA grade 8 guest scoreboard', () => {
+    const scoreboard = scoreboards.get('onia-2026-clasa-8');
+
+    expect(scoreboard).toBeDefined();
+    expect(scoreboard?.results).toHaveLength(5);
+    expect(scoreboard?.results.every((result) => result.status === 'guest')).toBe(true);
+    expect(scoreboard?.results.map((result) => result.score)).toEqual([112.64, 109.3, 88.3, 35.84, 18.18]);
+    expect(scoreboardOrder(scoreboard!)).toBeGreaterThan(scoreboardOrder(scoreboards.get('onia-2026-clasa-12')!));
+  });
+
+  it('keeps ONIA grade 8 guests in score order on IX-X', () => {
+    const scoreboard = scoreboards.get('onia-2026-ix-x');
+    const guestRows = scoreboard?.results.filter((result) => result.status === 'guest') ?? [];
+
+    expect(guestRows).toHaveLength(5);
+    expect(guestRows.map((result) => result.personId)).toEqual([
+      'boac-mihai-cosmin',
+      'boca-petru',
+      'calin-tudor-ioan',
+      'chelaru-ioan-cristian',
+      'predesel-mathias-alexandru'
+    ]);
   });
 
   it('keeps special official source links', () => {

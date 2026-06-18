@@ -7,23 +7,129 @@ func TestBuildDatasetCountsOfficialRows(t *testing.T) {
 	if err != nil {
 		t.Fatalf("BuildDataset: %v", err)
 	}
-	if dataset.Summary.Results != 513 {
-		t.Fatalf("results = %d, want 513", dataset.Summary.Results)
+	if dataset.Summary.Results != 518 {
+		t.Fatalf("results = %d, want 518", dataset.Summary.Results)
 	}
-	if dataset.Summary.AnonymousResults != 80 {
-		t.Fatalf("anonymous results = %d, want 80", dataset.Summary.AnonymousResults)
+	if dataset.Summary.AnonymousResults != 23 {
+		t.Fatalf("anonymous results = %d, want 23 after ONIA recovery", dataset.Summary.AnonymousResults)
 	}
-	if dataset.Summary.People != 172 {
-		t.Fatalf("people = %d, want 172 after missing-name alias merges", dataset.Summary.People)
+	if dataset.Summary.People != 206 {
+		t.Fatalf("people = %d, want 206 after ONIA recovery, guests, and missing-name alias merges", dataset.Summary.People)
 	}
-	if dataset.Summary.Schools != 81 {
-		t.Fatalf("schools = %d, want 81", dataset.Summary.Schools)
+	if dataset.Summary.Schools != 99 {
+		t.Fatalf("schools = %d, want 99", dataset.Summary.Schools)
+	}
+	if dataset.Summary.Counties != 37 {
+		t.Fatalf("counties = %d, want 37", dataset.Summary.Counties)
 	}
 	if len(dataset.Contests) != 17 {
 		t.Fatalf("contests = %d, want 17", len(dataset.Contests))
 	}
 	if dataset.Summary.Years[0] != 2024 || dataset.Summary.LatestYear != 2026 {
 		t.Fatalf("years = %v latest = %d", dataset.Summary.Years, dataset.Summary.LatestYear)
+	}
+}
+
+func TestONIANationalRecoveryImportsAnonymousRows(t *testing.T) {
+	dataset, err := BuildDataset("../..")
+	if err != nil {
+		t.Fatalf("BuildDataset: %v", err)
+	}
+	cases := []struct {
+		personID string
+		username string
+		grade    string
+		place    int
+		score    float64
+		schoolID string
+		countyID string
+	}{
+		{"hanganu-rares", "raresh30", "9", 10, 34.61, "school-colegiul-national-de-informatica-tudor-vianu", "bucuresti"},
+		{"plocon-andrei-ionut", "Nad3x", "10", 28, 33.63, "school-colegiul-national-unirea", "teleorman"},
+		{"albus-denis-florin", "albusalbita", "10", 47, 7.68, "school-colegiul-national-ecaterina-teodoroiu", "gorj"},
+		{"tomita-mircea-stefan", "tomita-mircea-stefan", "11", 38, 27.45, "school-colegiul-national-stefan-cel-mare", "suceava"},
+	}
+	for _, tc := range cases {
+		person := findPerson(dataset, tc.personID)
+		if person == nil {
+			t.Fatalf("missing recovered person %s", tc.personID)
+		}
+		if person.ExternalUsernames == nil || !contains(person.ExternalUsernames.MLCompete, tc.username) {
+			t.Fatalf("%s MLCompete usernames = %v, want %q", person.Name, person.ExternalUsernames, tc.username)
+		}
+		var found Result
+		for _, result := range dataset.Results {
+			if result.ContestID == "onia-2026-nationala" && result.PersonID == tc.personID {
+				found = result
+				break
+			}
+		}
+		if found.ContestID == "" {
+			t.Fatalf("missing recovered ONIA national result for %s", tc.personID)
+		}
+		if found.Anonymous {
+			t.Fatalf("%s is still anonymous", tc.personID)
+		}
+		if found.Grade != tc.grade || found.Place != tc.place || found.Score != tc.score || found.SchoolID != tc.schoolID || found.CountyID != tc.countyID {
+			t.Fatalf("%s ONIA national = grade %s place %d score %.2f school %s county %s, want grade %s place %d score %.2f school %s county %s",
+				tc.personID, found.Grade, found.Place, found.Score, found.SchoolID, found.CountyID, tc.grade, tc.place, tc.score, tc.schoolID, tc.countyID)
+		}
+	}
+}
+
+func TestONIANationalGuestsAreTracked(t *testing.T) {
+	dataset, err := BuildDataset("../..")
+	if err != nil {
+		t.Fatalf("BuildDataset: %v", err)
+	}
+	guestIDs := map[string]struct {
+		username string
+		score    float64
+		schoolID string
+		countyID string
+	}{
+		"boac-mihai-cosmin":          {username: "Cosminane", score: 112.64, schoolID: "school-liceul-teoretic-international-de-informatica", countyID: "bucuresti"},
+		"boca-petru":                 {username: "petru_boca", score: 109.30, schoolID: "school-liceul-teoretic-international-de-informatica", countyID: "bucuresti"},
+		"calin-tudor-ioan":           {username: "Sobolansky", score: 88.30, schoolID: "school-liceul-teoretic-international-de-informatica", countyID: "bucuresti"},
+		"chelaru-ioan-cristian":      {username: "iccjoc", score: 35.84, schoolID: "school-liceul-teoretic-international-de-informatica", countyID: "bucuresti"},
+		"predesel-mathias-alexandru": {username: "andreiminunat", score: 18.18, schoolID: "school-liceul-teoretic-tudor-arghezi", countyID: "dolj"},
+	}
+	seen := map[string]bool{}
+	for _, result := range dataset.Results {
+		if result.ContestID != "onia-2026-nationala" || result.Grade != "8" {
+			continue
+		}
+		want, ok := guestIDs[result.PersonID]
+		if !ok {
+			t.Fatalf("unexpected grade 8 ONIA national guest: %#v", result)
+		}
+		seen[result.PersonID] = true
+		if result.Status != "guest" || result.Place != 0 || result.Score != want.score || result.Medal != "" || result.Prize != "" {
+			t.Fatalf("%s guest status/place/score/medal/prize = %q/%d/%.2f/%q/%q, want guest, empty place/medal/prize, and score %.2f",
+				result.PersonID, result.Status, result.Place, result.Score, result.Medal, result.Prize, want.score)
+		}
+		if result.SourceID != sourceONIANationalGuests || result.SchoolID != want.schoolID || result.CountyID != want.countyID {
+			t.Fatalf("%s guest source/school/county = %q/%q/%q, want %q/%q/%q",
+				result.PersonID, result.SourceID, result.SchoolID, result.CountyID, sourceONIANationalGuests, want.schoolID, want.countyID)
+		}
+	}
+	if len(seen) != len(guestIDs) {
+		t.Fatalf("ONIA national guests = %v, want %d tracked guests", seen, len(guestIDs))
+	}
+	for personID, want := range guestIDs {
+		person := findPerson(dataset, personID)
+		if person == nil {
+			t.Fatalf("missing ONIA national guest profile %s", personID)
+		}
+		if !contains(person.SchoolIDs, want.schoolID) || !contains(person.CountyIDs, want.countyID) {
+			t.Fatalf("%s school/county ids = %v/%v, want %s/%s", personID, person.SchoolIDs, person.CountyIDs, want.schoolID, want.countyID)
+		}
+		if person.ExternalUsernames == nil || !contains(person.ExternalUsernames.MLCompete, want.username) {
+			t.Fatalf("%s MLCompete usernames = %v, want %q", personID, person.ExternalUsernames, want.username)
+		}
+		if !contains(person.Stats.Circuits, "ONIA") || person.Stats.NationalParticipations == 0 {
+			t.Fatalf("%s stats = %#v, want ONIA national guest participation", personID, person.Stats)
+		}
 	}
 }
 
@@ -107,6 +213,7 @@ func TestSchoolSuffixVariantsMergeIntoCanonicalSchools(t *testing.T) {
 		"school-colegiul-national-de-informatica-matei-basarab-ramnicu-valcea",
 		"school-colegiul-national-vasile-alecsandri-galati",
 		"school-liceul-teoretic-international-de-informatica-bucuresti",
+		"school-ichb",
 		"school-teleorman",
 	}
 	for _, id := range staleIDs {
@@ -132,6 +239,8 @@ func TestMissingFirstNameVariantsMergeIntoLongerPeople(t *testing.T) {
 		"drugan-ion-andrei":      {name: "Drugan Ion-Andrei", alias: "Drugan Andrei", participations: 2},
 		"gasparel-marian-stefan": {name: "Gășpărel Marian-Ștefan", alias: "Gasparel Marian", participations: 3},
 		"tudose-dragos-razvan":   {name: "Tudose Dragoș Razvan", alias: "Tudose Dragoș", participations: 2},
+		"calin-tudor-ioan":       {name: "Calin Tudor-Ioan", alias: "Calin Tudor Ioan", participations: 2},
+		"chelaru-ioan-cristian":  {name: "Chelaru Ioan-Cristian", alias: "Chelaru Ioan Cristian", participations: 2},
 	}
 	for id, want := range expected {
 		person := findPerson(dataset, id)

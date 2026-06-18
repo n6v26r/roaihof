@@ -121,6 +121,16 @@
       "reason": "ROAI final and Lot pages differ on the compound surname separator."
     },
     {
+      "alias": "Calin Tudor Ioan",
+      "canonical": "Calin Tudor-Ioan",
+      "reason": "ONIA participant sheet omits the first-name separator."
+    },
+    {
+      "alias": "Chelaru Ioan Cristian",
+      "canonical": "Chelaru Ioan-Cristian",
+      "reason": "ONIA participant sheet omits the first-name separator."
+    },
+    {
       "alias": "Iacob Răzvan Mihai",
       "canonical": "Iacob Răzvan-Mihai",
       "reason": "ROAI Lot page includes the first-name separator."

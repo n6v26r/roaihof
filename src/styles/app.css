@@ -913,6 +913,14 @@ code {
   background: var(--qualification-bg);
 }
 
+.result-guest {
+  border-color: color-mix(in srgb, var(--cyan) 42%, var(--line));
+  color: var(--cyan);
+  background: color-mix(in srgb, var(--cyan) 16%, transparent);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .m-gold,
 .medal-gold {
   color: var(--gold-text);

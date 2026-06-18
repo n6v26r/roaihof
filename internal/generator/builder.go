@@ -43,9 +43,13 @@ func newBuilder(aliases map[string]string, aliasReasons map[string]string) *buil
 	}
 }
 
-func (b *builder) importONIANational(path string) error {
+func (b *builder) importONIANational(path string, recoveryPath string) error {
 	var file oniaNationalFile
 	if err := readJSON(path, &file); err != nil {
+		return err
+	}
+	recovered, guests, err := b.loadONIANationalRecovery(recoveryPath)
+	if err != nil {
 		return err
 	}
 	b.addContest(Contest{
@@ -74,14 +78,26 @@ func (b *builder) importONIANational(path string) error {
 			name := b.canonicalName(row.Username)
 			anonymous := isAnonymousName(name)
 			county := normalizeCounty(row.Judet)
+			originalCounty := cleanHuman(row.Judet)
 			school := cleanHuman(row.Scoala)
+			mlcompeteUsername := ""
+			if anonymous {
+				if recovery, ok := recovered[oniaNationalRecoveryKey(group.grade, row.Pozitie, float64(row.ScorTotal))]; ok {
+					name = b.canonicalName(recovery.Name)
+					anonymous = false
+					county = normalizeCounty(recovery.County)
+					originalCounty = cleanHuman(recovery.County)
+					school = cleanHuman(recovery.School)
+					mlcompeteUsername = cleanHuman(recovery.Username)
+				}
+			}
 			section := "clasa " + group.grade
 			result := Result{
 				ContestID:      "onia-2026-nationala",
 				PersonName:     name,
 				School:         school,
 				County:         county,
-				OriginalCounty: cleanHuman(row.Judet),
+				OriginalCounty: originalCounty,
 				Locality:       cleanHuman(row.Localitate),
 				Year:           2026,
 				Circuit:        "ONIA",
@@ -96,9 +112,84 @@ func (b *builder) importONIANational(path string) error {
 				Anonymous:      anonymous,
 			}
 			b.addResult(result)
+			if mlcompeteUsername != "" {
+				b.addExternalUsername(name, "mlcompete", mlcompeteUsername)
+			}
+		}
+	}
+	for _, guest := range guests {
+		name := b.canonicalName(guest.Name)
+		b.addResult(Result{
+			ContestID:      "onia-2026-nationala",
+			PersonName:     name,
+			School:         cleanHuman(guest.School),
+			County:         normalizeCounty(guest.County),
+			OriginalCounty: cleanHuman(guest.County),
+			Year:           2026,
+			Circuit:        "ONIA",
+			Stage:          "national",
+			Section:        "clasa " + guest.Grade,
+			Grade:          guest.Grade,
+			Score:          float64(guest.Score),
+			Status:         guest.Status,
+			SourceID:       sourceONIANationalGuests,
+		})
+		if guest.Username != "" {
+			b.addExternalUsername(name, "mlcompete", guest.Username)
 		}
 	}
 	return nil
+}
+
+func (b *builder) loadONIANationalRecovery(path string) (map[string]oniaNationalRecoveryRow, []oniaNationalGuestRow, error) {
+	var file oniaNationalRecoveryFile
+	if err := readJSON(path, &file); err != nil {
+		return nil, nil, err
+	}
+	for _, source := range file.Sources {
+		b.addSource(source)
+	}
+	recovered := map[string]oniaNationalRecoveryRow{}
+	for _, row := range file.Recovered {
+		grade := normalizeGrade(row.Grade)
+		if grade == "8" {
+			continue
+		}
+		if grade == "" || row.Place == 0 || row.Score == 0 || cleanHuman(row.Name) == "" {
+			return nil, nil, fmt.Errorf("invalid ONIA national recovery row: grade=%q place=%d score=%.2f name=%q", row.Grade, row.Place, float64(row.Score), row.Name)
+		}
+		row.Grade = grade
+		key := oniaNationalRecoveryKey(row.Grade, row.Place, float64(row.Score))
+		if _, ok := recovered[key]; ok {
+			return nil, nil, fmt.Errorf("duplicate ONIA national recovery row for %s", key)
+		}
+		recovered[key] = row
+	}
+	guests := make([]oniaNationalGuestRow, 0, len(file.Guests))
+	for _, row := range file.Guests {
+		row.Grade = normalizeGrade(row.Grade)
+		row.Name = cleanHuman(row.Name)
+		row.School = cleanHuman(row.School)
+		row.County = cleanHuman(row.County)
+		row.Username = cleanHuman(row.Username)
+		row.UserID = cleanHuman(row.UserID)
+		row.Status = strings.ToLower(nameKey(row.Status))
+		if row.Status == "" {
+			row.Status = "guest"
+		}
+		if row.Status == "guests" {
+			row.Status = "guest"
+		}
+		if row.Grade != "8" || row.Name == "" || row.School == "" || row.County == "" || row.Username == "" || row.UserID == "" || row.Score == 0 || row.Status != "guest" {
+			return nil, nil, fmt.Errorf("invalid ONIA national guest row: grade=%q name=%q school=%q county=%q username=%q userId=%q score=%.2f status=%q", row.Grade, row.Name, row.School, row.County, row.Username, row.UserID, float64(row.Score), row.Status)
+		}
+		guests = append(guests, row)
+	}
+	return recovered, guests, nil
+}
+
+func oniaNationalRecoveryKey(grade string, place int, score float64) string {
+	return fmt.Sprintf("%s:%d:%.2f", normalizeGrade(grade), place, roundScore(score))
 }
 
 type oniaLotScoredCandidate struct {
@@ -1820,6 +1911,8 @@ func normalizeGrade(value string) string {
 	value = replacer.Replace(value)
 	value = strings.TrimSpace(value)
 	switch value {
+	case "VIII":
+		return "8"
 	case "IX":
 		return "9"
 	case "X":
@@ -1898,8 +1991,9 @@ var schoolCanonicalNames = map[string]string{
 	nameKey(`Liceul Teoretic "Nikolaus Lenau" Timișoara`):                                  `Liceul Teoretic "Nikolaus Lenau"`,
 	nameKey(`Liceul Teoretic "Petru Rareș" Târgu Lăpuș`):                                   `Liceul Teoretic "Petru Rareș"`,
 	nameKey(`Liceul Teoretic "Tudor Arghezi" Craiova`):                                     `Liceul Teoretic "Tudor Arghezi"`,
-	nameKey(`Liceul Teoretic Internațional de Informatică București`):                      `Liceul Teoretic Internațional de Informatică`,
-	nameKey(`Liceul Teoretic Internațional de Informatică Constanța`):                      `Liceul Teoretic Internațional de Informatică, Constanța`,
+	nameKey(`ICHB`): `Liceul Teoretic Internațional de Informatică`,
+	nameKey(`Liceul Teoretic Internațional de Informatică București`): `Liceul Teoretic Internațional de Informatică`,
+	nameKey(`Liceul Teoretic Internațional de Informatică Constanța`): `Liceul Teoretic Internațional de Informatică, Constanța`,
 
 	nameKey(`Colegiul Național de Informatică "Tudor Vianu" București`):    `Colegiul Național de Informatică "Tudor Vianu"`,
 	nameKey(`Colegiul Național "Silvania" Zalău`):                          `Colegiul Național "Silvania"`,

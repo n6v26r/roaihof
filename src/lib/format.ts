@@ -94,7 +94,10 @@ export function ordinalPlace(place?: number): string {
   return `${place}${suffix} place`;
 }
 
-export function resultOutcome(result: Result): { label: string; kind: 'prize' | 'qualification' | 'empty' } {
+export function resultOutcome(result: Result): { label: string; kind: 'prize' | 'qualification' | 'guest' | 'empty' } {
+  if (result.status === 'guest' || result.status === 'guests') {
+    return { label: 'GUEST', kind: 'guest' };
+  }
   if (result.prize) {
     return { label: result.prize, kind: 'prize' };
   }

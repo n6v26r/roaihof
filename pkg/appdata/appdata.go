@@ -103,6 +103,7 @@ type Result struct {
 	Medal          string  `json:"medal,omitempty"`
 	Prize          string  `json:"prize,omitempty"`
 	Qualification  string  `json:"qualification,omitempty"`
+	Status         string  `json:"status,omitempty"`
 	SourceID       string  `json:"sourceId"`
 	Anonymous      bool    `json:"anonymous"`
 }
