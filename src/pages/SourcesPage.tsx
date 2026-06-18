@@ -1,8 +1,19 @@
-import { ArrowUpRight, Database } from 'lucide-react';
+import { ArrowUpRight, Database, ListTodo } from 'lucide-react';
 import { dataset } from '../app/data';
 import { SourceCoverage } from '../components/SourceCoverage';
 import { SectionHeader } from '../components/layout/SectionHeader';
 import { formatRomanianDateTime } from '../lib/format';
+import type { SourceTodo } from '../lib/types';
+
+function sourceTodoStatusLabel(status: SourceTodo['status']) {
+  if (status === 'partial') {
+    return 'Partial';
+  }
+  if (status === 'missing') {
+    return 'Missing';
+  }
+  return status;
+}
 
 export function SourcesPage() {
   return (
@@ -21,6 +32,29 @@ export function SourcesPage() {
       <section className="terminal-panel">
         <SourceCoverage statuses={dataset.sourceStatuses} />
       </section>
+      {dataset.sourceTodos.length > 0 ? (
+        <section className="terminal-panel">
+          <SectionHeader icon={ListTodo} title="Source todo" meta={`${dataset.sourceTodos.length} items`} />
+          <div className="source-todo-list">
+            {dataset.sourceTodos.map((todo) => (
+              <article className="source-todo-row" key={todo.id}>
+                <span className={`source-todo-status source-todo-${todo.status}`}>
+                  {sourceTodoStatusLabel(todo.status)}
+                </span>
+                <div>
+                  <h3>{todo.title}</h3>
+                  <p>{todo.detail}</p>
+                  {todo.url ? (
+                    <a href={todo.url} target="_blank" rel="noreferrer">
+                      {todo.url.replace(/^https?:\/\//, '')}
+                    </a>
+                  ) : null}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      ) : null}
       <section className="terminal-panel">
         <SectionHeader icon={Database} title="Provenance" meta={`${dataset.provenance.length} sources`} />
         <div className="provenance-list">

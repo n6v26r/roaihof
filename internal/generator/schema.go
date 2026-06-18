@@ -16,6 +16,7 @@ type Dataset = appdata.Dataset
 type Summary = appdata.Summary
 type Source = appdata.Source
 type SourceStatus = appdata.SourceStatus
+type SourceTodo = appdata.SourceTodo
 type Stats = appdata.Stats
 type Person = appdata.Person
 type ExternalUsernames = appdata.ExternalUsernames

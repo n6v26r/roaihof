@@ -266,6 +266,7 @@ function rankingDataset(results: Result[]): Dataset {
     },
     provenance: [],
     sourceStatuses: [],
+    sourceTodos: [],
     people,
     schools,
     counties,
@@ -312,6 +313,7 @@ function rankingTieDataset(): Dataset {
     },
     provenance: [],
     sourceStatuses: [],
+    sourceTodos: [],
     people: [
       { id: 'alpha', name: 'Alpha', schoolIds: ['school-alpha'], countyIds: ['county-alpha'], stats: stats() },
       { id: 'beta', name: 'Beta', schoolIds: ['school-beta'], countyIds: ['county-beta'], stats: stats() }

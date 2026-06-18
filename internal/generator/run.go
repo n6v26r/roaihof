@@ -65,7 +65,7 @@ func BuildDataset(root string) (*Dataset, error) {
 		SourceStatus{
 			ID:      "onia-2026-national",
 			Title:   "ONIA 2026 national + Lot",
-			Status:  "ok",
+			Status:  "partial",
 			Detail:  "Imported from the official ONIA national JSON, LotNational identity list, and platform final leaderboards for the two Lot rounds.",
 			URL:     "https://olimpiada-ai.ro/ro/rezultate/nationala",
 			Checked: checked,
@@ -105,7 +105,7 @@ func BuildDataset(root string) (*Dataset, error) {
 		SourceStatus{
 			ID:      "roai-2025-national",
 			Title:   "ROAI 2025 national",
-			Status:  "ok",
+			Status:  "partial",
 			Detail:  "Imported from the official ROAI 2025 ONIA task/results page, using the Clasamente Finale PDFs split by class and the Nitro complete judge leaderboard for cumulative scores.",
 			URL:     "https://olimpiada.nitro-ai.org/ro/2025/onia?section=tasks",
 			Checked: checked,
@@ -125,6 +125,22 @@ func BuildDataset(root string) (*Dataset, error) {
 			Detail:  "Imported final leaderboard usernames from ROAI 2025 and 2026 national stage; Added only where there was no ambiguity.",
 			URL:     "https://judge.nitro-ai.org/competitions",
 			Checked: checked,
+		},
+	)
+	b.sourceTodos = append(b.sourceTodos,
+		SourceTodo{
+			ID:     "roai-2025",
+			Title:  "ROAI 2025",
+			Status: "partial",
+			Detail: "Partial: only medal information is tracked so far.",
+			URL:    "https://olimpiada.nitro-ai.org/ro/2025/onia?section=tasks",
+		},
+		SourceTodo{
+			ID:     "onia-2026",
+			Title:  "ONIA 2026",
+			Status: "partial",
+			Detail: "Partial: only medal information is tracked so far.",
+			URL:    "https://olimpiada-ai.ro/ro/rezultate/nationala",
 		},
 	)
 

@@ -9,6 +9,7 @@ export interface Dataset {
   summary: Summary;
   provenance: Source[];
   sourceStatuses: SourceStatus[];
+  sourceTodos: SourceTodo[];
   people: Person[];
   schools: School[];
   counties: County[];
@@ -45,10 +46,18 @@ export interface Source {
 export interface SourceStatus {
   id: string;
   title: string;
-  status: 'ok' | 'missing' | string;
+  status: 'ok' | 'partial' | 'missing' | string;
   detail: string;
   url?: string;
   checked: string;
+}
+
+export interface SourceTodo {
+  id: string;
+  title: string;
+  status: 'partial' | 'missing' | string;
+  detail: string;
+  url?: string;
 }
 
 export interface Stats {

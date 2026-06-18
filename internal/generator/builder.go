@@ -24,6 +24,7 @@ type builder struct {
 	sources       map[string]Source
 	sourceOrder   []string
 	sourceStatus  []SourceStatus
+	sourceTodos   []SourceTodo
 	schoolCounty  map[string]string
 	personAliases map[string]map[string]bool
 }
@@ -1184,6 +1185,7 @@ func (b *builder) finalize() *Dataset {
 		Summary:        summary,
 		Provenance:     provenance,
 		SourceStatuses: b.sourceStatus,
+		SourceTodos:    b.sourceTodos,
 		People:         people,
 		Schools:        schools,
 		Counties:       counties,

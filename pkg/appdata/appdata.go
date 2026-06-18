@@ -16,6 +16,7 @@ type Dataset struct {
 	Summary        Summary        `json:"summary"`
 	Provenance     []Source       `json:"provenance"`
 	SourceStatuses []SourceStatus `json:"sourceStatuses"`
+	SourceTodos    []SourceTodo   `json:"sourceTodos"`
 	People         []*Person      `json:"people"`
 	Schools        []*School      `json:"schools"`
 	Counties       []*County      `json:"counties"`
@@ -56,6 +57,14 @@ type SourceStatus struct {
 	Detail  string `json:"detail"`
 	URL     string `json:"url,omitempty"`
 	Checked string `json:"checked"`
+}
+
+type SourceTodo struct {
+	ID     string `json:"id"`
+	Title  string `json:"title"`
+	Status string `json:"status"`
+	Detail string `json:"detail"`
+	URL    string `json:"url,omitempty"`
 }
 
 type SearchItem struct {

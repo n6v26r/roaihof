@@ -226,7 +226,7 @@
     {
       "id": "onia-2026-national",
       "title": "ONIA 2026 national + Lot",
-      "status": "ok",
+      "status": "partial",
       "detail": "Imported from the official ONIA national JSON, LotNational identity list, and platform final leaderboards for the two Lot rounds.",
       "url": "https://olimpiada-ai.ro/ro/rezultate/nationala",
       "checked": "2026-06-18"
@@ -266,7 +266,7 @@
     {
       "id": "roai-2025-national",
       "title": "ROAI 2025 national",
-      "status": "ok",
+      "status": "partial",
       "detail": "Imported from the official ROAI 2025 ONIA task/results page, using the Clasamente Finale PDFs split by class and the Nitro complete judge leaderboard for cumulative scores.",
       "url": "https://olimpiada.nitro-ai.org/ro/2025/onia?section=tasks",
       "checked": "2026-06-18"
@@ -286,6 +286,22 @@
       "detail": "Imported final leaderboard usernames from ROAI 2025 and 2026 national stage; Added only where there was no ambiguity.",
       "url": "https://judge.nitro-ai.org/competitions",
       "checked": "2026-06-18"
+    }
+  ],
+  "sourceTodos": [
+    {
+      "id": "roai-2025",
+      "title": "ROAI 2025",
+      "status": "partial",
+      "detail": "Partial: only medal information is tracked so far.",
+      "url": "https://olimpiada.nitro-ai.org/ro/2025/onia?section=tasks"
+    },
+    {
+      "id": "onia-2026",
+      "title": "ONIA 2026",
+      "status": "partial",
+      "detail": "Partial: only medal information is tracked so far.",
+      "url": "https://olimpiada-ai.ro/ro/rezultate/nationala"
     }
   ],
   "people": [

@@ -947,7 +947,8 @@ code {
 
 .search-results,
 .contest-list,
-.provenance-list {
+.provenance-list,
+.source-todo-list {
   display: grid;
 }
 
@@ -1105,6 +1106,66 @@ code {
   background: var(--accent-bg);
 }
 
+.source-todo-row {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  padding: 13px 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.source-todo-row:last-child {
+  border-bottom: 0;
+}
+
+.source-todo-row h3 {
+  margin: 0 0 5px;
+  font-size: 0.95rem;
+}
+
+.source-todo-row p,
+.source-todo-row a {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.source-todo-row a {
+  display: inline-block;
+  margin-top: 7px;
+  color: var(--cyan);
+  overflow-wrap: anywhere;
+}
+
+.source-todo-status {
+  display: inline-grid;
+  place-items: center;
+  min-width: 82px;
+  min-height: 28px;
+  padding: 0 9px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--muted);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.source-todo-partial {
+  border-color: color-mix(in srgb, var(--amber) 36%, var(--line));
+  background: var(--result-pill-bg);
+  color: var(--amber);
+}
+
+.source-todo-missing {
+  border-color: color-mix(in srgb, var(--red) 36%, var(--line));
+  background: var(--bronze-bg);
+  color: var(--red);
+}
+
 .source-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1146,8 +1207,12 @@ code {
   color: var(--green);
 }
 
-.source-missing .source-status-icon {
+.source-partial .source-status-icon {
   color: var(--amber);
+}
+
+.source-missing .source-status-icon {
+  color: var(--red);
 }
 
 .empty-state {
@@ -1252,6 +1317,15 @@ code {
   .family-grid,
   .scoreboard-grid {
     grid-template-columns: 1fr;
+  }
+
+  .source-todo-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .source-todo-status {
+    justify-self: start;
   }
 
   .entity-heading .stat-grid {
