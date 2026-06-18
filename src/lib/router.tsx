@@ -1,7 +1,7 @@
 import { useEffect, useState, type AnchorHTMLAttributes, type MouseEvent, type PropsWithChildren } from 'react';
 
-export function usePathname(): string {
-  const [path, setPath] = useState(() => window.location.pathname);
+export function usePathname(initialPath = '/'): string {
+  const [path, setPath] = useState(() => browserPathname() ?? initialPath);
 
   useEffect(() => {
     const sync = () => setPath(window.location.pathname);
@@ -13,6 +13,7 @@ export function usePathname(): string {
 }
 
 export function navigateTo(href: string) {
+  if (typeof window === 'undefined') return;
   if (href === window.location.pathname) return;
   window.history.pushState({}, '', href);
   window.dispatchEvent(new PopStateEvent('popstate'));
@@ -39,4 +40,8 @@ export function AppLink({
       {children}
     </a>
   );
+}
+
+function browserPathname(): string | undefined {
+  return typeof window === 'undefined' ? undefined : window.location.pathname;
 }

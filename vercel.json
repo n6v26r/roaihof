@@ -1,36 +1,8 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "rewrites": [
-    {
-      "source": "/people/:path*",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/schools/:path*",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/counties/:path*",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/contests/:path*",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/scoreboards/:path*",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/rankings/:path*",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/sources",
-      "destination": "/index.html"
-    }
-  ],
+  "cleanUrls": true,
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/assets/(.*)",

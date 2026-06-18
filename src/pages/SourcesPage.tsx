@@ -2,6 +2,7 @@ import { ArrowUpRight, Database } from 'lucide-react';
 import { dataset } from '../app/data';
 import { SourceCoverage } from '../components/SourceCoverage';
 import { SectionHeader } from '../components/layout/SectionHeader';
+import { formatRomanianDateTime } from '../lib/format';
 
 export function SourcesPage() {
   return (
@@ -10,7 +11,7 @@ export function SourcesPage() {
         <div>
           <p className="eyebrow">Coverage</p>
           <h1>Sources</h1>
-          <p className="muted-line">Generated {new Date(dataset.generatedAt).toLocaleString('ro-RO')}</p>
+          <p className="muted-line">Generated {formatRomanianDateTime(dataset.generatedAt)}</p>
           <p className="muted-line">
             Most data is fetched using ai. If you find any inaccuracies/completions to be made pls contact me: {' '}
             <a href="https://razv.xyz" target="_blank" rel="noreferrer" className="inline-link">@razv</a>

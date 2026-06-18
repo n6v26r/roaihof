@@ -17,11 +17,12 @@ async function main() {
   });
 
   try {
-    const [{ dataset }, { buildIndexes }, { parseRoute }, seo] = await Promise.all([
+    const [{ dataset }, { buildIndexes }, { parseRoute }, seo, { renderRoute }] = await Promise.all([
       server.ssrLoadModule('/src/app/data.ts'),
       server.ssrLoadModule('/src/app/indexes.ts'),
       server.ssrLoadModule('/src/app/routes.ts'),
-      server.ssrLoadModule('/src/lib/seo.ts')
+      server.ssrLoadModule('/src/lib/seo.ts'),
+      server.ssrLoadModule('/src/entry-server.tsx')
     ]);
 
     const indexes = buildIndexes(dataset);
@@ -30,11 +31,11 @@ async function main() {
     for (const routePath of paths) {
       const route = parseRoute(routePath);
       const routeSeo = seo.seoForRoute(route, indexes, dataset, routePath);
-      await writeRouteHtml(routePath, injectSeo(baseHtml, seo.renderSeoTags(routeSeo)));
+      await writeRouteHtml(routePath, injectRouteHtml(baseHtml, seo.renderSeoTags(routeSeo), renderRoute(routePath)));
     }
 
     const notFoundSeo = seo.seoForRoute({ name: 'not-found' }, indexes, dataset, '/404');
-    await writeFile(path.join(distDir, '404.html'), injectSeo(baseHtml, seo.renderSeoTags(notFoundSeo)));
+    await writeFile(path.join(distDir, '404.html'), injectRouteHtml(baseHtml, seo.renderSeoTags(notFoundSeo), renderRoute('/404')));
     await writeFile(path.join(distDir, 'sitemap.xml'), renderSitemap(paths, dataset.generatedAt, seo.absoluteUrl));
     await writeFile(path.join(distDir, 'robots.txt'), renderRobots(seo.SEO_ORIGIN));
 
@@ -44,7 +45,7 @@ async function main() {
   }
 }
 
-function injectSeo(html, tags) {
+function injectRouteHtml(html, tags, bodyHtml) {
   const stripped = html
     .replace(/<title\b[^>]*>[\s\S]*?<\/title>\s*/i, '')
     .replace(/\s*<(?:meta|link)\b[^>]*data-roaihof-seo=(?:"true"|'true')[^>]*>\s*/gi, '\n')
@@ -53,8 +54,13 @@ function injectSeo(html, tags) {
   if (!stripped.includes('</head>')) {
     throw new Error('Could not find </head> in built index.html');
   }
+  if (!stripped.includes('<div id="root"></div>')) {
+    throw new Error('Could not find root mount point in built index.html');
+  }
 
-  return stripped.replace('</head>', `${indent(tags, '  ')}\n</head>`);
+  return stripped
+    .replace('</head>', `${indent(tags, '  ')}\n</head>`)
+    .replace('<div id="root"></div>', `<div id="root">${bodyHtml}</div>`);
 }
 
 async function writeRouteHtml(routePath, html) {
@@ -67,6 +73,15 @@ async function writeRouteHtml(routePath, html) {
   }
   await mkdir(path.dirname(file), { recursive: true });
   await writeFile(file, html);
+
+  if (normalized !== '/') {
+    const cleanFile = path.join(distDir, `${normalized.slice(1)}.html`);
+    if (!cleanFile.startsWith(distDir)) {
+      throw new Error(`Refusing to write outside dist: ${cleanFile}`);
+    }
+    await mkdir(path.dirname(cleanFile), { recursive: true });
+    await writeFile(cleanFile, html);
+  }
 }
 
 function renderSitemap(paths, generatedAt, absoluteUrl) {

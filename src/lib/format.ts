@@ -111,3 +111,13 @@ export function resultPrize(result: Result): string {
 export function statLine(stats: Stats): string {
   return `${stats.gold}/${stats.silver}/${stats.bronze} · ${stats.participations} participări`;
 }
+
+export function formatRomanianDateTime(value: string): string {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return value;
+  return new Intl.DateTimeFormat('ro-RO', {
+    dateStyle: 'short',
+    timeStyle: 'medium',
+    timeZone: 'Europe/Bucharest'
+  }).format(date);
+}

@@ -3,7 +3,10 @@ import type { Route } from '../app/routes';
 import type { Scoreboard } from '../features/scoreboards/scoreboards';
 import type { Dataset, RankingKind, RankingRow, Result } from './types';
 
-export const SEO_ORIGIN = 'https://roaihof.vercel.app';
+const DEFAULT_SEO_ORIGIN = 'https://roaihof.vercel.app';
+const SOCIAL_IMAGE_PATH = '/og.png';
+
+export const SEO_ORIGIN = normalizeOrigin(import.meta.env.VITE_SEO_ORIGIN || DEFAULT_SEO_ORIGIN);
 
 const SITE_NAME = 'Romanian AI Hall Of Fame';
 const SITE_SHORT_NAME = 'ROAIHOF';
@@ -27,6 +30,7 @@ export interface SeoMetadata {
   description: string;
   path: string;
   url: string;
+  imageUrl: string;
   socialType: 'website' | 'profile';
   noindex?: boolean;
   jsonLd: JsonLdObject[];
@@ -249,7 +253,7 @@ function scoreboardMetadata(scoreboard: Scoreboard): SeoMetadata {
   });
 }
 
-function metadata(input: Omit<SeoMetadata, 'url' | 'socialType' | 'jsonLd'> & {
+function metadata(input: Omit<SeoMetadata, 'url' | 'imageUrl' | 'socialType' | 'jsonLd'> & {
   socialType?: SeoMetadata['socialType'];
   jsonLd?: JsonLdObject[];
 }): SeoMetadata {
@@ -259,6 +263,7 @@ function metadata(input: Omit<SeoMetadata, 'url' | 'socialType' | 'jsonLd'> & {
     description: input.description,
     path,
     url: absoluteUrl(path),
+    imageUrl: absoluteUrl(SOCIAL_IMAGE_PATH),
     socialType: input.socialType ?? 'website',
     noindex: input.noindex,
     jsonLd: input.jsonLd ?? []
@@ -403,9 +408,13 @@ function headTagsForSeo(seo: SeoMetadata): SeoHeadTag[] {
     { tag: 'meta', property: 'og:title', content: seo.title },
     { tag: 'meta', property: 'og:description', content: seo.description },
     { tag: 'meta', property: 'og:url', content: seo.url },
-    { tag: 'meta', name: 'twitter:card', content: 'summary' },
+    { tag: 'meta', property: 'og:image', content: seo.imageUrl },
+    { tag: 'meta', property: 'og:image:width', content: '1200' },
+    { tag: 'meta', property: 'og:image:height', content: '630' },
+    { tag: 'meta', name: 'twitter:card', content: 'summary_large_image' },
     { tag: 'meta', name: 'twitter:title', content: seo.title },
-    { tag: 'meta', name: 'twitter:description', content: seo.description }
+    { tag: 'meta', name: 'twitter:description', content: seo.description },
+    { tag: 'meta', name: 'twitter:image', content: seo.imageUrl }
   ];
   if (seo.noindex) tags.unshift({ tag: 'meta', name: 'robots', content: 'noindex,follow' });
   for (const value of seo.jsonLd) {
@@ -438,6 +447,10 @@ function entityPath(kind: RankingKind, id: string): string {
 
 function sortedById<T extends { id: string }>(items: Iterable<T>): T[] {
   return Array.from(items).sort((a, b) => a.id.localeCompare(b.id));
+}
+
+function normalizeOrigin(value: string): string {
+  return value.replace(/\/+$/g, '');
 }
 
 function isoDate(value: string): string {

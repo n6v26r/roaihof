@@ -13,8 +13,8 @@ import { ScoreboardPage } from './pages/ScoreboardPage';
 import { SourcesPage } from './pages/SourcesPage';
 import { applySeoMetadata, seoForRoute } from './lib/seo';
 
-export function App() {
-  const pathname = usePathname();
+export function App({ initialPath }: { initialPath?: string }) {
+  const pathname = usePathname(initialPath);
   const indexes = useMemo(() => buildIndexes(dataset), []);
   const route = useMemo(() => parseRoute(pathname), [pathname]);
   const seo = useMemo(() => seoForRoute(route, indexes, dataset, pathname), [indexes, pathname, route]);
