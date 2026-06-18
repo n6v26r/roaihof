@@ -21,7 +21,7 @@ export function RankingPage({ kind }: { kind: RankingKind }) {
           <h1>{title}</h1>
           <p className="muted-line">Sorted by medals, best places, selections, and international results by filter.</p>
         </div>
-        <FilterBar filters={filters} onChange={setFilters} showSearch={false} />
+        <FilterBar filters={filters} onChange={setFilters} />
       </section>
       <section className="terminal-panel">
         <RankingTable rows={rows} kind={kind} />

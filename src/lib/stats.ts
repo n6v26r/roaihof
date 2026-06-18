@@ -69,7 +69,7 @@ function matchedSearchUsername(item: SearchItem, queryTokens: string[]): SearchU
 export function aggregateRanking(
   kind: RankingKind,
   dataset: Dataset,
-  filters: Pick<Filters, 'circuit' | 'stage'>
+  filters: Pick<Filters, 'circuit' | 'stage'> & Partial<Pick<Filters, 'query'>>
 ): RankingRow[] {
   const labels = new Map<string, string>();
   const stats = new Map<string, Stats>();
@@ -119,14 +119,47 @@ export function aggregateRanking(
     };
   });
 
-  return rows.sort((a, b) => {
-    const comparison = compareRankingRows(a, b, sortingMode, internationalStats);
-    return comparison !== 0 ? -comparison : a.name.localeCompare(b.name);
-  });
+  const sorted = rows
+    .sort((a, b) => {
+      const comparison = compareRankingRows(a, b, sortingMode, internationalStats);
+      return comparison !== 0 ? -comparison : a.name.localeCompare(b.name);
+    })
+    .map((row, index) => ({ ...row, rank: index + 1 }));
+  return filterRankingRows(kind, dataset, sorted, filters.query);
 }
 
 function internationalRankingScope(filters: Pick<Filters, 'circuit' | 'stage'>): boolean {
   return filters.stage === 'international' || ['international', 'IAIO', 'IOAI', 'CEOAI'].includes(filters.circuit);
+}
+
+function filterRankingRows(kind: RankingKind, dataset: Dataset, rows: RankingRow[], query?: string): RankingRow[] {
+  const queryTokens = normalizeText(query ?? '').split(' ').filter(Boolean);
+  if (queryTokens.length === 0) return rows;
+  const searchKind = rankingEntityKind(kind);
+  const searchItemsByID = new Map(dataset.search
+    .filter((item) => item.kind === searchKind)
+    .map((item) => [item.id, item]));
+
+  return rows.flatMap((row) => {
+    const item = searchItemsByID.get(row.id);
+    if (!rankingRowMatchesQuery(row, item, queryTokens)) return [];
+    const matchedUsername = searchKind === 'person' && item
+      ? matchedSearchUsername(item, queryTokens)
+      : undefined;
+    return [{ ...row, matchedUsername }];
+  });
+}
+
+function rankingRowMatchesQuery(row: RankingRow, item: SearchItem | undefined, queryTokens: string[]): boolean {
+  const rowNameTokens = normalizeText(row.name).split(' ').filter(Boolean);
+  const candidateTokens = [...(item?.tokens ?? []), ...rowNameTokens];
+  return queryTokens.every((queryToken) => candidateTokens.some((candidate) => candidate.includes(queryToken)));
+}
+
+function rankingEntityKind(kind: RankingKind): 'person' | 'school' | 'county' {
+  if (kind === 'people') return 'person';
+  if (kind === 'schools') return 'school';
+  return 'county';
 }
 
 type RankingSortingMode = 'international' | 'merged' | 'national' | 'lot';

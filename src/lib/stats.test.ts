@@ -68,6 +68,42 @@ describe('stats helpers', () => {
     expect(ilie?.stats.ceoaiSelections).toBe(2);
   });
 
+  it('filters people rankings by name and external username search tokens', () => {
+    const unfiltered = aggregateRanking('people', data, { circuit: 'merged', stage: 'all' });
+    const byName = aggregateRanking('people', data, { circuit: 'merged', stage: 'all', query: 'razvan dedu' });
+    const byUsername = aggregateRanking('people', data, { circuit: 'merged', stage: 'all', query: 'MihneaTeodorStoica' });
+    const stoicaRank = unfiltered.findIndex((row) => row.id === 'stoica-mihnea-teodor') + 1;
+
+    expect(byName.map((row) => row.id)).toEqual(['dedu-razvan-matei']);
+    expect(byUsername.map((row) => row.id)).toEqual(['stoica-mihnea-teodor']);
+    expect(stoicaRank).toBeGreaterThan(1);
+    expect(byUsername[0].rank).toBe(stoicaRank);
+  });
+
+  it('annotates people ranking username matches without annotating name matches', () => {
+    const byName = aggregateRanking('people', data, { circuit: 'merged', stage: 'all', query: 'razvan dedu' });
+    const byUsername = aggregateRanking('people', data, { circuit: 'merged', stage: 'all', query: 'MihneaTeodorStoica' });
+
+    expect(byName[0].matchedUsername).toBeUndefined();
+    expect(byUsername[0].matchedUsername).toEqual({ platform: 'mlcompete', username: 'MihneaTeodorStoica' });
+  });
+
+  it('filters school and county rankings by generated search tokens', () => {
+    const schools = aggregateRanking('schools', data, { circuit: 'merged', stage: 'all', query: 'tudor vianu' });
+    const counties = aggregateRanking('counties', data, { circuit: 'merged', stage: 'all', query: 'salaj' });
+
+    expect(schools.map((row) => row.id)).toEqual(['school-colegiul-national-de-informatica-tudor-vianu']);
+    expect(counties.map((row) => row.id)).toEqual(['salaj']);
+  });
+
+  it('keeps full ranking results for empty search queries', () => {
+    const unfiltered = aggregateRanking('people', data, { circuit: 'ONIA', stage: 'national' });
+    const filtered = aggregateRanking('people', data, { circuit: 'ONIA', stage: 'national', query: '   ' });
+
+    expect(filtered.map((row) => row.id)).toEqual(unfiltered.map((row) => row.id));
+    expect(filtered.every((row) => row.matchedUsername === undefined)).toBe(true);
+  });
+
   it('uses international criteria after merged national criteria for every entity kind', () => {
     const tieData = rankingTieDataset();
 

@@ -152,6 +152,8 @@ export interface RankingRow {
   name: string;
   kind: 'person' | 'school' | 'county' | string;
   stats: Stats;
+  rank?: number;
+  matchedUsername?: SearchUsername;
 }
 
 export interface SearchItem {

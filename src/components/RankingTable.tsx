@@ -31,32 +31,43 @@ export function RankingTable({ rows, kind, limit }: RankingTableProps) {
           </tr>
         </thead>
         <tbody>
-          {visible.map((row, index) => (
-            <tr key={row.id}>
-              <td data-label="#">
-                <span className="rank-cell">
-                  {index < 3 ? <Trophy size={15} aria-hidden="true" /> : <Medal size={15} aria-hidden="true" />}
-                  {index + 1}
-                </span>
-              </td>
-              <td data-label="Name">
-                <AppLink href={routeFor(kindToEntity[kind], row.id)} className="table-link">
-                  {row.name}
-                </AppLink>
-                <span className="row-subtitle">{statLine(row.stats)}</span>
-              </td>
-              <td data-label="Medals">
-                <span className="medal-stack">
-                  <b className="m-gold">{row.stats.gold}</b>
-                  <b className="m-silver">{row.stats.silver}</b>
-                  <b className="m-bronze">{row.stats.bronze}</b>
-                </span>
-              </td>
-              <td data-label="Prizes">{row.stats.prizes}</td>
-              <td data-label="Selections">{row.stats.selections}</td>
-              <td data-label="Years">{row.stats.years.join(', ') || '-'}</td>
-            </tr>
-          ))}
+          {visible.map((row, index) => {
+            const rank = row.rank ?? index + 1;
+            const matchedUsername = kind === 'people' ? row.matchedUsername : undefined;
+            return (
+              <tr key={row.id}>
+                <td data-label="#">
+                  <span className="rank-cell">
+                    {rank <= 3 ? <Trophy size={15} aria-hidden="true" /> : <Medal size={15} aria-hidden="true" />}
+                    {rank}
+                  </span>
+                </td>
+                <td data-label="Name">
+                  <span className="search-result-title">
+                    <AppLink href={routeFor(kindToEntity[kind], row.id)} className="table-link">
+                      {row.name}
+                    </AppLink>
+                    {matchedUsername ? (
+                      <span className={`search-username-match ${matchedUsername.platform}`}>
+                        @{matchedUsername.username}
+                      </span>
+                    ) : null}
+                  </span>
+                  <span className="row-subtitle">{statLine(row.stats)}</span>
+                </td>
+                <td data-label="Medals">
+                  <span className="medal-stack">
+                    <b className="m-gold">{row.stats.gold}</b>
+                    <b className="m-silver">{row.stats.silver}</b>
+                    <b className="m-bronze">{row.stats.bronze}</b>
+                  </span>
+                </td>
+                <td data-label="Prizes">{row.stats.prizes}</td>
+                <td data-label="Selections">{row.stats.selections}</td>
+                <td data-label="Years">{row.stats.years.join(', ') || '-'}</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
       {visible.length === 0 ? <div className="empty-state">No rows for this filter.</div> : null}
