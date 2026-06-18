@@ -4,6 +4,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (() => {
+      try {
+        const theme = localStorage.getItem('roaihof-theme');
+        if (theme === 'dark' || theme === 'light') {
+          document.documentElement.dataset.theme = theme;
+        }
+      } catch {
+      }
+    })();
+  </script>
   <title>Romanian AI Hall Of Fame | ROAIHOF</title>
   <meta name="description"
     content="Search Romanian AI olympiad results, rankings, scoreboards, contestants, schools, and counties across ONIA, ROAI, IAIO, IOAI, and CEOAI."

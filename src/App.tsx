@@ -13,6 +13,9 @@ import { ScoreboardPage } from './pages/ScoreboardPage';
 import { SourcesPage } from './pages/SourcesPage';
 import { applySeoMetadata, seoForRoute } from './lib/seo';
 
+const themeStorageKey = 'roaihof-theme';
+type Theme = 'dark' | 'light';
+
 export function App({ initialPath }: { initialPath?: string }) {
   const pathname = usePathname(initialPath);
   const indexes = useMemo(() => buildIndexes(dataset), []);
@@ -25,7 +28,7 @@ export function App({ initialPath }: { initialPath?: string }) {
 
   return (
     <div className="app-shell">
-      <Header pathname={pathname} />
+      <Header pathname={pathname} onToggleTheme={toggleTheme} />
       <main className="page-main">
         {route.name === 'home' ? <DashboardPage indexes={indexes} /> : null}
         {route.name === 'rankings' ? <RankingPage kind={route.kind} /> : null}
@@ -39,4 +42,24 @@ export function App({ initialPath }: { initialPath?: string }) {
       </main>
     </div>
   );
+}
+
+function toggleTheme() {
+  if (typeof window === 'undefined') return;
+
+  const current = currentTheme();
+  const next = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.dataset.theme = next;
+
+  try {
+    window.localStorage.setItem(themeStorageKey, next);
+  } catch {
+    // Ignore storage failures; the in-page theme switch still applies.
+  }
+}
+
+function currentTheme(): Theme {
+  const explicitTheme = document.documentElement.dataset.theme;
+  if (explicitTheme === 'dark' || explicitTheme === 'light') return explicitTheme;
+  return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
 }

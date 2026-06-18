@@ -2,12 +2,14 @@ import {
   Database,
   Home,
   MapPinned,
+  Moon,
   School2,
+  Sun,
   Users
 } from 'lucide-react';
 import { AppLink } from '../../lib/router';
 
-export function Header({ pathname }: { pathname: string }) {
+export function Header({ pathname, onToggleTheme }: { pathname: string; onToggleTheme: () => void }) {
   const links = [
     { href: '/', label: 'Dashboard', icon: Home },
     { href: '/rankings/people', label: 'People', icon: Users },
@@ -18,13 +20,19 @@ export function Header({ pathname }: { pathname: string }) {
 
   return (
     <header className="site-header">
-      <AppLink href="/" className="brand-mark" aria-label="ROAIHOF dashboard">
-        <span className="brand-glyph">AI</span>
-        <span>
-          <strong>ROAIHOF</strong>
-          <small>Romanian AI Hall Of Fame</small>
-        </span>
-      </AppLink>
+      <div className="brand-row">
+        <AppLink href="/" className="brand-mark" aria-label="ROAIHOF dashboard">
+          <span className="brand-glyph">AI</span>
+          <span>
+            <strong>ROAIHOF</strong>
+            <small>Romanian AI Hall Of Fame</small>
+          </span>
+        </AppLink>
+        <button type="button" className="theme-toggle" onClick={onToggleTheme} title="Switch theme" aria-label="Switch theme">
+          <Sun size={16} className="theme-toggle-sun" aria-hidden="true" />
+          <Moon size={16} className="theme-toggle-moon" aria-hidden="true" />
+        </button>
+      </div>
       <nav className="site-nav" aria-label="primary">
         {links.map((link) => {
           const Icon = link.icon;
