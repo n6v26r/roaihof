@@ -1,0 +1,36 @@
+import { useMemo } from 'react';
+import { dataset } from './app/data';
+import { buildIndexes } from './app/indexes';
+import { parseRoute } from './app/routes';
+import { Header } from './components/layout/Header';
+import { usePathname } from './lib/router';
+import { ContestFamilyPage } from './pages/ContestFamilyPage';
+import { DashboardPage } from './pages/DashboardPage';
+import { CountyPage, PersonPage, SchoolPage } from './pages/EntityPages';
+import { NotFoundPage } from './pages/NotFoundPage';
+import { RankingPage } from './pages/RankingPage';
+import { ScoreboardPage } from './pages/ScoreboardPage';
+import { SourcesPage } from './pages/SourcesPage';
+
+export function App() {
+  const pathname = usePathname();
+  const indexes = useMemo(() => buildIndexes(dataset), []);
+  const route = parseRoute(pathname);
+
+  return (
+    <div className="app-shell">
+      <Header pathname={pathname} />
+      <main className="page-main">
+        {route.name === 'home' ? <DashboardPage indexes={indexes} /> : null}
+        {route.name === 'rankings' ? <RankingPage kind={route.kind} /> : null}
+        {route.name === 'person' ? <PersonPage person={indexes.people.get(route.id)} indexes={indexes} /> : null}
+        {route.name === 'school' ? <SchoolPage school={indexes.schools.get(route.id)} indexes={indexes} /> : null}
+        {route.name === 'county' ? <CountyPage county={indexes.counties.get(route.id)} indexes={indexes} /> : null}
+        {route.name === 'contest-family' ? <ContestFamilyPage family={route.family} indexes={indexes} /> : null}
+        {route.name === 'scoreboard' ? <ScoreboardPage scoreboard={indexes.scoreboards.get(route.id)} indexes={indexes} /> : null}
+        {route.name === 'sources' ? <SourcesPage /> : null}
+        {route.name === 'not-found' ? <NotFoundPage /> : null}
+      </main>
+    </div>
+  );
+}

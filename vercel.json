@@ -1,0 +1,63 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/people/:path*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/schools/:path*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/counties/:path*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/contests/:path*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/scoreboards/:path*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/rankings/:path*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/sources",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/data/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/index.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ]
+}

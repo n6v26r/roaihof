@@ -1,0 +1,134 @@
+{
+  "aliases": [
+    {
+      "alias": "Roland Petrean",
+      "canonical": "Petrean Roland",
+      "reason": "ONIA lot selection page uses first-name order; national stage uses last-name order."
+    },
+    {
+      "alias": "Alexandru Thury Burileanu",
+      "canonical": "Thury Burileanu Alexandru",
+      "reason": "ONIA lot selection page uses first-name order and omits the national list order."
+    },
+    {
+      "alias": "Darius-Adrian Dobre",
+      "canonical": "Dobre Darius-Adrian",
+      "reason": "ONIA lot selection page uses first-name order."
+    },
+    {
+      "alias": "David Georgescu",
+      "canonical": "Georgescu David",
+      "reason": "ONIA lot selection page uses first-name order."
+    },
+    {
+      "alias": "Iulian Nistor",
+      "canonical": "Nistor Iulian",
+      "reason": "ONIA lot selection page uses first-name order."
+    },
+    {
+      "alias": "Matei-Tudor Pop",
+      "canonical": "Pop Matei-Tudor",
+      "reason": "ONIA lot selection page uses first-name order."
+    },
+    {
+      "alias": "Mihnea-Teodor Stoica",
+      "canonical": "Stoica Mihnea-Teodor",
+      "reason": "ONIA lot selection page uses first-name order."
+    },
+    {
+      "alias": "Daniel-Antoniu Bence-Muk",
+      "canonical": "Bence-Muk Daniel-Antoniu",
+      "reason": "ONIA lot selection page uses first-name order."
+    },
+    {
+      "alias": "David Gheorghica-Istrate",
+      "canonical": "Gheorghică Istrate David",
+      "reason": "ONIA lot selection page uses first-name order and drops the diacritic."
+    },
+    {
+      "alias": "Răzvan Dedu",
+      "canonical": "Dedu Răzvan-Matei",
+      "reason": "ONIA lot selection page omits the second first name."
+    },
+    {
+      "alias": "Luca Nicolae",
+      "canonical": "Nicolae Luca-Ștefan",
+      "reason": "ONIA lot selection page omits the second first name."
+    },
+    {
+      "alias": "Radu Ilie-Goga",
+      "canonical": "Ilie-Goga Radu",
+      "reason": "ONIA lot selection page uses first-name order."
+    },
+    {
+      "alias": "Dedu Răzvan",
+      "canonical": "Dedu Răzvan-Matei",
+      "reason": "ROAI final page omits the second first name."
+    },
+    {
+      "alias": "Tutunaru Vlad",
+      "canonical": "Tutunaru Vlad Mihai",
+      "reason": "ROAI final page omits the second first name."
+    },
+    {
+      "alias": "Apostol Mihnea Petru",
+      "canonical": "Apostol Mihnea-Petru",
+      "reason": "ROAI final page omits the first-name separator."
+    },
+    {
+      "alias": "Asandei Ștefan",
+      "canonical": "Asandei Ștefan-Alexandru",
+      "reason": "ROAI Lot page includes the longer first-name form."
+    },
+    {
+      "alias": "Rebengiuc Mircea Maxim",
+      "canonical": "Rebengiuc Mircea-Maxim",
+      "reason": "ROAI 2025 Lot ranking omits the first-name separator."
+    },
+    {
+      "alias": "Mușat Tudor Ștefan",
+      "canonical": "Mușat Tudor-Ștefan",
+      "reason": "ROAI 2025 Lot ranking omits the first-name separator."
+    },
+    {
+      "alias": "Tache David",
+      "canonical": "Tache David-Ștefan",
+      "reason": "ROAI 2025 Lot ranking includes the longer first-name form."
+    },
+    {
+      "alias": "Tache David Ștefan",
+      "canonical": "Tache David-Ștefan",
+      "reason": "ROAI 2025 Lot ranking omits the first-name separator."
+    },
+    {
+      "alias": "Tudose Rareș Felix",
+      "canonical": "Tudose Rareș-Felix",
+      "reason": "ROAI 2025 Lot ranking omits the first-name separator."
+    },
+    {
+      "alias": "Mateiș David Andrei",
+      "canonical": "Mateiș David-Andrei",
+      "reason": "ROAI 2025 Lot ranking omits the first-name separator."
+    },
+    {
+      "alias": "Danțoş Lorena",
+      "canonical": "Danțoș Lorena",
+      "reason": "ROAI 2025 Lot ranking uses a cedilla variant."
+    },
+    {
+      "alias": "Ciortea Suciu Andrei",
+      "canonical": "Ciortea-Suciu Andrei",
+      "reason": "ROAI final and Lot pages differ on the compound surname separator."
+    },
+    {
+      "alias": "Iacob Răzvan Mihai",
+      "canonical": "Iacob Răzvan-Mihai",
+      "reason": "ROAI Lot page includes the first-name separator."
+    },
+    {
+      "alias": "Isidor Herea",
+      "canonical": "Herea Isidor",
+      "reason": "ROAI final page uses first-name order; Lot ranking uses last-name order."
+    }
+  ]
+}

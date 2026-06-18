@@ -1,0 +1,1432 @@
+{
+  "sources": [
+    {
+      "id": "roai-2025-national-judge",
+      "title": "ROAI 2025 ONIA complete Nitro leaderboard",
+      "url": "https://judge.nitro-ai.org/competitions/roai-2025/onia/leaderboard/complete?page=1&page_size=200",
+      "accessedAt": "2026-06-18",
+      "status": "ok"
+    }
+  ],
+  "scores": [
+    {
+      "position": 1,
+      "rank": 1,
+      "username": "rolandpetrean",
+      "taskScores": [
+        100,
+        99
+      ],
+      "score": 199,
+      "scoreMax": 200
+    },
+    {
+      "position": 2,
+      "rank": 2,
+      "username": "RaresFelix",
+      "taskScores": [
+        68,
+        72
+      ],
+      "score": 140,
+      "scoreMax": 200
+    },
+    {
+      "position": 3,
+      "rank": 3,
+      "username": "mircea_007",
+      "taskScores": [
+        65,
+        51
+      ],
+      "score": 116,
+      "scoreMax": 200
+    },
+    {
+      "position": 4,
+      "rank": 4,
+      "username": "Rareshika",
+      "taskScores": [
+        70,
+        34
+      ],
+      "score": 104,
+      "scoreMax": 200
+    },
+    {
+      "position": 5,
+      "rank": 4,
+      "username": "dvdtsb",
+      "taskScores": [
+        100,
+        4
+      ],
+      "score": 104,
+      "scoreMax": 200
+    },
+    {
+      "position": 6,
+      "rank": 6,
+      "username": "stefanasandei",
+      "taskScores": [
+        100,
+        3
+      ],
+      "score": 103,
+      "scoreMax": 200
+    },
+    {
+      "position": 7,
+      "rank": 7,
+      "username": "savarares",
+      "taskScores": [
+        94,
+        3
+      ],
+      "score": 97,
+      "scoreMax": 200
+    },
+    {
+      "position": 8,
+      "rank": 8,
+      "username": "Xx_GuysILiterallyHaveDementia_xX",
+      "taskScores": [
+        86,
+        9
+      ],
+      "score": 95,
+      "scoreMax": 200
+    },
+    {
+      "position": 9,
+      "rank": 9,
+      "username": "morariutudor",
+      "taskScores": [
+        57,
+        37
+      ],
+      "score": 94,
+      "scoreMax": 200
+    },
+    {
+      "position": 10,
+      "rank": 10,
+      "username": "Tudor006",
+      "taskScores": [
+        46,
+        46
+      ],
+      "score": 92,
+      "scoreMax": 200
+    },
+    {
+      "position": 11,
+      "rank": 10,
+      "username": "lensu",
+      "taskScores": [
+        92,
+        0
+      ],
+      "score": 92,
+      "scoreMax": 200
+    },
+    {
+      "position": 12,
+      "rank": 12,
+      "username": "Dulea_Andrei",
+      "taskScores": [
+        82,
+        9
+      ],
+      "score": 91,
+      "scoreMax": 200
+    },
+    {
+      "position": 13,
+      "rank": 13,
+      "username": "qraulz",
+      "taskScores": [
+        81,
+        9
+      ],
+      "score": 90,
+      "scoreMax": 200
+    },
+    {
+      "position": 14,
+      "rank": 13,
+      "username": "tudorbadea",
+      "taskScores": [
+        87,
+        3
+      ],
+      "score": 90,
+      "scoreMax": 200
+    },
+    {
+      "position": 15,
+      "rank": 15,
+      "username": "AlexCorto",
+      "taskScores": [
+        88,
+        1
+      ],
+      "score": 89,
+      "scoreMax": 200
+    },
+    {
+      "position": 16,
+      "rank": 15,
+      "username": "AlexGB56",
+      "taskScores": [
+        80,
+        9
+      ],
+      "score": 89,
+      "scoreMax": 200
+    },
+    {
+      "position": 17,
+      "rank": 15,
+      "username": "RaduCiocirlan",
+      "taskScores": [
+        89,
+        0
+      ],
+      "score": 89,
+      "scoreMax": 200
+    },
+    {
+      "position": 18,
+      "rank": 15,
+      "username": "Tudor12",
+      "taskScores": [
+        88,
+        1
+      ],
+      "score": 89,
+      "scoreMax": 200
+    },
+    {
+      "position": 19,
+      "rank": 19,
+      "username": "Kirkos",
+      "taskScores": [
+        87,
+        1
+      ],
+      "score": 88,
+      "scoreMax": 200
+    },
+    {
+      "position": 20,
+      "rank": 19,
+      "username": "tega_george",
+      "taskScores": [
+        79,
+        9
+      ],
+      "score": 88,
+      "scoreMax": 200
+    },
+    {
+      "position": 21,
+      "rank": 21,
+      "username": "Goga",
+      "taskScores": [
+        78,
+        8
+      ],
+      "score": 86,
+      "scoreMax": 200
+    },
+    {
+      "position": 22,
+      "rank": 21,
+      "username": "Ioanacl",
+      "taskScores": [
+        86,
+        0
+      ],
+      "score": 86,
+      "scoreMax": 200
+    },
+    {
+      "position": 23,
+      "rank": 21,
+      "username": "bagae",
+      "taskScores": [
+        86,
+        0
+      ],
+      "score": 86,
+      "scoreMax": 200
+    },
+    {
+      "position": 24,
+      "rank": 21,
+      "username": "iLaurian",
+      "taskScores": [
+        79,
+        7
+      ],
+      "score": 86,
+      "scoreMax": 200
+    },
+    {
+      "position": 25,
+      "rank": 25,
+      "username": "MihaiMocanu",
+      "taskScores": [
+        53,
+        31
+      ],
+      "score": 84,
+      "scoreMax": 200
+    },
+    {
+      "position": 26,
+      "rank": 25,
+      "username": "Sashaaa_2326",
+      "taskScores": [
+        81,
+        3
+      ],
+      "score": 84,
+      "scoreMax": 200
+    },
+    {
+      "position": 27,
+      "rank": 25,
+      "username": "alexsd06",
+      "taskScores": [
+        76,
+        8
+      ],
+      "score": 84,
+      "scoreMax": 200
+    },
+    {
+      "position": 28,
+      "rank": 25,
+      "username": "mateias",
+      "taskScores": [
+        75,
+        9
+      ],
+      "score": 84,
+      "scoreMax": 200
+    },
+    {
+      "position": 29,
+      "rank": 29,
+      "username": "davidgi23200",
+      "taskScores": [
+        72,
+        11
+      ],
+      "score": 83,
+      "scoreMax": 200
+    },
+    {
+      "position": 30,
+      "rank": 29,
+      "username": "octavianboji",
+      "taskScores": [
+        80,
+        3
+      ],
+      "score": 83,
+      "scoreMax": 200
+    },
+    {
+      "position": 31,
+      "rank": 31,
+      "username": "davidgeo",
+      "taskScores": [
+        58,
+        24
+      ],
+      "score": 82,
+      "scoreMax": 200
+    },
+    {
+      "position": 32,
+      "rank": 31,
+      "username": "ed3iv",
+      "taskScores": [
+        73,
+        9
+      ],
+      "score": 82,
+      "scoreMax": 200
+    },
+    {
+      "position": 33,
+      "rank": 31,
+      "username": "lorenaster",
+      "taskScores": [
+        81,
+        1
+      ],
+      "score": 82,
+      "scoreMax": 200
+    },
+    {
+      "position": 34,
+      "rank": 31,
+      "username": "rarespetrisor1",
+      "taskScores": [
+        81,
+        1
+      ],
+      "score": 82,
+      "scoreMax": 200
+    },
+    {
+      "position": 35,
+      "rank": 35,
+      "username": "Fabi",
+      "taskScores": [
+        72,
+        9
+      ],
+      "score": 81,
+      "scoreMax": 200
+    },
+    {
+      "position": 36,
+      "rank": 35,
+      "username": "GBVlad",
+      "taskScores": [
+        78,
+        3
+      ],
+      "score": 81,
+      "scoreMax": 200
+    },
+    {
+      "position": 37,
+      "rank": 35,
+      "username": "Luciannk",
+      "taskScores": [
+        78,
+        3
+      ],
+      "score": 81,
+      "scoreMax": 200
+    },
+    {
+      "position": 38,
+      "rank": 35,
+      "username": "MihneaStoica",
+      "taskScores": [
+        78,
+        3
+      ],
+      "score": 81,
+      "scoreMax": 200
+    },
+    {
+      "position": 39,
+      "rank": 35,
+      "username": "razv",
+      "taskScores": [
+        72,
+        9
+      ],
+      "score": 81,
+      "scoreMax": 200
+    },
+    {
+      "position": 40,
+      "rank": 40,
+      "username": "mihai",
+      "taskScores": [
+        76,
+        4
+      ],
+      "score": 80,
+      "scoreMax": 200
+    },
+    {
+      "position": 41,
+      "rank": 41,
+      "username": "Gibonul",
+      "taskScores": [
+        70,
+        9
+      ],
+      "score": 79,
+      "scoreMax": 200
+    },
+    {
+      "position": 42,
+      "rank": 41,
+      "username": "Warrior_exe",
+      "taskScores": [
+        78,
+        1
+      ],
+      "score": 79,
+      "scoreMax": 200
+    },
+    {
+      "position": 43,
+      "rank": 43,
+      "username": "alextigau",
+      "taskScores": [
+        77,
+        1
+      ],
+      "score": 78,
+      "scoreMax": 200
+    },
+    {
+      "position": 44,
+      "rank": 43,
+      "username": "nusuntvictor",
+      "taskScores": [
+        71,
+        7
+      ],
+      "score": 78,
+      "scoreMax": 200
+    },
+    {
+      "position": 45,
+      "rank": 45,
+      "username": "dariuschifor",
+      "taskScores": [
+        68,
+        9
+      ],
+      "score": 77,
+      "scoreMax": 200
+    },
+    {
+      "position": 46,
+      "rank": 45,
+      "username": "george2701",
+      "taskScores": [
+        68,
+        9
+      ],
+      "score": 77,
+      "scoreMax": 200
+    },
+    {
+      "position": 47,
+      "rank": 45,
+      "username": "raresc",
+      "taskScores": [
+        75,
+        2
+      ],
+      "score": 77,
+      "scoreMax": 200
+    },
+    {
+      "position": 48,
+      "rank": 48,
+      "username": "robert_m",
+      "taskScores": [
+        73,
+        3
+      ],
+      "score": 76,
+      "scoreMax": 200
+    },
+    {
+      "position": 49,
+      "rank": 48,
+      "username": "tmi",
+      "taskScores": [
+        73,
+        3
+      ],
+      "score": 76,
+      "scoreMax": 200
+    },
+    {
+      "position": 50,
+      "rank": 50,
+      "username": "AneaRares",
+      "taskScores": [
+        72,
+        3
+      ],
+      "score": 75,
+      "scoreMax": 200
+    },
+    {
+      "position": 51,
+      "rank": 50,
+      "username": "divad",
+      "taskScores": [
+        44,
+        31
+      ],
+      "score": 75,
+      "scoreMax": 200
+    },
+    {
+      "position": 52,
+      "rank": 50,
+      "username": "mateid",
+      "taskScores": [
+        66,
+        9
+      ],
+      "score": 75,
+      "scoreMax": 200
+    },
+    {
+      "position": 53,
+      "rank": 53,
+      "username": "CReaper1116",
+      "taskScores": [
+        65,
+        9
+      ],
+      "score": 74,
+      "scoreMax": 200
+    },
+    {
+      "position": 54,
+      "rank": 53,
+      "username": "bucurici",
+      "taskScores": [
+        65,
+        9
+      ],
+      "score": 74,
+      "scoreMax": 200
+    },
+    {
+      "position": 55,
+      "rank": 53,
+      "username": "sarass286",
+      "taskScores": [
+        71,
+        3
+      ],
+      "score": 74,
+      "scoreMax": 200
+    },
+    {
+      "position": 56,
+      "rank": 56,
+      "username": "raduk",
+      "taskScores": [
+        66,
+        7
+      ],
+      "score": 73,
+      "scoreMax": 200
+    },
+    {
+      "position": 57,
+      "rank": 57,
+      "username": "Merien",
+      "taskScores": [
+        65,
+        7
+      ],
+      "score": 72,
+      "scoreMax": 200
+    },
+    {
+      "position": 58,
+      "rank": 57,
+      "username": "Ploscaru",
+      "taskScores": [
+        69,
+        3
+      ],
+      "score": 72,
+      "scoreMax": 200
+    },
+    {
+      "position": 59,
+      "rank": 59,
+      "username": "Lora",
+      "taskScores": [
+        62,
+        9
+      ],
+      "score": 71,
+      "scoreMax": 200
+    },
+    {
+      "position": 60,
+      "rank": 59,
+      "username": "Raiku",
+      "taskScores": [
+        71,
+        0
+      ],
+      "score": 71,
+      "scoreMax": 200
+    },
+    {
+      "position": 61,
+      "rank": 59,
+      "username": "ecaterina",
+      "taskScores": [
+        71,
+        0
+      ],
+      "score": 71,
+      "scoreMax": 200
+    },
+    {
+      "position": 62,
+      "rank": 62,
+      "username": "NistorIulian",
+      "taskScores": [
+        69,
+        1
+      ],
+      "score": 70,
+      "scoreMax": 200
+    },
+    {
+      "position": 63,
+      "rank": 63,
+      "username": "Daniel26",
+      "taskScores": [
+        59,
+        9
+      ],
+      "score": 68,
+      "scoreMax": 200
+    },
+    {
+      "position": 64,
+      "rank": 63,
+      "username": "Rares_Petruse",
+      "taskScores": [
+        59,
+        9
+      ],
+      "score": 68,
+      "scoreMax": 200
+    },
+    {
+      "position": 65,
+      "rank": 65,
+      "username": "lucad",
+      "taskScores": [
+        58,
+        9
+      ],
+      "score": 67,
+      "scoreMax": 200
+    },
+    {
+      "position": 66,
+      "rank": 66,
+      "username": "codber",
+      "taskScores": [
+        65,
+        0
+      ],
+      "score": 65,
+      "scoreMax": 200
+    },
+    {
+      "position": 67,
+      "rank": 66,
+      "username": "eduard14",
+      "taskScores": [
+        62,
+        3
+      ],
+      "score": 65,
+      "scoreMax": 200
+    },
+    {
+      "position": 68,
+      "rank": 66,
+      "username": "ianstefancazacu",
+      "taskScores": [
+        62,
+        3
+      ],
+      "score": 65,
+      "scoreMax": 200
+    },
+    {
+      "position": 69,
+      "rank": 66,
+      "username": "radu122",
+      "taskScores": [
+        65,
+        0
+      ],
+      "score": 65,
+      "scoreMax": 200
+    },
+    {
+      "position": 70,
+      "rank": 70,
+      "username": "tibinyte",
+      "taskScores": [
+        55,
+        9
+      ],
+      "score": 64,
+      "scoreMax": 200
+    },
+    {
+      "position": 71,
+      "rank": 71,
+      "username": "GGStefan",
+      "taskScores": [
+        62,
+        1
+      ],
+      "score": 63,
+      "scoreMax": 200
+    },
+    {
+      "position": 72,
+      "rank": 72,
+      "username": "Isidor",
+      "taskScores": [
+        53,
+        9
+      ],
+      "score": 62,
+      "scoreMax": 200
+    },
+    {
+      "position": 73,
+      "rank": 72,
+      "username": "Wzukay",
+      "taskScores": [
+        62,
+        0
+      ],
+      "score": 62,
+      "scoreMax": 200
+    },
+    {
+      "position": 74,
+      "rank": 74,
+      "username": "Andrew",
+      "taskScores": [
+        58,
+        3
+      ],
+      "score": 61,
+      "scoreMax": 200
+    },
+    {
+      "position": 75,
+      "rank": 74,
+      "username": "Omu_Planta",
+      "taskScores": [
+        52,
+        9
+      ],
+      "score": 61,
+      "scoreMax": 200
+    },
+    {
+      "position": 76,
+      "rank": 76,
+      "username": "Delia2025",
+      "taskScores": [
+        51,
+        9
+      ],
+      "score": 60,
+      "scoreMax": 200
+    },
+    {
+      "position": 77,
+      "rank": 76,
+      "username": "luca_lazar",
+      "taskScores": [
+        57,
+        3
+      ],
+      "score": 60,
+      "scoreMax": 200
+    },
+    {
+      "position": 78,
+      "rank": 78,
+      "username": "Alexandrescu",
+      "taskScores": [
+        59,
+        0
+      ],
+      "score": 59,
+      "scoreMax": 200
+    },
+    {
+      "position": 79,
+      "rank": 78,
+      "username": "Lucas_R4",
+      "taskScores": [
+        56,
+        3
+      ],
+      "score": 59,
+      "scoreMax": 200
+    },
+    {
+      "position": 80,
+      "rank": 78,
+      "username": "Popu",
+      "taskScores": [
+        52,
+        7
+      ],
+      "score": 59,
+      "scoreMax": 200
+    },
+    {
+      "position": 81,
+      "rank": 78,
+      "username": "Teodor5030",
+      "taskScores": [
+        56,
+        3
+      ],
+      "score": 59,
+      "scoreMax": 200
+    },
+    {
+      "position": 82,
+      "rank": 78,
+      "username": "obucata",
+      "taskScores": [
+        56,
+        3
+      ],
+      "score": 59,
+      "scoreMax": 200
+    },
+    {
+      "position": 83,
+      "rank": 78,
+      "username": "trbf",
+      "taskScores": [
+        52,
+        7
+      ],
+      "score": 59,
+      "scoreMax": 200
+    },
+    {
+      "position": 84,
+      "rank": 84,
+      "username": "Fomni",
+      "taskScores": [
+        57,
+        1
+      ],
+      "score": 58,
+      "scoreMax": 200
+    },
+    {
+      "position": 85,
+      "rank": 84,
+      "username": "evanastase",
+      "taskScores": [
+        55,
+        3
+      ],
+      "score": 58,
+      "scoreMax": 200
+    },
+    {
+      "position": 86,
+      "rank": 84,
+      "username": "tihocandrei",
+      "taskScores": [
+        55,
+        3
+      ],
+      "score": 58,
+      "scoreMax": 200
+    },
+    {
+      "position": 87,
+      "rank": 87,
+      "username": "David181",
+      "taskScores": [
+        57,
+        0
+      ],
+      "score": 57,
+      "scoreMax": 200
+    },
+    {
+      "position": 88,
+      "rank": 87,
+      "username": "Deivid",
+      "taskScores": [
+        53,
+        4
+      ],
+      "score": 57,
+      "scoreMax": 200
+    },
+    {
+      "position": 89,
+      "rank": 87,
+      "username": "VoltVector",
+      "taskScores": [
+        54,
+        3
+      ],
+      "score": 57,
+      "scoreMax": 200
+    },
+    {
+      "position": 90,
+      "rank": 90,
+      "username": "Cata154",
+      "taskScores": [
+        52,
+        3
+      ],
+      "score": 55,
+      "scoreMax": 200
+    },
+    {
+      "position": 91,
+      "rank": 90,
+      "username": "FabianOTL",
+      "taskScores": [
+        52,
+        3
+      ],
+      "score": 55,
+      "scoreMax": 200
+    },
+    {
+      "position": 92,
+      "rank": 92,
+      "username": "radubirceanu",
+      "taskScores": [
+        54,
+        0
+      ],
+      "score": 54,
+      "scoreMax": 200
+    },
+    {
+      "position": 93,
+      "rank": 93,
+      "username": "Andrei0016",
+      "taskScores": [
+        52,
+        1
+      ],
+      "score": 53,
+      "scoreMax": 200
+    },
+    {
+      "position": 94,
+      "rank": 93,
+      "username": "Db123",
+      "taskScores": [
+        52,
+        1
+      ],
+      "score": 53,
+      "scoreMax": 200
+    },
+    {
+      "position": 95,
+      "rank": 93,
+      "username": "VvLlAaDd05",
+      "taskScores": [
+        53,
+        0
+      ],
+      "score": 53,
+      "scoreMax": 200
+    },
+    {
+      "position": 96,
+      "rank": 96,
+      "username": "Karo",
+      "taskScores": [
+        52,
+        0
+      ],
+      "score": 52,
+      "scoreMax": 200
+    },
+    {
+      "position": 97,
+      "rank": 96,
+      "username": "Palamida",
+      "taskScores": [
+        51,
+        1
+      ],
+      "score": 52,
+      "scoreMax": 200
+    },
+    {
+      "position": 98,
+      "rank": 98,
+      "username": "GulaMihaiOvidiu",
+      "taskScores": [
+        50,
+        1
+      ],
+      "score": 51,
+      "scoreMax": 200
+    },
+    {
+      "position": 99,
+      "rank": 98,
+      "username": "PDarius02",
+      "taskScores": [
+        48,
+        3
+      ],
+      "score": 51,
+      "scoreMax": 200
+    },
+    {
+      "position": 100,
+      "rank": 98,
+      "username": "andrei",
+      "taskScores": [
+        51,
+        0
+      ],
+      "score": 51,
+      "scoreMax": 200
+    },
+    {
+      "position": 101,
+      "rank": 101,
+      "username": "AlbertMolocea09",
+      "taskScores": [
+        43,
+        0
+      ],
+      "score": 43,
+      "scoreMax": 200
+    },
+    {
+      "position": 102,
+      "rank": 102,
+      "username": "ItsRaffalix",
+      "taskScores": [
+        42,
+        0
+      ],
+      "score": 42,
+      "scoreMax": 200
+    },
+    {
+      "position": 103,
+      "rank": 103,
+      "username": "LucaTana",
+      "taskScores": [
+        35,
+        0
+      ],
+      "score": 35,
+      "scoreMax": 200
+    },
+    {
+      "position": 104,
+      "rank": 104,
+      "username": "SebastianAlexandru",
+      "taskScores": [
+        34,
+        0
+      ],
+      "score": 34,
+      "scoreMax": 200
+    },
+    {
+      "position": 105,
+      "rank": 105,
+      "username": "MarinMihaita",
+      "taskScores": [
+        25,
+        1
+      ],
+      "score": 26,
+      "scoreMax": 200
+    },
+    {
+      "position": 106,
+      "rank": 106,
+      "username": "Blinstrike",
+      "taskScores": [
+        5,
+        9
+      ],
+      "score": 14,
+      "scoreMax": 200
+    },
+    {
+      "position": 107,
+      "rank": 106,
+      "username": "TYTH",
+      "taskScores": [
+        5,
+        9
+      ],
+      "score": 14,
+      "scoreMax": 200
+    },
+    {
+      "position": 108,
+      "rank": 106,
+      "username": "TheExothermicR",
+      "taskScores": [
+        5,
+        9
+      ],
+      "score": 14,
+      "scoreMax": 200
+    },
+    {
+      "position": 109,
+      "rank": 106,
+      "username": "maia_pricop",
+      "taskScores": [
+        5,
+        9
+      ],
+      "score": 14,
+      "scoreMax": 200
+    },
+    {
+      "position": 110,
+      "rank": 110,
+      "username": "DanielPaun",
+      "taskScores": [
+        12,
+        0
+      ],
+      "score": 12,
+      "scoreMax": 200
+    },
+    {
+      "position": 111,
+      "rank": 111,
+      "username": "Oprea_Tudor",
+      "taskScores": [
+        5,
+        5
+      ],
+      "score": 10,
+      "scoreMax": 200
+    },
+    {
+      "position": 112,
+      "rank": 112,
+      "username": "Adrian_Tota",
+      "taskScores": [
+        5,
+        3
+      ],
+      "score": 8,
+      "scoreMax": 200
+    },
+    {
+      "position": 113,
+      "rank": 112,
+      "username": "Albert",
+      "taskScores": [
+        5,
+        3
+      ],
+      "score": 8,
+      "scoreMax": 200
+    },
+    {
+      "position": 114,
+      "rank": 112,
+      "username": "PaveleDavid",
+      "taskScores": [
+        5,
+        3
+      ],
+      "score": 8,
+      "scoreMax": 200
+    },
+    {
+      "position": 115,
+      "rank": 112,
+      "username": "Sughit",
+      "taskScores": [
+        5,
+        3
+      ],
+      "score": 8,
+      "scoreMax": 200
+    },
+    {
+      "position": 116,
+      "rank": 112,
+      "username": "TeoP",
+      "taskScores": [
+        5,
+        3
+      ],
+      "score": 8,
+      "scoreMax": 200
+    },
+    {
+      "position": 117,
+      "rank": 112,
+      "username": "alexandruabrudan0",
+      "taskScores": [
+        5,
+        3
+      ],
+      "score": 8,
+      "scoreMax": 200
+    },
+    {
+      "position": 118,
+      "rank": 112,
+      "username": "rarycuh",
+      "taskScores": [
+        5,
+        3
+      ],
+      "score": 8,
+      "scoreMax": 200
+    },
+    {
+      "position": 119,
+      "rank": 112,
+      "username": "saranegrila",
+      "taskScores": [
+        5,
+        3
+      ],
+      "score": 8,
+      "scoreMax": 200
+    },
+    {
+      "position": 120,
+      "rank": 112,
+      "username": "vlader",
+      "taskScores": [
+        5,
+        3
+      ],
+      "score": 8,
+      "scoreMax": 200
+    },
+    {
+      "position": 121,
+      "rank": 121,
+      "username": "tudor_db",
+      "taskScores": [
+        7,
+        0
+      ],
+      "score": 7,
+      "scoreMax": 200
+    },
+    {
+      "position": 122,
+      "rank": 122,
+      "username": "Gianluigi",
+      "taskScores": [
+        5,
+        0
+      ],
+      "score": 5,
+      "scoreMax": 200
+    },
+    {
+      "position": 123,
+      "rank": 122,
+      "username": "Ionescu_David",
+      "taskScores": [
+        5,
+        0
+      ],
+      "score": 5,
+      "scoreMax": 200
+    },
+    {
+      "position": 124,
+      "rank": 122,
+      "username": "MateInfinit",
+      "taskScores": [
+        5,
+        0
+      ],
+      "score": 5,
+      "scoreMax": 200
+    },
+    {
+      "position": 125,
+      "rank": 122,
+      "username": "RaduM",
+      "taskScores": [
+        5,
+        0
+      ],
+      "score": 5,
+      "scoreMax": 200
+    },
+    {
+      "position": 126,
+      "rank": 122,
+      "username": "Yustin",
+      "taskScores": [
+        5,
+        0
+      ],
+      "score": 5,
+      "scoreMax": 200
+    },
+    {
+      "position": 127,
+      "rank": 122,
+      "username": "cristirvn",
+      "taskScores": [
+        5,
+        0
+      ],
+      "score": 5,
+      "scoreMax": 200
+    },
+    {
+      "position": 128,
+      "rank": 128,
+      "username": "cboabes",
+      "taskScores": [
+        0,
+        3
+      ],
+      "score": 3,
+      "scoreMax": 200
+    },
+    {
+      "position": 129,
+      "rank": 129,
+      "username": "Circi",
+      "taskScores": [
+        0,
+        0
+      ],
+      "score": 0,
+      "scoreMax": 200
+    }
+  ]
+}

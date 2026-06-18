@@ -1,0 +1,110 @@
+{
+  "Stage": "lot-largit",
+  "Year": 2026,
+  "Title": {
+    "ro": "Selecția Lotului Național — Top 12",
+    "en": "National Team Selection — Top 12"
+  },
+  "Subtitle": {
+    "ro": "Tabăra Lotului Național (Lot Lărgit) · 21–25 mai 2026 · Timișoara",
+    "en": "National Team Camp (Extended Team) · May 21–25, 2026 · Timișoara"
+  },
+  "Top12": [
+    {
+      "Pozitie": 1,
+      "Nume": "Roland Petrean",
+      "Scoala": "Colegiul Național „Silvania” Zalău",
+      "Clasa": "a XI-a",
+      "Judet": "Sălaj",
+      "Punctaj": 335.11
+    },
+    {
+      "Pozitie": 2,
+      "Nume": "Alexandru Thury Burileanu",
+      "Scoala": "Colegiul Național „Mircea cel Bătrân” Constanța",
+      "Clasa": "a XI-a",
+      "Judet": "Constanța",
+      "Punctaj": 307.71
+    },
+    {
+      "Pozitie": 3,
+      "Nume": "Darius-Adrian Dobre",
+      "Scoala": "Colegiul Național de Informatică „Matei Basarab” Râmnicu Vâlcea",
+      "Clasa": "a XII-a",
+      "Judet": "Vâlcea",
+      "Punctaj": 278.54
+    },
+    {
+      "Pozitie": 4,
+      "Nume": "David Georgescu",
+      "Scoala": "Colegiul Național „Constantin Diaconovici Loga” Timișoara",
+      "Clasa": "a XI-a",
+      "Judet": "Timiș",
+      "Punctaj": 261.65
+    },
+    {
+      "Pozitie": 5,
+      "Nume": "Iulian Nistor",
+      "Scoala": "Liceul de Informatică „Tiberiu Popoviciu” Cluj-Napoca",
+      "Clasa": "a XII-a",
+      "Judet": "Cluj",
+      "Punctaj": 202.81
+    },
+    {
+      "Pozitie": 6,
+      "Nume": "Matei-Tudor Pop",
+      "Scoala": "Liceul Teoretic „Avram Iancu” Cluj-Napoca",
+      "Clasa": "a XII-a",
+      "Judet": "Cluj",
+      "Punctaj": 197.06
+    },
+    {
+      "Pozitie": 7,
+      "Nume": "Mihnea-Teodor Stoica",
+      "Scoala": "Liceul Teoretic Internațional de Informatică București",
+      "Clasa": "a X-a",
+      "Judet": "Sector 3",
+      "Punctaj": 196.60
+    },
+    {
+      "Pozitie": 8,
+      "Nume": "Daniel-Antoniu Bence-Muk",
+      "Scoala": "Colegiul Național „George Barițiu” Cluj-Napoca",
+      "Clasa": "a XI-a",
+      "Judet": "Cluj",
+      "Punctaj": 189.80
+    },
+    {
+      "Pozitie": 9,
+      "Nume": "David Gheorghica-Istrate",
+      "Scoala": "Colegiul Național „Mircea cel Bătrân” Constanța",
+      "Clasa": "a XI-a",
+      "Judet": "Constanța",
+      "Punctaj": 187.50
+    },
+    {
+      "Pozitie": 10,
+      "Nume": "Răzvan Dedu",
+      "Scoala": "Liceul Teoretic „Mihai Eminescu” Călărași",
+      "Clasa": "a X-a",
+      "Judet": "Călărași",
+      "Punctaj": 178.47
+    },
+    {
+      "Pozitie": 11,
+      "Nume": "Luca Nicolae",
+      "Scoala": "Liceul Teoretic Internațional de Informatică București",
+      "Clasa": "a XII-a",
+      "Judet": "Sector 3",
+      "Punctaj": 177.70
+    },
+    {
+      "Pozitie": 12,
+      "Nume": "Radu Ilie-Goga",
+      "Scoala": "Colegiul Național de Informatică „Tudor Vianu” București",
+      "Clasa": "a X-a",
+      "Judet": "Sector 1",
+      "Punctaj": 176.19
+    }
+  ]
+}

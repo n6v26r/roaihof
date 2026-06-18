@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.vercel/
+.agents/
+.codex/
+.env
+.env.*
+.DS_Store
+*.tsbuildinfo
+npm-debug.log*
+coverage/
+.cache/

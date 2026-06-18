@@ -1,0 +1,1404 @@
+{
+  "sources": [
+    {
+      "id": "mlcompete-17-final",
+      "title": "ONIA 2026 IX-X mlcompete final leaderboard",
+      "url": "https://platform.olimpiada-ai.ro/ro/competitions/17?tab=final",
+      "accessedAt": "2026-06-18",
+      "status": "ok"
+    },
+    {
+      "id": "mlcompete-18-final",
+      "title": "ONIA 2026 XI-XII mlcompete final leaderboard",
+      "url": "https://platform.olimpiada-ai.ro/ro/competitions/18?tab=final",
+      "accessedAt": "2026-06-18",
+      "status": "ok"
+    },
+    {
+      "id": "mlcompete-23-final",
+      "title": "ONIA 2026 Lot mlcompete final leaderboard 23",
+      "url": "https://platform.olimpiada-ai.ro/ro/competitions/23?tab=final",
+      "accessedAt": "2026-06-18",
+      "status": "ok"
+    },
+    {
+      "id": "mlcompete-24-final",
+      "title": "ONIA 2026 Lot mlcompete final leaderboard 24",
+      "url": "https://platform.olimpiada-ai.ro/ro/competitions/24?tab=final",
+      "accessedAt": "2026-06-18",
+      "status": "ok"
+    }
+  ],
+  "leaderboards": [
+    {
+      "sourceId": "mlcompete-17-final",
+      "competitionId": 17,
+      "contestId": "onia-2026-nationala",
+      "section": "IX-X",
+      "rows": [
+        {
+          "userId": "eb9bd92e-72d3-4e57-854d-107f93e42a79",
+          "username": "razv",
+          "rank": 1,
+          "score": 221.3
+        },
+        {
+          "userId": "2972e7f2-81ce-479c-8195-7d2b7b460cf2",
+          "username": "MihneaTeodorStoica",
+          "rank": 2,
+          "score": 212.42
+        },
+        {
+          "userId": "a9339b53-3a9e-4114-95f0-a07347139928",
+          "username": "LucaLucaM",
+          "rank": 3,
+          "score": 161.69
+        },
+        {
+          "userId": "6f185618-4453-4756-9072-66031e9e9d38",
+          "username": "Andrei0016",
+          "rank": 4,
+          "score": 122.18
+        },
+        {
+          "userId": "a40bb040-76cb-4f59-8025-935e5e040d3f",
+          "username": "Goga",
+          "rank": 5,
+          "score": 114.57
+        },
+        {
+          "userId": "a6ee4c25-0a46-4885-84bb-c09ab4153f74",
+          "username": "Cosminane",
+          "rank": 6,
+          "score": 112.64
+        },
+        {
+          "userId": "4759a793-da4a-493c-aaa2-d2a2fc66a207",
+          "username": "petru_boca",
+          "rank": 7,
+          "score": 109.3
+        },
+        {
+          "userId": "e0660e06-fee9-46aa-8d28-68e2584d7ea6",
+          "username": "mcbun03",
+          "rank": 8,
+          "score": 104.33
+        },
+        {
+          "userId": "c05cd75f-fe2e-40a7-aa05-fb1d33bcf725",
+          "username": "cristi6241",
+          "rank": 9,
+          "score": 100.88
+        },
+        {
+          "userId": "24e0bafd-389f-4c39-b7c6-fa73992ff355",
+          "username": "vladn",
+          "rank": 10,
+          "score": 100.45
+        },
+        {
+          "userId": "17dbd68a-1da9-435b-bc88-bf698b5f5794",
+          "username": "gabi_not-found",
+          "rank": 11,
+          "score": 100
+        },
+        {
+          "userId": "569f7049-fbbe-4cf3-815b-29fd764f904b",
+          "username": "Circi",
+          "rank": 12,
+          "score": 99.38
+        },
+        {
+          "userId": "8a0e669f-c147-47c0-bca5-9e9369075a9b",
+          "username": "rarescosma",
+          "rank": 13,
+          "score": 98.66
+        },
+        {
+          "userId": "40a26d81-5806-4406-b214-79f480035410",
+          "username": "Teodor759",
+          "rank": 14,
+          "score": 96.87
+        },
+        {
+          "userId": "fc40c6c8-25a8-4781-bc6c-5d40ba211676",
+          "username": "fabibosspericulos",
+          "rank": 15,
+          "score": 96.68
+        },
+        {
+          "userId": "1aaca1c8-d867-46fc-a700-7045373ce3c8",
+          "username": "divad",
+          "rank": 16,
+          "score": 94.95
+        },
+        {
+          "userId": "320b67e4-1779-43df-a2da-d8407027e26b",
+          "username": "dragosgatan",
+          "rank": 17,
+          "score": 91.56
+        },
+        {
+          "userId": "077e785b-4aaf-4c31-9868-6f5bf545876e",
+          "username": "Mihaita",
+          "rank": 18,
+          "score": 90.62
+        },
+        {
+          "userId": "bb2808de-b0b3-475e-b2ea-034d234f9daa",
+          "username": "Ion-Rotitorul",
+          "rank": 19,
+          "score": 89.93
+        },
+        {
+          "userId": "1c27f347-8c89-4e93-bb2c-043e1538f198",
+          "username": "Merien",
+          "rank": 20,
+          "score": 89.15
+        },
+        {
+          "userId": "55e2a306-69e2-4fa4-bcae-89ce13963fcf",
+          "username": "vnegut",
+          "rank": 21,
+          "score": 88.69
+        },
+        {
+          "userId": "765d2bba-9501-4ac9-90f4-dcade16be5c2",
+          "username": "Sobolansky",
+          "rank": 22,
+          "score": 88.3
+        },
+        {
+          "userId": "e069059b-0f8e-4bfb-9d14-739f8d7a4439",
+          "username": "Marc3l",
+          "rank": 23,
+          "score": 88.23
+        },
+        {
+          "userId": "f07f0aff-a806-44d0-a6f5-ffca7a05b679",
+          "username": "rodutudor",
+          "rank": 24,
+          "score": 87.23
+        },
+        {
+          "userId": "c85e3eaf-b96a-4620-9e62-592166793426",
+          "username": "petrix",
+          "rank": 25,
+          "score": 85.92
+        },
+        {
+          "userId": "a2562a46-911c-4798-a12d-4b8e219c4a14",
+          "username": "LuciannK",
+          "rank": 26,
+          "score": 84.87
+        },
+        {
+          "userId": "2a26975a-9f14-404e-92d0-e86b428c0d0c",
+          "username": "Gaby",
+          "rank": 27,
+          "score": 84.76
+        },
+        {
+          "userId": "f4d1e50d-66bf-4b8f-a2f6-a760607b6b70",
+          "username": "tvladm",
+          "rank": 28,
+          "score": 84.75
+        },
+        {
+          "userId": "9260a270-8a12-4fe9-bc97-16df346354aa",
+          "username": "Cyb3rBolt",
+          "rank": 29,
+          "score": 82.04
+        },
+        {
+          "userId": "1c9b558a-0693-4bc1-823a-4eb1494b88ad",
+          "username": "lucageorgescu",
+          "rank": 30,
+          "score": 79.81
+        },
+        {
+          "userId": "2d346ab5-c0ab-44d1-a448-31798ba8558f",
+          "username": "CezarTitihazan",
+          "rank": 31,
+          "score": 79.66
+        },
+        {
+          "userId": "f188d5b2-c365-4a58-a754-fc809e9190dc",
+          "username": "LucIAn_25",
+          "rank": 32,
+          "score": 72.19
+        },
+        {
+          "userId": "fd395b9c-2756-450c-bcfb-ae8d01f2c7c0",
+          "username": "raresp",
+          "rank": 33,
+          "score": 64.83
+        },
+        {
+          "userId": "f07033c1-9e96-4205-bf79-eea406ab8df9",
+          "username": "nastigrad",
+          "rank": 34,
+          "score": 59.25
+        },
+        {
+          "userId": "70359710-c5b3-4b02-9516-c6bb44a44fbe",
+          "username": "arcticfox75",
+          "rank": 35,
+          "score": 57.51
+        },
+        {
+          "userId": "3a625107-1e2e-4a3a-8cef-f031a4692c06",
+          "username": "maitacron",
+          "rank": 36,
+          "score": 57.46
+        },
+        {
+          "userId": "fa645f22-8c4c-4866-b877-79d88d321f75",
+          "username": "stefanhacker",
+          "rank": 37,
+          "score": 54.05
+        },
+        {
+          "userId": "4214b2ac-8d03-49e7-adbc-97b032809df1",
+          "username": "Poapaa",
+          "rank": 38,
+          "score": 41.94
+        },
+        {
+          "userId": "e5d983b5-26c7-49c0-9755-d4816b532bda",
+          "username": "im-razvan",
+          "rank": 39,
+          "score": 36.43
+        },
+        {
+          "userId": "8b64d623-e24b-44c5-a793-d5a7da7b027c",
+          "username": "iccjoc",
+          "rank": 40,
+          "score": 35.84
+        },
+        {
+          "userId": "4e152f6a-1692-4378-8ed7-8075c96a7d88",
+          "username": "raresh30",
+          "rank": 41,
+          "score": 34.61
+        },
+        {
+          "userId": "b9e11fdb-33c5-418b-b7a5-392af1782725",
+          "username": "Nad3x",
+          "rank": 42,
+          "score": 33.63
+        },
+        {
+          "userId": "e72d1d6b-5287-4647-acbc-c0ff1ac118ca",
+          "username": "bacanug",
+          "rank": 43,
+          "score": 32.81
+        },
+        {
+          "userId": "1470668b-fefc-4c4d-80be-88e65cb34b4e",
+          "username": "k4rina",
+          "rank": 44,
+          "score": 32.37
+        },
+        {
+          "userId": "9a918d03-fdc1-451d-88c4-988b023544fc",
+          "username": "cezaricabasarica",
+          "rank": 45,
+          "score": 32.17
+        },
+        {
+          "userId": "2b54d0c3-b678-4db1-86dc-8bb187287a72",
+          "username": "ianstefancazacu",
+          "rank": 46,
+          "score": 32.15
+        },
+        {
+          "userId": "a96f1bbc-eb5b-4f8e-86d5-2cea777a4cd1",
+          "username": "vlad473",
+          "rank": 47,
+          "score": 29.16
+        },
+        {
+          "userId": "a3257271-ae3a-40a9-bc7a-ecef50f6c367",
+          "username": "Adrian",
+          "rank": 48,
+          "score": 28.13
+        },
+        {
+          "userId": "0eb36038-8ff9-48cb-8eb9-f719100252ab",
+          "username": "dana27",
+          "rank": 49,
+          "score": 27.58
+        },
+        {
+          "userId": "1a02503c-d5ea-4743-8ad5-1586bf273a5d",
+          "username": "mihaiariton",
+          "rank": 50,
+          "score": 27.46
+        },
+        {
+          "userId": "851523c2-7dae-4d96-bc73-fe11a1ff713d",
+          "username": "Stoica",
+          "rank": 51,
+          "score": 27.37
+        },
+        {
+          "userId": "c6d7e5a5-6a51-4f94-a3b1-52695ef0eea1",
+          "username": "mateiash",
+          "rank": 52,
+          "score": 27.03
+        },
+        {
+          "userId": "2abdc091-e616-45f8-bb6e-09fe3eec9e9f",
+          "username": "Bucurcubeu",
+          "rank": 53,
+          "score": 26.83
+        },
+        {
+          "userId": "e4c90ca1-4113-4820-9620-9b68bd70462b",
+          "username": "vartolomeiluca",
+          "rank": 54,
+          "score": 26.42
+        },
+        {
+          "userId": "76a48507-c988-4aab-a57b-6c0745cf69de",
+          "username": "adri22",
+          "rank": 55,
+          "score": 26.04
+        },
+        {
+          "userId": "d238a9a8-b76d-4ca2-83eb-5fcd1bfbf9a2",
+          "username": "Andrada_Minca",
+          "rank": 56,
+          "score": 24.35
+        },
+        {
+          "userId": "a0847467-2083-4a0d-9b6b-f35697337113",
+          "username": "paundaniel",
+          "rank": 57,
+          "score": 24.25
+        },
+        {
+          "userId": "b2473ce7-492a-4994-8c0a-8f4e19e17c7f",
+          "username": "mateo",
+          "rank": 58,
+          "score": 20.6
+        },
+        {
+          "userId": "fd956386-69fb-44a7-b9ef-f75ecb3ea62c",
+          "username": "Iditor",
+          "rank": 59,
+          "score": 19.83
+        },
+        {
+          "userId": "7909252e-20a6-46cb-a1d0-0fcb058fbba4",
+          "username": "brianabcr",
+          "rank": 60,
+          "score": 19.67
+        },
+        {
+          "userId": "c0ce628e-535e-409b-915b-141e8a660e1f",
+          "username": "ade.radoi",
+          "rank": 61,
+          "score": 19.44
+        },
+        {
+          "userId": "ff95fcf5-e38b-4bc7-8de3-dea8d4f2d140",
+          "username": "Albert",
+          "rank": 62,
+          "score": 18.94
+        },
+        {
+          "userId": "8841fb98-9cdc-4093-ab78-a0ce99b08c77",
+          "username": "saranegrila",
+          "rank": 63,
+          "score": 18.86
+        },
+        {
+          "userId": "4cdbc014-cb38-4595-b279-a22d6a6dd192",
+          "username": "andreiminunat",
+          "rank": 64,
+          "score": 18.18
+        },
+        {
+          "userId": "6fee9d19-2913-4396-9176-0f9042831638",
+          "username": "bg16",
+          "rank": 65,
+          "score": 15.81
+        },
+        {
+          "userId": "eaecfc0b-2a83-4791-9f1c-5609273c0b1a",
+          "username": "mili",
+          "rank": 66,
+          "score": 14.99
+        },
+        {
+          "userId": "0799a571-2a79-4d31-a02c-b7a38422f644",
+          "username": "albusalbita",
+          "rank": 67,
+          "score": 7.68
+        },
+        {
+          "userId": "51d12e23-9f7d-494b-8bce-cc68ebb07228",
+          "username": "vlader",
+          "rank": 68,
+          "score": 7.59
+        },
+        {
+          "userId": "99c6b23a-f764-4ba6-895c-58294f198ea1",
+          "username": "Radu_",
+          "rank": 69,
+          "score": 6.6
+        },
+        {
+          "userId": "611b7379-f15f-4222-8975-497c89eb1bf8",
+          "username": "mihai231",
+          "rank": 70,
+          "score": 5.35
+        },
+        {
+          "userId": "50619f8b-41ca-40ae-96ec-43f2503b84a9",
+          "username": "Sebi1",
+          "rank": 71,
+          "score": 5.12
+        },
+        {
+          "userId": "79b675a4-0067-4659-90a4-6c34aa4c0bd0",
+          "username": "bcristina",
+          "rank": 72,
+          "score": 0
+        },
+        {
+          "userId": "fa3fe029-7d66-425a-8348-3876cbb00b05",
+          "username": "AndreiDT",
+          "rank": 73,
+          "score": 0
+        },
+        {
+          "userId": "210f6e2e-d957-44df-b836-4164dd041ad6",
+          "username": "turtle-key",
+          "rank": 74,
+          "score": 0
+        },
+        {
+          "userId": "945c6a03-7205-434a-ae29-0dae14d54f56",
+          "username": "david-gabrielvasile",
+          "rank": 75,
+          "score": 0
+        },
+        {
+          "userId": "cbe7eae7-e797-4db3-9c2c-0d47c38f5e92",
+          "username": "anonymus",
+          "rank": 75,
+          "score": 0
+        }
+      ]
+    },
+    {
+      "sourceId": "mlcompete-18-final",
+      "competitionId": 18,
+      "contestId": "onia-2026-nationala",
+      "section": "XI-XII",
+      "rows": [
+        {
+          "userId": "7df296fc-084d-4ade-b83e-a28f02d4d69d",
+          "username": "rolandpetrean",
+          "rank": 1,
+          "score": 293.02
+        },
+        {
+          "userId": "107a8f46-ca52-40d9-82b4-866c99b3fe1c",
+          "username": "nrand",
+          "rank": 2,
+          "score": 259.98
+        },
+        {
+          "userId": "5527e324-20b1-4867-85db-ab5823ae3f28",
+          "username": "davidgeo",
+          "rank": 3,
+          "score": 242.99
+        },
+        {
+          "userId": "eac56092-fe26-4be0-afe2-b7067ad8dff2",
+          "username": "67baiter67",
+          "rank": 4,
+          "score": 219.38
+        },
+        {
+          "userId": "7d6a17e9-575c-4d3a-b0ed-bd40f888ff25",
+          "username": "AlexGB56",
+          "rank": 5,
+          "score": 208.26
+        },
+        {
+          "userId": "aec57b5b-3902-41af-9880-32fac81fce12",
+          "username": "MateiKing80",
+          "rank": 6,
+          "score": 198.88
+        },
+        {
+          "userId": "bc185d86-9fcf-470b-acd9-ac53c67e7657",
+          "username": "cciprii",
+          "rank": 7,
+          "score": 198.04
+        },
+        {
+          "userId": "741db3bd-ebd9-42cf-907e-389797ad90ca",
+          "username": "Luca-N",
+          "rank": 8,
+          "score": 193.92
+        },
+        {
+          "userId": "f72508dd-f705-416d-a44d-4da7e851060c",
+          "username": "radum",
+          "rank": 9,
+          "score": 188.8
+        },
+        {
+          "userId": "07520e7b-16d8-4a36-84d4-195e1cb4e7d6",
+          "username": "trbf",
+          "rank": 10,
+          "score": 186.24
+        },
+        {
+          "userId": "9550174b-7529-46c8-8c62-95aebcadffe7",
+          "username": "Darius1414",
+          "rank": 11,
+          "score": 184.71
+        },
+        {
+          "userId": "fa969b10-dfcf-4abc-aa63-db8c9d642e3a",
+          "username": "alextigau",
+          "rank": 12,
+          "score": 182.94
+        },
+        {
+          "userId": "66ff9c28-d8a4-4237-ac91-bb471980226d",
+          "username": "creaper1116",
+          "rank": 13,
+          "score": 182.43
+        },
+        {
+          "userId": "9a90ed54-3658-47f0-afe6-797d16e5abc0",
+          "username": "danielbence",
+          "rank": 14,
+          "score": 182.29
+        },
+        {
+          "userId": "58e6f959-b51d-43a5-957d-dbc785e79f6d",
+          "username": "Andrei_Drugan",
+          "rank": 15,
+          "score": 162.89
+        },
+        {
+          "userId": "c089d577-7d1f-4177-828d-aa588d2a34ef",
+          "username": "dvdtsb",
+          "rank": 16,
+          "score": 162.71
+        },
+        {
+          "userId": "7ac7b41b-0296-4458-9a11-25180b5188bb",
+          "username": "Victor5539",
+          "rank": 17,
+          "score": 146.69
+        },
+        {
+          "userId": "2d4610a3-f5c9-42b1-b893-fd9771e5adb1",
+          "username": "sashaaa",
+          "rank": 18,
+          "score": 142.27
+        },
+        {
+          "userId": "1a9723a5-669c-43a2-a257-9179ae5090a8",
+          "username": "mihai",
+          "rank": 19,
+          "score": 134.53
+        },
+        {
+          "userId": "7a348e6b-c439-48e3-84b2-26e1458dfa15",
+          "username": "bucurici",
+          "rank": 20,
+          "score": 133.81
+        },
+        {
+          "userId": "9d8ae68f-5c66-48fa-b758-beeb4da6fd31",
+          "username": "Gliggy",
+          "rank": 21,
+          "score": 131.16
+        },
+        {
+          "userId": "cd49193f-aadf-412d-96e2-4d7e9f8b0302",
+          "username": "andrew",
+          "rank": 22,
+          "score": 128.19
+        },
+        {
+          "userId": "2561ede5-1121-4c06-a2c4-36d263236685",
+          "username": "Axety",
+          "rank": 23,
+          "score": 122.32
+        },
+        {
+          "userId": "8ee2a490-7d13-465c-b326-ceaeb45f5cf8",
+          "username": "turiburi",
+          "rank": 24,
+          "score": 112.65
+        },
+        {
+          "userId": "26756635-6a20-4ffa-9f16-ba7680d9f670",
+          "username": "popu",
+          "rank": 25,
+          "score": 108.24
+        },
+        {
+          "userId": "299dc846-46e2-411a-886e-9ef5baefcef0",
+          "username": "paul122",
+          "rank": 26,
+          "score": 104.38
+        },
+        {
+          "userId": "6cc6d1aa-ec8a-4375-abf0-d18f790189df",
+          "username": "alexmih",
+          "rank": 27,
+          "score": 103.69
+        },
+        {
+          "userId": "448cb617-e7bd-45b7-89d6-6d4270e142aa",
+          "username": "paul444",
+          "rank": 28,
+          "score": 101
+        },
+        {
+          "userId": "5703637a-71eb-403d-82e1-5a94efdbcb29",
+          "username": "plus_minus",
+          "rank": 29,
+          "score": 100
+        },
+        {
+          "userId": "639f83fc-819c-493d-89df-c70babd1068f",
+          "username": "AneaRares",
+          "rank": 30,
+          "score": 99.35
+        },
+        {
+          "userId": "548bb73b-5768-41c4-9b59-dc72e316acfb",
+          "username": "susanthenerd",
+          "rank": 31,
+          "score": 98.34
+        },
+        {
+          "userId": "3e56b1cb-40cd-4220-8991-3c8788923a56",
+          "username": "tega_george",
+          "rank": 32,
+          "score": 98.33
+        },
+        {
+          "userId": "41d44cd3-e214-420c-9036-405f430b42b4",
+          "username": "ioana.cl",
+          "rank": 33,
+          "score": 98.08
+        },
+        {
+          "userId": "43dcc2b8-6371-45ab-bd04-df836a3a1f94",
+          "username": "duckjuice49",
+          "rank": 34,
+          "score": 96.06
+        },
+        {
+          "userId": "6032fec4-76e6-4492-ba89-82b78237d6c1",
+          "username": "PerhaitaRaul",
+          "rank": 35,
+          "score": 95.24
+        },
+        {
+          "userId": "d2b90006-ef22-48cf-89cb-eb44bdbabf9f",
+          "username": "tudor",
+          "rank": 36,
+          "score": 94.12
+        },
+        {
+          "userId": "e738d984-a575-4998-86a6-4743b64f1781",
+          "username": "dragoss",
+          "rank": 37,
+          "score": 93.11
+        },
+        {
+          "userId": "78e12af5-47e4-4295-9d07-45b74afb76e6",
+          "username": "Ianoș Alex-Marian",
+          "rank": 38,
+          "score": 92
+        },
+        {
+          "userId": "4266457c-3966-4573-bdc1-6ea6ddcacbaa",
+          "username": "steiorx08",
+          "rank": 39,
+          "score": 91.94
+        },
+        {
+          "userId": "5bde4369-40b4-4623-9997-69e1f6835d1a",
+          "username": "LucaD",
+          "rank": 40,
+          "score": 91.34
+        },
+        {
+          "userId": "c137e964-60a6-45f5-9605-f1074ddd1832",
+          "username": "RaresO",
+          "rank": 41,
+          "score": 90.97
+        },
+        {
+          "userId": "8067b6e5-4773-47f5-9d15-4935d5a3e38e",
+          "username": "constantyn",
+          "rank": 42,
+          "score": 89.69
+        },
+        {
+          "userId": "26ec8c5f-b6f8-4469-8d70-168b33e64e20",
+          "username": "texfactory",
+          "rank": 43,
+          "score": 87.8
+        },
+        {
+          "userId": "b3ba7a71-55c2-4e6d-8b4e-bc647ea3a7ed",
+          "username": "Petran08",
+          "rank": 44,
+          "score": 85.05
+        },
+        {
+          "userId": "b22fb99b-584a-4450-9e8d-147f42f27ff8",
+          "username": "mateinfinit",
+          "rank": 45,
+          "score": 82.54
+        },
+        {
+          "userId": "45d6dd25-1ba0-4d76-9380-b7d280308164",
+          "username": "Warriore",
+          "rank": 46,
+          "score": 78.38
+        },
+        {
+          "userId": "c153f79c-825a-452a-ada5-fb8c64b53c84",
+          "username": "StefanI",
+          "rank": 47,
+          "score": 76.18
+        },
+        {
+          "userId": "f7ffa1b8-a550-4a3b-b043-475d68f41f77",
+          "username": "v1ctor",
+          "rank": 48,
+          "score": 72.04
+        },
+        {
+          "userId": "c775ebeb-0d6a-4ef4-ac8f-2c831d258eef",
+          "username": "teodor5030",
+          "rank": 49,
+          "score": 68.06
+        },
+        {
+          "userId": "711c28f2-7405-495d-bff0-4cc39fbff516",
+          "username": "ciustea",
+          "rank": 50,
+          "score": 65.88
+        },
+        {
+          "userId": "daa42e8c-797c-47f2-a96b-cfb97e851b62",
+          "username": "tmi",
+          "rank": 51,
+          "score": 62.79
+        },
+        {
+          "userId": "49c50562-4fb7-4f13-989b-e5259d867a59",
+          "username": "vladhera",
+          "rank": 52,
+          "score": 58.21
+        },
+        {
+          "userId": "5414c0d4-3dbd-4b07-a35f-29eed0855ccb",
+          "username": "rotarsasdragos",
+          "rank": 53,
+          "score": 52.41
+        },
+        {
+          "userId": "b7456aea-a29a-43b9-95fc-943fc3f24b3d",
+          "username": "Tudor_",
+          "rank": 54,
+          "score": 42.58
+        },
+        {
+          "userId": "f8406706-fdfb-46c2-a2c3-730014ea0009",
+          "username": "serban1",
+          "rank": 55,
+          "score": 41.49
+        },
+        {
+          "userId": "112d0c89-ea45-49dd-bdba-4a4aaa2ea82f",
+          "username": "erin_alexis",
+          "rank": 56,
+          "score": 38.66
+        },
+        {
+          "userId": "8c453218-0853-42eb-8abc-51ae57033c10",
+          "username": "MCC_16",
+          "rank": 57,
+          "score": 38.03
+        },
+        {
+          "userId": "e5d42618-849c-46d6-a48e-84ad42b3f969",
+          "username": "andu",
+          "rank": 58,
+          "score": 35.04
+        },
+        {
+          "userId": "6237cca9-feac-4a6d-95a6-8b53644f63f0",
+          "username": "AlexSerban21",
+          "rank": 59,
+          "score": 34.03
+        },
+        {
+          "userId": "da6f7e91-69d0-4758-87fe-972053b06f73",
+          "username": "cristi.nxt",
+          "rank": 60,
+          "score": 31.87
+        },
+        {
+          "userId": "d4ad54fc-127e-4b71-90f1-3c00ea4a8642",
+          "username": "David_Ilie",
+          "rank": 61,
+          "score": 30.57
+        },
+        {
+          "userId": "8cd9127c-b070-4690-9893-61329f24639e",
+          "username": "Teo_Pirvu",
+          "rank": 62,
+          "score": 30.07
+        },
+        {
+          "userId": "96411ec4-4687-4e57-b38a-7cb1d8b8259e",
+          "username": "EmiCrn",
+          "rank": 63,
+          "score": 29.88
+        },
+        {
+          "userId": "780fd783-943f-4896-a73a-d748663af892",
+          "username": "tontonel236",
+          "rank": 64,
+          "score": 29.63
+        },
+        {
+          "userId": "b3ee6caa-0982-4608-923b-25d280d2265c",
+          "username": "eduard_",
+          "rank": 65,
+          "score": 27.59
+        },
+        {
+          "userId": "babb4382-2859-4dfc-b83d-f3d727ce0244",
+          "username": "tomita-mircea-stefan",
+          "rank": 66,
+          "score": 27.45
+        },
+        {
+          "userId": "9dcfde63-b881-4e90-bd62-3c2794c8ca79",
+          "username": "Omu_Planta",
+          "rank": 67,
+          "score": 25.57
+        },
+        {
+          "userId": "84e0293d-67d6-4edc-9059-b43eaeea27ba",
+          "username": "STM",
+          "rank": 68,
+          "score": 25.18
+        },
+        {
+          "userId": "803cefb7-6f5c-4897-a097-5aa380999e39",
+          "username": "popapatrick",
+          "rank": 69,
+          "score": 24.07
+        },
+        {
+          "userId": "7298ae36-c645-45d6-a449-69e6a022197e",
+          "username": "corto",
+          "rank": 70,
+          "score": 19.96
+        },
+        {
+          "userId": "194559bb-9efe-4268-a2b1-885e3200edda",
+          "username": "unguroiu-razvan",
+          "rank": 71,
+          "score": 18.21
+        },
+        {
+          "userId": "4b74863d-f519-4171-8254-84c45e9df51a",
+          "username": "george27",
+          "rank": 72,
+          "score": 17.99
+        },
+        {
+          "userId": "022ec898-4b3b-446f-88ea-0577bd23bbcb",
+          "username": "rarespoinaru",
+          "rank": 73,
+          "score": 16.49
+        },
+        {
+          "userId": "7c32e267-06af-46b9-98a4-151c40780e82",
+          "username": "albert1024",
+          "rank": 74,
+          "score": 16.04
+        },
+        {
+          "userId": "117691dd-757e-4af9-8357-8f632e66f7a5",
+          "username": "mysterybug",
+          "rank": 75,
+          "score": 16.02
+        },
+        {
+          "userId": "3ff68ee6-fd69-41fc-ba91-4fde521e1df2",
+          "username": "razvaniga",
+          "rank": 76,
+          "score": 15.17
+        },
+        {
+          "userId": "57674766-e479-4252-95fa-4b43d4df2d82",
+          "username": "raraselz",
+          "rank": 77,
+          "score": 11.84
+        },
+        {
+          "userId": "145da196-32de-4c80-bed7-9a1455dceba5",
+          "username": "gabi",
+          "rank": 78,
+          "score": 5.34
+        },
+        {
+          "userId": "a974c2bb-73e0-4041-baab-bb22ef4d6d56",
+          "username": "Mateiasgt",
+          "rank": 79,
+          "score": 4.98
+        },
+        {
+          "userId": "ceb5399c-d220-4159-886f-ce67b772aa10",
+          "username": "ddlaur",
+          "rank": 80,
+          "score": 3.56
+        },
+        {
+          "userId": "fdee1ac8-d153-44fe-9dd0-e7f27bf892f3",
+          "username": "Lucas_R4",
+          "rank": 81,
+          "score": 3.18
+        },
+        {
+          "userId": "587ff20c-2fde-4c8a-84e7-0b408bf2f014",
+          "username": "sankee",
+          "rank": 82,
+          "score": 0.85
+        },
+        {
+          "userId": "e677ccea-faa9-40c5-91b7-dbbf74307ab8",
+          "username": "WiseAndrei4",
+          "rank": 83,
+          "score": 0
+        },
+        {
+          "userId": "708a7e11-1a5d-4285-ba7f-4b18f2df9927",
+          "username": "andreisonea",
+          "rank": 84,
+          "score": 0
+        },
+        {
+          "userId": "02df1baa-bdb2-4ef4-9814-2abe83e3a4cf",
+          "username": "Alexandrescu",
+          "rank": 85,
+          "score": 0
+        }
+      ]
+    },
+    {
+      "sourceId": "mlcompete-23-final",
+      "competitionId": 23,
+      "contestId": "onia-2026-lot",
+      "section": "Lot day 1",
+      "rows": [
+        {
+          "userId": "9550174b-7529-46c8-8c62-95aebcadffe7",
+          "username": "Darius1414",
+          "rank": 1,
+          "score": 137.01
+        },
+        {
+          "userId": "8ee2a490-7d13-465c-b326-ceaeb45f5cf8",
+          "username": "turiburi",
+          "rank": 2,
+          "score": 128.73
+        },
+        {
+          "userId": "7df296fc-084d-4ade-b83e-a28f02d4d69d",
+          "username": "rolandpetrean",
+          "rank": 3,
+          "score": 123.09
+        },
+        {
+          "userId": "6f185618-4453-4756-9072-66031e9e9d38",
+          "username": "Andrei0016",
+          "rank": 4,
+          "score": 109.51
+        },
+        {
+          "userId": "5527e324-20b1-4867-85db-ab5823ae3f28",
+          "username": "davidgeo",
+          "rank": 5,
+          "score": 107.91
+        },
+        {
+          "userId": "66ff9c28-d8a4-4237-ac91-bb471980226d",
+          "username": "creaper1116",
+          "rank": 6,
+          "score": 96.77
+        },
+        {
+          "userId": "7d6a17e9-575c-4d3a-b0ed-bd40f888ff25",
+          "username": "AlexGB56",
+          "rank": 7,
+          "score": 83.47
+        },
+        {
+          "userId": "741db3bd-ebd9-42cf-907e-389797ad90ca",
+          "username": "Luca-N",
+          "rank": 8,
+          "score": 70.04
+        },
+        {
+          "userId": "58e6f959-b51d-43a5-957d-dbc785e79f6d",
+          "username": "Andrei_Drugan",
+          "rank": 9,
+          "score": 69.58
+        },
+        {
+          "userId": "f72508dd-f705-416d-a44d-4da7e851060c",
+          "username": "radum",
+          "rank": 10,
+          "score": 65.77
+        },
+        {
+          "userId": "fa969b10-dfcf-4abc-aa63-db8c9d642e3a",
+          "username": "alextigau",
+          "rank": 11,
+          "score": 64.06
+        },
+        {
+          "userId": "cd49193f-aadf-412d-96e2-4d7e9f8b0302",
+          "username": "andrew",
+          "rank": 12,
+          "score": 55.57
+        },
+        {
+          "userId": "2561ede5-1121-4c06-a2c4-36d263236685",
+          "username": "Axety",
+          "rank": 13,
+          "score": 52.05
+        },
+        {
+          "userId": "eac56092-fe26-4be0-afe2-b7067ad8dff2",
+          "username": "67baiter67",
+          "rank": 14,
+          "score": 51.14
+        },
+        {
+          "userId": "9d8ae68f-5c66-48fa-b758-beeb4da6fd31",
+          "username": "Gliggy",
+          "rank": 15,
+          "score": 49.45
+        },
+        {
+          "userId": "1a9723a5-669c-43a2-a257-9179ae5090a8",
+          "username": "mihai",
+          "rank": 16,
+          "score": 48.96
+        },
+        {
+          "userId": "26756635-6a20-4ffa-9f16-ba7680d9f670",
+          "username": "popu",
+          "rank": 17,
+          "score": 35.19
+        },
+        {
+          "userId": "a9339b53-3a9e-4114-95f0-a07347139928",
+          "username": "LucaLucaM",
+          "rank": 18,
+          "score": 33.91
+        },
+        {
+          "userId": "a40bb040-76cb-4f59-8025-935e5e040d3f",
+          "username": "Goga",
+          "rank": 19,
+          "score": 32.42
+        },
+        {
+          "userId": "2d4610a3-f5c9-42b1-b893-fd9771e5adb1",
+          "username": "sashaaa",
+          "rank": 20,
+          "score": 31.56
+        },
+        {
+          "userId": "2972e7f2-81ce-479c-8195-7d2b7b460cf2",
+          "username": "MihneaTeodorStoica",
+          "rank": 21,
+          "score": 27.18
+        },
+        {
+          "userId": "eb9bd92e-72d3-4e57-854d-107f93e42a79",
+          "username": "razv",
+          "rank": 22,
+          "score": 26.44
+        },
+        {
+          "userId": "07520e7b-16d8-4a36-84d4-195e1cb4e7d6",
+          "username": "trbf",
+          "rank": 23,
+          "score": 26.38
+        },
+        {
+          "userId": "9a90ed54-3658-47f0-afe6-797d16e5abc0",
+          "username": "danielbence",
+          "rank": 24,
+          "score": 24.21
+        },
+        {
+          "userId": "c089d577-7d1f-4177-828d-aa588d2a34ef",
+          "username": "dvdtsb",
+          "rank": 25,
+          "score": 22.29
+        },
+        {
+          "userId": "a6ee4c25-0a46-4885-84bb-c09ab4153f74",
+          "username": "Cosminane",
+          "rank": 26,
+          "score": 21.65
+        },
+        {
+          "userId": "bc185d86-9fcf-470b-acd9-ac53c67e7657",
+          "username": "cciprii",
+          "rank": 27,
+          "score": 20.54
+        },
+        {
+          "userId": "4759a793-da4a-493c-aaa2-d2a2fc66a207",
+          "username": "petru_boca",
+          "rank": 28,
+          "score": 17.15
+        },
+        {
+          "userId": "7a348e6b-c439-48e3-84b2-26e1458dfa15",
+          "username": "bucurici",
+          "rank": 29,
+          "score": 13.6
+        },
+        {
+          "userId": "7ac7b41b-0296-4458-9a11-25180b5188bb",
+          "username": "Victor5539",
+          "rank": 30,
+          "score": 1.57
+        },
+        {
+          "userId": "aec57b5b-3902-41af-9880-32fac81fce12",
+          "username": "MateiKing80",
+          "rank": 31,
+          "score": 0
+        }
+      ]
+    },
+    {
+      "sourceId": "mlcompete-24-final",
+      "competitionId": 24,
+      "contestId": "onia-2026-lot",
+      "section": "Lot day 2",
+      "rows": [
+        {
+          "userId": "7df296fc-084d-4ade-b83e-a28f02d4d69d",
+          "username": "rolandpetrean",
+          "rank": 1,
+          "score": 212.02
+        },
+        {
+          "userId": "8ee2a490-7d13-465c-b326-ceaeb45f5cf8",
+          "username": "turiburi",
+          "rank": 2,
+          "score": 178.98
+        },
+        {
+          "userId": "2972e7f2-81ce-479c-8195-7d2b7b460cf2",
+          "username": "MihneaTeodorStoica",
+          "rank": 3,
+          "score": 169.42
+        },
+        {
+          "userId": "9a90ed54-3658-47f0-afe6-797d16e5abc0",
+          "username": "danielbence",
+          "rank": 4,
+          "score": 165.59
+        },
+        {
+          "userId": "26756635-6a20-4ffa-9f16-ba7680d9f670",
+          "username": "popu",
+          "rank": 5,
+          "score": 161.87
+        },
+        {
+          "userId": "5527e324-20b1-4867-85db-ab5823ae3f28",
+          "username": "davidgeo",
+          "rank": 6,
+          "score": 153.74
+        },
+        {
+          "userId": "eb9bd92e-72d3-4e57-854d-107f93e42a79",
+          "username": "razv",
+          "rank": 7,
+          "score": 152.03
+        },
+        {
+          "userId": "2561ede5-1121-4c06-a2c4-36d263236685",
+          "username": "Axety",
+          "rank": 8,
+          "score": 150.76
+        },
+        {
+          "userId": "a40bb040-76cb-4f59-8025-935e5e040d3f",
+          "username": "Goga",
+          "rank": 9,
+          "score": 143.77
+        },
+        {
+          "userId": "9550174b-7529-46c8-8c62-95aebcadffe7",
+          "username": "Darius1414",
+          "rank": 10,
+          "score": 141.53
+        },
+        {
+          "userId": "eac56092-fe26-4be0-afe2-b7067ad8dff2",
+          "username": "67baiter67",
+          "rank": 11,
+          "score": 136.36
+        },
+        {
+          "userId": "c089d577-7d1f-4177-828d-aa588d2a34ef",
+          "username": "dvdtsb",
+          "rank": 12,
+          "score": 124.18
+        },
+        {
+          "userId": "bc185d86-9fcf-470b-acd9-ac53c67e7657",
+          "username": "cciprii",
+          "rank": 13,
+          "score": 109.51
+        },
+        {
+          "userId": "741db3bd-ebd9-42cf-907e-389797ad90ca",
+          "username": "Luca-N",
+          "rank": 14,
+          "score": 107.66
+        },
+        {
+          "userId": "fa969b10-dfcf-4abc-aa63-db8c9d642e3a",
+          "username": "alextigau",
+          "rank": 15,
+          "score": 106.96
+        },
+        {
+          "userId": "cd49193f-aadf-412d-96e2-4d7e9f8b0302",
+          "username": "andrew",
+          "rank": 16,
+          "score": 96.63
+        },
+        {
+          "userId": "1a9723a5-669c-43a2-a257-9179ae5090a8",
+          "username": "mihai",
+          "rank": 17,
+          "score": 86.99
+        },
+        {
+          "userId": "aec57b5b-3902-41af-9880-32fac81fce12",
+          "username": "MateiKing80",
+          "rank": 18,
+          "score": 82.7
+        },
+        {
+          "userId": "7ac7b41b-0296-4458-9a11-25180b5188bb",
+          "username": "Victor5539",
+          "rank": 19,
+          "score": 81.24
+        },
+        {
+          "userId": "9d8ae68f-5c66-48fa-b758-beeb4da6fd31",
+          "username": "Gliggy",
+          "rank": 20,
+          "score": 78.23
+        },
+        {
+          "userId": "58e6f959-b51d-43a5-957d-dbc785e79f6d",
+          "username": "Andrei_Drugan",
+          "rank": 21,
+          "score": 76.8
+        },
+        {
+          "userId": "4759a793-da4a-493c-aaa2-d2a2fc66a207",
+          "username": "petru_boca",
+          "rank": 22,
+          "score": 62.26
+        },
+        {
+          "userId": "6f185618-4453-4756-9072-66031e9e9d38",
+          "username": "Andrei0016",
+          "rank": 23,
+          "score": 62
+        },
+        {
+          "userId": "7d6a17e9-575c-4d3a-b0ed-bd40f888ff25",
+          "username": "AlexGB56",
+          "rank": 24,
+          "score": 62
+        },
+        {
+          "userId": "7a348e6b-c439-48e3-84b2-26e1458dfa15",
+          "username": "bucurici",
+          "rank": 25,
+          "score": 59.26
+        },
+        {
+          "userId": "f72508dd-f705-416d-a44d-4da7e851060c",
+          "username": "radum",
+          "rank": 26,
+          "score": 57.76
+        },
+        {
+          "userId": "a9339b53-3a9e-4114-95f0-a07347139928",
+          "username": "LucaLucaM",
+          "rank": 27,
+          "score": 45.12
+        },
+        {
+          "userId": "07520e7b-16d8-4a36-84d4-195e1cb4e7d6",
+          "username": "trbf",
+          "rank": 28,
+          "score": 45
+        },
+        {
+          "userId": "2d4610a3-f5c9-42b1-b893-fd9771e5adb1",
+          "username": "sashaaa",
+          "rank": 29,
+          "score": 44.95
+        },
+        {
+          "userId": "a6ee4c25-0a46-4885-84bb-c09ab4153f74",
+          "username": "Cosminane",
+          "rank": 30,
+          "score": 24.76
+        },
+        {
+          "userId": "66ff9c28-d8a4-4237-ac91-bb471980226d",
+          "username": "creaper1116",
+          "rank": 31,
+          "score": 0
+        }
+      ]
+    }
+  ]
+}
