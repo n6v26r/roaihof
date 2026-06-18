@@ -1569,6 +1569,9 @@ func accumulateInternationalRankingStats(stats *Stats, result Result) {
 	case "honorable":
 		stats.Honorable++
 	}
+	if result.Prize != "" {
+		stats.Prizes++
+	}
 	if result.Place > 0 && (stats.BestPlace == 0 || result.Place < stats.BestPlace) {
 		stats.BestPlace = result.Place
 	}
@@ -1593,6 +1596,7 @@ func compareNationalRankingStats(a, b Stats) int {
 		{a.Gold, b.Gold},
 		{a.Silver, b.Silver},
 		{a.Bronze, b.Bronze},
+		{a.Prizes, b.Prizes},
 	} {
 		if check[0] != check[1] {
 			return check[0] - check[1]
@@ -1610,6 +1614,7 @@ func compareInternationalRankingStats(a, b Stats) int {
 		{a.Gold, b.Gold},
 		{a.Silver, b.Silver},
 		{a.Bronze, b.Bronze},
+		{a.Prizes, b.Prizes},
 	} {
 		if check[0] != check[1] {
 			return check[0] - check[1]

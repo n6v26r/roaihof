@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18T18:26:11Z",
+  "generatedAt": "2026-06-18T18:58:39Z",
   "summary": {
     "people": 172,
     "schools": 81,
@@ -632,48 +632,6 @@
       }
     },
     {
-      "id": "burloi-emil-andrei",
-      "name": "Burloi Emil-Andrei",
-      "externalUsernames": {
-        "judge": [
-          "mcbun03"
-        ],
-        "mlcompete": [
-          "mcbun03"
-        ]
-      },
-      "schoolIds": [
-        "school-liceul-teoretic-international-de-informatica"
-      ],
-      "countyIds": [
-        "bucuresti"
-      ],
-      "stats": {
-        "participations": 2,
-        "nationalParticipations": 2,
-        "internationalParticipations": 0,
-        "lotParticipations": 1,
-        "gold": 1,
-        "silver": 1,
-        "bronze": 0,
-        "honorable": 0,
-        "prizes": 1,
-        "selections": 1,
-        "ioaiSelections": 0,
-        "ceoaiSelections": 1,
-        "iaioSelections": 0,
-        "uniqueContestants": 1,
-        "bestPlace": 1,
-        "years": [
-          2026
-        ],
-        "circuits": [
-          "ONIA",
-          "ROAI"
-        ]
-      }
-    },
-    {
       "id": "neacsu-matei",
       "name": "Neacșu Matei",
       "externalUsernames": {
@@ -701,48 +659,6 @@
         "honorable": 0,
         "prizes": 2,
         "selections": 1,
-        "ioaiSelections": 0,
-        "ceoaiSelections": 0,
-        "iaioSelections": 0,
-        "uniqueContestants": 1,
-        "bestPlace": 1,
-        "years": [
-          2026
-        ],
-        "circuits": [
-          "ONIA",
-          "ROAI"
-        ]
-      }
-    },
-    {
-      "id": "neculau-rares-andrei",
-      "name": "Neculau Rareș-Andrei",
-      "externalUsernames": {
-        "judge": [
-          "Andrei_ierdnA"
-        ],
-        "mlcompete": [
-          "nrand"
-        ]
-      },
-      "schoolIds": [
-        "school-colegiul-national-vasile-alecsandri"
-      ],
-      "countyIds": [
-        "galati"
-      ],
-      "stats": {
-        "participations": 2,
-        "nationalParticipations": 2,
-        "internationalParticipations": 0,
-        "lotParticipations": 0,
-        "gold": 1,
-        "silver": 1,
-        "bronze": 0,
-        "honorable": 0,
-        "prizes": 1,
-        "selections": 0,
         "ioaiSelections": 0,
         "ceoaiSelections": 0,
         "iaioSelections": 0,
@@ -790,6 +706,90 @@
         "iaioSelections": 0,
         "uniqueContestants": 1,
         "bestPlace": 2,
+        "years": [
+          2026
+        ],
+        "circuits": [
+          "ONIA",
+          "ROAI"
+        ]
+      }
+    },
+    {
+      "id": "burloi-emil-andrei",
+      "name": "Burloi Emil-Andrei",
+      "externalUsernames": {
+        "judge": [
+          "mcbun03"
+        ],
+        "mlcompete": [
+          "mcbun03"
+        ]
+      },
+      "schoolIds": [
+        "school-liceul-teoretic-international-de-informatica"
+      ],
+      "countyIds": [
+        "bucuresti"
+      ],
+      "stats": {
+        "participations": 2,
+        "nationalParticipations": 2,
+        "internationalParticipations": 0,
+        "lotParticipations": 1,
+        "gold": 1,
+        "silver": 1,
+        "bronze": 0,
+        "honorable": 0,
+        "prizes": 1,
+        "selections": 1,
+        "ioaiSelections": 0,
+        "ceoaiSelections": 1,
+        "iaioSelections": 0,
+        "uniqueContestants": 1,
+        "bestPlace": 1,
+        "years": [
+          2026
+        ],
+        "circuits": [
+          "ONIA",
+          "ROAI"
+        ]
+      }
+    },
+    {
+      "id": "neculau-rares-andrei",
+      "name": "Neculau Rareș-Andrei",
+      "externalUsernames": {
+        "judge": [
+          "Andrei_ierdnA"
+        ],
+        "mlcompete": [
+          "nrand"
+        ]
+      },
+      "schoolIds": [
+        "school-colegiul-national-vasile-alecsandri"
+      ],
+      "countyIds": [
+        "galati"
+      ],
+      "stats": {
+        "participations": 2,
+        "nationalParticipations": 2,
+        "internationalParticipations": 0,
+        "lotParticipations": 0,
+        "gold": 1,
+        "silver": 1,
+        "bronze": 0,
+        "honorable": 0,
+        "prizes": 1,
+        "selections": 0,
+        "ioaiSelections": 0,
+        "ceoaiSelections": 0,
+        "iaioSelections": 0,
+        "uniqueContestants": 1,
+        "bestPlace": 1,
         "years": [
           2026
         ],
@@ -1253,6 +1253,46 @@
       }
     },
     {
+      "id": "perhaita-raul-cosmin",
+      "name": "Perhaița Raul-Cosmin",
+      "externalUsernames": {
+        "mlcompete": [
+          "PerhaitaRaul"
+        ]
+      },
+      "schoolIds": [
+        "school-liceul-teoretic-petru-rares"
+      ],
+      "countyIds": [
+        "maramures"
+      ],
+      "stats": {
+        "participations": 2,
+        "nationalParticipations": 2,
+        "internationalParticipations": 0,
+        "lotParticipations": 1,
+        "gold": 1,
+        "silver": 0,
+        "bronze": 1,
+        "honorable": 0,
+        "prizes": 1,
+        "selections": 1,
+        "ioaiSelections": 0,
+        "ceoaiSelections": 0,
+        "iaioSelections": 0,
+        "uniqueContestants": 1,
+        "bestPlace": 5,
+        "years": [
+          2025,
+          2026
+        ],
+        "circuits": [
+          "ONIA",
+          "ROAI"
+        ]
+      }
+    },
+    {
       "id": "pop-matei-tudor",
       "name": "Pop Matei-Tudor",
       "externalUsernames": {
@@ -1286,46 +1326,6 @@
         "uniqueContestants": 1,
         "bestPlace": 5,
         "years": [
-          2026
-        ],
-        "circuits": [
-          "ONIA",
-          "ROAI"
-        ]
-      }
-    },
-    {
-      "id": "perhaita-raul-cosmin",
-      "name": "Perhaița Raul-Cosmin",
-      "externalUsernames": {
-        "mlcompete": [
-          "PerhaitaRaul"
-        ]
-      },
-      "schoolIds": [
-        "school-liceul-teoretic-petru-rares"
-      ],
-      "countyIds": [
-        "maramures"
-      ],
-      "stats": {
-        "participations": 2,
-        "nationalParticipations": 2,
-        "internationalParticipations": 0,
-        "lotParticipations": 1,
-        "gold": 1,
-        "silver": 0,
-        "bronze": 1,
-        "honorable": 0,
-        "prizes": 1,
-        "selections": 1,
-        "ioaiSelections": 0,
-        "ceoaiSelections": 0,
-        "iaioSelections": 0,
-        "uniqueContestants": 1,
-        "bestPlace": 5,
-        "years": [
-          2025,
           2026
         ],
         "circuits": [
@@ -1637,51 +1637,6 @@
       }
     },
     {
-      "id": "morariu-tudor",
-      "name": "Morariu Tudor",
-      "externalUsernames": {
-        "judge": [
-          "morariutudor"
-        ],
-        "mlcompete": [
-          "tudor"
-        ]
-      },
-      "schoolIds": [
-        "school-liceul-teoretic-international-de-informatica",
-        "school-colegiul-national-emil-racovita"
-      ],
-      "countyIds": [
-        "bucuresti",
-        "cluj"
-      ],
-      "stats": {
-        "participations": 3,
-        "nationalParticipations": 3,
-        "internationalParticipations": 0,
-        "lotParticipations": 2,
-        "gold": 0,
-        "silver": 2,
-        "bronze": 1,
-        "honorable": 0,
-        "prizes": 1,
-        "selections": 2,
-        "ioaiSelections": 1,
-        "ceoaiSelections": 1,
-        "iaioSelections": 0,
-        "uniqueContestants": 1,
-        "bestPlace": 5,
-        "years": [
-          2025,
-          2026
-        ],
-        "circuits": [
-          "ONIA",
-          "ROAI"
-        ]
-      }
-    },
-    {
       "id": "tipa-fabian-alexandru",
       "name": "Tipa Fabian Alexandru",
       "externalUsernames": {
@@ -1757,6 +1712,51 @@
         "iaioSelections": 0,
         "uniqueContestants": 1,
         "bestPlace": 7,
+        "years": [
+          2025,
+          2026
+        ],
+        "circuits": [
+          "ONIA",
+          "ROAI"
+        ]
+      }
+    },
+    {
+      "id": "morariu-tudor",
+      "name": "Morariu Tudor",
+      "externalUsernames": {
+        "judge": [
+          "morariutudor"
+        ],
+        "mlcompete": [
+          "tudor"
+        ]
+      },
+      "schoolIds": [
+        "school-liceul-teoretic-international-de-informatica",
+        "school-colegiul-national-emil-racovita"
+      ],
+      "countyIds": [
+        "bucuresti",
+        "cluj"
+      ],
+      "stats": {
+        "participations": 3,
+        "nationalParticipations": 3,
+        "internationalParticipations": 0,
+        "lotParticipations": 2,
+        "gold": 0,
+        "silver": 2,
+        "bronze": 1,
+        "honorable": 0,
+        "prizes": 1,
+        "selections": 2,
+        "ioaiSelections": 1,
+        "ceoaiSelections": 1,
+        "iaioSelections": 0,
+        "uniqueContestants": 1,
+        "bestPlace": 5,
         "years": [
           2025,
           2026
@@ -2157,48 +2157,6 @@
       }
     },
     {
-      "id": "herea-isidor",
-      "name": "Herea Isidor",
-      "aliases": [
-        "Isidor Herea"
-      ],
-      "externalUsernames": {
-        "judge": [
-          "Isidor"
-        ]
-      },
-      "schoolIds": [
-        "school-colegiul-national-petru-rares"
-      ],
-      "countyIds": [
-        "suceava"
-      ],
-      "stats": {
-        "participations": 2,
-        "nationalParticipations": 2,
-        "internationalParticipations": 0,
-        "lotParticipations": 1,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 1,
-        "honorable": 0,
-        "prizes": 0,
-        "selections": 1,
-        "ioaiSelections": 0,
-        "ceoaiSelections": 0,
-        "iaioSelections": 0,
-        "uniqueContestants": 1,
-        "bestPlace": 7,
-        "years": [
-          2025,
-          2026
-        ],
-        "circuits": [
-          "ROAI"
-        ]
-      }
-    },
-    {
       "id": "shang-chenglin",
       "name": "Shang Chenglin",
       "externalUsernames": {
@@ -2237,6 +2195,126 @@
         ],
         "circuits": [
           "ONIA",
+          "ROAI"
+        ]
+      }
+    },
+    {
+      "id": "tega-george-mihai",
+      "name": "Tega George-Mihai",
+      "schoolIds": [
+        "school-colegiul-national-mircea-cel-batran"
+      ],
+      "countyIds": [
+        "constanta"
+      ],
+      "stats": {
+        "participations": 2,
+        "nationalParticipations": 2,
+        "internationalParticipations": 0,
+        "lotParticipations": 0,
+        "gold": 0,
+        "silver": 1,
+        "bronze": 1,
+        "honorable": 0,
+        "prizes": 1,
+        "selections": 0,
+        "ioaiSelections": 0,
+        "ceoaiSelections": 0,
+        "iaioSelections": 0,
+        "uniqueContestants": 1,
+        "bestPlace": 9,
+        "years": [
+          2025,
+          2026
+        ],
+        "circuits": [
+          "ONIA",
+          "ROAI"
+        ]
+      }
+    },
+    {
+      "id": "iordache-catalin",
+      "name": "Iordache Cătălin",
+      "externalUsernames": {
+        "judge": [
+          "Cata154"
+        ],
+        "mlcompete": [
+          "Ion-Rotitorul"
+        ]
+      },
+      "schoolIds": [
+        "school-colegiul-national-mihai-eminescu"
+      ],
+      "countyIds": [
+        "constanta"
+      ],
+      "stats": {
+        "participations": 3,
+        "nationalParticipations": 3,
+        "internationalParticipations": 0,
+        "lotParticipations": 0,
+        "gold": 0,
+        "silver": 1,
+        "bronze": 1,
+        "honorable": 0,
+        "prizes": 1,
+        "selections": 0,
+        "ioaiSelections": 0,
+        "ceoaiSelections": 0,
+        "iaioSelections": 0,
+        "uniqueContestants": 1,
+        "bestPlace": 12,
+        "years": [
+          2025,
+          2026
+        ],
+        "circuits": [
+          "ONIA",
+          "ROAI"
+        ]
+      }
+    },
+    {
+      "id": "herea-isidor",
+      "name": "Herea Isidor",
+      "aliases": [
+        "Isidor Herea"
+      ],
+      "externalUsernames": {
+        "judge": [
+          "Isidor"
+        ]
+      },
+      "schoolIds": [
+        "school-colegiul-national-petru-rares"
+      ],
+      "countyIds": [
+        "suceava"
+      ],
+      "stats": {
+        "participations": 2,
+        "nationalParticipations": 2,
+        "internationalParticipations": 0,
+        "lotParticipations": 1,
+        "gold": 0,
+        "silver": 1,
+        "bronze": 1,
+        "honorable": 0,
+        "prizes": 0,
+        "selections": 1,
+        "ioaiSelections": 0,
+        "ceoaiSelections": 0,
+        "iaioSelections": 0,
+        "uniqueContestants": 1,
+        "bestPlace": 7,
+        "years": [
+          2025,
+          2026
+        ],
+        "circuits": [
           "ROAI"
         ]
       }
@@ -2323,41 +2401,6 @@
       }
     },
     {
-      "id": "tega-george-mihai",
-      "name": "Tega George-Mihai",
-      "schoolIds": [
-        "school-colegiul-national-mircea-cel-batran"
-      ],
-      "countyIds": [
-        "constanta"
-      ],
-      "stats": {
-        "participations": 2,
-        "nationalParticipations": 2,
-        "internationalParticipations": 0,
-        "lotParticipations": 0,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 1,
-        "honorable": 0,
-        "prizes": 1,
-        "selections": 0,
-        "ioaiSelections": 0,
-        "ceoaiSelections": 0,
-        "iaioSelections": 0,
-        "uniqueContestants": 1,
-        "bestPlace": 9,
-        "years": [
-          2025,
-          2026
-        ],
-        "circuits": [
-          "ONIA",
-          "ROAI"
-        ]
-      }
-    },
-    {
       "id": "dinulescu-ioana-claudia",
       "name": "Dinulescu Ioana- Claudia",
       "externalUsernames": {
@@ -2388,49 +2431,6 @@
         "iaioSelections": 0,
         "uniqueContestants": 1,
         "bestPlace": 11,
-        "years": [
-          2025,
-          2026
-        ],
-        "circuits": [
-          "ONIA",
-          "ROAI"
-        ]
-      }
-    },
-    {
-      "id": "iordache-catalin",
-      "name": "Iordache Cătălin",
-      "externalUsernames": {
-        "judge": [
-          "Cata154"
-        ],
-        "mlcompete": [
-          "Ion-Rotitorul"
-        ]
-      },
-      "schoolIds": [
-        "school-colegiul-national-mihai-eminescu"
-      ],
-      "countyIds": [
-        "constanta"
-      ],
-      "stats": {
-        "participations": 3,
-        "nationalParticipations": 3,
-        "internationalParticipations": 0,
-        "lotParticipations": 0,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 1,
-        "honorable": 0,
-        "prizes": 1,
-        "selections": 0,
-        "ioaiSelections": 0,
-        "ceoaiSelections": 0,
-        "iaioSelections": 0,
-        "uniqueContestants": 1,
-        "bestPlace": 12,
         "years": [
           2025,
           2026
@@ -2843,44 +2843,6 @@
       }
     },
     {
-      "id": "iancu-stefan-constantin",
-      "name": "Iancu Ștefan-Constantin",
-      "externalUsernames": {
-        "judge": [
-          "Fomni"
-        ]
-      },
-      "schoolIds": [
-        "school-liceul-teoretic-tudor-arghezi"
-      ],
-      "countyIds": [
-        "dolj"
-      ],
-      "stats": {
-        "participations": 1,
-        "nationalParticipations": 1,
-        "internationalParticipations": 0,
-        "lotParticipations": 0,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 0,
-        "honorable": 0,
-        "prizes": 0,
-        "selections": 0,
-        "ioaiSelections": 0,
-        "ceoaiSelections": 0,
-        "iaioSelections": 0,
-        "uniqueContestants": 1,
-        "bestPlace": 6,
-        "years": [
-          2026
-        ],
-        "circuits": [
-          "ROAI"
-        ]
-      }
-    },
-    {
       "id": "cortojan-alexandru",
       "name": "Cortojan Alexandru",
       "schoolIds": [
@@ -3134,6 +3096,82 @@
       }
     },
     {
+      "id": "marin-mihaita",
+      "name": "Marin Mihăiță",
+      "externalUsernames": {
+        "mlcompete": [
+          "Mihaita"
+        ]
+      },
+      "schoolIds": [
+        "school-colegiul-national-mircea-cel-batran-ramnicu-valcea"
+      ],
+      "countyIds": [
+        "valcea"
+      ],
+      "stats": {
+        "participations": 1,
+        "nationalParticipations": 1,
+        "internationalParticipations": 0,
+        "lotParticipations": 0,
+        "gold": 0,
+        "silver": 1,
+        "bronze": 0,
+        "honorable": 0,
+        "prizes": 1,
+        "selections": 0,
+        "ioaiSelections": 0,
+        "ceoaiSelections": 0,
+        "iaioSelections": 0,
+        "uniqueContestants": 1,
+        "bestPlace": 11,
+        "years": [
+          2026
+        ],
+        "circuits": [
+          "ONIA"
+        ]
+      }
+    },
+    {
+      "id": "iancu-stefan-constantin",
+      "name": "Iancu Ștefan-Constantin",
+      "externalUsernames": {
+        "judge": [
+          "Fomni"
+        ]
+      },
+      "schoolIds": [
+        "school-liceul-teoretic-tudor-arghezi"
+      ],
+      "countyIds": [
+        "dolj"
+      ],
+      "stats": {
+        "participations": 1,
+        "nationalParticipations": 1,
+        "internationalParticipations": 0,
+        "lotParticipations": 0,
+        "gold": 0,
+        "silver": 1,
+        "bronze": 0,
+        "honorable": 0,
+        "prizes": 0,
+        "selections": 0,
+        "ioaiSelections": 0,
+        "ceoaiSelections": 0,
+        "iaioSelections": 0,
+        "uniqueContestants": 1,
+        "bestPlace": 6,
+        "years": [
+          2026
+        ],
+        "circuits": [
+          "ROAI"
+        ]
+      }
+    },
+    {
       "id": "burlacu-andrei-valentin",
       "name": "Burlacu Andrei-Valentin",
       "schoolIds": [
@@ -3230,44 +3268,6 @@
         "prizes": 0,
         "selections": 1,
         "ioaiSelections": 1,
-        "ceoaiSelections": 0,
-        "iaioSelections": 0,
-        "uniqueContestants": 1,
-        "bestPlace": 11,
-        "years": [
-          2026
-        ],
-        "circuits": [
-          "ONIA"
-        ]
-      }
-    },
-    {
-      "id": "marin-mihaita",
-      "name": "Marin Mihăiță",
-      "externalUsernames": {
-        "mlcompete": [
-          "Mihaita"
-        ]
-      },
-      "schoolIds": [
-        "school-colegiul-national-mircea-cel-batran-ramnicu-valcea"
-      ],
-      "countyIds": [
-        "valcea"
-      ],
-      "stats": {
-        "participations": 1,
-        "nationalParticipations": 1,
-        "internationalParticipations": 0,
-        "lotParticipations": 0,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 0,
-        "honorable": 0,
-        "prizes": 1,
-        "selections": 0,
-        "ioaiSelections": 0,
         "ceoaiSelections": 0,
         "iaioSelections": 0,
         "uniqueContestants": 1,
@@ -7147,6 +7147,36 @@
       }
     },
     {
+      "id": "school-colegiul-national-spiru-haret-tecuci",
+      "name": "Colegiul Național \"Spiru Haret\", Tecuci",
+      "countyId": "galati",
+      "county": "Galați",
+      "stats": {
+        "participations": 4,
+        "nationalParticipations": 4,
+        "internationalParticipations": 0,
+        "lotParticipations": 0,
+        "gold": 1,
+        "silver": 2,
+        "bronze": 0,
+        "honorable": 0,
+        "prizes": 3,
+        "selections": 0,
+        "ioaiSelections": 0,
+        "ceoaiSelections": 0,
+        "iaioSelections": 0,
+        "uniqueContestants": 2,
+        "bestPlace": 2,
+        "years": [
+          2026
+        ],
+        "circuits": [
+          "ONIA",
+          "ROAI"
+        ]
+      }
+    },
+    {
       "id": "school-liceul-teoretic-mihai-eminescu",
       "name": "Liceul Teoretic \"Mihai Eminescu\"",
       "countyId": "calarasi",
@@ -7231,36 +7261,6 @@
         "bestPlace": 2,
         "years": [
           2025,
-          2026
-        ],
-        "circuits": [
-          "ONIA",
-          "ROAI"
-        ]
-      }
-    },
-    {
-      "id": "school-colegiul-national-spiru-haret-tecuci",
-      "name": "Colegiul Național \"Spiru Haret\", Tecuci",
-      "countyId": "galati",
-      "county": "Galați",
-      "stats": {
-        "participations": 4,
-        "nationalParticipations": 4,
-        "internationalParticipations": 0,
-        "lotParticipations": 0,
-        "gold": 1,
-        "silver": 2,
-        "bronze": 0,
-        "honorable": 0,
-        "prizes": 3,
-        "selections": 0,
-        "ioaiSelections": 0,
-        "ceoaiSelections": 0,
-        "iaioSelections": 0,
-        "uniqueContestants": 2,
-        "bestPlace": 2,
-        "years": [
           2026
         ],
         "circuits": [
@@ -7790,36 +7790,6 @@
       }
     },
     {
-      "id": "school-colegiul-national-ion-luca-caragiale-ploiesti",
-      "name": "Colegiul Național \"Ion Luca Caragiale\", Ploiești",
-      "countyId": "prahova",
-      "county": "Prahova",
-      "stats": {
-        "participations": 4,
-        "nationalParticipations": 4,
-        "internationalParticipations": 0,
-        "lotParticipations": 0,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 2,
-        "honorable": 0,
-        "prizes": 0,
-        "selections": 0,
-        "ioaiSelections": 0,
-        "ceoaiSelections": 0,
-        "iaioSelections": 0,
-        "uniqueContestants": 3,
-        "bestPlace": 7,
-        "years": [
-          2026
-        ],
-        "circuits": [
-          "ONIA",
-          "ROAI"
-        ]
-      }
-    },
-    {
       "id": "school-colegiul-national-mihai-viteazul-ploiesti",
       "name": "Colegiul Național \"Mihai Viteazul\", Ploiești",
       "countyId": "prahova",
@@ -7872,6 +7842,36 @@
         "bestPlace": 12,
         "years": [
           2025,
+          2026
+        ],
+        "circuits": [
+          "ONIA",
+          "ROAI"
+        ]
+      }
+    },
+    {
+      "id": "school-colegiul-national-ion-luca-caragiale-ploiesti",
+      "name": "Colegiul Național \"Ion Luca Caragiale\", Ploiești",
+      "countyId": "prahova",
+      "county": "Prahova",
+      "stats": {
+        "participations": 4,
+        "nationalParticipations": 4,
+        "internationalParticipations": 0,
+        "lotParticipations": 0,
+        "gold": 0,
+        "silver": 1,
+        "bronze": 2,
+        "honorable": 0,
+        "prizes": 0,
+        "selections": 0,
+        "ioaiSelections": 0,
+        "ceoaiSelections": 0,
+        "iaioSelections": 0,
+        "uniqueContestants": 3,
+        "bestPlace": 7,
+        "years": [
           2026
         ],
         "circuits": [
@@ -7972,36 +7972,6 @@
       }
     },
     {
-      "id": "school-colegiul-national-petru-rares",
-      "name": "Colegiul Național \"Petru Rareș\"",
-      "countyId": "suceava",
-      "county": "Suceava",
-      "stats": {
-        "participations": 2,
-        "nationalParticipations": 2,
-        "internationalParticipations": 0,
-        "lotParticipations": 1,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 1,
-        "honorable": 0,
-        "prizes": 0,
-        "selections": 1,
-        "ioaiSelections": 0,
-        "ceoaiSelections": 0,
-        "iaioSelections": 0,
-        "uniqueContestants": 1,
-        "bestPlace": 7,
-        "years": [
-          2025,
-          2026
-        ],
-        "circuits": [
-          "ROAI"
-        ]
-      }
-    },
-    {
       "id": "school-liceul-teoretic-alexandru-ioan-cuza",
       "name": "Liceul Teoretic \"Alexandru Ioan Cuza\"",
       "countyId": "bucuresti",
@@ -8028,6 +7998,36 @@
         ],
         "circuits": [
           "ONIA",
+          "ROAI"
+        ]
+      }
+    },
+    {
+      "id": "school-colegiul-national-petru-rares",
+      "name": "Colegiul Național \"Petru Rareș\"",
+      "countyId": "suceava",
+      "county": "Suceava",
+      "stats": {
+        "participations": 2,
+        "nationalParticipations": 2,
+        "internationalParticipations": 0,
+        "lotParticipations": 1,
+        "gold": 0,
+        "silver": 1,
+        "bronze": 1,
+        "honorable": 0,
+        "prizes": 0,
+        "selections": 1,
+        "ioaiSelections": 0,
+        "ceoaiSelections": 0,
+        "iaioSelections": 0,
+        "uniqueContestants": 1,
+        "bestPlace": 7,
+        "years": [
+          2025,
+          2026
+        ],
+        "circuits": [
           "ROAI"
         ]
       }
@@ -8209,35 +8209,6 @@
       }
     },
     {
-      "id": "school-liceul-teoretic-tudor-arghezi",
-      "name": "Liceul Teoretic \"Tudor Arghezi\"",
-      "countyId": "dolj",
-      "county": "Dolj",
-      "stats": {
-        "participations": 1,
-        "nationalParticipations": 1,
-        "internationalParticipations": 0,
-        "lotParticipations": 0,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 0,
-        "honorable": 0,
-        "prizes": 0,
-        "selections": 0,
-        "ioaiSelections": 0,
-        "ceoaiSelections": 0,
-        "iaioSelections": 0,
-        "uniqueContestants": 1,
-        "bestPlace": 6,
-        "years": [
-          2026
-        ],
-        "circuits": [
-          "ROAI"
-        ]
-      }
-    },
-    {
       "id": "school-colegiul-national-pedagogic-regina-maria",
       "name": "Colegiul Național Pedagogic \"Regina Maria\"",
       "countyId": "hunedoara",
@@ -8292,6 +8263,35 @@
         ],
         "circuits": [
           "ONIA"
+        ]
+      }
+    },
+    {
+      "id": "school-liceul-teoretic-tudor-arghezi",
+      "name": "Liceul Teoretic \"Tudor Arghezi\"",
+      "countyId": "dolj",
+      "county": "Dolj",
+      "stats": {
+        "participations": 1,
+        "nationalParticipations": 1,
+        "internationalParticipations": 0,
+        "lotParticipations": 0,
+        "gold": 0,
+        "silver": 1,
+        "bronze": 0,
+        "honorable": 0,
+        "prizes": 0,
+        "selections": 0,
+        "ioaiSelections": 0,
+        "ceoaiSelections": 0,
+        "iaioSelections": 0,
+        "uniqueContestants": 1,
+        "bestPlace": 6,
+        "years": [
+          2026
+        ],
+        "circuits": [
+          "ROAI"
         ]
       }
     },
@@ -21154,35 +21154,6 @@
         }
       },
       {
-        "id": "burloi-emil-andrei",
-        "name": "Burloi Emil-Andrei",
-        "kind": "person",
-        "stats": {
-          "participations": 2,
-          "nationalParticipations": 2,
-          "internationalParticipations": 0,
-          "lotParticipations": 1,
-          "gold": 1,
-          "silver": 1,
-          "bronze": 0,
-          "honorable": 0,
-          "prizes": 1,
-          "selections": 1,
-          "ioaiSelections": 0,
-          "ceoaiSelections": 1,
-          "iaioSelections": 0,
-          "uniqueContestants": 1,
-          "bestPlace": 1,
-          "years": [
-            2026
-          ],
-          "circuits": [
-            "ONIA",
-            "ROAI"
-          ]
-        }
-      },
-      {
         "id": "neacsu-matei",
         "name": "Neacșu Matei",
         "kind": "person",
@@ -21197,35 +21168,6 @@
           "honorable": 0,
           "prizes": 2,
           "selections": 1,
-          "ioaiSelections": 0,
-          "ceoaiSelections": 0,
-          "iaioSelections": 0,
-          "uniqueContestants": 1,
-          "bestPlace": 1,
-          "years": [
-            2026
-          ],
-          "circuits": [
-            "ONIA",
-            "ROAI"
-          ]
-        }
-      },
-      {
-        "id": "neculau-rares-andrei",
-        "name": "Neculau Rareș-Andrei",
-        "kind": "person",
-        "stats": {
-          "participations": 2,
-          "nationalParticipations": 2,
-          "internationalParticipations": 0,
-          "lotParticipations": 0,
-          "gold": 1,
-          "silver": 1,
-          "bronze": 0,
-          "honorable": 0,
-          "prizes": 1,
-          "selections": 0,
           "ioaiSelections": 0,
           "ceoaiSelections": 0,
           "iaioSelections": 0,
@@ -21260,6 +21202,64 @@
           "iaioSelections": 0,
           "uniqueContestants": 1,
           "bestPlace": 2,
+          "years": [
+            2026
+          ],
+          "circuits": [
+            "ONIA",
+            "ROAI"
+          ]
+        }
+      },
+      {
+        "id": "burloi-emil-andrei",
+        "name": "Burloi Emil-Andrei",
+        "kind": "person",
+        "stats": {
+          "participations": 2,
+          "nationalParticipations": 2,
+          "internationalParticipations": 0,
+          "lotParticipations": 1,
+          "gold": 1,
+          "silver": 1,
+          "bronze": 0,
+          "honorable": 0,
+          "prizes": 1,
+          "selections": 1,
+          "ioaiSelections": 0,
+          "ceoaiSelections": 1,
+          "iaioSelections": 0,
+          "uniqueContestants": 1,
+          "bestPlace": 1,
+          "years": [
+            2026
+          ],
+          "circuits": [
+            "ONIA",
+            "ROAI"
+          ]
+        }
+      },
+      {
+        "id": "neculau-rares-andrei",
+        "name": "Neculau Rareș-Andrei",
+        "kind": "person",
+        "stats": {
+          "participations": 2,
+          "nationalParticipations": 2,
+          "internationalParticipations": 0,
+          "lotParticipations": 0,
+          "gold": 1,
+          "silver": 1,
+          "bronze": 0,
+          "honorable": 0,
+          "prizes": 1,
+          "selections": 0,
+          "ioaiSelections": 0,
+          "ceoaiSelections": 0,
+          "iaioSelections": 0,
+          "uniqueContestants": 1,
+          "bestPlace": 1,
           "years": [
             2026
           ],
@@ -21592,35 +21592,6 @@
         }
       },
       {
-        "id": "pop-matei-tudor",
-        "name": "Pop Matei-Tudor",
-        "kind": "person",
-        "stats": {
-          "participations": 2,
-          "nationalParticipations": 2,
-          "internationalParticipations": 0,
-          "lotParticipations": 2,
-          "gold": 1,
-          "silver": 0,
-          "bronze": 1,
-          "honorable": 0,
-          "prizes": 0,
-          "selections": 2,
-          "ioaiSelections": 1,
-          "ceoaiSelections": 0,
-          "iaioSelections": 0,
-          "uniqueContestants": 1,
-          "bestPlace": 5,
-          "years": [
-            2026
-          ],
-          "circuits": [
-            "ONIA",
-            "ROAI"
-          ]
-        }
-      },
-      {
         "id": "perhaita-raul-cosmin",
         "name": "Perhaița Raul-Cosmin",
         "kind": "person",
@@ -21642,6 +21613,35 @@
           "bestPlace": 5,
           "years": [
             2025,
+            2026
+          ],
+          "circuits": [
+            "ONIA",
+            "ROAI"
+          ]
+        }
+      },
+      {
+        "id": "pop-matei-tudor",
+        "name": "Pop Matei-Tudor",
+        "kind": "person",
+        "stats": {
+          "participations": 2,
+          "nationalParticipations": 2,
+          "internationalParticipations": 0,
+          "lotParticipations": 2,
+          "gold": 1,
+          "silver": 0,
+          "bronze": 1,
+          "honorable": 0,
+          "prizes": 0,
+          "selections": 2,
+          "ioaiSelections": 1,
+          "ceoaiSelections": 0,
+          "iaioSelections": 0,
+          "uniqueContestants": 1,
+          "bestPlace": 5,
+          "years": [
             2026
           ],
           "circuits": [
@@ -21881,36 +21881,6 @@
         }
       },
       {
-        "id": "morariu-tudor",
-        "name": "Morariu Tudor",
-        "kind": "person",
-        "stats": {
-          "participations": 3,
-          "nationalParticipations": 3,
-          "internationalParticipations": 0,
-          "lotParticipations": 2,
-          "gold": 0,
-          "silver": 2,
-          "bronze": 1,
-          "honorable": 0,
-          "prizes": 1,
-          "selections": 2,
-          "ioaiSelections": 1,
-          "ceoaiSelections": 1,
-          "iaioSelections": 0,
-          "uniqueContestants": 1,
-          "bestPlace": 5,
-          "years": [
-            2025,
-            2026
-          ],
-          "circuits": [
-            "ONIA",
-            "ROAI"
-          ]
-        }
-      },
-      {
         "id": "tipa-fabian-alexandru",
         "name": "Tipa Fabian Alexandru",
         "kind": "person",
@@ -21960,6 +21930,36 @@
           "iaioSelections": 0,
           "uniqueContestants": 1,
           "bestPlace": 7,
+          "years": [
+            2025,
+            2026
+          ],
+          "circuits": [
+            "ONIA",
+            "ROAI"
+          ]
+        }
+      },
+      {
+        "id": "morariu-tudor",
+        "name": "Morariu Tudor",
+        "kind": "person",
+        "stats": {
+          "participations": 3,
+          "nationalParticipations": 3,
+          "internationalParticipations": 0,
+          "lotParticipations": 2,
+          "gold": 0,
+          "silver": 2,
+          "bronze": 1,
+          "honorable": 0,
+          "prizes": 1,
+          "selections": 2,
+          "ioaiSelections": 1,
+          "ceoaiSelections": 1,
+          "iaioSelections": 0,
+          "uniqueContestants": 1,
+          "bestPlace": 5,
           "years": [
             2025,
             2026
@@ -22237,35 +22237,6 @@
         }
       },
       {
-        "id": "herea-isidor",
-        "name": "Herea Isidor",
-        "kind": "person",
-        "stats": {
-          "participations": 2,
-          "nationalParticipations": 2,
-          "internationalParticipations": 0,
-          "lotParticipations": 1,
-          "gold": 0,
-          "silver": 1,
-          "bronze": 1,
-          "honorable": 0,
-          "prizes": 0,
-          "selections": 1,
-          "ioaiSelections": 0,
-          "ceoaiSelections": 0,
-          "iaioSelections": 0,
-          "uniqueContestants": 1,
-          "bestPlace": 7,
-          "years": [
-            2025,
-            2026
-          ],
-          "circuits": [
-            "ROAI"
-          ]
-        }
-      },
-      {
         "id": "shang-chenglin",
         "name": "Shang Chenglin",
         "kind": "person",
@@ -22287,64 +22258,6 @@
           "bestPlace": 8,
           "years": [
             2025,
-            2026
-          ],
-          "circuits": [
-            "ONIA",
-            "ROAI"
-          ]
-        }
-      },
-      {
-        "id": "molocea-albert",
-        "name": "Molocea Albert",
-        "kind": "person",
-        "stats": {
-          "participations": 2,
-          "nationalParticipations": 2,
-          "internationalParticipations": 0,
-          "lotParticipations": 0,
-          "gold": 0,
-          "silver": 1,
-          "bronze": 1,
-          "honorable": 0,
-          "prizes": 0,
-          "selections": 0,
-          "ioaiSelections": 0,
-          "ceoaiSelections": 0,
-          "iaioSelections": 0,
-          "uniqueContestants": 1,
-          "bestPlace": 9,
-          "years": [
-            2025,
-            2026
-          ],
-          "circuits": [
-            "ROAI"
-          ]
-        }
-      },
-      {
-        "id": "popa-david-matei",
-        "name": "Popa David-Matei",
-        "kind": "person",
-        "stats": {
-          "participations": 2,
-          "nationalParticipations": 2,
-          "internationalParticipations": 0,
-          "lotParticipations": 0,
-          "gold": 0,
-          "silver": 1,
-          "bronze": 1,
-          "honorable": 0,
-          "prizes": 0,
-          "selections": 0,
-          "ioaiSelections": 0,
-          "ceoaiSelections": 0,
-          "iaioSelections": 0,
-          "uniqueContestants": 1,
-          "bestPlace": 9,
-          "years": [
             2026
           ],
           "circuits": [
@@ -22379,6 +22292,94 @@
           ],
           "circuits": [
             "ONIA",
+            "ROAI"
+          ]
+        }
+      },
+      {
+        "id": "iordache-catalin",
+        "name": "Iordache Cătălin",
+        "kind": "person",
+        "stats": {
+          "participations": 3,
+          "nationalParticipations": 3,
+          "internationalParticipations": 0,
+          "lotParticipations": 0,
+          "gold": 0,
+          "silver": 1,
+          "bronze": 1,
+          "honorable": 0,
+          "prizes": 1,
+          "selections": 0,
+          "ioaiSelections": 0,
+          "ceoaiSelections": 0,
+          "iaioSelections": 0,
+          "uniqueContestants": 1,
+          "bestPlace": 12,
+          "years": [
+            2025,
+            2026
+          ],
+          "circuits": [
+            "ONIA",
+            "ROAI"
+          ]
+        }
+      },
+      {
+        "id": "herea-isidor",
+        "name": "Herea Isidor",
+        "kind": "person",
+        "stats": {
+          "participations": 2,
+          "nationalParticipations": 2,
+          "internationalParticipations": 0,
+          "lotParticipations": 1,
+          "gold": 0,
+          "silver": 1,
+          "bronze": 1,
+          "honorable": 0,
+          "prizes": 0,
+          "selections": 1,
+          "ioaiSelections": 0,
+          "ceoaiSelections": 0,
+          "iaioSelections": 0,
+          "uniqueContestants": 1,
+          "bestPlace": 7,
+          "years": [
+            2025,
+            2026
+          ],
+          "circuits": [
+            "ROAI"
+          ]
+        }
+      },
+      {
+        "id": "molocea-albert",
+        "name": "Molocea Albert",
+        "kind": "person",
+        "stats": {
+          "participations": 2,
+          "nationalParticipations": 2,
+          "internationalParticipations": 0,
+          "lotParticipations": 0,
+          "gold": 0,
+          "silver": 1,
+          "bronze": 1,
+          "honorable": 0,
+          "prizes": 0,
+          "selections": 0,
+          "ioaiSelections": 0,
+          "ceoaiSelections": 0,
+          "iaioSelections": 0,
+          "uniqueContestants": 1,
+          "bestPlace": 9,
+          "years": [
+            2025,
+            2026
+          ],
+          "circuits": [
             "ROAI"
           ]
         }
@@ -22596,6 +22597,35 @@
         }
       },
       {
+        "id": "school-colegiul-national-spiru-haret-tecuci",
+        "name": "Colegiul Național \"Spiru Haret\", Tecuci",
+        "kind": "school",
+        "stats": {
+          "participations": 4,
+          "nationalParticipations": 4,
+          "internationalParticipations": 0,
+          "lotParticipations": 0,
+          "gold": 1,
+          "silver": 2,
+          "bronze": 0,
+          "honorable": 0,
+          "prizes": 3,
+          "selections": 0,
+          "ioaiSelections": 0,
+          "ceoaiSelections": 0,
+          "iaioSelections": 0,
+          "uniqueContestants": 2,
+          "bestPlace": 2,
+          "years": [
+            2026
+          ],
+          "circuits": [
+            "ONIA",
+            "ROAI"
+          ]
+        }
+      },
+      {
         "id": "school-liceul-teoretic-mihai-eminescu",
         "name": "Liceul Teoretic \"Mihai Eminescu\"",
         "kind": "school",
@@ -22677,35 +22707,6 @@
           "bestPlace": 2,
           "years": [
             2025,
-            2026
-          ],
-          "circuits": [
-            "ONIA",
-            "ROAI"
-          ]
-        }
-      },
-      {
-        "id": "school-colegiul-national-spiru-haret-tecuci",
-        "name": "Colegiul Național \"Spiru Haret\", Tecuci",
-        "kind": "school",
-        "stats": {
-          "participations": 4,
-          "nationalParticipations": 4,
-          "internationalParticipations": 0,
-          "lotParticipations": 0,
-          "gold": 1,
-          "silver": 2,
-          "bronze": 0,
-          "honorable": 0,
-          "prizes": 3,
-          "selections": 0,
-          "ioaiSelections": 0,
-          "ceoaiSelections": 0,
-          "iaioSelections": 0,
-          "uniqueContestants": 2,
-          "bestPlace": 2,
-          "years": [
             2026
           ],
           "circuits": [
@@ -23218,35 +23219,6 @@
         }
       },
       {
-        "id": "school-colegiul-national-ion-luca-caragiale-ploiesti",
-        "name": "Colegiul Național \"Ion Luca Caragiale\", Ploiești",
-        "kind": "school",
-        "stats": {
-          "participations": 4,
-          "nationalParticipations": 4,
-          "internationalParticipations": 0,
-          "lotParticipations": 0,
-          "gold": 0,
-          "silver": 1,
-          "bronze": 2,
-          "honorable": 0,
-          "prizes": 0,
-          "selections": 0,
-          "ioaiSelections": 0,
-          "ceoaiSelections": 0,
-          "iaioSelections": 0,
-          "uniqueContestants": 3,
-          "bestPlace": 7,
-          "years": [
-            2026
-          ],
-          "circuits": [
-            "ONIA",
-            "ROAI"
-          ]
-        }
-      },
-      {
         "id": "school-colegiul-national-mihai-viteazul-ploiesti",
         "name": "Colegiul Național \"Mihai Viteazul\", Ploiești",
         "kind": "school",
@@ -23297,6 +23269,35 @@
           "bestPlace": 12,
           "years": [
             2025,
+            2026
+          ],
+          "circuits": [
+            "ONIA",
+            "ROAI"
+          ]
+        }
+      },
+      {
+        "id": "school-colegiul-national-ion-luca-caragiale-ploiesti",
+        "name": "Colegiul Național \"Ion Luca Caragiale\", Ploiești",
+        "kind": "school",
+        "stats": {
+          "participations": 4,
+          "nationalParticipations": 4,
+          "internationalParticipations": 0,
+          "lotParticipations": 0,
+          "gold": 0,
+          "silver": 1,
+          "bronze": 2,
+          "honorable": 0,
+          "prizes": 0,
+          "selections": 0,
+          "ioaiSelections": 0,
+          "ceoaiSelections": 0,
+          "iaioSelections": 0,
+          "uniqueContestants": 3,
+          "bestPlace": 7,
+          "years": [
             2026
           ],
           "circuits": [
@@ -23394,35 +23395,6 @@
         }
       },
       {
-        "id": "school-colegiul-national-petru-rares",
-        "name": "Colegiul Național \"Petru Rareș\"",
-        "kind": "school",
-        "stats": {
-          "participations": 2,
-          "nationalParticipations": 2,
-          "internationalParticipations": 0,
-          "lotParticipations": 1,
-          "gold": 0,
-          "silver": 1,
-          "bronze": 1,
-          "honorable": 0,
-          "prizes": 0,
-          "selections": 1,
-          "ioaiSelections": 0,
-          "ceoaiSelections": 0,
-          "iaioSelections": 0,
-          "uniqueContestants": 1,
-          "bestPlace": 7,
-          "years": [
-            2025,
-            2026
-          ],
-          "circuits": [
-            "ROAI"
-          ]
-        }
-      },
-      {
         "id": "school-liceul-teoretic-alexandru-ioan-cuza",
         "name": "Liceul Teoretic \"Alexandru Ioan Cuza\"",
         "kind": "school",
@@ -23448,6 +23420,35 @@
           ],
           "circuits": [
             "ONIA",
+            "ROAI"
+          ]
+        }
+      },
+      {
+        "id": "school-colegiul-national-petru-rares",
+        "name": "Colegiul Național \"Petru Rareș\"",
+        "kind": "school",
+        "stats": {
+          "participations": 2,
+          "nationalParticipations": 2,
+          "internationalParticipations": 0,
+          "lotParticipations": 1,
+          "gold": 0,
+          "silver": 1,
+          "bronze": 1,
+          "honorable": 0,
+          "prizes": 0,
+          "selections": 1,
+          "ioaiSelections": 0,
+          "ceoaiSelections": 0,
+          "iaioSelections": 0,
+          "uniqueContestants": 1,
+          "bestPlace": 7,
+          "years": [
+            2025,
+            2026
+          ],
+          "circuits": [
             "ROAI"
           ]
         }
@@ -23623,34 +23624,6 @@
         }
       },
       {
-        "id": "school-liceul-teoretic-tudor-arghezi",
-        "name": "Liceul Teoretic \"Tudor Arghezi\"",
-        "kind": "school",
-        "stats": {
-          "participations": 1,
-          "nationalParticipations": 1,
-          "internationalParticipations": 0,
-          "lotParticipations": 0,
-          "gold": 0,
-          "silver": 1,
-          "bronze": 0,
-          "honorable": 0,
-          "prizes": 0,
-          "selections": 0,
-          "ioaiSelections": 0,
-          "ceoaiSelections": 0,
-          "iaioSelections": 0,
-          "uniqueContestants": 1,
-          "bestPlace": 6,
-          "years": [
-            2026
-          ],
-          "circuits": [
-            "ROAI"
-          ]
-        }
-      },
-      {
         "id": "school-colegiul-national-pedagogic-regina-maria",
         "name": "Colegiul Național Pedagogic \"Regina Maria\"",
         "kind": "school",
@@ -23703,6 +23676,34 @@
           ],
           "circuits": [
             "ONIA"
+          ]
+        }
+      },
+      {
+        "id": "school-liceul-teoretic-tudor-arghezi",
+        "name": "Liceul Teoretic \"Tudor Arghezi\"",
+        "kind": "school",
+        "stats": {
+          "participations": 1,
+          "nationalParticipations": 1,
+          "internationalParticipations": 0,
+          "lotParticipations": 0,
+          "gold": 0,
+          "silver": 1,
+          "bronze": 0,
+          "honorable": 0,
+          "prizes": 0,
+          "selections": 0,
+          "ioaiSelections": 0,
+          "ceoaiSelections": 0,
+          "iaioSelections": 0,
+          "uniqueContestants": 1,
+          "bestPlace": 6,
+          "years": [
+            2026
+          ],
+          "circuits": [
+            "ROAI"
           ]
         }
       },

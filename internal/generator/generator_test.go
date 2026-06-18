@@ -500,12 +500,19 @@ func TestGeneratedDefaultRankingsUseInternationalCriterionAfterMergedCriteria(t 
 
 func TestRankingComparatorsUseRequestedCriterionOrder(t *testing.T) {
 	betterNationalPlace := Stats{Gold: 1, BestPlace: 1}
+	morePrizes := Stats{Gold: 1, Prizes: 1, BestPlace: 2}
 	moreSelections := Stats{Gold: 1, BestPlace: 2, Selections: 99}
+	if compareNationalRankingStats(morePrizes, betterNationalPlace) <= 0 {
+		t.Fatal("national ranking did not prefer prizes after medals and before best place")
+	}
+	if compareMergedRankingStats(morePrizes, betterNationalPlace, Stats{}, Stats{}) <= 0 {
+		t.Fatal("merged ranking did not prefer prizes after medals and before best place")
+	}
 	if compareMergedRankingStats(betterNationalPlace, moreSelections, Stats{}, Stats{}) <= 0 {
 		t.Fatal("merged ranking did not prefer national best place before selections")
 	}
 	if compareNationalRankingStats(moreSelections, Stats{Gold: 1, BestPlace: 2}) != 0 {
-		t.Fatal("national ranking should ignore selections after medals and best place are tied")
+		t.Fatal("national ranking should ignore selections after medals, prizes, and best place are tied")
 	}
 	if compareSelectionRankingStats(Stats{Selections: 2}, Stats{Selections: 1}) <= 0 {
 		t.Fatal("lot ranking did not prefer higher selection count")
@@ -516,7 +523,11 @@ func TestRankingComparatorsUseRequestedCriterionOrder(t *testing.T) {
 	if compareInternationalRankingStats(internationalGold, internationalSilver) <= 0 {
 		t.Fatal("international ranking did not prefer gold before silver")
 	}
+	internationalPrize := Stats{Bronze: 1, Prizes: 1, BestPlace: 3, InternationalParticipations: 1}
 	betterInternationalPlace := Stats{Bronze: 1, BestPlace: 2, InternationalParticipations: 1}
+	if compareInternationalRankingStats(internationalPrize, betterInternationalPlace) <= 0 {
+		t.Fatal("international ranking did not prefer prizes after medals and before best place")
+	}
 	moreInternationalParticipations := Stats{Bronze: 1, BestPlace: 3, InternationalParticipations: 10}
 	if compareInternationalRankingStats(betterInternationalPlace, moreInternationalParticipations) <= 0 {
 		t.Fatal("international ranking did not prefer best place before participations")

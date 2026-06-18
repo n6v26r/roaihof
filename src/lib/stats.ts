@@ -258,6 +258,7 @@ function accumulateInternational(stats: Stats, result: Result) {
   if (result.medal === 'silver') stats.silver += 1;
   if (result.medal === 'bronze') stats.bronze += 1;
   if (result.medal === 'honorable') stats.honorable += 1;
+  if (result.prize) stats.prizes += 1;
   if (result.place && (!stats.bestPlace || result.place < stats.bestPlace)) stats.bestPlace = result.place;
   if (!stats.years.includes(result.year)) stats.years.push(result.year);
   if (!stats.circuits.includes(result.circuit)) stats.circuits.push(result.circuit);
@@ -304,6 +305,7 @@ function compareNationalStats(a: Stats, b: Stats): number {
   return compareDesc(a.gold, b.gold) ||
     compareDesc(a.silver, b.silver) ||
     compareDesc(a.bronze, b.bronze) ||
+    compareDesc(a.prizes, b.prizes) ||
     compareBestPlace(a.bestPlace, b.bestPlace);
 }
 
@@ -315,6 +317,7 @@ function compareInternationalStats(a: Stats, b: Stats): number {
   return compareDesc(a.gold, b.gold) ||
     compareDesc(a.silver, b.silver) ||
     compareDesc(a.bronze, b.bronze) ||
+    compareDesc(a.prizes, b.prizes) ||
     compareBestPlace(a.bestPlace, b.bestPlace) ||
     compareDesc(a.internationalParticipations || a.participations, b.internationalParticipations || b.participations);
 }

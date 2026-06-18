@@ -130,6 +130,16 @@ describe('stats helpers', () => {
     expect(aggregateRanking('people', tieData, { circuit: 'merged', stage: 'all' }).map((row) => row.id)).toEqual(['alpha', 'beta']);
   });
 
+  it('uses prizes after medals and before best place in national-derived rankings', () => {
+    const tieData = rankingDataset([
+      rankingResult('alpha-national', 'alpha', 'Alpha', 'ONIA', 'national', { medal: 'gold', place: 1 }),
+      rankingResult('beta-national', 'beta', 'Beta', 'ONIA', 'national', { medal: 'gold', place: 2, prize: 'Premiul II' })
+    ]);
+
+    expect(aggregateRanking('people', tieData, { circuit: 'merged', stage: 'all' }).map((row) => row.id)).toEqual(['beta', 'alpha']);
+    expect(aggregateRanking('people', tieData, { circuit: 'merged', stage: 'national' }).map((row) => row.id)).toEqual(['beta', 'alpha']);
+  });
+
   it('uses selections before international criteria in lot rankings', () => {
     const tieData = rankingDataset([
       rankingResult('alpha-lot-1', 'alpha', 'Alpha', 'ONIA', 'lot', { qualification: 'IOAI', year: 2025 }),
@@ -141,7 +151,16 @@ describe('stats helpers', () => {
     expect(aggregateRanking('people', tieData, { circuit: 'merged', stage: 'lot' }).map((row) => row.id)).toEqual(['alpha', 'beta']);
   });
 
-  it('uses international medals, best place, then participations for international rankings', () => {
+  it('uses prizes after medals and before best place in international rankings when present', () => {
+    const tieData = rankingDataset([
+      rankingResult('alpha-iaio', 'alpha', 'Alpha', 'IAIO', 'international', { medal: 'bronze', place: 1 }),
+      rankingResult('beta-iaio', 'beta', 'Beta', 'IAIO', 'international', { medal: 'bronze', place: 2, prize: 'Special prize' })
+    ]);
+
+    expect(aggregateRanking('people', tieData, { circuit: 'international', stage: 'all' }).map((row) => row.id)).toEqual(['beta', 'alpha']);
+  });
+
+  it('uses international medals, best place, then participations when prizes are tied', () => {
     const tieData = rankingDataset([
       rankingResult('alpha-iaio', 'alpha', 'Alpha', 'IAIO', 'international', { medal: 'silver', place: 1 }),
       rankingResult('beta-ioai', 'beta', 'Beta', 'IOAI', 'international', { medal: 'gold', place: 50 }),

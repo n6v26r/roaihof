@@ -208,7 +208,7 @@ function rankingMetadata(kind: RankingKind, data: Dataset): SeoMetadata {
   const labels: Record<RankingKind, { title: string; description: string }> = {
     people: {
       title: `People Ranking | ${SITE_NAME}`,
-      description: 'Ranking of Romanian AI olympiad contestants by medals, prizes, selections, participation, and best national results.'
+      description: 'Ranking of Romanian AI olympiad contestants by medals, prizes, best places, selections, participation, and international results.'
     },
     schools: {
       title: `Schools Ranking | ${SITE_NAME}`,
