@@ -65,8 +65,8 @@ func BuildDataset(root string) (*Dataset, error) {
 		SourceStatus{
 			ID:      "onia-2026-national",
 			Title:   "ONIA 2026 national + Lot",
-			Status:  "partial",
-			Detail:  "Imported from the official ONIA national JSON, public national participant sheet/profile recovery for anonymous IX-XII rows, LotNational identity list, and platform final leaderboards for the two Lot rounds.",
+			Status:  "validate",
+			Detail:  "Anonymous recovered results should be broadly manually checked.",
 			URL:     "https://olimpiada-ai.ro/ro/rezultate/nationala",
 			Checked: checked,
 		},
@@ -138,8 +138,8 @@ func BuildDataset(root string) (*Dataset, error) {
 		SourceTodo{
 			ID:     "onia-2026",
 			Title:  "ONIA 2026",
-			Status: "partial",
-			Detail: "Partial: 23 national rows remain anonymous.",
+			Status: "validate",
+			Detail: "Anonymous recovered results should be broadly manually checked.",
 			URL:    "https://olimpiada-ai.ro/ro/rezultate/nationala",
 		},
 	)

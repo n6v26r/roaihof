@@ -1174,6 +1174,12 @@ code {
   color: var(--red);
 }
 
+.source-todo-validate {
+  border-color: color-mix(in srgb, var(--cyan) 36%, var(--line));
+  background: color-mix(in srgb, var(--cyan) 10%, var(--panel));
+  color: var(--cyan);
+}
+
 .source-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1221,6 +1227,10 @@ code {
 
 .source-missing .source-status-icon {
   color: var(--red);
+}
+
+.source-validate .source-status-icon {
+  color: var(--cyan);
 }
 
 .empty-state {

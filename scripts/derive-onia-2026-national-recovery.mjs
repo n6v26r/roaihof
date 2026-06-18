@@ -4,76 +4,34 @@ import path from 'node:path';
 const root = process.cwd();
 const checked = '2026-06-19';
 const profileCacheDir = '/tmp/onia-mlcompete-profiles';
-const participantsURL = 'https://docs.google.com/spreadsheets/d/1W8bptasd7CqXVyLROwJhvEgJHexbc722ol22AMIbdn0/gviz/tq?tqx=out:csv';
+const participantsURL = 'https://docs.google.com/spreadsheets/d/1W8bptasd7CqXVyLROwJhvEgJHexbc722ol22AMIbdn0/gviz/tq?tqx=out:csv&gid=0';
 const participantsHTMLURL = 'https://docs.google.com/spreadsheets/d/1W8bptasd7CqXVyLROwJhvEgJHexbc722ol22AMIbdn0/htmlview?pli=1';
 
 const nationalPath = path.join(root, 'data/raw/onia/rezultate-nationala-2026.json');
 const platformPath = path.join(root, 'data/manual/onia-platform-leaderboards.json');
+const aliasesPath = path.join(root, 'data/manual/aliases.json');
 const participantsPath = '/tmp/onia-national-participants.csv';
 const outputPath = path.join(root, 'data/manual/onia-2026-national-recovery.json');
 
 const national = JSON.parse(await fs.readFile(nationalPath, 'utf8'));
 const platform = JSON.parse(await fs.readFile(platformPath, 'utf8'));
-const namedNationalParticipants = officialNamedParticipantKeys(national);
+const aliases = await loadAliases(aliasesPath);
 const allParticipants = parseParticipants(await loadCachedText(participantsPath, participantsURL));
-const participants = allParticipants
-  .filter((participant) => participant.grade !== '8')
-  .filter((participant) => !namedNationalParticipants.has(`${participant.grade}:${nameKey(participant.name)}`));
+const namedNationalParticipants = officialNamedParticipantKeys(national);
 
 await fs.mkdir(profileCacheDir, { recursive: true });
 
 const platformRows = nationalPlatformRows(platform.leaderboards);
+const stageAppearances = await loadStageAppearances();
 const guests = nationalGuests(allParticipants, platformRows);
-const anonymousRows = officialAnonymousRows(national).filter((row) => typeof row.score === 'number' && row.score > 0);
-const candidateRows = [];
-const usernames = new Set();
-
-for (const row of anonymousRows) {
-  const rows = (platformRows.get(sectionForGrade(row.grade)) ?? []).filter((candidate) => scoresClose(candidate.score, row.score));
-  if (rows.length !== 1) {
-    continue;
-  }
-  const candidate = rows[0];
-  candidateRows.push({ ...row, username: candidate.username, userId: candidate.userId, platformRank: candidate.rank });
-  usernames.add(candidate.username);
-}
-
-const profiles = new Map();
-for (const username of [...usernames].sort((a, b) => a.localeCompare(b))) {
-  profiles.set(username, await loadProfile(username));
-}
-
-const participantByName = new Map(participants.map((participant) => [nameKey(participant.name), participant]));
-const matches = [];
-const unresolved = [];
-
-for (const row of candidateRows) {
-  const profile = profiles.get(row.username);
-  const candidates = participantCandidates(row, profile, participants);
-  if (candidates.length !== 1) {
-    unresolved.push(unresolvedRow(row, profile, candidates));
-    continue;
-  }
-  const participant = candidates[0];
-  const evidence = [];
-  if (profile?.firstName || profile?.lastName) evidence.push('profile-name');
-  if (profile?.institution?.name) evidence.push('profile-institution');
-  evidence.push('national-score');
-  matches.push({
-    grade: row.grade,
-    place: row.place,
-    score: row.score,
-    username: row.username,
-    userId: row.userId,
-    name: participant.name,
-    school: participant.school,
-    county: participant.county,
-    evidence
-  });
-}
-
-matches.sort((a, b) => Number(a.grade) - Number(b.grade) || a.place - b.place);
-unresolved.sort((a, b) => Number(a.grade) - Number(b.grade) || a.place - b.place);
+const anonymousRows = officialAnonymousRows(national);
+const excluded = anonymousRows.filter((row) => row.kind === 'absent').map(excludedAbsentRow);
+const recovery = await recoverAnonymousRows(
+  anonymousRows.filter((row) => row.kind !== 'absent'),
+  allParticipants,
+  platformRows,
+  stageAppearances
+);
 
 const output = {
   sources: [
@@ -85,6 +43,34 @@ const output = {
       status: 'ok'
     },
     {
+      id: 'mlcompete-11-final',
+      title: 'ONIA 2026 local IX-X mlcompete final leaderboard',
+      url: 'https://platform.olimpiada-ai.ro/ro/competitions/11?tab=final',
+      accessedAt: checked,
+      status: 'ok'
+    },
+    {
+      id: 'mlcompete-12-final',
+      title: 'ONIA 2026 local XI-XII mlcompete final leaderboard',
+      url: 'https://platform.olimpiada-ai.ro/ro/competitions/12?tab=final',
+      accessedAt: checked,
+      status: 'ok'
+    },
+    {
+      id: 'mlcompete-14-final',
+      title: 'ONIA 2026 county IX-X mlcompete final leaderboard',
+      url: 'https://platform.olimpiada-ai.ro/ro/competitions/14?tab=final',
+      accessedAt: checked,
+      status: 'ok'
+    },
+    {
+      id: 'mlcompete-15-final',
+      title: 'ONIA 2026 county XI-XII mlcompete final leaderboard',
+      url: 'https://platform.olimpiada-ai.ro/ro/competitions/15?tab=final',
+      accessedAt: checked,
+      status: 'ok'
+    },
+    {
       id: 'mlcompete-2026-profile-pages',
       title: 'ONIA 2026 public mlcompete profile pages',
       url: 'https://platform.olimpiada-ai.ro/ro/profile/',
@@ -92,14 +78,214 @@ const output = {
       status: 'partial'
     }
   ],
-  note: 'Recovered IX-XII anonymous ONIA 2026 national rows by exact national-score match to the public mlcompete final leaderboard, then by public profile identity/institution against the official national participant sheet. Grade 8 national invitees are tracked separately as guest participations; their scores come from the extra IX-X mlcompete final rows not present in the official IX-X national JSON.',
+  note: 'Recovered IX-XII anonymous ONIA 2026 national rows by matching public mlcompete national scores to usernames, then iteratively matching remaining participants by public profile institution/county, username-name evidence, and local/county stage username appearances. Grade 8 national invitees are tracked separately as guest participations. Official absent placeholders are excluded because they did not participate in the contest.',
   guests,
-  recovered: matches,
-  unresolved
+  excluded,
+  recovered: recovery.matches,
+  unresolved: recovery.unresolved
 };
 
 await fs.writeFile(outputPath, `${JSON.stringify(output, null, 2)}\n`);
-console.log(`wrote ${matches.length} recovered rows, ${guests.length} guests, and ${unresolved.length} unresolved rows to ${outputPath}`);
+console.log(`wrote ${recovery.matches.length} recovered rows, ${guests.length} guests, ${excluded.length} excluded absent rows, and ${recovery.unresolved.length} unresolved rows to ${outputPath}`);
+
+async function recoverAnonymousRows(rows, participants, platformRows, stageAppearances) {
+  let availableParticipants = participants
+    .filter((participant) => participant.grade !== '8')
+    .filter((participant) => !namedNationalParticipants.has(participantKey(participant)));
+  const matches = [];
+  const unresolved = [];
+  const usedUsernames = new Set();
+  const matchedRows = new Set();
+  const profiles = new Map();
+
+  const profileFor = async (username) => {
+    if (!username) return null;
+    if (!profiles.has(username)) {
+      profiles.set(username, await loadProfile(username));
+    }
+    return profiles.get(username);
+  };
+
+  const removeParticipant = (participant) => {
+    availableParticipants = availableParticipants.filter((item) => item !== participant);
+  };
+
+  const bestForRow = async (row, candidates) => {
+    const options = [];
+    for (const candidate of candidates.filter((item) => !usedUsernames.has(item.username))) {
+      const profile = await profileFor(candidate.username);
+      for (const participant of availableParticipants.filter((item) => item.grade === row.grade)) {
+        const score = participantMatchScore({
+          username: candidate.username,
+          rowScore: row.score,
+          platformScore: candidate.score,
+          profile,
+          participant,
+          availableParticipants
+        });
+        if (score > 0) {
+          options.push({ candidate, participant, profile, score });
+        }
+      }
+    }
+    options.sort((a, b) => b.score - a.score);
+    if (options.length === 0) return null;
+    if (options.length > 1 && options[0].score === options[1].score) return null;
+    return options[0].score >= 6 ? options[0] : null;
+  };
+
+  let progress = true;
+  while (progress) {
+    progress = false;
+    const positiveRows = rows
+      .filter((row) => row.kind === 'positive' && !matchedRows.has(rowKey(row)))
+      .sort((a, b) => b.score - a.score || Number(a.grade) - Number(b.grade) || a.place - b.place);
+    for (const row of positiveRows) {
+      const candidates = (platformRows.get(row.section) ?? []).filter((candidate) => scoresClose(candidate.score, row.score));
+      const match = await bestForRow(row, candidates);
+      if (!match) continue;
+      matches.push(recoveredRow(row, match, stageAppearances));
+      usedUsernames.add(match.candidate.username);
+      matchedRows.add(rowKey(row));
+      removeParticipant(match.participant);
+      progress = true;
+    }
+  }
+
+  for (const section of ['IX-X', 'XI-XII']) {
+    const sectionGrades = section === 'IX-X' ? ['9', '10'] : ['11', '12'];
+    const zeroUsers = (platformRows.get(section) ?? []).filter((row) => row.score === 0 && !usedUsernames.has(row.username));
+    const pairings = [];
+    for (const candidate of zeroUsers) {
+      const profile = await profileFor(candidate.username);
+      const options = [];
+      for (const participant of availableParticipants.filter((item) => sectionGrades.includes(item.grade))) {
+        const score = participantMatchScore({
+          username: candidate.username,
+          rowScore: 0,
+          platformScore: 0,
+          profile,
+          participant,
+          availableParticipants,
+          ignoreScore: true
+        });
+        if (score > 0) {
+          options.push({ candidate, participant, profile, score });
+        }
+      }
+      options.sort((a, b) => b.score - a.score);
+      if (options.length === 0 || (options.length > 1 && options[0].score === options[1].score) || options[0].score < 6) {
+        continue;
+      }
+      pairings.push(options[0]);
+      usedUsernames.add(candidate.username);
+      removeParticipant(options[0].participant);
+    }
+
+    const zeroRows = rows.filter((row) => row.section === section && row.kind === 'zero' && !matchedRows.has(rowKey(row)));
+    for (const grade of sectionGrades) {
+      const gradeRows = zeroRows.filter((row) => row.grade === grade).sort((a, b) => a.place - b.place);
+      const gradePairings = pairings
+        .filter((pairing) => pairing.participant.grade === grade)
+        .sort((a, b) => a.candidate.rank - b.candidate.rank || a.candidate.username.localeCompare(b.candidate.username));
+      for (let index = 0; index < Math.min(gradeRows.length, gradePairings.length); index++) {
+        const row = gradeRows[index];
+        matches.push(recoveredRow(row, gradePairings[index], stageAppearances));
+        matchedRows.add(rowKey(row));
+      }
+    }
+  }
+
+  for (const row of rows.filter((item) => !matchedRows.has(rowKey(item)))) {
+    const candidates = (platformRows.get(row.section) ?? []).filter((candidate) => row.kind === 'zero' ? candidate.score === 0 : scoresClose(candidate.score, row.score));
+    unresolved.push({
+      grade: row.grade,
+      place: row.place,
+      score: row.score,
+      anonymousName: row.anonymousName,
+      kind: row.kind,
+      candidateCount: candidates.length,
+      reason: 'ambiguous or missing participant match'
+    });
+  }
+
+  matches.sort((a, b) => Number(a.grade) - Number(b.grade) || a.place - b.place);
+  unresolved.sort((a, b) => Number(a.grade) - Number(b.grade) || a.place - b.place);
+  return { matches, unresolved };
+}
+
+function excludedAbsentRow(row) {
+  return {
+    grade: row.grade,
+    place: row.place,
+    anonymousName: row.anonymousName,
+    kind: row.kind,
+    reason: 'official national source marks the row absent'
+  };
+}
+
+function recoveredRow(row, match, stageAppearances) {
+  const evidence = [];
+  const explicitName = profileName(match.profile);
+  if (explicitName && nameKey(explicitName) === nameKey(match.participant.name)) {
+    evidence.push('profile-name');
+  }
+  if (profileInstitutionEvidence(match.profile, match.participant)) {
+    evidence.push('profile-institution');
+  }
+  if (usernameNameScore(match.candidate.username, match.participant.name) > 0) {
+    evidence.push('username-name');
+  }
+  for (const stage of stageAppearances.get(usernameKey(match.candidate.username)) ?? []) {
+    evidence.push(stage);
+  }
+  evidence.push(row.kind === 'zero' ? 'national-zero-score' : 'national-score');
+
+  return {
+    grade: row.grade,
+    place: row.place,
+    score: row.score,
+    username: match.candidate.username,
+    userId: match.candidate.userId,
+    platformRank: match.candidate.rank,
+    name: match.participant.name,
+    school: match.participant.school,
+    county: match.participant.county,
+    evidence: [...new Set(evidence)]
+  };
+}
+
+function participantMatchScore({ username, rowScore, platformScore, profile, participant, availableParticipants, ignoreScore = false }) {
+  let score = usernameNameScore(username, participant.name);
+  const explicitName = profileName(profile);
+  if (explicitName && nameKey(explicitName) === nameKey(participant.name)) {
+    score += 100;
+  }
+  const institution = profile?.institution?.name ?? '';
+  if (institution) {
+    if (isCountyInstitution(institution, availableParticipants) && sameCountyName(institution, participant.county)) {
+      score += 35;
+    }
+    if (sameSchool(institution, participant.school)) {
+      score += 70;
+    }
+  }
+  if (!ignoreScore && rowScore != null && platformScore != null) {
+    const delta = Math.abs(Number(rowScore) - Number(platformScore));
+    if (delta < 0.005) {
+      score += 100;
+    } else {
+      score -= delta * 1000;
+    }
+  }
+  return score;
+}
+
+function profileInstitutionEvidence(profile, participant) {
+  const institution = profile?.institution?.name ?? '';
+  if (!institution) return false;
+  return sameCountyName(institution, participant.county) || sameSchool(institution, participant.school);
+}
 
 function officialAnonymousRows(file) {
   const groups = [
@@ -115,7 +301,9 @@ function officialAnonymousRows(file) {
       rows.push({
         grade,
         place: item.Pozitie,
-        score: typeof item.ScorTotal === 'number' ? item.ScorTotal : item.ScorTotal,
+        score: typeof item.ScorTotal === 'number' ? item.ScorTotal : 0,
+        kind: scoreKind(item),
+        section: sectionForGrade(grade),
         anonymousName: item.Username
       });
     }
@@ -123,21 +311,31 @@ function officialAnonymousRows(file) {
   return rows;
 }
 
+function scoreKind(row) {
+  if (typeof row.ScorTotal === 'number') {
+    return row.ScorTotal === 0 ? 'zero' : 'positive';
+  }
+  if (cleanHuman(row.ScorTotal).toLowerCase() === 'absent' || row.ScorFinal == null) {
+    return 'absent';
+  }
+  return 'zero';
+}
+
 function officialNamedParticipantKeys(file) {
-	const groups = [
-		['9', file.Clasa_9 ?? []],
-		['10', file.Clasa_10 ?? []],
-		['11', file.Clasa_11 ?? []],
-		['12', file.Clasa_12 ?? []]
-	];
-	const keys = new Set();
-	for (const [grade, items] of groups) {
-		for (const item of items) {
-			if (nameKey(item.Username).startsWith('participant ')) continue;
-			keys.add(`${grade}:${nameKey(item.Username)}`);
-		}
-	}
-	return keys;
+  const groups = [
+    ['9', file.Clasa_9 ?? []],
+    ['10', file.Clasa_10 ?? []],
+    ['11', file.Clasa_11 ?? []],
+    ['12', file.Clasa_12 ?? []]
+  ];
+  const keys = new Set();
+  for (const [grade, items] of groups) {
+    for (const item of items) {
+      if (nameKey(item.Username).startsWith('participant ')) continue;
+      keys.add(`${grade}:${nameKey(canonicalName(item.Username))}`);
+    }
+  }
+  return keys;
 }
 
 function nationalPlatformRows(leaderboards) {
@@ -186,61 +384,87 @@ function nationalGuests(participants, platformRows) {
     });
 }
 
-function participantCandidates(row, profile, participants) {
-	const gradeParticipants = participants.filter((participant) => participant.grade === row.grade);
-	const explicitName = profileName(profile);
-	if (explicitName) {
-		const participant = participantByName.get(nameKey(explicitName));
-		if (participant?.grade === row.grade) return [participant];
-	}
-
-	const profileInstitution = profile?.institution?.name ?? '';
-	if (profileInstitution && isCountyInstitution(profileInstitution, participants)) {
-		const sameCounty = gradeParticipants.filter((participant) => sameCountyName(profileInstitution, participant.county));
-		if (sameCounty.length === 1) {
-			return sameCounty;
-		}
-		const countyUsernameMatches = rankedUsernameMatches(row.username, sameCounty);
-		if (countyUsernameMatches.length === 1) {
-			return countyUsernameMatches;
-		}
-	} else if (profileInstitution) {
-		const sameInstitution = gradeParticipants.filter((participant) => sameSchool(profileInstitution, participant.school));
-		if (sameInstitution.length === 1) {
-			return sameInstitution;
-		}
-		const schoolUsernameMatches = rankedUsernameMatches(row.username, sameInstitution);
-		if (schoolUsernameMatches.length === 1) {
-			return schoolUsernameMatches;
-		}
-	}
-
-	return rankedUsernameMatches(row.username, gradeParticipants, 2);
+async function loadStageAppearances() {
+  const specs = [
+    {
+      evidence: 'local-stage-username',
+      cachePath: '/tmp/mlcompete-competition-11.html',
+      fallbackCachePath: '/tmp/mlcompete-11-final.html',
+      url: 'https://platform.olimpiada-ai.ro/ro/competitions/11?tab=final'
+    },
+    {
+      evidence: 'local-stage-username',
+      cachePath: '/tmp/mlcompete-competition-12.html',
+      fallbackCachePath: '/tmp/mlcompete-12-final.html',
+      url: 'https://platform.olimpiada-ai.ro/ro/competitions/12?tab=final'
+    },
+    {
+      evidence: 'county-stage-username',
+      cachePath: '/tmp/mlcompete-competition-14.html',
+      fallbackCachePath: '/tmp/mlcompete-14-final.html',
+      url: 'https://platform.olimpiada-ai.ro/ro/competitions/14?tab=final'
+    },
+    {
+      evidence: 'county-stage-username',
+      cachePath: '/tmp/mlcompete-competition-15.html',
+      fallbackCachePath: '/tmp/mlcompete-15-final.html',
+      url: 'https://platform.olimpiada-ai.ro/ro/competitions/15?tab=final'
+    }
+  ];
+  const appearances = new Map();
+  for (const spec of specs) {
+    const html = await loadCachedTextWithFallback(spec.cachePath, spec.fallbackCachePath, spec.url);
+    for (const row of extractLeaderboardRows(html)) {
+      const key = usernameKey(row.username);
+      if (!appearances.has(key)) {
+        appearances.set(key, []);
+      }
+      appearances.get(key).push(spec.evidence);
+    }
+  }
+  for (const [key, values] of appearances) {
+    appearances.set(key, [...new Set(values)]);
+  }
+  return appearances;
 }
 
-function unresolvedRow(row, profile, candidates) {
-  return {
-    grade: row.grade,
-    place: row.place,
-    score: row.score,
-    username: row.username,
-    userId: row.userId,
-    profileName: profileName(profile),
-    profileInstitution: profile?.institution?.name ?? '',
-    candidateCount: candidates.length
-  };
+function extractLeaderboardRows(html) {
+  const marker = '\\"partialLeaderboard\\":';
+  const markerIndex = html.indexOf(marker);
+  if (markerIndex < 0) return [];
+  const start = html.indexOf('[', markerIndex + marker.length);
+  let depth = 0;
+  let end = -1;
+  for (let index = start; index < html.length; index++) {
+    const char = html[index];
+    if (char === '[') depth++;
+    if (char === ']') {
+      depth--;
+      if (depth === 0) {
+        end = index + 1;
+        break;
+      }
+    }
+  }
+  if (start < 0 || end < 0) return [];
+  return JSON.parse(html.slice(start, end).replace(/\\"/g, '"'));
 }
 
 function parseParticipants(csv) {
   const [header, ...lines] = parseCSV(csv);
   const indices = Object.fromEntries(header.map((name, index) => [name, index]));
   return lines
-    .map((row) => ({
-      name: cleanHuman(`${row[indices.Nume] ?? ''} ${row[indices.Prenume] ?? ''}`),
-      grade: parseGrade(row[indices.Clasa] ?? ''),
-      school: cleanHuman(row[indices.Liceu] ?? ''),
-      county: titleCounty(row[indices['Județ']] ?? '')
-    }))
+    .map((row) => {
+      const rawName = cleanHuman(`${row[indices.Nume] ?? ''} ${row[indices.Prenume] ?? ''}`);
+      return {
+        name: rawName,
+        canonicalName: canonicalName(rawName),
+        originalName: rawName,
+        grade: parseGrade(row[indices.Clasa] ?? ''),
+        school: cleanHuman(row[indices.Liceu] ?? ''),
+        county: titleCounty(row[indices['Județ']] ?? '')
+      };
+    })
     .filter((row) => row.name && row.grade);
 }
 
@@ -306,11 +530,25 @@ async function loadCachedText(cachePath, url) {
   return html;
 }
 
+async function loadCachedTextWithFallback(cachePath, fallbackCachePath, url) {
+  try {
+    return await fs.readFile(cachePath, 'utf8');
+  } catch {
+    try {
+      const text = await fs.readFile(fallbackCachePath, 'utf8');
+      await fs.writeFile(cachePath, text);
+      return text;
+    } catch {
+      return loadCachedText(cachePath, url);
+    }
+  }
+}
+
 function extractProfile(html) {
-	const marker = '\\"profile\\":{\\"userId\\"';
-	const start = html.indexOf(marker);
-	if (start < 0) return null;
-	const objectStart = html.indexOf('{', start);
+  const marker = '\\"profile\\":{\\"userId\\"';
+  const start = html.indexOf(marker);
+  if (start < 0) return null;
+  const objectStart = html.indexOf('{', start);
   let depth = 0;
   let end = -1;
   for (let index = objectStart; index < html.length; index++) {
@@ -321,53 +559,53 @@ function extractProfile(html) {
       end = index + 1;
       break;
     }
-	}
-	if (end < 0) return null;
-	const blob = html.slice(objectStart, end);
-	const institutionStart = blob.indexOf('\\"institution\\":{');
-	const institutionEnd = institutionStart >= 0 ? matchingObjectEnd(blob, blob.indexOf('{', institutionStart)) : -1;
-	const institutionBlob = institutionStart >= 0 && institutionEnd > institutionStart ? blob.slice(institutionStart, institutionEnd) : '';
-	return {
-		userId: escapedField(blob, 'userId'),
-		username: escapedField(blob, 'username'),
-		firstName: escapedField(blob, 'firstName'),
-		lastName: escapedField(blob, 'lastName'),
-		location: escapedField(blob, 'location'),
-		institution: institutionBlob ? {
-			name: escapedField(institutionBlob, 'name'),
-			county: {
-				name: escapedField(institutionBlob, 'name', institutionBlob.indexOf('\\"county\\":{'))
-			}
-		} : null
-	};
+  }
+  if (end < 0) return null;
+  const blob = html.slice(objectStart, end);
+  const institutionStart = blob.indexOf('\\"institution\\":{');
+  const institutionEnd = institutionStart >= 0 ? matchingObjectEnd(blob, blob.indexOf('{', institutionStart)) : -1;
+  const institutionBlob = institutionStart >= 0 && institutionEnd > institutionStart ? blob.slice(institutionStart, institutionEnd) : '';
+  return {
+    userId: escapedField(blob, 'userId'),
+    username: escapedField(blob, 'username'),
+    firstName: escapedField(blob, 'firstName'),
+    lastName: escapedField(blob, 'lastName'),
+    location: escapedField(blob, 'location'),
+    institution: institutionBlob ? {
+      name: escapedField(institutionBlob, 'name'),
+      county: {
+        name: escapedField(institutionBlob, 'name', institutionBlob.indexOf('\\"county\\":{'))
+      }
+    } : null
+  };
 }
 
 function matchingObjectEnd(text, objectStart) {
-	if (objectStart < 0) return -1;
-	let depth = 0;
-	for (let index = objectStart; index < text.length; index++) {
-		const char = text[index];
-		if (char === '{') depth++;
-		if (char === '}') depth--;
-		if (depth === 0) return index + 1;
-	}
-	return -1;
+  if (objectStart < 0) return -1;
+  let depth = 0;
+  for (let index = objectStart; index < text.length; index++) {
+    const char = text[index];
+    if (char === '{') depth++;
+    if (char === '}') depth--;
+    if (depth === 0) return index + 1;
+  }
+  return -1;
 }
 
 function escapedField(text, field, offset = 0) {
-	if (offset < 0) return '';
-	const pattern = new RegExp(`\\\\\\"${field}\\\\\\":(?:null|\\\\\\"((?:\\\\\\\\.|[^\\\\"])*)\\\\\\")`);
-	const match = text.slice(offset).match(pattern);
-	if (!match || match[1] == null) return '';
-	return unescapeJSONString(match[1]);
+  if (offset < 0) return '';
+  const pattern = new RegExp(`\\\\\\"${field}\\\\\\":(?:null|\\\\\\"((?:\\\\\\\\.|[^\\\\"])*)\\\\\\")`);
+  const match = text.slice(offset).match(pattern);
+  if (!match || match[1] == null) return '';
+  return unescapeJSONString(match[1]);
 }
 
 function unescapeJSONString(value) {
-	try {
-		return JSON.parse(`"${value.replace(/"/g, '\\"')}"`);
-	} catch {
-		return value.replace(/\\"/g, '"').replace(/\\u0026/g, '&');
-	}
+  try {
+    return JSON.parse(`"${value.replace(/"/g, '\\"')}"`);
+  } catch {
+    return value.replace(/\\"/g, '"').replace(/\\u0026/g, '&');
+  }
 }
 
 function profileName(profile) {
@@ -390,63 +628,65 @@ function parseGrade(raw) {
   return '';
 }
 
-function rankedUsernameMatches(username, participants, minimumScore = 1) {
-	const scored = participants
-		.map((participant) => ({ participant, score: usernameNameScore(username, participant.name) }))
-		.filter((item) => item.score >= minimumScore)
-		.sort((a, b) => b.score - a.score);
-	if (scored.length === 0) return [];
-	if (scored.length > 1 && scored[0].score === scored[1].score) return [];
-	return [scored[0].participant];
-}
-
 function usernameNameScore(username, name) {
-	const key = usernameKey(username);
-	if (!key) return 0;
-	const tokens = nameKey(name).split(' ').filter(Boolean);
-	let score = 0;
-	for (const token of tokens) {
-		if (token.length >= 4 && key.includes(token)) score += token.length;
-		if (token.length >= 5 && key.includes(token.replace(/s$/, 'sh'))) score += token.length - 1;
-		if (token.length >= 6 && key.includes(token.slice(0, 3))) score += 1;
-	}
-	for (const permutation of tokenPermutations(tokens)) {
-		const compact = permutation.join('');
-		if (compact.length >= 8 && key.includes(compact)) score += compact.length * 2;
-	}
-	return score;
+  const key = usernameKey(username);
+  if (!key) return 0;
+  const tokens = nameKey(name).split(' ').filter(Boolean);
+  let score = 0;
+  for (const token of tokens) {
+    if (token.length >= 4 && key.includes(token)) score += token.length * 3;
+    if (token.length >= 4 && key.includes(token.slice(0, 4))) score += 4;
+    if (token.length >= 3 && key.includes(token)) score += token.length;
+  }
+  for (const permutation of tokenPermutations(tokens.map((token) => token[0]))) {
+    if (permutation.length >= 2 && key.includes(permutation)) score += permutation.length * 3;
+  }
+  for (let left = 0; left < tokens.length; left++) {
+    for (let right = 0; right < tokens.length; right++) {
+      if (left === right) continue;
+      const firstInitialThenToken = `${tokens[left][0]}${tokens[right]}`;
+      const tokenThenInitial = `${tokens[right]}${tokens[left][0]}`;
+      if (firstInitialThenToken.length >= 4 && key.includes(firstInitialThenToken)) {
+        score += firstInitialThenToken.length * 3;
+      }
+      if (tokenThenInitial.length >= 4 && key.includes(tokenThenInitial)) {
+        score += tokenThenInitial.length * 2;
+      }
+    }
+  }
+  return score;
 }
 
 function tokenPermutations(tokens) {
-	if (tokens.length < 2 || tokens.length > 4) return [];
-	const output = [];
-	const used = new Array(tokens.length).fill(false);
-	const current = [];
-	function walk() {
-		if (current.length === tokens.length) {
-			output.push([...current]);
-			return;
-		}
-		for (let index = 0; index < tokens.length; index++) {
-			if (used[index]) continue;
-			used[index] = true;
-			current.push(tokens[index]);
-			walk();
-			current.pop();
-			used[index] = false;
-		}
-	}
-	walk();
-	return output;
+  if (tokens.length < 2 || tokens.length > 4) return [];
+  const output = [];
+  const used = new Array(tokens.length).fill(false);
+  const current = [];
+  function walk() {
+    if (current.length === tokens.length) {
+      output.push(current.join(''));
+      return;
+    }
+    for (let index = 0; index < tokens.length; index++) {
+      if (used[index]) continue;
+      used[index] = true;
+      current.push(tokens[index]);
+      walk();
+      current.pop();
+      used[index] = false;
+    }
+  }
+  walk();
+  return output;
 }
 
 function isCountyInstitution(value, participants) {
-	const key = nameKey(value);
-	return participants.some((participant) => nameKey(participant.county) === key);
+  const key = nameKey(value);
+  return participants.some((participant) => nameKey(participant.county) === key);
 }
 
 function sameCountyName(left, right) {
-	return nameKey(left) === nameKey(right);
+  return nameKey(left) === nameKey(right);
 }
 
 function sameSchool(left, right) {
@@ -457,7 +697,7 @@ function sameSchool(left, right) {
 
 function schoolKey(value) {
   return nameKey(value)
-    .replace(/\b(colegiul|colegiul national|national|liceul|liceul teoretic|teoretic|de|din|municipiul|bucuresti|bucuresti|sectorul|sector)\b/g, ' ')
+    .replace(/\b(colegiul|colegiul national|national|liceul|liceul teoretic|teoretic|de|din|municipiul|bucuresti|sectorul|sector|cn|c n)\b/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -466,8 +706,32 @@ function scoresClose(left, right) {
   return Math.abs(Number(left) - Number(right)) <= 0.05 + Number.EPSILON;
 }
 
+function participantKey(participant) {
+  return `${participant.grade}:${nameKey(participant.canonicalName ?? participant.name)}`;
+}
+
+function rowKey(row) {
+  return `${row.grade}:${row.place}`;
+}
+
+function canonicalName(name) {
+  const clean = cleanHuman(name);
+  return aliases.get(nameKey(clean)) ?? clean;
+}
+
+async function loadAliases(filePath) {
+  const file = JSON.parse(await fs.readFile(filePath, 'utf8'));
+  const map = new Map();
+  for (const item of file.aliases ?? []) {
+    map.set(nameKey(item.alias), cleanHuman(item.canonical));
+  }
+  return map;
+}
+
 function usernameKey(value) {
-  return nameKey(value).replaceAll(' ', '');
+  return nameKey(value)
+    .replaceAll(' ', '')
+    .replace(/[013457]/g, (char) => ({ 0: 'o', 1: 'i', 3: 'e', 4: 'a', 5: 's', 7: 't' })[char] ?? char);
 }
 
 function nameKey(value) {

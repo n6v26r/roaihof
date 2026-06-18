@@ -31,10 +31,14 @@ type oniaNationalRow struct {
 	Localitate string    `json:"Localitate"`
 	Judet      string    `json:"Judet"`
 	Clasa      string    `json:"Clasa"`
-	ScorTotal  flexFloat `json:"ScorTotal"`
-	ScorFinal  flexFloat `json:"ScorFinal"`
+	ScorTotal  oniaScore `json:"ScorTotal"`
+	ScorFinal  oniaScore `json:"ScorFinal"`
 	Premiu     *string   `json:"Premiu"`
 	Medalie    *string   `json:"Medalie"`
+}
+
+func (row oniaNationalRow) isAbsent() bool {
+	return row.ScorTotal.Absent
 }
 
 type oniaNationalRecoveryFile struct {
@@ -123,6 +127,50 @@ func (f *flexFloat) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	*f = flexFloat(value)
+	return nil
+}
+
+type oniaScore struct {
+	Value   float64
+	Present bool
+	Absent  bool
+}
+
+func (s *oniaScore) UnmarshalJSON(data []byte) error {
+	raw := strings.TrimSpace(string(data))
+	if raw == "" || raw == "null" {
+		*s = oniaScore{}
+		return nil
+	}
+	s.Present = true
+	if strings.HasPrefix(raw, "\"") {
+		var text string
+		if err := json.Unmarshal(data, &text); err != nil {
+			return err
+		}
+		text = strings.TrimSpace(strings.ReplaceAll(text, ",", "."))
+		if strings.EqualFold(text, "absent") {
+			s.Absent = true
+			s.Value = 0
+			return nil
+		}
+		if text == "" || text == "-" {
+			s.Value = 0
+			return nil
+		}
+		value, err := strconv.ParseFloat(text, 64)
+		if err != nil {
+			s.Value = 0
+			return nil
+		}
+		s.Value = value
+		return nil
+	}
+	value, err := strconv.ParseFloat(raw, 64)
+	if err != nil {
+		return err
+	}
+	s.Value = value
 	return nil
 }
 

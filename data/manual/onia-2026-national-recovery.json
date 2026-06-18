@@ -8,6 +8,34 @@
       "status": "ok"
     },
     {
+      "id": "mlcompete-11-final",
+      "title": "ONIA 2026 local IX-X mlcompete final leaderboard",
+      "url": "https://platform.olimpiada-ai.ro/ro/competitions/11?tab=final",
+      "accessedAt": "2026-06-19",
+      "status": "ok"
+    },
+    {
+      "id": "mlcompete-12-final",
+      "title": "ONIA 2026 local XI-XII mlcompete final leaderboard",
+      "url": "https://platform.olimpiada-ai.ro/ro/competitions/12?tab=final",
+      "accessedAt": "2026-06-19",
+      "status": "ok"
+    },
+    {
+      "id": "mlcompete-14-final",
+      "title": "ONIA 2026 county IX-X mlcompete final leaderboard",
+      "url": "https://platform.olimpiada-ai.ro/ro/competitions/14?tab=final",
+      "accessedAt": "2026-06-19",
+      "status": "ok"
+    },
+    {
+      "id": "mlcompete-15-final",
+      "title": "ONIA 2026 county XI-XII mlcompete final leaderboard",
+      "url": "https://platform.olimpiada-ai.ro/ro/competitions/15?tab=final",
+      "accessedAt": "2026-06-19",
+      "status": "ok"
+    },
+    {
       "id": "mlcompete-2026-profile-pages",
       "title": "ONIA 2026 public mlcompete profile pages",
       "url": "https://platform.olimpiada-ai.ro/ro/profile/",
@@ -15,7 +43,7 @@
       "status": "partial"
     }
   ],
-  "note": "Recovered IX-XII anonymous ONIA 2026 national rows by exact national-score match to the public mlcompete final leaderboard, then by public profile identity/institution against the official national participant sheet. Grade 8 national invitees are tracked separately as guest participations; their scores come from the extra IX-X mlcompete final rows not present in the official IX-X national JSON.",
+  "note": "Recovered IX-XII anonymous ONIA 2026 national rows by matching public mlcompete national scores to usernames, then iteratively matching remaining participants by public profile institution/county, username-name evidence, and local/county stage username appearances. Grade 8 national invitees are tracked separately as guest participations. Official absent placeholders are excluded because they did not participate in the contest.",
   "guests": [
     {
       "name": "Boac Mihai Cosmin",
@@ -93,6 +121,29 @@
       ]
     }
   ],
+  "excluded": [
+    {
+      "grade": "12",
+      "place": 41,
+      "anonymousName": "Participant 2332",
+      "kind": "absent",
+      "reason": "official national source marks the row absent"
+    },
+    {
+      "grade": "12",
+      "place": 42,
+      "anonymousName": "Participant 2385",
+      "kind": "absent",
+      "reason": "official national source marks the row absent"
+    },
+    {
+      "grade": "12",
+      "place": 43,
+      "anonymousName": "Participant 2309",
+      "kind": "absent",
+      "reason": "official national source marks the row absent"
+    }
+  ],
   "recovered": [
     {
       "grade": "9",
@@ -100,11 +151,32 @@
       "score": 34.61,
       "username": "raresh30",
       "userId": "4e152f6a-1692-4378-8ed7-8075c96a7d88",
+      "platformRank": 41,
       "name": "Hanganu Rareș",
       "school": "Colegiul Național de Informatică \"Tudor Vianu\"",
       "county": "București",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
+        "national-score"
+      ]
+    },
+    {
+      "grade": "9",
+      "place": 11,
+      "score": 27.58,
+      "username": "dana27",
+      "userId": "0eb36038-8ff9-48cb-8eb9-f719100252ab",
+      "platformRank": 49,
+      "name": "Drăghici Ana Veronica",
+      "school": "Liceul Teoretic International de Informatica Bucuresti",
+      "county": "București",
+      "evidence": [
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -114,11 +186,15 @@
       "score": 26.42,
       "username": "vartolomeiluca",
       "userId": "e4c90ca1-4113-4820-9620-9b68bd70462b",
+      "platformRank": 54,
       "name": "Vartolomei Luca",
       "school": "Colegiul Național \"Gheorghe Vrănceanu\"",
       "county": "Bacău",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -128,11 +204,15 @@
       "score": 26.04,
       "username": "adri22",
       "userId": "76a48507-c988-4aab-a57b-6c0745cf69de",
+      "platformRank": 55,
       "name": "Grama Maria-Adriana",
       "school": "Colegiul Național \"Spiru Haret\"",
       "county": "București",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -142,11 +222,15 @@
       "score": 19.67,
       "username": "brianabcr",
       "userId": "7909252e-20a6-46cb-a1d0-0fcb058fbba4",
+      "platformRank": 60,
       "name": "Bucur Briana-Maria",
       "school": "Colegiul Național \"Ion Luca Caragiale\"",
       "county": "Prahova",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -156,12 +240,51 @@
       "score": 14.99,
       "username": "mili",
       "userId": "eaecfc0b-2a83-4791-9f1c-5609273c0b1a",
+      "platformRank": 66,
       "name": "MILIAN DARIUS-GRAȚIAN",
       "school": "Colegiul Național „Mihai Eminescu\" Oradea",
       "county": "Bihor",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
+      ]
+    },
+    {
+      "grade": "9",
+      "place": 16,
+      "score": 0,
+      "username": "turtle-key",
+      "userId": "210f6e2e-d957-44df-b836-4164dd041ad6",
+      "platformRank": 74,
+      "name": "Ghețu Mihai-Eduard",
+      "school": "Colegiul German “Goethe”",
+      "county": "București",
+      "evidence": [
+        "profile-institution",
+        "local-stage-username",
+        "county-stage-username",
+        "national-zero-score"
+      ]
+    },
+    {
+      "grade": "9",
+      "place": 17,
+      "score": 0,
+      "username": "david-gabrielvasile",
+      "userId": "945c6a03-7205-434a-ae29-0dae14d54f56",
+      "platformRank": 75,
+      "name": "Vasile David-Gabriel",
+      "school": "Colegiul National Ion Minulescu",
+      "county": "Olt",
+      "evidence": [
+        "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
+        "national-zero-score"
       ]
     },
     {
@@ -170,11 +293,14 @@
       "score": 33.63,
       "username": "Nad3x",
       "userId": "b9e11fdb-33c5-418b-b7a5-392af1782725",
+      "platformRank": 42,
       "name": "Plocon Andrei-Ionuț",
       "school": "Colegiul National Unirea",
       "county": "Teleorman",
       "evidence": [
         "profile-institution",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -184,11 +310,15 @@
       "score": 32.81,
       "username": "bacanug",
       "userId": "e72d1d6b-5287-4647-acbc-c0ff1ac118ca",
+      "platformRank": 43,
       "name": "Băcanu Florin-Gabriel",
       "school": "Colegiul Național \"Nicolae Iorga\"",
       "county": "Prahova",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -198,11 +328,50 @@
       "score": 32.37,
       "username": "k4rina",
       "userId": "1470668b-fefc-4c4d-80be-88e65cb34b4e",
+      "platformRank": 44,
       "name": "Brebenaru Carina-Ștefania",
       "school": "Colegiul Național “Sfântul Sava”",
       "county": "București",
       "evidence": [
         "profile-institution",
+        "local-stage-username",
+        "county-stage-username",
+        "national-score"
+      ]
+    },
+    {
+      "grade": "10",
+      "place": 31,
+      "score": 32.17,
+      "username": "cezaricabasarica",
+      "userId": "9a918d03-fdc1-451d-88c4-988b023544fc",
+      "platformRank": 45,
+      "name": "Tambozi Cezar Justin",
+      "school": "Liceul Teoretic Internațional de Informatică București",
+      "county": "București",
+      "evidence": [
+        "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
+        "national-score"
+      ]
+    },
+    {
+      "grade": "10",
+      "place": 32,
+      "score": 32.15,
+      "username": "ianstefancazacu",
+      "userId": "2b54d0c3-b678-4db1-86dc-8bb187287a72",
+      "platformRank": 46,
+      "name": "Ștefan-Cazacu Ian",
+      "school": "Colegiul Național \"Emil Racoviță\"",
+      "county": "Cluj",
+      "evidence": [
+        "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -212,11 +381,15 @@
       "score": 29.16,
       "username": "vlad473",
       "userId": "a96f1bbc-eb5b-4f8e-86d5-2cea777a4cd1",
+      "platformRank": 47,
       "name": "TOMA VLAD NICOLAE",
       "school": "Liceul Teoretic \"Emil Racoviță\"",
       "county": "Vaslui",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -226,11 +399,15 @@
       "score": 28.13,
       "username": "Adrian",
       "userId": "a3257271-ae3a-40a9-bc7a-ecef50f6c367",
+      "platformRank": 48,
       "name": "Țoța Adrian",
       "school": "Colegiul Național \"Avram Iancu\" Ștei",
       "county": "Bihor",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -240,11 +417,15 @@
       "score": 27.46,
       "username": "mihaiariton",
       "userId": "1a02503c-d5ea-4743-8ad5-1586bf273a5d",
+      "platformRank": 50,
       "name": "Ariton Mihai",
       "school": "Liceul Teoretic Internațional de Informatică București",
       "county": "București",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -254,11 +435,15 @@
       "score": 27.37,
       "username": "Stoica",
       "userId": "851523c2-7dae-4d96-bc73-fe11a1ff713d",
+      "platformRank": 51,
       "name": "Stoica Gabriel-Bogdan",
       "school": "CNILC PLOIEȘTI",
       "county": "Prahova",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -268,11 +453,15 @@
       "score": 27.03,
       "username": "mateiash",
       "userId": "c6d7e5a5-6a51-4f94-a3b1-52695ef0eea1",
+      "platformRank": 52,
       "name": "Mateiș David-Andrei",
       "school": "Colegiul Național de Informatică \"Tudor Vianu\"",
       "county": "București",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -282,11 +471,15 @@
       "score": 26.83,
       "username": "Bucurcubeu",
       "userId": "2abdc091-e616-45f8-bb6e-09fe3eec9e9f",
+      "platformRank": 53,
       "name": "Bucur Andrei",
       "school": "Colegiul National Mircea cel Batran",
       "county": "Constanța",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -296,11 +489,15 @@
       "score": 24.35,
       "username": "Andrada_Minca",
       "userId": "d238a9a8-b76d-4ca2-83eb-5fcd1bfbf9a2",
+      "platformRank": 56,
       "name": "Mincă Andrada Elena",
       "school": "C.N. \"Mihai Viteazul\" Ploiești",
       "county": "Prahova",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -310,11 +507,15 @@
       "score": 24.25,
       "username": "paundaniel",
       "userId": "a0847467-2083-4a0d-9b6b-f35697337113",
+      "platformRank": 57,
       "name": "Păun Daniel-Marcus",
       "school": "Colegiul National Grigore Moisil",
       "county": "București",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -324,11 +525,15 @@
       "score": 20.6,
       "username": "mateo",
       "userId": "b2473ce7-492a-4994-8c0a-8f4e19e17c7f",
+      "platformRank": 58,
       "name": "Spiridon Mateo-Andrei",
       "school": "Liceul Teoretic ,,Miron Costin”",
       "county": "Iași",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -338,11 +543,14 @@
       "score": 19.83,
       "username": "Iditor",
       "userId": "fd956386-69fb-44a7-b9ef-f75ecb3ea62c",
+      "platformRank": 59,
       "name": "Herea Isidor",
       "school": "CNPRSV",
       "county": "Suceava",
       "evidence": [
         "profile-institution",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -352,11 +560,14 @@
       "score": 19.44,
       "username": "ade.radoi",
       "userId": "c0ce628e-535e-409b-915b-141e8a660e1f",
+      "platformRank": 61,
       "name": "Rădoi Adelina-Ioana",
       "school": "Colegiul Național de Informatică “Grigore Moisil”",
       "county": "Brașov",
       "evidence": [
-        "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -366,11 +577,15 @@
       "score": 18.94,
       "username": "Albert",
       "userId": "ff95fcf5-e38b-4bc7-8de3-dea8d4f2d140",
+      "platformRank": 62,
       "name": "MOLOCEA ALBERT",
       "school": "Liceul Teoretic “Grigore Moisil” Timișoara",
       "county": "Timiș",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -380,11 +595,33 @@
       "score": 18.86,
       "username": "saranegrila",
       "userId": "8841fb98-9cdc-4093-ab78-a0ce99b08c77",
+      "platformRank": 63,
       "name": "Negrilă Sara Anastasia",
       "school": "Colegiul National de Informatica 'Tudor Vianu' Bucuresti",
       "county": "București",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
+        "national-score"
+      ]
+    },
+    {
+      "grade": "10",
+      "place": 46,
+      "score": 15.81,
+      "username": "bg16",
+      "userId": "6fee9d19-2913-4396-9176-0f9042831638",
+      "platformRank": 65,
+      "name": "Gabor Bogdan",
+      "school": "Liceul Internațional de Informatică SPECTRUM CLUJ",
+      "county": "Cluj",
+      "evidence": [
+        "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -394,11 +631,15 @@
       "score": 7.68,
       "username": "albusalbita",
       "userId": "0799a571-2a79-4d31-a02c-b7a38422f644",
+      "platformRank": 67,
       "name": "Albuș Denis-Florin",
       "school": "Colegiul Național \"Ecaterina Teodoroiu\"",
       "county": "Gorj",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -408,11 +649,15 @@
       "score": 7.59,
       "username": "vlader",
       "userId": "51d12e23-9f7d-494b-8bce-cc68ebb07228",
+      "platformRank": 68,
       "name": "Neștian Vlad-Ioan",
       "school": "Colegiul Național \"Ferdinand I\" Bacău",
       "county": "Bacău",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -422,11 +667,33 @@
       "score": 6.6,
       "username": "Radu_",
       "userId": "99c6b23a-f764-4ba6-895c-58294f198ea1",
+      "platformRank": 69,
       "name": "Bancu Radu-Ştefan",
       "school": "Colegiul Național “Andrei Şaguna”",
       "county": "Brașov",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
+        "national-score"
+      ]
+    },
+    {
+      "grade": "10",
+      "place": 50,
+      "score": 5.35,
+      "username": "mihai231",
+      "userId": "611b7379-f15f-4222-8975-497c89eb1bf8",
+      "platformRank": 70,
+      "name": "Mandragiu Mihai",
+      "school": "Colegiul Național de Informatică “Tudor Vianu”",
+      "county": "București",
+      "evidence": [
+        "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -436,12 +703,67 @@
       "score": 5.12,
       "username": "Sebi1",
       "userId": "50619f8b-41ca-40ae-96ec-43f2503b84a9",
+      "platformRank": 71,
       "name": "Popescu Sebastian-Andrei",
       "school": "Colegiul National Mihai Viteazul” Ploiesti PH",
       "county": "Prahova",
       "evidence": [
         "profile-institution",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
+      ]
+    },
+    {
+      "grade": "10",
+      "place": 52,
+      "score": 0,
+      "username": "bcristina",
+      "userId": "79b675a4-0067-4659-90a4-6c34aa4c0bd0",
+      "platformRank": 72,
+      "name": "Boabeș Cristina-Ioana",
+      "school": "Colegul Național de Informatică “Tudor Vianu”",
+      "county": "București",
+      "evidence": [
+        "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
+        "national-zero-score"
+      ]
+    },
+    {
+      "grade": "10",
+      "place": 53,
+      "score": 0,
+      "username": "AndreiDT",
+      "userId": "fa3fe029-7d66-425a-8348-3876cbb00b05",
+      "platformRank": 73,
+      "name": "Tulpan Dragoș-Andrei",
+      "school": "Colegiul Național \"Mircea cel Bătrân\"",
+      "county": "Vâlcea",
+      "evidence": [
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
+        "national-zero-score"
+      ]
+    },
+    {
+      "grade": "10",
+      "place": 54,
+      "score": 0,
+      "username": "anonymus",
+      "userId": "cbe7eae7-e797-4db3-9c2c-0d47c38f5e92",
+      "platformRank": 75,
+      "name": "Isepciuc Robert Ștefan",
+      "school": "Liceul Teoretic Internațional de Informatică București",
+      "county": "București",
+      "evidence": [
+        "profile-institution",
+        "local-stage-username",
+        "county-stage-username",
+        "national-zero-score"
       ]
     },
     {
@@ -450,11 +772,14 @@
       "score": 78.38,
       "username": "Warriore",
       "userId": "45d6dd25-1ba0-4d76-9380-b7d280308164",
+      "platformRank": 46,
       "name": "Zgorcea Mihai-Alexandru",
       "school": "Colegiul National \"Alexandru Odobescu\"",
       "county": "Argeș",
       "evidence": [
         "profile-institution",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -464,11 +789,15 @@
       "score": 76.18,
       "username": "StefanI",
       "userId": "c153f79c-825a-452a-ada5-fb8c64b53c84",
+      "platformRank": 47,
       "name": "Iancu Ștefan Constantin",
       "school": "Liceul Teoretic \"Tudor Arghezi Craiova\"",
       "county": "Dolj",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -478,11 +807,15 @@
       "score": 68.06,
       "username": "teodor5030",
       "userId": "c775ebeb-0d6a-4ef4-ac8f-2c831d258eef",
+      "platformRank": 49,
       "name": "Marina Teodor",
       "school": "Colegiul Național \"Nicolae Titulescu\"",
       "county": "Dâmbovița",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -492,11 +825,14 @@
       "score": 62.79,
       "username": "tmi",
       "userId": "daa42e8c-797c-47f2-a96b-cfb97e851b62",
+      "platformRank": 51,
       "name": "Stupariu Teodor-Mihai",
       "school": "Colegiul Național de Informatică \"Tudor Vianu\"",
       "county": "București",
       "evidence": [
         "profile-institution",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -506,11 +842,15 @@
       "score": 58.21,
       "username": "vladhera",
       "userId": "49c50562-4fb7-4f13-989b-e5259d867a59",
+      "platformRank": 52,
       "name": "OANCEA VLAD ALEXANDRU",
       "school": "C.N. “B.P. Hasdeu”",
       "county": "Buzău",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -520,11 +860,15 @@
       "score": 42.58,
       "username": "Tudor_",
       "userId": "b7456aea-a29a-43b9-95fc-943fc3f24b3d",
+      "platformRank": 54,
       "name": "Budişan Tudor-Gabriel",
       "school": "Liceul Teoretic \"Avram Iancu\" Cluj-Napoca",
       "county": "Cluj",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -534,11 +878,15 @@
       "score": 41.49,
       "username": "serban1",
       "userId": "f8406706-fdfb-46c2-a2c3-730014ea0009",
+      "platformRank": 55,
       "name": "Galea Șerban",
       "school": "Colegiul Național „Gheorghe Lazăr“ Sibiu",
       "county": "Sibiu",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -548,11 +896,49 @@
       "score": 38.66,
       "username": "erin_alexis",
       "userId": "112d0c89-ea45-49dd-bdba-4a4aaa2ea82f",
+      "platformRank": 56,
       "name": "Coman Erin-Alexis-Antonio",
       "school": "Colegiul Național \"Vasile Alecsandri\" Bacău",
       "county": "Bacău",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
+        "national-score"
+      ]
+    },
+    {
+      "grade": "11",
+      "place": 32,
+      "score": 38.03,
+      "username": "MCC_16",
+      "userId": "8c453218-0853-42eb-8abc-51ae57033c10",
+      "platformRank": 57,
+      "name": "Chivu Călin-Matei",
+      "school": "Liceul Bilingv Olga Gudynn",
+      "county": "Ilfov",
+      "evidence": [
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
+        "national-score"
+      ]
+    },
+    {
+      "grade": "11",
+      "place": 33,
+      "score": 35.04,
+      "username": "andu",
+      "userId": "e5d42618-849c-46d6-a48e-84ad42b3f969",
+      "platformRank": 58,
+      "name": "Apetrei Alexandru",
+      "school": "Colegiul National Stefan cel Mare Suceava",
+      "county": "Suceava",
+      "evidence": [
+        "profile-institution",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -562,10 +948,14 @@
       "score": 34.03,
       "username": "AlexSerban21",
       "userId": "6237cca9-feac-4a6d-95a6-8b53644f63f0",
+      "platformRank": 59,
       "name": "Șerban Alexandru Nicolae",
       "school": "Colegiul Național „Frații Buzești”",
       "county": "Dolj",
       "evidence": [
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -575,11 +965,15 @@
       "score": 30.57,
       "username": "David_Ilie",
       "userId": "d4ad54fc-127e-4b71-90f1-3c00ea4a8642",
+      "platformRank": 61,
       "name": "Ilie David Alexandru",
       "school": "Colegiul Național „Ion Creangă”",
       "county": "București",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -589,11 +983,15 @@
       "score": 30.07,
       "username": "Teo_Pirvu",
       "userId": "8cd9127c-b070-4690-9893-61329f24639e",
+      "platformRank": 62,
       "name": "Pîrvu Mihai Teodor",
       "school": "Liceul Teoretic \"Ovidius\"",
       "county": "Constanța",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -603,11 +1001,15 @@
       "score": 29.63,
       "username": "tontonel236",
       "userId": "780fd783-943f-4896-a73a-d748663af892",
+      "platformRank": 64,
       "name": "Țone Alexandru-Ionuț",
       "school": "Liceul Teoretic Internațional de Informatică București",
       "county": "București",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -617,10 +1019,14 @@
       "score": 27.45,
       "username": "tomita-mircea-stefan",
       "userId": "babb4382-2859-4dfc-b83d-f3d727ce0244",
+      "platformRank": 66,
       "name": "Tomiță Mircea-Ștefan",
       "school": "Colegiul Național „Ștefan cel Mare” Suceava",
       "county": "Suceava",
       "evidence": [
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -630,11 +1036,64 @@
       "score": 25.18,
       "username": "STM",
       "userId": "84e0293d-67d6-4edc-9059-b43eaeea27ba",
+      "platformRank": 68,
       "name": "Moldoveanu Ştefan",
       "school": "Colegiul National Unirea",
       "county": "Vrancea",
       "evidence": [
         "profile-institution",
+        "local-stage-username",
+        "county-stage-username",
+        "national-score"
+      ]
+    },
+    {
+      "grade": "11",
+      "place": 40,
+      "score": 16.02,
+      "username": "mysterybug",
+      "userId": "117691dd-757e-4af9-8357-8f632e66f7a5",
+      "platformRank": 75,
+      "name": "Rusișoru Cristian",
+      "school": "Colegiu Național \"Mihai Viteazul\"",
+      "county": "Prahova",
+      "evidence": [
+        "profile-institution",
+        "local-stage-username",
+        "county-stage-username",
+        "national-score"
+      ]
+    },
+    {
+      "grade": "11",
+      "place": 41,
+      "score": 11.84,
+      "username": "raraselz",
+      "userId": "57674766-e479-4252-95fa-4b43d4df2d82",
+      "platformRank": 77,
+      "name": "Petre Rareș Mihail",
+      "school": "Colegiul Național “Carol I”",
+      "county": "Dolj",
+      "evidence": [
+        "profile-institution",
+        "local-stage-username",
+        "county-stage-username",
+        "national-score"
+      ]
+    },
+    {
+      "grade": "11",
+      "place": 42,
+      "score": 5.34,
+      "username": "gabi",
+      "userId": "145da196-32de-4c80-bed7-9a1455dceba5",
+      "platformRank": 78,
+      "name": "Sanda Marius-Gabriel",
+      "school": "Colegiul Național Ecaterina Teodoroiu",
+      "county": "Gorj",
+      "evidence": [
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -644,11 +1103,15 @@
       "score": 4.98,
       "username": "Mateiasgt",
       "userId": "a974c2bb-73e0-4041-baab-bb22ef4d6d56",
+      "platformRank": 79,
       "name": "Avram Matei Alexandru",
       "school": "Colegiul National \"Alexandru Papiu Ilarian\"",
       "county": "Mureș",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -658,11 +1121,15 @@
       "score": 3.18,
       "username": "Lucas_R4",
       "userId": "fdee1ac8-d153-44fe-9dd0-e7f27bf892f3",
+      "platformRank": 81,
       "name": "Rus Lucas",
       "school": "Colegiul Național Mihai Eminescu",
       "county": "Satu Mare",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -672,11 +1139,14 @@
       "score": 0.85,
       "username": "sankee",
       "userId": "587ff20c-2fde-4c8a-84e7-0b408bf2f014",
+      "platformRank": 82,
       "name": "Lascu Andrei",
       "school": "Colegiul Național \"Gheorghe Munteanu Murgoci\"",
       "county": "Brăila",
       "evidence": [
         "profile-institution",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -686,11 +1156,14 @@
       "score": 87.8,
       "username": "texfactory",
       "userId": "26ec8c5f-b6f8-4469-8d70-168b33e64e20",
+      "platformRank": 43,
       "name": "Beca Vladimir",
       "school": "Colegiul Național Horea, Cloșca și Crișan",
       "county": "Alba",
       "evidence": [
         "profile-institution",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -700,11 +1173,33 @@
       "score": 82.54,
       "username": "mateinfinit",
       "userId": "b22fb99b-584a-4450-9e8d-147f42f27ff8",
+      "platformRank": 45,
       "name": "Bărbat Matei",
       "school": "Colegiul Național \"Emil Racovița\"",
       "county": "Cluj",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
+        "national-score"
+      ]
+    },
+    {
+      "grade": "12",
+      "place": 23,
+      "score": 72.04,
+      "username": "v1ctor",
+      "userId": "f7ffa1b8-a550-4a3b-b043-475d68f41f77",
+      "platformRank": 48,
+      "name": "Grigore Victor-Ștefan",
+      "school": "Colegiul National \"Zinca Golescu\"",
+      "county": "Argeș",
+      "evidence": [
+        "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -714,11 +1209,15 @@
       "score": 65.88,
       "username": "ciustea",
       "userId": "711c28f2-7405-495d-bff0-4cc39fbff516",
+      "platformRank": 50,
       "name": "Ciuștea Ioana-Alexandra",
       "school": "Colegiul Național \"Roman-Vodă\"",
       "county": "Neamț",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -728,11 +1227,15 @@
       "score": 52.41,
       "username": "rotarsasdragos",
       "userId": "5414c0d4-3dbd-4b07-a35f-29eed0855ccb",
+      "platformRank": 53,
       "name": "Rotar-Sas Dragoș",
       "school": "Colegiul Național “Samuel von Brukenthal”",
       "county": "Sibiu",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -742,11 +1245,15 @@
       "score": 31.87,
       "username": "cristi.nxt",
       "userId": "da6f7e91-69d0-4758-87fe-972053b06f73",
+      "platformRank": 60,
       "name": "Voinea Cristian-Mihai",
       "school": "Colegiul Național de Informatică Tudor Vianu",
       "county": "București",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -756,11 +1263,14 @@
       "score": 29.88,
       "username": "EmiCrn",
       "userId": "96411ec4-4687-4e57-b38a-7cb1d8b8259e",
+      "platformRank": 63,
       "name": "Crina Emanuel-Octavian",
       "school": "Colegiul Național Traian Lalescu Reșița",
       "county": "Caraș-Severin",
       "evidence": [
         "profile-institution",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -770,11 +1280,15 @@
       "score": 27.59,
       "username": "eduard_",
       "userId": "b3ee6caa-0982-4608-923b-25d280d2265c",
+      "platformRank": 65,
       "name": "Vlăduț Eduard-Gabriel",
       "school": "Colegiul Național de Informatică \"Matei Basarab\"",
       "county": "Vâlcea",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -784,11 +1298,14 @@
       "score": 25.57,
       "username": "Omu_Planta",
       "userId": "9dcfde63-b881-4e90-bd62-3c2794c8ca79",
+      "platformRank": 67,
       "name": "Damian Tudor Constantin",
       "school": "Liceul \"Regina Maria\" Dorohoi",
       "county": "Botoșani",
       "evidence": [
         "profile-institution",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -798,11 +1315,15 @@
       "score": 24.07,
       "username": "popapatrick",
       "userId": "803cefb7-6f5c-4897-a097-5aa380999e39",
+      "platformRank": 69,
       "name": "Popa Patrick",
       "school": "Colegiul Național Decebal Deva",
       "county": "Hunedoara",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -812,11 +1333,15 @@
       "score": 19.96,
       "username": "corto",
       "userId": "7298ae36-c645-45d6-a449-69e6a022197e",
+      "platformRank": 70,
       "name": "Cortojan Alexandru",
       "school": "COLEGIUL NAȚIONAL PEDAGOGIC \"REGINA MARIA\" DEVA",
       "county": "Hunedoara",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -826,11 +1351,15 @@
       "score": 18.21,
       "username": "unguroiu-razvan",
       "userId": "194559bb-9efe-4268-a2b1-885e3200edda",
+      "platformRank": 71,
       "name": "Unguroiu Răzvan-Marius",
       "school": "Colegiul Național \"Preparandia- Dimitrie Țichindeal\" Arad",
       "county": "Arad",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -840,11 +1369,15 @@
       "score": 17.99,
       "username": "george27",
       "userId": "4b74863d-f519-4171-8254-84c45e9df51a",
+      "platformRank": 72,
       "name": "Bobirică George-Emil",
       "school": "Colegiul Național ,,Constantin Carabella\"",
       "county": "Dâmbovița",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -854,11 +1387,33 @@
       "score": 16.49,
       "username": "rarespoinaru",
       "userId": "022ec898-4b3b-446f-88ea-0577bd23bbcb",
+      "platformRank": 73,
       "name": "Poinaru Rareș-Aurel",
       "school": "Colegiul Național Ștefan cel Mare Suceava",
       "county": "Suceava",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
+        "national-score"
+      ]
+    },
+    {
+      "grade": "12",
+      "place": 35,
+      "score": 16.04,
+      "username": "albert1024",
+      "userId": "7c32e267-06af-46b9-98a4-151c40780e82",
+      "platformRank": 74,
+      "name": "Gabor Albert Andrei",
+      "school": "Colegiul Național Decebal",
+      "county": "Hunedoara",
+      "evidence": [
+        "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -868,11 +1423,15 @@
       "score": 15.17,
       "username": "razvaniga",
       "userId": "3ff68ee6-fd69-41fc-ba91-4fde521e1df2",
+      "platformRank": 76,
       "name": "STAN RĂZVAN-ANDREI",
       "school": "Liceul teoretic \"Avram Iancu\"",
       "county": "Cluj",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
     },
@@ -882,95 +1441,72 @@
       "score": 3.56,
       "username": "ddlaur",
       "userId": "ceb5399c-d220-4159-886f-ce67b772aa10",
+      "platformRank": 80,
       "name": "Dănilă Laurențiu",
       "school": "Liceul Teoretic Jean Monnet",
       "county": "București",
       "evidence": [
         "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
         "national-score"
       ]
-    }
-  ],
-  "unresolved": [
-    {
-      "grade": "9",
-      "place": 11,
-      "score": 27.58,
-      "username": "dana27",
-      "userId": "0eb36038-8ff9-48cb-8eb9-f719100252ab",
-      "profileName": "",
-      "profileInstitution": "",
-      "candidateCount": 0
-    },
-    {
-      "grade": "10",
-      "place": 46,
-      "score": 15.81,
-      "username": "bg16",
-      "userId": "6fee9d19-2913-4396-9176-0f9042831638",
-      "profileName": "",
-      "profileInstitution": "Cluj",
-      "candidateCount": 0
-    },
-    {
-      "grade": "10",
-      "place": 50,
-      "score": 5.35,
-      "username": "mihai231",
-      "userId": "611b7379-f15f-4222-8975-497c89eb1bf8",
-      "profileName": "",
-      "profileInstitution": "Colegiul Naţional de Informatică „Tudor Vianu”",
-      "candidateCount": 0
-    },
-    {
-      "grade": "11",
-      "place": 32,
-      "score": 38.03,
-      "username": "MCC_16",
-      "userId": "8c453218-0853-42eb-8abc-51ae57033c10",
-      "profileName": "",
-      "profileInstitution": "",
-      "candidateCount": 0
-    },
-    {
-      "grade": "11",
-      "place": 33,
-      "score": 35.04,
-      "username": "andu",
-      "userId": "e5d42618-849c-46d6-a48e-84ad42b3f969",
-      "profileName": "",
-      "profileInstitution": "Suceava",
-      "candidateCount": 0
-    },
-    {
-      "grade": "11",
-      "place": 41,
-      "score": 11.84,
-      "username": "raraselz",
-      "userId": "57674766-e479-4252-95fa-4b43d4df2d82",
-      "profileName": "",
-      "profileInstitution": "Dolj",
-      "candidateCount": 0
-    },
-    {
-      "grade": "11",
-      "place": 42,
-      "score": 5.34,
-      "username": "gabi",
-      "userId": "145da196-32de-4c80-bed7-9a1455dceba5",
-      "profileName": "",
-      "profileInstitution": "",
-      "candidateCount": 0
     },
     {
       "grade": "12",
-      "place": 23,
-      "score": 72.04,
-      "username": "v1ctor",
-      "userId": "f7ffa1b8-a550-4a3b-b043-475d68f41f77",
-      "profileName": "",
-      "profileInstitution": "Argeș",
-      "candidateCount": 0
+      "place": 38,
+      "score": 0,
+      "username": "WiseAndrei4",
+      "userId": "e677ccea-faa9-40c5-91b7-dbbf74307ab8",
+      "platformRank": 83,
+      "name": "Vetrilă Andrei",
+      "school": "Colegiul Național \"I.C. Brătianu\"",
+      "county": "Argeș",
+      "evidence": [
+        "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
+        "national-zero-score"
+      ]
+    },
+    {
+      "grade": "12",
+      "place": 39,
+      "score": 0,
+      "username": "andreisonea",
+      "userId": "708a7e11-1a5d-4285-ba7f-4b18f2df9927",
+      "platformRank": 84,
+      "name": "Sonea Andrei",
+      "school": "Colegiul National \"Vasile Alecsandri\" Iasi",
+      "county": "Iași",
+      "evidence": [
+        "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
+        "national-zero-score"
+      ]
+    },
+    {
+      "grade": "12",
+      "place": 40,
+      "score": 0,
+      "username": "Alexandrescu",
+      "userId": "02df1baa-bdb2-4ef4-9814-2abe83e3a4cf",
+      "platformRank": 85,
+      "name": "Alexandrescu Luca",
+      "school": "Colegiul Național Bilingv “George Coșbuc”",
+      "county": "București",
+      "evidence": [
+        "profile-institution",
+        "username-name",
+        "local-stage-username",
+        "county-stage-username",
+        "national-zero-score"
+      ]
     }
-  ]
+  ],
+  "unresolved": []
 }

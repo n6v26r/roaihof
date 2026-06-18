@@ -12,6 +12,9 @@ function sourceTodoStatusLabel(status: SourceTodo['status']) {
   if (status === 'missing') {
     return 'Missing';
   }
+  if (status === 'validate') {
+    return 'VALIDATE';
+  }
   return status;
 }
 

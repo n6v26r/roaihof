@@ -139,6 +139,11 @@
       "alias": "Isidor Herea",
       "canonical": "Herea Isidor",
       "reason": "ROAI final page uses first-name order; Lot ranking uses last-name order."
+    },
+    {
+      "alias": "Negut Vlad",
+      "canonical": "Neguț Vlad-Mihai",
+      "reason": "ONIA national ranking omits the second first name and diacritic; the national participant sheet has the full name."
     }
   ]
 }

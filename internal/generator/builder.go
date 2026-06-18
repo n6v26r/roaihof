@@ -75,6 +75,9 @@ func (b *builder) importONIANational(path string, recoveryPath string) error {
 	}
 	for _, group := range classes {
 		for _, row := range group.rows {
+			if row.isAbsent() {
+				continue
+			}
 			name := b.canonicalName(row.Username)
 			anonymous := isAnonymousName(name)
 			county := normalizeCounty(row.Judet)
@@ -82,7 +85,7 @@ func (b *builder) importONIANational(path string, recoveryPath string) error {
 			school := cleanHuman(row.Scoala)
 			mlcompeteUsername := ""
 			if anonymous {
-				if recovery, ok := recovered[oniaNationalRecoveryKey(group.grade, row.Pozitie, float64(row.ScorTotal))]; ok {
+				if recovery, ok := recovered[oniaNationalRecoveryKey(group.grade, row.Pozitie, row.ScorTotal.Value)]; ok {
 					name = b.canonicalName(recovery.Name)
 					anonymous = false
 					county = normalizeCounty(recovery.County)
@@ -105,7 +108,7 @@ func (b *builder) importONIANational(path string, recoveryPath string) error {
 				Section:        section,
 				Grade:          group.grade,
 				Place:          row.Pozitie,
-				Score:          float64(row.ScorTotal),
+				Score:          row.ScorTotal.Value,
 				Medal:          normalizeMedal(ptr(row.Medalie)),
 				Prize:          cleanPrize(ptr(row.Premiu)),
 				SourceID:       sourceONIANational,
@@ -155,7 +158,7 @@ func (b *builder) loadONIANationalRecovery(path string) (map[string]oniaNational
 		if grade == "8" {
 			continue
 		}
-		if grade == "" || row.Place == 0 || row.Score == 0 || cleanHuman(row.Name) == "" {
+		if grade == "" || row.Place == 0 || cleanHuman(row.Name) == "" {
 			return nil, nil, fmt.Errorf("invalid ONIA national recovery row: grade=%q place=%d score=%.2f name=%q", row.Grade, row.Place, float64(row.Score), row.Name)
 		}
 		row.Grade = grade
@@ -1002,7 +1005,7 @@ func (b *builder) addContest(contest Contest) {
 
 func (b *builder) addResult(result Result) {
 	result.ID = "r-" + strconv.Itoa(len(b.results)+1)
-	result.School = canonicalSchoolName(result.School)
+	result.School = canonicalSchoolNameForCounty(result.School, result.County)
 	if result.County == "" && result.School != "" {
 		result.County = b.countyForSchool(result.School)
 	}
@@ -1957,7 +1960,7 @@ var schoolCanonicalNames = map[string]string{
 	nameKey(`Colegiul Național "Ienăchiță Văcărescu" Târgoviște`):                          `Colegiul Național "Ienăchiță Văcărescu"`,
 	nameKey(`Colegiul Național "Ion C. Brătianu" Pitești`):                                 `Colegiul Național "Ion C. Brătianu"`,
 	nameKey(`Colegiul Național 'Radu Negru' Făgăraș`):                                      `Colegiul Național "Radu Negru", Făgăraș`,
-	nameKey(`Colegiul Național 'Mircea Cel Bătrân' Constanța`):                             `Colegiul Național "Mircea cel Bătrân"`,
+	nameKey(`Colegiul Național 'Mircea Cel Bătrân' Constanța`):                             `Colegiul Național "Mircea cel Bătrân", Constanța`,
 	nameKey(`Colegiul Național "Mircea Cel Bătrân", Municipiul Râmnicu Vâlcea`):            `Colegiul Național "Mircea cel Bătrân", Râmnicu Vâlcea`,
 	nameKey(`Colegiul Național "Octavian Goga" Sibiu`):                                     `Colegiul Național "Octavian Goga"`,
 	nameKey(`Colegiul Național "Petru Rareș" Suceava`):                                     `Colegiul Național "Petru Rareș"`,
@@ -1966,7 +1969,7 @@ var schoolCanonicalNames = map[string]string{
 	nameKey(`Colegiul Național "Spiru Haret", Municipiul Tecuci`):                          `Colegiul Național "Spiru Haret", Tecuci`,
 	nameKey(`Colegiul Național "Traian Lalescu" Reșița`):                                   `Colegiul Național "Traian Lalescu"`,
 	nameKey(`Colegiul Național "Tudor Vladimirescu" Târgu Jiu`):                            `Colegiul Național "Tudor Vladimirescu"`,
-	nameKey(`Colegiul Național "Unirea" Focșani`):                                          `Colegiul Național "Unirea"`,
+	nameKey(`Colegiul Național "Unirea" Focșani`):                                          `Colegiul Național "Unirea", Focșani`,
 	nameKey(`Colegiul Național "Unirea" Târgu Mureș`):                                      `Colegiul Național "Unirea", Târgu Mureș`,
 	nameKey(`Colegiul Național "Unirea" Turnu Măgurele`):                                   `Colegiul Național "Unirea", Turnu Măgurele`,
 	nameKey(`Colegiul Național "Vasile Alecsandri" Bacău`):                                 `Colegiul Național "Vasile Alecsandri", Bacău`,
@@ -1996,19 +1999,62 @@ var schoolCanonicalNames = map[string]string{
 	nameKey(`Liceul Teoretic Internațional de Informatică Constanța`): `Liceul Teoretic Internațional de Informatică, Constanța`,
 
 	nameKey(`Colegiul Național de Informatică "Tudor Vianu" București`):    `Colegiul Național de Informatică "Tudor Vianu"`,
+	nameKey(`Colegul Național de Informatică "Tudor Vianu"`):               `Colegiul Național de Informatică "Tudor Vianu"`,
+	nameKey(`Colegul Național de Informatică “Tudor Vianu”`):               `Colegiul Național de Informatică "Tudor Vianu"`,
 	nameKey(`Colegiul Național "Silvania" Zalău`):                          `Colegiul Național "Silvania"`,
 	nameKey(`Liceul Teoretic "Mihai Eminescu" Călărași`):                   `Liceul Teoretic "Mihai Eminescu"`,
 	nameKey(`Colegiul Național "Constantin Diaconovici Loga" Timișoara`):   `Colegiul Național "Constantin Diaconovici Loga"`,
 	nameKey(`Liceul Teoretic "Grigore Moisil" Timișoara`):                  `Liceul Teoretic "Grigore Moisil"`,
 	nameKey(`Colegiul Național "Barbu Știrbei" Călărași`):                  `Colegiul Național "Barbu Știrbei"`,
-	nameKey(`Colegiul Național "Mihai Eminescu" Constanța`):                `Colegiul Național "Mihai Eminescu"`,
-	nameKey(`Colegiul Național 'Mihai Eminescu' Constanța`):                `Colegiul Național "Mihai Eminescu"`,
+	nameKey(`Colegiul Național "Mihai Eminescu" Constanța`):                `Colegiul Național "Mihai Eminescu", Constanța`,
+	nameKey(`Colegiul Național 'Mihai Eminescu' Constanța`):                `Colegiul Național "Mihai Eminescu", Constanța`,
 	nameKey(`Colegiul Național "I.L. Caragiale" București`):                `Colegiul Național "I. L. Caragiale"`,
+	nameKey(`Colegiul Național Horea, Cloșca și Crișan`):                   `Colegiul Național "Horea, Cloșca și Crișan"`,
 	nameKey(`Liceul de Informatică "Tiberiu Popoviciu" Cluj-Napoca`):       `Liceul de Informatică "Tiberiu Popoviciu"`,
 	nameKey(`Liceul De Informatică "Tiberiu Popoviciu" Cluj-Napoca`):       `Liceul de Informatică "Tiberiu Popoviciu"`,
 	nameKey(`Liceul de Informatica "Tiberiu Popoviciu"`):                   `Liceul de Informatică "Tiberiu Popoviciu"`,
 	nameKey(`Colegiul Național "Ion Luca Caragiale", Municipiul Ploiești`): `Colegiul Național "Ion Luca Caragiale", Ploiești`,
 	nameKey(`Colegiul Național "Mihai Viteazul", Municipiul Ploiești`):     `Colegiul Național "Mihai Viteazul", Ploiești`,
+	nameKey(`C.N. "Mihai Viteazul" Ploiești`):                              `Colegiul Național "Mihai Viteazul", Ploiești`,
+	nameKey(`CNILC PLOIEȘTI`):                                              `Colegiul Național "Ion Luca Caragiale", Ploiești`,
+	nameKey(`CNPRSV`):                                                      `Colegiul Național "Petru Rareș"`,
+	nameKey(`Colegiu Național "Mihai Viteazul"`):                           `Colegiul Național "Mihai Viteazul", Ploiești`,
+	nameKey(`Colegiul National Mihai Viteazul” Ploiesti PH`):               `Colegiul Național "Mihai Viteazul", Ploiești`,
+	nameKey(`Colegiul National "Vasile Alecsandri" Iasi`):                  `Colegiul Național "Vasile Alecsandri", Iași`,
+	nameKey(`C.N. "B.P. Hasdeu"`):                                          `Colegiul Național "B. P. Hasdeu"`,
+	nameKey(`Colegiul National Grigore Moisil`):                            `Colegiul Național "Grigore Moisil"`,
+	nameKey(`Colegiul Național "Mihai Eminescu" Oradea`):                   `Colegiul Național "Mihai Eminescu", Oradea`,
+}
+
+var schoolCanonicalNamesByCounty = map[string]string{
+	schoolCountyKey(`Colegiul Național "Mihai Viteazul"`, "Prahova"):    `Colegiul Național "Mihai Viteazul", Ploiești`,
+	schoolCountyKey(`Colegiul Național "Unirea"`, "Vrancea"):            `Colegiul Național "Unirea", Focșani`,
+	schoolCountyKey(`Colegiul Național "Unirea"`, "Teleorman"):          `Colegiul Național "Unirea", Turnu Măgurele`,
+	schoolCountyKey(`Colegiul Național "Unirea"`, "Mureș"):              `Colegiul Național "Unirea", Târgu Mureș`,
+	schoolCountyKey(`Colegiul National Mircea cel Batran`, "Constanța"): `Colegiul Național "Mircea cel Bătrân", Constanța`,
+	schoolCountyKey(`Colegiul National Mircea cel Batran`, "Vâlcea"):    `Colegiul Național "Mircea cel Bătrân", Râmnicu Vâlcea`,
+	schoolCountyKey(`Colegiul Național "Mihai Eminescu"`, "Constanța"):  `Colegiul Național "Mihai Eminescu", Constanța`,
+	schoolCountyKey(`Colegiul Național "Mihai Eminescu"`, "Satu Mare"):  `Colegiul Național "Mihai Eminescu", Satu Mare`,
+	schoolCountyKey(`Colegiul Național "Mihai Eminescu"`, "Bihor"):      `Colegiul Național "Mihai Eminescu", Oradea`,
+	schoolCountyKey(`Liceul teoretic "Avram Iancu"`, "Cluj"):            `Liceul Teoretic "Avram Iancu", Cluj-Napoca`,
+	schoolCountyKey(`Liceul teoretic "Avram Iancu"`, "Hunedoara"):       `Liceul Teoretic "Avram Iancu", Brad`,
+	schoolCountyKey(`Liceul Teoretic "Avram Iancu"`, "Cluj"):            `Liceul Teoretic "Avram Iancu", Cluj-Napoca`,
+	schoolCountyKey(`Liceul Teoretic "Avram Iancu"`, "Hunedoara"):       `Liceul Teoretic "Avram Iancu", Brad`,
+}
+
+func schoolCountyKey(school string, county string) string {
+	return nameKey(normalizeCounty(county)) + "\t" + nameKey(school)
+}
+
+func canonicalSchoolNameForCounty(name string, county string) string {
+	name = cleanHuman(name)
+	if isCountyName(name) {
+		return ""
+	}
+	if canonical, ok := schoolCanonicalNamesByCounty[schoolCountyKey(name, county)]; ok {
+		return canonical
+	}
+	return canonicalSchoolName(name)
 }
 
 func canonicalSchoolName(name string) string {

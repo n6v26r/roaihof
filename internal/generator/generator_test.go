@@ -7,17 +7,20 @@ func TestBuildDatasetCountsOfficialRows(t *testing.T) {
 	if err != nil {
 		t.Fatalf("BuildDataset: %v", err)
 	}
-	if dataset.Summary.Results != 518 {
-		t.Fatalf("results = %d, want 518", dataset.Summary.Results)
+	if dataset.Summary.Results != 515 {
+		t.Fatalf("results = %d, want 515 after excluding ONIA absent rows", dataset.Summary.Results)
 	}
-	if dataset.Summary.AnonymousResults != 23 {
-		t.Fatalf("anonymous results = %d, want 23 after ONIA recovery", dataset.Summary.AnonymousResults)
+	if dataset.Summary.NamedResults != 515 {
+		t.Fatalf("named results = %d, want 515 after ONIA recovery", dataset.Summary.NamedResults)
 	}
-	if dataset.Summary.People != 206 {
-		t.Fatalf("people = %d, want 206 after ONIA recovery, guests, and missing-name alias merges", dataset.Summary.People)
+	if dataset.Summary.AnonymousResults != 0 {
+		t.Fatalf("anonymous results = %d, want 0 after ONIA recovery", dataset.Summary.AnonymousResults)
 	}
-	if dataset.Summary.Schools != 99 {
-		t.Fatalf("schools = %d, want 99", dataset.Summary.Schools)
+	if dataset.Summary.People != 222 {
+		t.Fatalf("people = %d, want 222 after ONIA recovery, guests, and missing-name alias merges", dataset.Summary.People)
+	}
+	if dataset.Summary.Schools != 101 {
+		t.Fatalf("schools = %d, want 101 after school canonicalization", dataset.Summary.Schools)
 	}
 	if dataset.Summary.Counties != 37 {
 		t.Fatalf("counties = %d, want 37", dataset.Summary.Counties)
@@ -27,6 +30,33 @@ func TestBuildDatasetCountsOfficialRows(t *testing.T) {
 	}
 	if dataset.Summary.Years[0] != 2024 || dataset.Summary.LatestYear != 2026 {
 		t.Fatalf("years = %v latest = %d", dataset.Summary.Years, dataset.Summary.LatestYear)
+	}
+}
+
+func TestONIA2026MarkedForValidation(t *testing.T) {
+	dataset, err := BuildDataset("../..")
+	if err != nil {
+		t.Fatalf("BuildDataset: %v", err)
+	}
+	var sourceStatus SourceStatus
+	for _, status := range dataset.SourceStatuses {
+		if status.ID == "onia-2026-national" {
+			sourceStatus = status
+			break
+		}
+	}
+	if sourceStatus.Status != "validate" || sourceStatus.Detail != "Anonymous recovered results should be broadly manually checked." {
+		t.Fatalf("ONIA source status = %q/%q, want validate with manual-check detail", sourceStatus.Status, sourceStatus.Detail)
+	}
+	var sourceTodo SourceTodo
+	for _, todo := range dataset.SourceTodos {
+		if todo.ID == "onia-2026" {
+			sourceTodo = todo
+			break
+		}
+	}
+	if sourceTodo.Status != "validate" || sourceTodo.Detail != "Anonymous recovered results should be broadly manually checked." {
+		t.Fatalf("ONIA source todo = %q/%q, want validate with manual-check detail", sourceTodo.Status, sourceTodo.Detail)
 	}
 }
 
@@ -45,16 +75,21 @@ func TestONIANationalRecoveryImportsAnonymousRows(t *testing.T) {
 		countyID string
 	}{
 		{"hanganu-rares", "raresh30", "9", 10, 34.61, "school-colegiul-national-de-informatica-tudor-vianu", "bucuresti"},
-		{"plocon-andrei-ionut", "Nad3x", "10", 28, 33.63, "school-colegiul-national-unirea", "teleorman"},
+		{"draghici-ana-veronica", "dana27", "9", 11, 27.58, "school-liceul-teoretic-international-de-informatica", "bucuresti"},
+		{"plocon-andrei-ionut", "Nad3x", "10", 28, 33.63, "school-colegiul-national-unirea-turnu-magurele", "teleorman"},
+		{"tambozi-cezar-justin", "cezaricabasarica", "10", 31, 32.17, "school-liceul-teoretic-international-de-informatica", "bucuresti"},
+		{"boabes-cristina-ioana", "bcristina", "10", 52, 0, "school-colegiul-national-de-informatica-tudor-vianu", "bucuresti"},
 		{"albus-denis-florin", "albusalbita", "10", 47, 7.68, "school-colegiul-national-ecaterina-teodoroiu", "gorj"},
 		{"tomita-mircea-stefan", "tomita-mircea-stefan", "11", 38, 27.45, "school-colegiul-national-stefan-cel-mare", "suceava"},
+		{"chivu-calin-matei", "MCC_16", "11", 32, 38.03, "school-liceul-bilingv-olga-gudynn", "ilfov"},
+		{"sanda-marius-gabriel", "gabi", "11", 42, 5.34, "school-colegiul-national-ecaterina-teodoroiu", "gorj"},
 	}
 	for _, tc := range cases {
 		person := findPerson(dataset, tc.personID)
 		if person == nil {
 			t.Fatalf("missing recovered person %s", tc.personID)
 		}
-		if person.ExternalUsernames == nil || !contains(person.ExternalUsernames.MLCompete, tc.username) {
+		if tc.username != "" && (person.ExternalUsernames == nil || !contains(person.ExternalUsernames.MLCompete, tc.username)) {
 			t.Fatalf("%s MLCompete usernames = %v, want %q", person.Name, person.ExternalUsernames, tc.username)
 		}
 		var found Result
@@ -73,6 +108,47 @@ func TestONIANationalRecoveryImportsAnonymousRows(t *testing.T) {
 		if found.Grade != tc.grade || found.Place != tc.place || found.Score != tc.score || found.SchoolID != tc.schoolID || found.CountyID != tc.countyID {
 			t.Fatalf("%s ONIA national = grade %s place %d score %.2f school %s county %s, want grade %s place %d score %.2f school %s county %s",
 				tc.personID, found.Grade, found.Place, found.Score, found.SchoolID, found.CountyID, tc.grade, tc.place, tc.score, tc.schoolID, tc.countyID)
+		}
+	}
+}
+
+func TestONIANationalAbsentRowsAreExcluded(t *testing.T) {
+	dataset, err := BuildDataset("../..")
+	if err != nil {
+		t.Fatalf("BuildDataset: %v", err)
+	}
+	for _, result := range dataset.Results {
+		if result.ContestID != "onia-2026-nationala" {
+			continue
+		}
+		if result.Anonymous {
+			t.Fatalf("ONIA national result is still anonymous: %#v", result)
+		}
+		if result.Grade == "12" && result.Place >= 41 {
+			t.Fatalf("ONIA national absent row was imported: %#v", result)
+		}
+		if isAnonymousName(result.PersonName) {
+			t.Fatalf("ONIA national placeholder name was imported: %#v", result)
+		}
+	}
+
+	zeroScoreRows := map[string]int{
+		"boabes-cristina-ioana": 52,
+		"vetrila-andrei":        38,
+	}
+	for personID, place := range zeroScoreRows {
+		var found Result
+		for _, result := range dataset.Results {
+			if result.ContestID == "onia-2026-nationala" && result.PersonID == personID {
+				found = result
+				break
+			}
+		}
+		if found.ContestID == "" {
+			t.Fatalf("missing zero-score ONIA national result for %s", personID)
+		}
+		if found.Place != place || found.Score != 0 {
+			t.Fatalf("%s ONIA zero-score result = place %d score %.2f, want place %d score 0", personID, found.Place, found.Score, place)
 		}
 	}
 }
@@ -184,15 +260,27 @@ func TestSchoolSuffixVariantsMergeIntoCanonicalSchools(t *testing.T) {
 		t.Fatalf("BuildDataset: %v", err)
 	}
 	expected := map[string]string{
-		"school-colegiul-national-de-informatica-tudor-vianu":   `Colegiul Național de Informatică "Tudor Vianu"`,
-		"school-liceul-teoretic-mihai-eminescu":                 `Liceul Teoretic "Mihai Eminescu"`,
-		"school-colegiul-national-silvania":                     `Colegiul Național "Silvania"`,
-		"school-colegiul-national-andrei-saguna":                `Colegiul Național "Andrei Șaguna"`,
-		"school-colegiul-national-emanuil-gojdu":                `Colegiul Național "Emanuil Gojdu"`,
-		"school-colegiul-national-emil-racovita":                `Colegiul Național "Emil Racoviță"`,
-		"school-colegiul-national-de-informatica-matei-basarab": `Colegiul Național de Informatică "Matei Basarab"`,
-		"school-colegiul-national-vasile-alecsandri":            `Colegiul Național "Vasile Alecsandri"`,
-		"school-liceul-teoretic-international-de-informatica":   `Liceul Teoretic Internațional de Informatică`,
+		"school-colegiul-national-de-informatica-tudor-vianu":       `Colegiul Național de Informatică "Tudor Vianu"`,
+		"school-liceul-teoretic-mihai-eminescu":                     `Liceul Teoretic "Mihai Eminescu"`,
+		"school-colegiul-national-silvania":                         `Colegiul Național "Silvania"`,
+		"school-colegiul-national-andrei-saguna":                    `Colegiul Național "Andrei Șaguna"`,
+		"school-colegiul-national-emanuil-gojdu":                    `Colegiul Național "Emanuil Gojdu"`,
+		"school-colegiul-national-emil-racovita":                    `Colegiul Național "Emil Racoviță"`,
+		"school-colegiul-national-de-informatica-matei-basarab":     `Colegiul Național de Informatică "Matei Basarab"`,
+		"school-colegiul-national-vasile-alecsandri":                `Colegiul Național "Vasile Alecsandri"`,
+		"school-liceul-teoretic-international-de-informatica":       `Liceul Teoretic Internațional de Informatică`,
+		"school-colegiul-national-petru-rares":                      `Colegiul Național "Petru Rareș"`,
+		"school-colegiul-national-mihai-viteazul-ploiesti":          `Colegiul Național "Mihai Viteazul", Ploiești`,
+		"school-colegiul-national-unirea-focsani":                   `Colegiul Național "Unirea", Focșani`,
+		"school-colegiul-national-unirea-turnu-magurele":            `Colegiul Național "Unirea", Turnu Măgurele`,
+		"school-colegiul-national-unirea-targu-mures":               `Colegiul Național "Unirea", Târgu Mureș`,
+		"school-colegiul-national-mircea-cel-batran-constanta":      `Colegiul Național "Mircea cel Bătrân", Constanța`,
+		"school-colegiul-national-mircea-cel-batran-ramnicu-valcea": `Colegiul Național "Mircea cel Bătrân", Râmnicu Vâlcea`,
+		"school-colegiul-national-mihai-eminescu-constanta":         `Colegiul Național "Mihai Eminescu", Constanța`,
+		"school-colegiul-national-mihai-eminescu-satu-mare":         `Colegiul Național "Mihai Eminescu", Satu Mare`,
+		"school-liceul-teoretic-avram-iancu-cluj-napoca":            `Liceul Teoretic "Avram Iancu", Cluj-Napoca`,
+		"school-liceul-teoretic-avram-iancu-brad":                   `Liceul Teoretic "Avram Iancu", Brad`,
+		"school-colegiul-national-b-p-hasdeu":                       `Colegiul Național "B. P. Hasdeu"`,
 	}
 	for id, name := range expected {
 		school := findSchool(dataset, id)
@@ -215,10 +303,68 @@ func TestSchoolSuffixVariantsMergeIntoCanonicalSchools(t *testing.T) {
 		"school-liceul-teoretic-international-de-informatica-bucuresti",
 		"school-ichb",
 		"school-teleorman",
+		"school-colegul-national-de-informatica-tudor-vianu",
+		"school-cnilc-ploiesti",
+		"school-cnprsv",
+		"school-colegiu-national-mihai-viteazul",
+		"school-colegiul-national-mihai-viteazul-ploiesti-ph",
+		"school-c-n-mihai-viteazul-ploiesti",
+		"school-c-n-b-p-hasdeu",
+		"school-colegiul-national-unirea",
+		"school-colegiul-national-mircea-cel-batran",
+		"school-colegiul-national-mihai-eminescu",
+		"school-liceul-teoretic-avram-iancu",
 	}
 	for _, id := range staleIDs {
 		if findSchool(dataset, id) != nil {
 			t.Fatalf("found stale suffixed school id %s", id)
+		}
+	}
+}
+
+func TestGeneratedNamesAndSchoolsHaveNoDuplicates(t *testing.T) {
+	dataset, err := BuildDataset("../..")
+	if err != nil {
+		t.Fatalf("BuildDataset: %v", err)
+	}
+	seenPeople := map[string]string{}
+	for _, person := range dataset.People {
+		key := nameKey(person.Name)
+		if previous := seenPeople[key]; previous != "" {
+			t.Fatalf("duplicate normalized person name %q: %s and %s", key, previous, person.ID)
+		}
+		seenPeople[key] = person.ID
+	}
+	seenSchools := map[string]string{}
+	for _, school := range dataset.Schools {
+		key := nameKey(school.Name)
+		if previous := seenSchools[key]; previous != "" {
+			t.Fatalf("duplicate normalized school name %q: %s and %s", key, previous, school.ID)
+		}
+		seenSchools[key] = school.ID
+	}
+	seenCounties := map[string]string{}
+	for _, county := range dataset.Counties {
+		key := nameKey(county.Name)
+		if previous := seenCounties[key]; previous != "" {
+			t.Fatalf("duplicate normalized county name %q: %s and %s", key, previous, county.ID)
+		}
+		seenCounties[key] = county.ID
+	}
+
+	resultCountiesBySchool := map[string]map[string]bool{}
+	for _, result := range dataset.Results {
+		if result.SchoolID == "" || result.CountyID == "" {
+			continue
+		}
+		if resultCountiesBySchool[result.SchoolID] == nil {
+			resultCountiesBySchool[result.SchoolID] = map[string]bool{}
+		}
+		resultCountiesBySchool[result.SchoolID][result.CountyID] = true
+	}
+	for schoolID, countyIDs := range resultCountiesBySchool {
+		if len(countyIDs) > 1 {
+			t.Fatalf("school %s has results in multiple counties: %v", schoolID, countyIDs)
 		}
 	}
 }
@@ -241,6 +387,7 @@ func TestMissingFirstNameVariantsMergeIntoLongerPeople(t *testing.T) {
 		"tudose-dragos-razvan":   {name: "Tudose Dragoș Razvan", alias: "Tudose Dragoș", participations: 2},
 		"calin-tudor-ioan":       {name: "Calin Tudor-Ioan", alias: "Calin Tudor Ioan", participations: 2},
 		"chelaru-ioan-cristian":  {name: "Chelaru Ioan-Cristian", alias: "Chelaru Ioan Cristian", participations: 2},
+		"negut-vlad-mihai":       {name: "Neguț Vlad-Mihai", alias: "Negut Vlad", participations: 1},
 	}
 	for id, want := range expected {
 		person := findPerson(dataset, id)
@@ -264,6 +411,7 @@ func TestMissingFirstNameVariantsMergeIntoLongerPeople(t *testing.T) {
 		"drugan-andrei",
 		"gasparel-marian",
 		"tudose-dragos",
+		"negut-vlad",
 	}
 	for _, id := range staleIDs {
 		if findPerson(dataset, id) != nil {
