@@ -3,9 +3,10 @@ package generator
 import "roaihof/pkg/appdata"
 
 const (
-	sourceONIANational = "onia-national-2026"
-	sourceONIALot      = "onia-lot-largit-2026"
-	sourceROAI2026     = "roai-2026"
+	sourceONIANational      = "onia-national-2026"
+	sourceONIALot           = "onia-lot-largit-2026"
+	sourceONIALotScoreboard = "onia-lot-scoreboard-2026"
+	sourceROAI2026          = "roai-2026"
 )
 
 const oniaLotParticipantCount = 30

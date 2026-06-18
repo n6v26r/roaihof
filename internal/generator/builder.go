@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"math"
 	"os"
 	"sort"
 	"strconv"
@@ -99,11 +100,40 @@ func (b *builder) importONIANational(path string) error {
 	return nil
 }
 
-func (b *builder) importONIALotSelection(path string) error {
-	var file oniaLotSelectionFile
-	if err := readJSON(path, &file); err != nil {
+type oniaLotScoredCandidate struct {
+	Row      oniaLotRow
+	Name     string
+	Username string
+	Score    float64
+}
+
+type oniaLotPlatformScore struct {
+	Username string
+	Total    float64
+}
+
+func (b *builder) importONIALotSelection(nationalPath string, selectionPath string, platformPath string) error {
+	var national oniaNationalFile
+	if err := readJSON(nationalPath, &national); err != nil {
 		return err
 	}
+	if len(national.LotNational) != oniaLotParticipantCount {
+		return fmt.Errorf("ONIA LotNational rows = %d, want %d", len(national.LotNational), oniaLotParticipantCount)
+	}
+
+	var file oniaLotSelectionFile
+	if err := readJSON(selectionPath, &file); err != nil {
+		return err
+	}
+
+	var platform mlcompeteFile
+	if err := readJSON(platformPath, &platform); err != nil {
+		return err
+	}
+	for _, source := range platform.Sources {
+		b.addSource(source)
+	}
+
 	if file.Year == 0 {
 		file.Year = 2026
 	}
@@ -120,43 +150,130 @@ func (b *builder) importONIALotSelection(path string) error {
 		OfficialURL: "https://olimpiada-ai.ro/ro/rezultate/lot-largit",
 		SourceID:    sourceONIALot,
 	})
-	for _, row := range file.Top12 {
-		qualification := "CEOAI"
-		if row.Pozitie <= 8 {
-			qualification = "IOAI"
+
+	scoresByUsername := oniaLotScoresByUsername(platform.Leaderboards)
+	var rows []oniaLotScoredCandidate
+	var missing []string
+	for _, row := range national.LotNational {
+		name := b.canonicalName(row.Nume)
+		person := b.people[slug(name)]
+		username, ok := oniaLotMLCompeteUsername(person, scoresByUsername)
+		if !ok {
+			if oniaLotKnownAbsentParticipant(name, "") {
+				continue
+			}
+			missing = append(missing, fmt.Sprintf("%s: missing mlcompete username", name))
+			continue
 		}
+		score, ok := scoresByUsername[usernameKey(username)]
+		if !ok || score.Total == 0 {
+			if oniaLotKnownAbsentParticipant(name, username) {
+				continue
+			}
+			missing = append(missing, fmt.Sprintf("%s (%s): missing Lot score", name, username))
+			continue
+		}
+		rows = append(rows, oniaLotScoredCandidate{
+			Row:      row,
+			Name:     name,
+			Username: username,
+			Score:    score.Total,
+		})
+	}
+	if len(missing) > 0 {
+		return fmt.Errorf("could not map ONIA Lot participants: %s", strings.Join(missing, "; "))
+	}
+	if len(rows) != oniaLotParticipantCount-1 {
+		return fmt.Errorf("ONIA counted Lot rows = %d, want %d", len(rows), oniaLotParticipantCount-1)
+	}
+
+	sort.SliceStable(rows, func(i, j int) bool {
+		if rows[i].Score != rows[j].Score {
+			return rows[i].Score > rows[j].Score
+		}
+		if rows[i].Row.Pozitie != rows[j].Row.Pozitie {
+			return rows[i].Row.Pozitie < rows[j].Row.Pozitie
+		}
+		return rows[i].Name < rows[j].Name
+	})
+
+	for index, row := range rows {
+		place := index + 1
 		result := Result{
-			ContestID:      "onia-2026-lot",
-			PersonName:     b.canonicalName(row.Nume),
-			School:         cleanHuman(row.Scoala),
-			County:         normalizeCounty(row.Judet),
-			OriginalCounty: cleanHuman(row.Judet),
-			Year:           file.Year,
-			Circuit:        "ONIA",
-			Stage:          "lot",
-			Section:        "top 12",
-			Grade:          normalizeGrade(row.Clasa),
-			Place:          row.Pozitie,
-			Score:          float64(row.Punctaj),
-			Qualification:  qualification,
-			SourceID:       sourceONIALot,
+			ContestID:     "onia-2026-lot",
+			PersonName:    row.Name,
+			School:        cleanHuman(row.Row.Scoala),
+			Year:          file.Year,
+			Circuit:       "ONIA",
+			Stage:         "lot",
+			Section:       cleanHuman(row.Row.Sectiune),
+			Grade:         normalizeGrade(row.Row.Clasa),
+			Place:         place,
+			Score:         row.Score,
+			Qualification: oniaLotQualification(place),
+			SourceID:      sourceONIALotScoreboard,
 		}
 		b.addResult(result)
 	}
-	for place := len(file.Top12) + 1; place <= oniaLotParticipantCount; place++ {
-		b.addResult(Result{
-			ContestID:  "onia-2026-lot",
-			PersonName: fmt.Sprintf("Participant unknown #%d", place),
-			Year:       file.Year,
-			Circuit:    "ONIA",
-			Stage:      "lot",
-			Section:    "top 30",
-			Place:      place,
-			SourceID:   sourceONIALot,
-			Anonymous:  true,
-		})
-	}
 	return nil
+}
+
+func oniaLotScoresByUsername(leaderboards []mlcompeteLeaderboard) map[string]oniaLotPlatformScore {
+	scores := map[string]oniaLotPlatformScore{}
+	for _, board := range mlcompeteScoreBoards(leaderboards) {
+		if board.ContestID != "onia-2026-lot" {
+			continue
+		}
+		for _, row := range board.Rows {
+			username := cleanHuman(row.Username)
+			key := usernameKey(username)
+			if key == "" {
+				continue
+			}
+			scores[key] = oniaLotPlatformScore{
+				Username: username,
+				Total:    roundScore(row.Score),
+			}
+		}
+	}
+	return scores
+}
+
+func oniaLotMLCompeteUsername(person *Person, scores map[string]oniaLotPlatformScore) (string, bool) {
+	if person == nil || person.ExternalUsernames == nil {
+		return "", false
+	}
+	var scored []string
+	for _, username := range person.ExternalUsernames.MLCompete {
+		if _, ok := scores[usernameKey(username)]; ok {
+			scored = addUnique(scored, username)
+		}
+	}
+	if len(scored) == 1 {
+		return scored[0], true
+	}
+	if len(scored) > 1 {
+		return "", false
+	}
+	if len(person.ExternalUsernames.MLCompete) == 1 {
+		return person.ExternalUsernames.MLCompete[0], true
+	}
+	return "", false
+}
+
+func oniaLotKnownAbsentParticipant(name string, username string) bool {
+	return nameKey(name) == nameKey("Neculau Rareș-Andrei") || usernameKey(username) == "nrand"
+}
+
+func oniaLotQualification(place int) string {
+	switch {
+	case place >= 1 && place <= 8:
+		return "IOAI"
+	case place <= 12:
+		return "CEOAI"
+	default:
+		return ""
+	}
 }
 
 func (b *builder) importROAI(path string, roai2025NationalScoresPath string) error {
@@ -538,6 +655,10 @@ func scoresClose(left float64, right float64) bool {
 		diff = -diff
 	}
 	return diff <= mlcompeteScoreTolerance+1e-9
+}
+
+func roundScore(score float64) float64 {
+	return math.Round(score*100) / 100
 }
 
 func (b *builder) personParticipatesInMLCompeteBoard(personID string, leaderboard mlcompeteLeaderboard) bool {

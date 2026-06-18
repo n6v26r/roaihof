@@ -7,11 +7,11 @@ func TestBuildDatasetCountsOfficialRows(t *testing.T) {
 	if err != nil {
 		t.Fatalf("BuildDataset: %v", err)
 	}
-	if dataset.Summary.Results != 514 {
-		t.Fatalf("results = %d, want 514", dataset.Summary.Results)
+	if dataset.Summary.Results != 513 {
+		t.Fatalf("results = %d, want 513", dataset.Summary.Results)
 	}
-	if dataset.Summary.AnonymousResults != 98 {
-		t.Fatalf("anonymous results = %d, want 98", dataset.Summary.AnonymousResults)
+	if dataset.Summary.AnonymousResults != 80 {
+		t.Fatalf("anonymous results = %d, want 80", dataset.Summary.AnonymousResults)
 	}
 	if dataset.Summary.People != 172 {
 		t.Fatalf("people = %d, want 172 after missing-name alias merges", dataset.Summary.People)
@@ -234,7 +234,7 @@ func TestLotRowsAreTeamSelectionOnly(t *testing.T) {
 	}
 }
 
-func TestONIALotRendersUnknownTop30Participants(t *testing.T) {
+func TestONIALotImportsCountedPlatformScoreboard(t *testing.T) {
 	dataset, err := BuildDataset("../..")
 	if err != nil {
 		t.Fatalf("BuildDataset: %v", err)
@@ -243,27 +243,61 @@ func TestONIALotRendersUnknownTop30Participants(t *testing.T) {
 	if contest == nil {
 		t.Fatal("missing ONIA 2026 Lot")
 	}
-	if contest.ResultsCount != 30 {
-		t.Fatalf("ONIA Lot rows = %d, want 30", contest.ResultsCount)
+	if contest.ResultsCount != 29 {
+		t.Fatalf("ONIA Lot rows = %d, want 29", contest.ResultsCount)
 	}
-	unknown := 0
 	qualified := 0
+	results := map[string]Result{}
 	for _, result := range dataset.Results {
 		if result.ContestID != "onia-2026-lot" {
 			continue
 		}
 		if result.Anonymous {
-			unknown++
-			if result.Place < 13 || result.Place > 30 {
-				t.Fatalf("unknown ONIA Lot place = %d, want 13..30", result.Place)
-			}
+			t.Fatalf("ONIA Lot result is still anonymous: %#v", result)
 		}
 		if result.Qualification != "" {
 			qualified++
 		}
+		if result.PersonID == "" || result.SchoolID == "" || result.CountyID == "" {
+			t.Fatalf("ONIA Lot result missing identity: %#v", result)
+		}
+		if result.SourceID != sourceONIALotScoreboard {
+			t.Fatalf("%s source = %q, want %q", result.PersonName, result.SourceID, sourceONIALotScoreboard)
+		}
+		results[result.PersonID] = result
 	}
-	if unknown != 18 || qualified != 12 {
-		t.Fatalf("ONIA Lot unknown/qualified = %d/%d, want 18/12", unknown, qualified)
+	if qualified != 12 {
+		t.Fatalf("ONIA Lot qualified = %d, want 12", qualified)
+	}
+	if _, ok := results["neculau-rares-andrei"]; ok {
+		t.Fatal("Neculau Rareș-Andrei was absent from Lot rounds and should not be counted")
+	}
+	if _, ok := results["boca-petru"]; ok {
+		t.Fatal("special non-Lot participant Boca Petru should not be counted")
+	}
+
+	expected := map[string]struct {
+		place         int
+		score         float64
+		qualification string
+	}{
+		"petrean-roland":           {place: 1, score: 335.11, qualification: "IOAI"},
+		"dobre-darius-adrian":      {place: 3, score: 278.54, qualification: "IOAI"},
+		"bence-muk-daniel-antoniu": {place: 8, score: 189.80, qualification: "IOAI"},
+		"gheorghica-istrate-david": {place: 9, score: 187.50, qualification: "CEOAI"},
+		"ilie-goga-radu":           {place: 12, score: 176.19, qualification: "CEOAI"},
+		"ciortea-suciu-andrei":     {place: 13, score: 171.51},
+		"rapa-balan-tudor-florin":  {place: 29, score: 71.38},
+	}
+	for personID, want := range expected {
+		result, ok := results[personID]
+		if !ok {
+			t.Fatalf("missing ONIA Lot result for %s", personID)
+		}
+		if result.Place != want.place || result.Score != want.score || result.Qualification != want.qualification {
+			t.Fatalf("%s ONIA Lot = place %d score %.2f qualification %q, want place %d score %.2f qualification %q",
+				personID, result.Place, result.Score, result.Qualification, want.place, want.score, want.qualification)
+		}
 	}
 }
 

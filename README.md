@@ -36,8 +36,15 @@ The current dataset includes:
 
 Result rows track `score`, `scoreMax`, `place`, `prize`, `medal`, and international `qualification`. Rankings are sorted by medal table, prizes, selections, and best place.
 
-TODO: Mabye an elo system thingy?
+## TODO:
+
+Mabye an elo system thingy?
+- [ ] ONIA 2026 Lot full leaderboard (all 30 students)
 
 ## Deployment
 
 vercel stuff go brrr
+
+## License
+
+This sofware provided under [The Unlicense](https://unlicense.org). If for whatever reason you prefer a different license, consider it under Zero Clause BSD.

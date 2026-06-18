@@ -54,12 +54,19 @@ func BuildDataset(root string) (*Dataset, error) {
 		AccessedAt: checked,
 		Status:     "ok",
 	})
+	b.addSource(Source{
+		ID:         sourceONIALotScoreboard,
+		Title:      "ONIA 2026 - Lot final leaderboard, rounds 1+2",
+		URL:        "https://platform.olimpiada-ai.ro/ro/competitions/23?tab=final",
+		AccessedAt: checked,
+		Status:     "ok",
+	})
 	b.sourceStatus = append(b.sourceStatus,
 		SourceStatus{
 			ID:      "onia-2026-national",
 			Title:   "ONIA 2026 national + Lot",
 			Status:  "ok",
-			Detail:  "Imported from official ONIA JSON files. Only the final Top 12 team selection is shown as Lot.",
+			Detail:  "Imported from the official ONIA national JSON, LotNational identity list, and platform final leaderboards for the two Lot rounds.",
 			URL:     "https://olimpiada-ai.ro/ro/rezultate/nationala",
 			Checked: checked,
 		},
@@ -124,7 +131,14 @@ func BuildDataset(root string) (*Dataset, error) {
 	if err := b.importONIANational(filepath.Join(root, "data/raw/onia/rezultate-nationala-2026.json")); err != nil {
 		return nil, err
 	}
-	if err := b.importONIALotSelection(filepath.Join(root, "data/raw/onia/rezultate-lot-largit-2026.json")); err != nil {
+	if err := b.importMLCompeteUsernames(filepath.Join(root, "data/manual/onia-platform-leaderboards.json")); err != nil {
+		return nil, err
+	}
+	if err := b.importONIALotSelection(
+		filepath.Join(root, "data/raw/onia/rezultate-nationala-2026.json"),
+		filepath.Join(root, "data/raw/onia/rezultate-lot-largit-2026.json"),
+		filepath.Join(root, "data/manual/onia-platform-leaderboards.json"),
+	); err != nil {
 		return nil, err
 	}
 	if err := b.importROAI(
@@ -134,9 +148,6 @@ func BuildDataset(root string) (*Dataset, error) {
 		return nil, err
 	}
 	if err := b.importManualInternational(filepath.Join(root, "data/manual/international-results.json")); err != nil {
-		return nil, err
-	}
-	if err := b.importMLCompeteUsernames(filepath.Join(root, "data/manual/onia-platform-leaderboards.json")); err != nil {
 		return nil, err
 	}
 	return b.finalize(), nil

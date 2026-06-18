@@ -13,13 +13,14 @@ describe('scoreboards', () => {
 
   it('uses class placement overrides for ROAI 2025 class scoreboards', () => {
     const scoreboard = scoreboards.get('roai-2025-clasa-9');
-    const ilieResult = dataset.results.find((result) => result.id === 'r-307');
+    const ilieResult = dataset.results.find((result) => result.contestId === 'roai-2025-national-clasa-9' && result.personId === 'ilie-goga-radu');
     const overrides = buildEffectivePlaceOverrides(dataset.results);
 
     expect(scoreboard).toBeDefined();
     expect(ilieResult?.place).toBe(24);
-    expect(overrides.get('r-307')).toBe(1);
-    expect(placementOverridesForScoreboard(scoreboard!, overrides)?.get('r-307')).toBe(1);
+    expect(ilieResult).toBeDefined();
+    expect(overrides.get(ilieResult!.id)).toBe(1);
+    expect(placementOverridesForScoreboard(scoreboard!, overrides)?.get(ilieResult!.id)).toBe(1);
   });
 
   it('does not repeat class titles as scoreboard detail tags', () => {
@@ -27,6 +28,18 @@ describe('scoreboards', () => {
   });
 
   it('keeps special official source links', () => {
+    expect(scoreboardOfficialLinks(scoreboards.get('onia-2026-lot')!)).toEqual([
+      {
+        label: 'round 1 final',
+        href: 'https://platform.olimpiada-ai.ro/ro/competitions/23?tab=final',
+        external: true
+      },
+      {
+        label: 'round 2 final',
+        href: 'https://platform.olimpiada-ai.ro/ro/competitions/24?tab=final',
+        external: true
+      }
+    ]);
     expect(scoreboardOfficialLinks(scoreboards.get('roai-2025-national-ranking')!)).toEqual([{
       label: 'official source',
       href: 'https://judge.nitro-ai.org/competitions/roai-2025/onia/leaderboard/complete?page=1&page_size=200',

@@ -167,6 +167,21 @@ export function scoreboardDetailTag(scoreboard: Scoreboard): string | undefined 
 }
 
 export function scoreboardOfficialLinks(scoreboard: Scoreboard): Array<{ label: string; href: string; external: boolean }> {
+  if (scoreboard.family === 'ONIA' && scoreboard.year === 2026 && scoreboard.stage === 'lot') {
+    return [
+      {
+        label: 'round 1 final',
+        href: 'https://platform.olimpiada-ai.ro/ro/competitions/23?tab=final',
+        external: true
+      },
+      {
+        label: 'round 2 final',
+        href: 'https://platform.olimpiada-ai.ro/ro/competitions/24?tab=final',
+        external: true
+      }
+    ];
+  }
+
   if (scoreboard.family === 'ROAI' && scoreboard.year === 2025 && scoreboard.stage === 'national') {
     return [{
       label: 'official source',
