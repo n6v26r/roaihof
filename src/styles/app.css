@@ -341,6 +341,41 @@ a:hover {
   padding: clamp(14px, 3vw, 28px);
 }
 
+.site-footer {
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  padding: 0 clamp(14px, 3vw, 28px) clamp(18px, 3vw, 30px);
+  color: var(--faint);
+  font-size: 0.78rem;
+}
+
+.site-footer a {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  padding-top: 2px;
+  color: inherit;
+}
+
+.site-footer a:hover {
+  color: var(--green-2);
+}
+
+.site-footer a:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 4px;
+}
+
+.site-footer code {
+  color: var(--green-2);
+}
+
+.site-footer strong {
+  color: var(--muted);
+  font-weight: 600;
+}
+
 .page-stack {
   display: grid;
   gap: 16px;

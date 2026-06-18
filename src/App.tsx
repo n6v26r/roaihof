@@ -40,7 +40,22 @@ export function App({ initialPath }: { initialPath?: string }) {
         {route.name === 'sources' ? <SourcesPage /> : null}
         {route.name === 'not-found' ? <NotFoundPage /> : null}
       </main>
+      {route.name === 'home' ? <Footer /> : null}
     </div>
+  );
+}
+
+function Footer() {
+  const commit = __ROAIHOF_COMMIT__;
+
+  return (
+    <footer className="site-footer">
+      <a href={commit.url} target="_blank" rel="noreferrer" title={commit.hash}>
+        <span>Last commit</span>
+        <code>{commit.shortHash || 'unknown'}</code>
+        <strong>{commit.message || 'unknown commit'}</strong>
+      </a>
+    </footer>
   );
 }
 

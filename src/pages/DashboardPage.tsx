@@ -40,7 +40,6 @@ export function DashboardPage({ indexes }: { indexes: Indexes }) {
             <span>{dataset.summary.years.join('-')}</span>
             <span>{dataset.summary.results} entries</span>
             <span>{dataset.summary.namedResults} nominale</span>
-            <span>Synced up to: June 2026</span>
           </div>
         </div>
         <FilterBar filters={filters} onChange={setFilters} />
