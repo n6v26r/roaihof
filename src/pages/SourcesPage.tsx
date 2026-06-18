@@ -12,7 +12,7 @@ export function SourcesPage() {
           <h1>Sources</h1>
           <p className="muted-line">Generated {new Date(dataset.generatedAt).toLocaleString('ro-RO')}</p>
           <p className="muted-line">
-            Most data is fetched using ai. If you find any inacuracies/completions to be made pls contact me: {' '}
+            Most data is fetched using ai. If you find any inaccuracies/completions to be made pls contact me: {' '}
             <a href="https://razv.xyz" target="_blank" rel="noreferrer" className="inline-link">@razv</a>
           </p>
         </div>
