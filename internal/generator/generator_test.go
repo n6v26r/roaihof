@@ -476,7 +476,7 @@ func TestEntityStatsIgnoreInternationalRepresentations(t *testing.T) {
 	}
 }
 
-func TestGeneratedDefaultRankingsUseInternationalParticipationTiebreaker(t *testing.T) {
+func TestGeneratedDefaultRankingsUseInternationalCriterionAfterMergedCriteria(t *testing.T) {
 	dataset, err := BuildDataset("../..")
 	if err != nil {
 		t.Fatalf("BuildDataset: %v", err)
@@ -487,7 +487,7 @@ func TestGeneratedDefaultRankingsUseInternationalParticipationTiebreaker(t *test
 		t.Fatalf("missing Petrean/Ilie in generated people rankings: %d/%d", petreanIndex, ilieIndex)
 	}
 	if petreanIndex > ilieIndex {
-		t.Fatalf("Petrean ranking index = %d, Ilie-Goga index = %d, want Petrean first by international participation tiebreaker", petreanIndex, ilieIndex)
+		t.Fatalf("Petrean ranking index = %d, Ilie-Goga index = %d, want Petrean first by international ranking criterion", petreanIndex, ilieIndex)
 	}
 	petrean := findPerson(dataset, "petrean-roland")
 	if petrean == nil {
@@ -498,13 +498,31 @@ func TestGeneratedDefaultRankingsUseInternationalParticipationTiebreaker(t *test
 	}
 }
 
-func TestInternationalParticipationTiebreakerCanBeDisabled(t *testing.T) {
-	stats := Stats{Gold: 1, BestPlace: 1}
-	if compareStatsWithInternationalTiebreaker(stats, stats, 2, 0, true) <= 0 {
-		t.Fatal("enabled international tiebreaker did not prefer the higher international count")
+func TestRankingComparatorsUseRequestedCriterionOrder(t *testing.T) {
+	betterNationalPlace := Stats{Gold: 1, BestPlace: 1}
+	moreSelections := Stats{Gold: 1, BestPlace: 2, Selections: 99}
+	if compareMergedRankingStats(betterNationalPlace, moreSelections, Stats{}, Stats{}) <= 0 {
+		t.Fatal("merged ranking did not prefer national best place before selections")
 	}
-	if compareStatsWithInternationalTiebreaker(stats, stats, 2, 0, false) != 0 {
-		t.Fatal("disabled international tiebreaker changed an otherwise tied comparison")
+	if compareNationalRankingStats(moreSelections, Stats{Gold: 1, BestPlace: 2}) != 0 {
+		t.Fatal("national ranking should ignore selections after medals and best place are tied")
+	}
+	if compareSelectionRankingStats(Stats{Selections: 2}, Stats{Selections: 1}) <= 0 {
+		t.Fatal("lot ranking did not prefer higher selection count")
+	}
+
+	internationalGold := Stats{Gold: 1, BestPlace: 50, InternationalParticipations: 1}
+	internationalSilver := Stats{Silver: 1, BestPlace: 1, InternationalParticipations: 10}
+	if compareInternationalRankingStats(internationalGold, internationalSilver) <= 0 {
+		t.Fatal("international ranking did not prefer gold before silver")
+	}
+	betterInternationalPlace := Stats{Bronze: 1, BestPlace: 2, InternationalParticipations: 1}
+	moreInternationalParticipations := Stats{Bronze: 1, BestPlace: 3, InternationalParticipations: 10}
+	if compareInternationalRankingStats(betterInternationalPlace, moreInternationalParticipations) <= 0 {
+		t.Fatal("international ranking did not prefer best place before participations")
+	}
+	if compareInternationalRankingStats(Stats{BestPlace: 10, InternationalParticipations: 2}, Stats{BestPlace: 10, InternationalParticipations: 1}) <= 0 {
+		t.Fatal("international ranking did not use participations after medals and best place")
 	}
 }
 

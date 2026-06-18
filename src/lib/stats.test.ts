@@ -68,7 +68,7 @@ describe('stats helpers', () => {
     expect(ilie?.stats.ceoaiSelections).toBe(2);
   });
 
-  it('uses international participations as the last non-national ranking tiebreaker for every entity kind', () => {
+  it('uses international criteria after merged national criteria for every entity kind', () => {
     const tieData = rankingTieDataset();
 
     expect(aggregateRanking('people', tieData, { circuit: 'merged', stage: 'all' }).map((row) => row.id)).toEqual(['beta', 'alpha']);
@@ -82,6 +82,48 @@ describe('stats helpers', () => {
     expect(aggregateRanking('people', tieData, { circuit: 'merged', stage: 'national' }).map((row) => row.id)).toEqual(['alpha', 'beta']);
     expect(aggregateRanking('schools', tieData, { circuit: 'merged', stage: 'national' }).map((row) => row.id)).toEqual(['school-alpha', 'school-beta']);
     expect(aggregateRanking('counties', tieData, { circuit: 'merged', stage: 'national' }).map((row) => row.id)).toEqual(['county-alpha', 'county-beta']);
+  });
+
+  it('uses national best place before selections in merged rankings', () => {
+    const tieData = rankingDataset([
+      rankingResult('alpha-national', 'alpha', 'Alpha', 'ONIA', 'national', { medal: 'gold', place: 1 }),
+      rankingResult('beta-national', 'beta', 'Beta', 'ONIA', 'national', { medal: 'gold', place: 2 }),
+      rankingResult('beta-lot', 'beta', 'Beta', 'ONIA', 'lot', { qualification: 'IOAI' })
+    ]);
+
+    expect(aggregateRanking('people', tieData, { circuit: 'merged', stage: 'all' }).map((row) => row.id)).toEqual(['alpha', 'beta']);
+  });
+
+  it('uses selections before international criteria in lot rankings', () => {
+    const tieData = rankingDataset([
+      rankingResult('alpha-lot-1', 'alpha', 'Alpha', 'ONIA', 'lot', { qualification: 'IOAI', year: 2025 }),
+      rankingResult('alpha-lot-2', 'alpha', 'Alpha', 'ROAI', 'lot', { qualification: 'IAIO', year: 2026 }),
+      rankingResult('beta-lot', 'beta', 'Beta', 'ONIA', 'lot', { qualification: 'IOAI' }),
+      rankingResult('beta-ioai', 'beta', 'Beta', 'IOAI', 'international', { medal: 'gold', place: 1 })
+    ]);
+
+    expect(aggregateRanking('people', tieData, { circuit: 'merged', stage: 'lot' }).map((row) => row.id)).toEqual(['alpha', 'beta']);
+  });
+
+  it('uses international medals, best place, then participations for international rankings', () => {
+    const tieData = rankingDataset([
+      rankingResult('alpha-iaio', 'alpha', 'Alpha', 'IAIO', 'international', { medal: 'silver', place: 1 }),
+      rankingResult('beta-ioai', 'beta', 'Beta', 'IOAI', 'international', { medal: 'gold', place: 50 }),
+      rankingResult('delta-ioai', 'delta', 'Delta', 'IOAI', 'international', { medal: 'bronze', place: 2 }),
+      rankingResult('gamma-ioai', 'gamma', 'Gamma', 'IOAI', 'international', { medal: 'bronze', place: 3 }),
+      rankingResult('zeta-iaio-1', 'zeta', 'Zeta', 'IAIO', 'international', { place: 10 }),
+      rankingResult('zeta-iaio-2', 'zeta', 'Zeta', 'IAIO', 'international', { place: 20, year: 2025 }),
+      rankingResult('eta-iaio', 'eta', 'Eta', 'IAIO', 'international', { place: 10 })
+    ]);
+
+    expect(aggregateRanking('people', tieData, { circuit: 'international', stage: 'all' }).map((row) => row.id)).toEqual([
+      'beta',
+      'alpha',
+      'delta',
+      'gamma',
+      'zeta',
+      'eta'
+    ]);
   });
 
   it('searches aliases and normalized tokens', () => {
@@ -105,6 +147,79 @@ describe('stats helpers', () => {
     expect(mlcompeteMatch?.matchedUsername).toEqual({ platform: 'mlcompete', username: 'MihneaTeodorStoica' });
   });
 });
+
+function rankingResult(
+  id: string,
+  personId: string,
+  personName: string,
+  circuit: string,
+  stage: string,
+  item: Partial<Result> = {}
+): Result {
+  const year = item.year ?? 2026;
+  return {
+    id,
+    contestId: item.contestId ?? `${circuit.toLowerCase()}-${stage}-${year}`,
+    personId,
+    personName,
+    schoolId: `school-${personId}`,
+    school: `${personName} School`,
+    countyId: `county-${personId}`,
+    county: `${personName} County`,
+    year,
+    circuit,
+    stage,
+    sourceId: 'source',
+    anonymous: false,
+    ...item
+  };
+}
+
+function rankingDataset(results: Result[]): Dataset {
+  const stats = (): Stats => emptyStats();
+  const people = Array.from(new Map(results.map((result) => [result.personId!, result.personName])).entries())
+    .map(([id, name]) => ({ id, name, schoolIds: [`school-${id}`], countyIds: [`county-${id}`], stats: stats() }));
+  const schools = people.map((person) => ({
+    id: `school-${person.id}`,
+    name: `${person.name} School`,
+    countyId: `county-${person.id}`,
+    county: `${person.name} County`,
+    stats: stats()
+  }));
+  const counties = people.map((person) => ({
+    id: `county-${person.id}`,
+    name: `${person.name} County`,
+    stats: stats()
+  }));
+
+  return {
+    generatedAt: '',
+    summary: {
+      people: people.length,
+      schools: schools.length,
+      counties: counties.length,
+      contests: 0,
+      results: results.length,
+      namedResults: results.length,
+      anonymousResults: 0,
+      years: [2026],
+      circuits: [],
+      latestYear: 2026,
+      mergedByDefault: true,
+      roaiStatus: '',
+      nationalCoverageScope: ''
+    },
+    provenance: [],
+    sourceStatuses: [],
+    people,
+    schools,
+    counties,
+    contests: [],
+    results,
+    rankings: { people: [], schools: [], counties: [] },
+    search: []
+  };
+}
 
 function rankingTieDataset(): Dataset {
   const stats = (): Stats => emptyStats();

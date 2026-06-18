@@ -76,10 +76,10 @@ export function aggregateRanking(
   const uniqueContestants = new Map<string, Set<string>>();
   const selectionEvents = new Map<string, Set<string>>();
   const rankingScope = internationalRankingScope(filters) ? 'international' : 'romanian';
-  const useInternationalTiebreaker = usesInternationalParticipationTiebreaker(filters);
-  const internationalParticipations = useInternationalTiebreaker
-    ? internationalParticipationCounts(kind, dataset.results)
-    : new Map<string, number>();
+  const sortingMode = rankingSortingMode(filters);
+  const internationalStats = sortingMode === 'merged' || sortingMode === 'lot'
+    ? internationalStatsByEntity(kind, dataset.results)
+    : new Map<string, Stats>();
   const effectivePlaces = buildEffectivePlaceOverrides(dataset.results);
 
   for (const result of dataset.results) {
@@ -119,32 +119,36 @@ export function aggregateRanking(
     };
   });
 
-  return rows.sort((a, b) =>
-    compareStats(b.stats, a.stats, {
-      includeInternationalTiebreaker: useInternationalTiebreaker,
-      leftInternationalParticipations: internationalParticipations.get(b.id) ?? 0,
-      rightInternationalParticipations: internationalParticipations.get(a.id) ?? 0
-    }) || a.name.localeCompare(b.name)
-  );
+  return rows.sort((a, b) => {
+    const comparison = compareRankingRows(a, b, sortingMode, internationalStats);
+    return comparison !== 0 ? -comparison : a.name.localeCompare(b.name);
+  });
 }
 
 function internationalRankingScope(filters: Pick<Filters, 'circuit' | 'stage'>): boolean {
   return filters.stage === 'international' || ['international', 'IAIO', 'IOAI', 'CEOAI'].includes(filters.circuit);
 }
 
-function usesInternationalParticipationTiebreaker(filters: Pick<Filters, 'circuit' | 'stage'>): boolean {
-  return filters.stage !== 'national' && !internationalRankingScope(filters);
+type RankingSortingMode = 'international' | 'merged' | 'national' | 'lot';
+
+function rankingSortingMode(filters: Pick<Filters, 'circuit' | 'stage'>): RankingSortingMode {
+  if (internationalRankingScope(filters)) return 'international';
+  if (filters.stage === 'national') return 'national';
+  if (filters.stage === 'lot') return 'lot';
+  return 'merged';
 }
 
-function internationalParticipationCounts(kind: RankingKind, results: Result[]): Map<string, number> {
-  const counts = new Map<string, number>();
+function internationalStatsByEntity(kind: RankingKind, results: Result[]): Map<string, Stats> {
+  const stats = new Map<string, Stats>();
   for (const result of results) {
     if (result.stage !== 'international') continue;
     const id = entityId(kind, result);
     if (!id) continue;
-    counts.set(id, (counts.get(id) ?? 0) + 1);
+    const item = stats.get(id) ?? emptyStats();
+    accumulateInternational(item, result);
+    stats.set(id, item);
   }
-  return counts;
+  return stats;
 }
 
 export function contestResults(contest: Contest, dataset: Dataset): Result[] {
@@ -242,31 +246,52 @@ function selectionEventKey(result: Result): string {
   return `${result.personId ?? normalizeText(result.personName)}:${result.year}:${result.circuit}`;
 }
 
-function compareStats(
-  a: Stats,
-  b: Stats,
-  options: {
-    includeInternationalTiebreaker?: boolean;
-    leftInternationalParticipations?: number;
-    rightInternationalParticipations?: number;
-  } = {}
+function compareRankingRows(
+  a: RankingRow,
+  b: RankingRow,
+  mode: RankingSortingMode,
+  internationalStats: Map<string, Stats>
 ): number {
-  const checks = [
-    a.gold - b.gold,
-    a.silver - b.silver,
-    a.bronze - b.bronze,
-    a.honorable - b.honorable,
-    a.prizes - b.prizes,
-    a.selections - b.selections,
-    a.lotParticipations - b.lotParticipations,
-    a.nationalParticipations - b.nationalParticipations,
-    a.participations - b.participations,
-    placeForSort(b.bestPlace) - placeForSort(a.bestPlace),
-    options.includeInternationalTiebreaker
-      ? (options.leftInternationalParticipations ?? 0) - (options.rightInternationalParticipations ?? 0)
-      : 0
-  ];
-  return checks.find((value) => value !== 0) ?? 0;
+  switch (mode) {
+    case 'international':
+      return compareInternationalStats(a.stats, b.stats);
+    case 'national':
+      return compareNationalStats(a.stats, b.stats);
+    case 'lot':
+      return compareSelectionStats(a.stats, b.stats) ||
+        compareInternationalStats(internationalStats.get(a.id) ?? emptyStats(), internationalStats.get(b.id) ?? emptyStats());
+    case 'merged':
+      return compareNationalStats(a.stats, b.stats) ||
+        compareSelectionStats(a.stats, b.stats) ||
+        compareInternationalStats(internationalStats.get(a.id) ?? emptyStats(), internationalStats.get(b.id) ?? emptyStats());
+  }
+}
+
+function compareNationalStats(a: Stats, b: Stats): number {
+  return compareDesc(a.gold, b.gold) ||
+    compareDesc(a.silver, b.silver) ||
+    compareDesc(a.bronze, b.bronze) ||
+    compareBestPlace(a.bestPlace, b.bestPlace);
+}
+
+function compareSelectionStats(a: Stats, b: Stats): number {
+  return compareDesc(a.selections, b.selections);
+}
+
+function compareInternationalStats(a: Stats, b: Stats): number {
+  return compareDesc(a.gold, b.gold) ||
+    compareDesc(a.silver, b.silver) ||
+    compareDesc(a.bronze, b.bronze) ||
+    compareBestPlace(a.bestPlace, b.bestPlace) ||
+    compareDesc(a.internationalParticipations || a.participations, b.internationalParticipations || b.participations);
+}
+
+function compareDesc(a: number, b: number): number {
+  return a - b;
+}
+
+function compareBestPlace(a?: number, b?: number): number {
+  return placeForSort(b) - placeForSort(a);
 }
 
 function placeForSort(place?: number): number {

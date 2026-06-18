@@ -39,7 +39,6 @@ Result rows track `score`, `scoreMax`, `place`, `prize`, `medal`, and internatio
 ## TODO:
 
 Mabye an elo system thingy?
-- [ ] ONIA 2026 Lot full leaderboard (all 30 students)
 
 ## Deployment
 

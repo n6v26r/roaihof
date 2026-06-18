@@ -19,7 +19,7 @@ export function RankingPage({ kind }: { kind: RankingKind }) {
         <div>
           <p className="eyebrow">Ranking</p>
           <h1>{title}</h1>
-          <p className="muted-line">Sorted by medals, prizes, selections, and national best place.</p>
+          <p className="muted-line">Sorted by medals, best places, selections, and international results by filter.</p>
         </div>
         <FilterBar filters={filters} onChange={setFilters} showSearch={false} />
       </section>

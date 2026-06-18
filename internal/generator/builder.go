@@ -1116,26 +1116,26 @@ func (b *builder) finalize() *Dataset {
 	applySelectionEvents(b.people, personSelectionEvents)
 	applySelectionEvents(b.schools, schoolSelectionEvents)
 	applySelectionEvents(b.counties, countySelectionEvents)
-	personInternationalParticipations, schoolInternationalParticipations, countyInternationalParticipations := internationalParticipationCounts(b.results)
+	personInternationalStats, schoolInternationalStats, countyInternationalStats := internationalStatsByEntity(b.results)
 
 	people := mapValues(b.people)
 	schools := mapValues(b.schools)
 	counties := mapValues(b.counties)
 	contests := mapValues(b.contests)
 	sort.Slice(people, func(i, j int) bool {
-		if cmp := compareStatsWithInternationalTiebreaker(people[i].Stats, people[j].Stats, personInternationalParticipations[people[i].ID], personInternationalParticipations[people[j].ID], true); cmp != 0 {
+		if cmp := compareMergedRankingStats(people[i].Stats, people[j].Stats, personInternationalStats[people[i].ID], personInternationalStats[people[j].ID]); cmp != 0 {
 			return cmp > 0
 		}
 		return people[i].Name < people[j].Name
 	})
 	sort.Slice(schools, func(i, j int) bool {
-		if cmp := compareStatsWithInternationalTiebreaker(schools[i].Stats, schools[j].Stats, schoolInternationalParticipations[schools[i].ID], schoolInternationalParticipations[schools[j].ID], true); cmp != 0 {
+		if cmp := compareMergedRankingStats(schools[i].Stats, schools[j].Stats, schoolInternationalStats[schools[i].ID], schoolInternationalStats[schools[j].ID]); cmp != 0 {
 			return cmp > 0
 		}
 		return schools[i].Name < schools[j].Name
 	})
 	sort.Slice(counties, func(i, j int) bool {
-		if cmp := compareStatsWithInternationalTiebreaker(counties[i].Stats, counties[j].Stats, countyInternationalParticipations[counties[i].ID], countyInternationalParticipations[counties[j].ID], true); cmp != 0 {
+		if cmp := compareMergedRankingStats(counties[i].Stats, counties[j].Stats, countyInternationalStats[counties[i].ID], countyInternationalStats[counties[j].ID]); cmp != 0 {
 			return cmp > 0
 		}
 		return counties[i].Name < counties[j].Name
@@ -1529,55 +1529,100 @@ func isSelectionStage(stage string) bool {
 	return stage == "lot"
 }
 
-func internationalParticipationCounts(results []Result) (map[string]int, map[string]int, map[string]int) {
-	people := map[string]int{}
-	schools := map[string]int{}
-	counties := map[string]int{}
+func internationalStatsByEntity(results []Result) (map[string]Stats, map[string]Stats, map[string]Stats) {
+	people := map[string]Stats{}
+	schools := map[string]Stats{}
+	counties := map[string]Stats{}
 	for _, result := range results {
 		if result.Stage != "international" {
 			continue
 		}
 		if result.PersonID != "" {
-			people[result.PersonID]++
+			stats := people[result.PersonID]
+			accumulateInternationalRankingStats(&stats, result)
+			people[result.PersonID] = stats
 		}
 		if result.SchoolID != "" {
-			schools[result.SchoolID]++
+			stats := schools[result.SchoolID]
+			accumulateInternationalRankingStats(&stats, result)
+			schools[result.SchoolID] = stats
 		}
 		if result.CountyID != "" {
-			counties[result.CountyID]++
+			stats := counties[result.CountyID]
+			accumulateInternationalRankingStats(&stats, result)
+			counties[result.CountyID] = stats
 		}
 	}
 	return people, schools, counties
 }
 
-func compareStats(a, b Stats) int {
-	return compareStatsWithInternationalTiebreaker(a, b, 0, 0, false)
+func accumulateInternationalRankingStats(stats *Stats, result Result) {
+	stats.Participations++
+	stats.InternationalParticipations++
+	switch result.Medal {
+	case "gold":
+		stats.Gold++
+	case "silver":
+		stats.Silver++
+	case "bronze":
+		stats.Bronze++
+	case "honorable":
+		stats.Honorable++
+	}
+	if result.Place > 0 && (stats.BestPlace == 0 || result.Place < stats.BestPlace) {
+		stats.BestPlace = result.Place
+	}
 }
 
-func compareStatsWithInternationalTiebreaker(a, b Stats, aInternationalParticipations, bInternationalParticipations int, includeInternationalTiebreaker bool) int {
-	checks := [][2]int{
+func compareStats(a, b Stats) int {
+	return compareMergedRankingStats(a, b, Stats{}, Stats{})
+}
+
+func compareMergedRankingStats(a, b Stats, aInternational, bInternational Stats) int {
+	if cmp := compareNationalRankingStats(a, b); cmp != 0 {
+		return cmp
+	}
+	if cmp := compareSelectionRankingStats(a, b); cmp != 0 {
+		return cmp
+	}
+	return compareInternationalRankingStats(aInternational, bInternational)
+}
+
+func compareNationalRankingStats(a, b Stats) int {
+	for _, check := range [][2]int{
 		{a.Gold, b.Gold},
 		{a.Silver, b.Silver},
 		{a.Bronze, b.Bronze},
-		{a.Honorable, b.Honorable},
-		{a.Prizes, b.Prizes},
-		{a.Selections, b.Selections},
-		{a.LotParticipations, b.LotParticipations},
-		{a.NationalParticipations, b.NationalParticipations},
-		{a.Participations, b.Participations},
-	}
-	for _, check := range checks {
+	} {
 		if check[0] != check[1] {
 			return check[0] - check[1]
 		}
 	}
-	if a.BestPlace != b.BestPlace {
-		return placeForSort(b.BestPlace) - placeForSort(a.BestPlace)
+	return compareBestPlace(a.BestPlace, b.BestPlace)
+}
+
+func compareSelectionRankingStats(a, b Stats) int {
+	return a.Selections - b.Selections
+}
+
+func compareInternationalRankingStats(a, b Stats) int {
+	for _, check := range [][2]int{
+		{a.Gold, b.Gold},
+		{a.Silver, b.Silver},
+		{a.Bronze, b.Bronze},
+	} {
+		if check[0] != check[1] {
+			return check[0] - check[1]
+		}
 	}
-	if includeInternationalTiebreaker && aInternationalParticipations != bInternationalParticipations {
-		return aInternationalParticipations - bInternationalParticipations
+	if cmp := compareBestPlace(a.BestPlace, b.BestPlace); cmp != 0 {
+		return cmp
 	}
-	return 0
+	return a.InternationalParticipations - b.InternationalParticipations
+}
+
+func compareBestPlace(a, b int) int {
+	return placeForSort(b) - placeForSort(a)
 }
 
 func placeForSort(place int) int {
