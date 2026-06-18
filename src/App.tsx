@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import { dataset } from './app/data';
 import { buildIndexes } from './app/indexes';
 import { parseRoute } from './app/routes';
@@ -11,11 +11,17 @@ import { NotFoundPage } from './pages/NotFoundPage';
 import { RankingPage } from './pages/RankingPage';
 import { ScoreboardPage } from './pages/ScoreboardPage';
 import { SourcesPage } from './pages/SourcesPage';
+import { applySeoMetadata, seoForRoute } from './lib/seo';
 
 export function App() {
   const pathname = usePathname();
   const indexes = useMemo(() => buildIndexes(dataset), []);
-  const route = parseRoute(pathname);
+  const route = useMemo(() => parseRoute(pathname), [pathname]);
+  const seo = useMemo(() => seoForRoute(route, indexes, dataset, pathname), [indexes, pathname, route]);
+
+  useEffect(() => {
+    applySeoMetadata(seo);
+  }, [seo]);
 
   return (
     <div className="app-shell">
