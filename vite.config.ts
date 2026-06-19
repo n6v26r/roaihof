@@ -28,7 +28,8 @@ export default defineConfig(async () => {
 async function resolveCommitInfo(): Promise<CommitInfo> {
   const env = ((globalThis as unknown as { process?: { env?: Record<string, string | undefined> } }).process?.env ?? {});
   const hash = env.VERCEL_GIT_COMMIT_SHA || await git('rev-parse HEAD');
-  const message = env.VERCEL_GIT_COMMIT_MESSAGE || await git('log -1 --pretty=%s');
+  const rawMessage = env.VERCEL_GIT_COMMIT_MESSAGE || await git('log -1 --pretty=%s');
+  const message = commitTitle(rawMessage);
 
   return {
     hash,
@@ -36,6 +37,10 @@ async function resolveCommitInfo(): Promise<CommitInfo> {
     message,
     url: hash ? `${repositoryUrl}/commit/${hash}` : repositoryUrl
   };
+}
+
+function commitTitle(message: string): string {
+  return message.split(/\r?\n/, 1)[0]?.trim() ?? '';
 }
 
 async function git(command: string): Promise<string> {
