@@ -23,6 +23,20 @@ describe('seo metadata', () => {
     expect(seo.url).toBe(`${SEO_ORIGIN}/scoreboards/onia-2026-nationala-full`);
   });
 
+  it('marks the dataset with structured data license and creator fields', () => {
+    const seo = seoForRoute(parseRoute('/'), indexes, dataset);
+    const datasetJsonLd = seo.jsonLd.find((value) => value['@type'] === 'Dataset');
+
+    expect(datasetJsonLd).toMatchObject({
+      license: 'https://unlicense.org/',
+      creator: {
+        '@type': 'Organization',
+        name: 'Romanian AI Hall Of Fame',
+        url: `${SEO_ORIGIN}/`
+      }
+    });
+  });
+
   it('marks missing dataset routes as noindex', () => {
     const seo = seoForRoute(parseRoute('/people/missing-person'), indexes, dataset, '/people/missing-person');
 

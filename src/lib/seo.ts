@@ -10,6 +10,7 @@ export const SEO_ORIGIN = normalizeOrigin(import.meta.env.VITE_SEO_ORIGIN || DEF
 
 const SITE_NAME = 'Romanian AI Hall Of Fame';
 const SITE_SHORT_NAME = 'ROAIHOF';
+const SITE_LICENSE_URL = 'https://unlicense.org/';
 const HOME_TITLE = `${SITE_NAME} | ${SITE_SHORT_NAME}`;
 const HOME_DESCRIPTION = 'Search Romanian AI olympiad results, rankings, scoreboards, contestants, schools, and counties across ONIA, ROAI, IAIO, IOAI, and CEOAI.';
 const MANAGED_HEAD_ATTR = 'data-roaihof-seo';
@@ -297,6 +298,12 @@ function datasetJsonLd(data: Dataset): JsonLdObject {
     name: `${SITE_NAME} dataset`,
     description: HOME_DESCRIPTION,
     url: absoluteUrl('/'),
+    license: SITE_LICENSE_URL,
+    creator: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: absoluteUrl('/')
+    },
     dateModified: isoDate(data.generatedAt),
     keywords: data.summary.circuits.join(', ')
   });
