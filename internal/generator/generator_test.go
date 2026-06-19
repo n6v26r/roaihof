@@ -1,6 +1,9 @@
 package generator
 
-import "testing"
+import (
+	"encoding/json"
+	"testing"
+)
 
 func TestBuildDatasetCountsOfficialRows(t *testing.T) {
 	dataset, err := BuildDataset("../..")
@@ -122,6 +125,55 @@ func TestONIANationalAbsentRowsAreExcluded(t *testing.T) {
 		}
 		if found.Place != place || found.Score != 0 {
 			t.Fatalf("%s ONIA zero-score result = place %d score %.2f, want place %d score 0", personID, found.Place, found.Score, place)
+		}
+	}
+}
+
+func TestRecoveredZeroScoresSerializeAsZero(t *testing.T) {
+	dataset, err := BuildDataset("../..")
+	if err != nil {
+		t.Fatalf("BuildDataset: %v", err)
+	}
+	data, err := json.Marshal(dataset)
+	if err != nil {
+		t.Fatalf("Marshal dataset: %v", err)
+	}
+	var payload struct {
+		Results []map[string]any `json:"results"`
+	}
+	if err := json.Unmarshal(data, &payload); err != nil {
+		t.Fatalf("Unmarshal marshaled dataset: %v", err)
+	}
+
+	cases := []struct {
+		personID  string
+		contestID string
+	}{
+		{"ghetu-mihai-eduard", "onia-2026-nationala"},
+		{"vasile-david-gabriel", "onia-2026-nationala"},
+		{"boabes-cristina-ioana", "onia-2026-nationala"},
+		{"tulpan-dragos-andrei", "onia-2026-nationala"},
+		{"isepciuc-robert-stefan", "onia-2026-nationala"},
+		{"vetrila-andrei", "onia-2026-nationala"},
+		{"sonea-andrei", "onia-2026-nationala"},
+		{"alexandrescu-luca", "onia-2026-nationala"},
+		{"circiumaru-alexandru-radu", "roai-2025-national-clasa-9"},
+	}
+	for _, tc := range cases {
+		result := findResult(dataset, tc.personID, tc.contestID)
+		if result == nil {
+			t.Fatalf("missing zero-score result for %s in %s", tc.personID, tc.contestID)
+		}
+		if result.Score != 0 || !result.ScoreKnown {
+			t.Fatalf("%s/%s internal score = %.2f known=%v, want explicit known zero", tc.personID, tc.contestID, result.Score, result.ScoreKnown)
+		}
+		jsonResult := findJSONResult(payload.Results, result.ID)
+		if jsonResult == nil {
+			t.Fatalf("missing marshaled JSON result %s", result.ID)
+		}
+		score, ok := jsonResult["score"]
+		if !ok || score != float64(0) {
+			t.Fatalf("%s marshaled score = %#v present=%v, want explicit 0", result.ID, score, ok)
 		}
 	}
 }
@@ -501,8 +553,8 @@ func TestONIALotImportsCountedPlatformScoreboard(t *testing.T) {
 		if result.PersonID == "" || result.SchoolID == "" || result.CountyID == "" {
 			t.Fatalf("ONIA Lot result missing identity: %#v", result)
 		}
-		if result.SourceID != sourceONIALotScoreboard {
-			t.Fatalf("%s source = %q, want %q", result.PersonName, result.SourceID, sourceONIALotScoreboard)
+		if result.SourceID != sourceONIALot {
+			t.Fatalf("%s source = %q, want %q", result.PersonName, result.SourceID, sourceONIALot)
 		}
 		results[result.PersonID] = result
 	}
@@ -905,6 +957,28 @@ func TestROAI2025NationalImportedByClass(t *testing.T) {
 		}
 	}
 
+	if stale := findPerson(dataset, "durduman-burtescu-t-udor"); stale != nil {
+		t.Fatalf("found stale split-name ROAI 2025 person: %#v", stale)
+	}
+	durduman := findPerson(dataset, "durduman-burtescu-tudor")
+	if durduman == nil {
+		t.Fatal("missing corrected Durduman-Burtescu Tudor person")
+	}
+	if durduman.Name != "Durduman-Burtescu Tudor" {
+		t.Fatalf("Durduman name = %q, want corrected name", durduman.Name)
+	}
+	if durduman.ExternalUsernames == nil || !contains(durduman.ExternalUsernames.Judge, "tudor_db") {
+		t.Fatalf("Durduman judge usernames = %v, want tudor_db", durduman.ExternalUsernames)
+	}
+	durdumanNational := findResult(dataset, "durduman-burtescu-tudor", "roai-2025-national-clasa-10")
+	if durdumanNational == nil {
+		t.Fatal("missing Durduman ROAI 2025 national result")
+	}
+	if durdumanNational.Place != 121 || durdumanNational.Score != 7 || durdumanNational.ScoreMax != 200 || durdumanNational.SourceID != "roai-2025-national-anonymized-final" {
+		t.Fatalf("Durduman ROAI 2025 national = place %d score %v/%v source %q, want place 121 score 7/200 anonymized source",
+			durdumanNational.Place, durdumanNational.Score, durdumanNational.ScoreMax, durdumanNational.SourceID)
+	}
+
 	guest := findPerson(dataset, "muntean-matei")
 	if guest == nil {
 		t.Fatal("missing ROAI 2025 grade 7 guest profile")
@@ -1079,6 +1153,15 @@ func findResult(dataset *Dataset, personID string, contestID string) *Result {
 	for i := range dataset.Results {
 		if dataset.Results[i].PersonID == personID && dataset.Results[i].ContestID == contestID {
 			return &dataset.Results[i]
+		}
+	}
+	return nil
+}
+
+func findJSONResult(results []map[string]any, id string) map[string]any {
+	for _, result := range results {
+		if result["id"] == id {
+			return result
 		}
 	}
 	return nil

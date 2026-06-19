@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-18T13:37:58.547Z",
-  "sourceCount": 27,
-  "archivedCount": 27,
+  "generatedAt": "2026-06-19T17:26:30.350Z",
+  "sourceCount": 38,
+  "archivedCount": 38,
   "sources": [
     {
       "id": "onia-national-2026",
@@ -12,7 +12,7 @@
       "contentType": "application/json; charset=UTF-8",
       "bytes": 54304,
       "sha256": "4a3b974ef240a614dc3a07d03df9cfec501573e1036708aa5d41cca2ad399e46",
-      "archivedAt": "2026-06-18T13:37:58.547Z",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
       "path": "files/onia-national-2026.json"
     },
     {
@@ -24,8 +24,134 @@
       "contentType": "application/json; charset=UTF-8",
       "bytes": 2997,
       "sha256": "7e6f8b6995d360c53e1dcf5f61175d203589903b85ff35be4fa255c0af486251",
-      "archivedAt": "2026-06-18T13:37:58.547Z",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
       "path": "files/onia-lot-largit-2026.json"
+    },
+    {
+      "id": "onia-2026-national-participants-sheet",
+      "title": "ONIA 2026 national participant room assignment sheet",
+      "originalUrl": "https://docs.google.com/spreadsheets/d/1W8bptasd7CqXVyLROwJhvEgJHexbc722ol22AMIbdn0/htmlview?pli=1",
+      "finalUrl": "https://docs.google.com/spreadsheets/d/1W8bptasd7CqXVyLROwJhvEgJHexbc722ol22AMIbdn0/htmlview?pli=1",
+      "statusCode": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 42058,
+      "sha256": "8a851e8bfb431f593086176183e7beaf06bb76a09009a11c340b0bfbd0663aa6",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
+      "path": "files/onia-2026-national-participants-sheet.html"
+    },
+    {
+      "id": "mlcompete-11-final",
+      "title": "ONIA 2026 local IX-X mlcompete final leaderboard",
+      "originalUrl": "https://platform.olimpiada-ai.ro/ro/competitions/11?tab=final",
+      "finalUrl": "https://platform.olimpiada-ai.ro/ro/competitions/11?tab=final",
+      "statusCode": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 941647,
+      "sha256": "5c65fffa4351a635ee6077a899ac08fe8716d1f8743d86efab86bf84488cc965",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
+      "path": "files/mlcompete-11-final.html"
+    },
+    {
+      "id": "mlcompete-12-final",
+      "title": "ONIA 2026 local XI-XII mlcompete final leaderboard",
+      "originalUrl": "https://platform.olimpiada-ai.ro/ro/competitions/12?tab=final",
+      "finalUrl": "https://platform.olimpiada-ai.ro/ro/competitions/12?tab=final",
+      "statusCode": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 1159813,
+      "sha256": "3d158cb66502369538a68f9fc9c0a119b5b459a1e31955169dc9166b5845606e",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
+      "path": "files/mlcompete-12-final.html"
+    },
+    {
+      "id": "mlcompete-14-final",
+      "title": "ONIA 2026 county IX-X mlcompete final leaderboard",
+      "originalUrl": "https://platform.olimpiada-ai.ro/ro/competitions/14?tab=final",
+      "finalUrl": "https://platform.olimpiada-ai.ro/ro/competitions/14?tab=final",
+      "statusCode": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 454363,
+      "sha256": "162bda8656805efce82d4efd3b611fd170dba1324c18d2edb00342452071a594",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
+      "path": "files/mlcompete-14-final.html"
+    },
+    {
+      "id": "mlcompete-15-final",
+      "title": "ONIA 2026 county XI-XII mlcompete final leaderboard",
+      "originalUrl": "https://platform.olimpiada-ai.ro/ro/competitions/15?tab=final",
+      "finalUrl": "https://platform.olimpiada-ai.ro/ro/competitions/15?tab=final",
+      "statusCode": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 632793,
+      "sha256": "62473e5c408bbab088c47048fa82429e425e9749243f2121a33671d3245619fb",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
+      "path": "files/mlcompete-15-final.html"
+    },
+    {
+      "id": "mlcompete-2026-profile-pages",
+      "title": "ONIA 2026 public mlcompete profile pages",
+      "originalUrl": "https://platform.olimpiada-ai.ro/ro/profile/",
+      "statusCode": 200,
+      "contentType": "application/json",
+      "bytes": 99268,
+      "sha256": "ebb283cd6b76a743b215071c7ec32dd15d93fede45f18e74f28d282333ede4a1",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
+      "path": "files/mlcompete-2026-profile-pages.json",
+      "profileCount": 154,
+      "archivedProfileCount": 154,
+      "failedProfileCount": 0,
+      "storage": "gzip-compressed HTML, one file per profile",
+      "originalProfileBytes": 37818084,
+      "compressedProfileBytes": 6214368,
+      "profileCompressionRatio": 0.1643
+    },
+    {
+      "id": "mlcompete-17-final",
+      "title": "ONIA 2026 IX-X mlcompete final leaderboard",
+      "originalUrl": "https://platform.olimpiada-ai.ro/ro/competitions/17?tab=final",
+      "finalUrl": "https://platform.olimpiada-ai.ro/ro/competitions/17?tab=final",
+      "statusCode": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 402828,
+      "sha256": "884a5691a7c9e02a9f6f79e2864684f90bd68f8e24e1630ada7930b544733a9d",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
+      "path": "files/mlcompete-17-final.html"
+    },
+    {
+      "id": "mlcompete-18-final",
+      "title": "ONIA 2026 XI-XII mlcompete final leaderboard",
+      "originalUrl": "https://platform.olimpiada-ai.ro/ro/competitions/18?tab=final",
+      "finalUrl": "https://platform.olimpiada-ai.ro/ro/competitions/18?tab=final",
+      "statusCode": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 432966,
+      "sha256": "e6c495e780bec5879fe6b28aa8ef988846c226af4a3f6b4d04437d792ecb59f0",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
+      "path": "files/mlcompete-18-final.html"
+    },
+    {
+      "id": "mlcompete-23-final",
+      "title": "ONIA 2026 Lot mlcompete final leaderboard 23",
+      "originalUrl": "https://platform.olimpiada-ai.ro/ro/competitions/23?tab=final",
+      "finalUrl": "https://platform.olimpiada-ai.ro/ro/competitions/23?tab=final",
+      "statusCode": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 316767,
+      "sha256": "3e7e29c90e130b9b5063208921c6d98aa4b964b9a0ba94cc1103c9d1795dbe1c",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
+      "path": "files/mlcompete-23-final.html"
+    },
+    {
+      "id": "mlcompete-24-final",
+      "title": "ONIA 2026 Lot mlcompete final leaderboard 24",
+      "originalUrl": "https://platform.olimpiada-ai.ro/ro/competitions/24?tab=final",
+      "finalUrl": "https://platform.olimpiada-ai.ro/ro/competitions/24?tab=final",
+      "statusCode": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 316963,
+      "sha256": "1d4b62c8a86892bcc1a1f3abe78a8757fdecd8ec0b3d8f017f794fac3f439bf4",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
+      "path": "files/mlcompete-24-final.html"
     },
     {
       "id": "roai-2026-page",
@@ -35,8 +161,8 @@
       "statusCode": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 90412,
-      "sha256": "b5bbf9b743709d72854961a9bf01c99115f38d854310ec5c0d5ed0a43e387e99",
-      "archivedAt": "2026-06-18T13:37:58.547Z",
+      "sha256": "1cd6e4d7893eac934231dcf46bc0e5d6857496467e3a6a1d21f947e28ce6fc68",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
       "path": "files/roai-2026-page.html"
     },
     {
@@ -48,7 +174,7 @@
       "contentType": "application/pdf",
       "bytes": 488523,
       "sha256": "044cda2be1b97e415968ed3526d4b1589b79d458034718ff1de69c91b259a8b8",
-      "archivedAt": "2026-06-18T13:37:58.547Z",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
       "path": "files/roai-2026-final-ix-x.pdf"
     },
     {
@@ -60,7 +186,7 @@
       "contentType": "application/pdf",
       "bytes": 514699,
       "sha256": "71b63025ab8254901c04903c44f82b14393e7001612b6abf43aca8f58f7097b8",
-      "archivedAt": "2026-06-18T13:37:58.547Z",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
       "path": "files/roai-2026-final-xi-xii.pdf"
     },
     {
@@ -71,8 +197,8 @@
       "statusCode": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 72810,
-      "sha256": "2ed7c7b75905b416dda863e421692bc181c454fea22276eb623b1384617f5b4d",
-      "archivedAt": "2026-06-18T13:37:58.547Z",
+      "sha256": "aa4172b99759aebab4473c92db3648878910d4e1608e4b4e3367c9da9d5da018",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
       "path": "files/roai-2026-national-ix-x-judge.html"
     },
     {
@@ -83,8 +209,8 @@
       "statusCode": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 72428,
-      "sha256": "89cb258fc6373b1fd6a9039662b4422147bbbaf94b2ec1e3e37c2ff91f6f8f40",
-      "archivedAt": "2026-06-18T13:37:58.547Z",
+      "sha256": "2f97852bf601777d5257372ae228f37e3935aeff08106e5774960e050cd0e48f",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
       "path": "files/roai-2026-national-xi-xii-judge.html"
     },
     {
@@ -95,8 +221,8 @@
       "statusCode": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 84326,
-      "sha256": "3d10cccf331a06c4a0a1d31983b9f1ad9a539821aba5225ab551980d480966a4",
-      "archivedAt": "2026-06-18T13:37:58.547Z",
+      "sha256": "d3624b9e20a2985e1196190f73233bfc29e3b1aac3634e5108b6654830a65718",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
       "path": "files/roai-2026-lot-page.html"
     },
     {
@@ -108,7 +234,7 @@
       "contentType": "application/pdf",
       "bytes": 313643,
       "sha256": "ae2d2ccb4d849ef8f92a0ad8c1e36e17b41bc78a0046f24f0bcd3f4189d61c7d",
-      "archivedAt": "2026-06-18T13:37:58.547Z",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
       "path": "files/roai-2026-lot-iaio-pdf.pdf"
     },
     {
@@ -120,7 +246,7 @@
       "contentType": "application/pdf",
       "bytes": 274280,
       "sha256": "95d82c5afa0d7bbfc0bf0facd69c18e07ba5ed743e03277446c719b22c819949",
-      "archivedAt": "2026-06-18T13:37:58.547Z",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
       "path": "files/roai-2026-lot-ceoai-pdf.pdf"
     },
     {
@@ -131,8 +257,8 @@
       "statusCode": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 81085,
-      "sha256": "8a84a4158a8011414cb027cde43c8226f608109ea941d55c12a4c9298b0eb62c",
-      "archivedAt": "2026-06-18T13:37:58.547Z",
+      "sha256": "5f0a816bcff4dfcafd57a5d594de63881f8db8560c202f6b03f3d56e776edbe2",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
       "path": "files/roai-2025-lot-page.html"
     },
     {
@@ -144,7 +270,7 @@
       "contentType": "application/pdf",
       "bytes": 310498,
       "sha256": "e3132617ff4610190cd419260e8b23221701a7b156376b19b8541923fce07977",
-      "archivedAt": "2026-06-18T13:37:58.547Z",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
       "path": "files/roai-2025-final-clasa-9.pdf"
     },
     {
@@ -156,7 +282,7 @@
       "contentType": "application/pdf",
       "bytes": 320357,
       "sha256": "709474422812a3e52ace3142fe4f6621254558700ac37f1a4f8b2b57a3184429",
-      "archivedAt": "2026-06-18T13:37:58.547Z",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
       "path": "files/roai-2025-final-clasa-10.pdf"
     },
     {
@@ -168,7 +294,7 @@
       "contentType": "application/pdf",
       "bytes": 336253,
       "sha256": "faef94ce309a32e5e407b71e58287eb7fb722f70347bfa8039f5002477be5528",
-      "archivedAt": "2026-06-18T13:37:58.547Z",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
       "path": "files/roai-2025-final-clasa-11.pdf"
     },
     {
@@ -180,7 +306,7 @@
       "contentType": "application/pdf",
       "bytes": 300548,
       "sha256": "a4a7ed3e2c625565d32ae5e1ddf1564e5b8330366cb495edfa9d9be0e3d2d28d",
-      "archivedAt": "2026-06-18T13:37:58.547Z",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
       "path": "files/roai-2025-final-clasa-12.pdf"
     },
     {
@@ -192,7 +318,7 @@
       "contentType": "application/pdf",
       "bytes": 150052,
       "sha256": "cb1f1ad23b2fd380416dd4869100d0adae030a00bdd5110605fd3d1eb51cacc3",
-      "archivedAt": "2026-06-18T13:37:58.547Z",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
       "path": "files/roai-2025-lot-ioai-pdf.pdf"
     },
     {
@@ -204,8 +330,68 @@
       "contentType": "application/pdf",
       "bytes": 128270,
       "sha256": "55c092625b1003714e6a78d9105b1db55b21b29d86ab76cdf17805715f783a5d",
-      "archivedAt": "2026-06-18T13:37:58.547Z",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
       "path": "files/roai-2025-lot-iaio-pdf.pdf"
+    },
+    {
+      "id": "roai-2025-national-anonymized-final",
+      "title": "ROAI 2025 national anonymized final ranking PDF",
+      "originalUrl": "https://olimpiada.nitro-ai.org/2025/onia/finale.pdf",
+      "finalUrl": "https://olimpiada.nitro-ai.org/2025/onia/finale.pdf",
+      "statusCode": 200,
+      "contentType": "application/pdf",
+      "bytes": 510632,
+      "sha256": "41b484a3882855bed16258a6af7e850310e8acc2d02f92e34c3fd4cce5317e0a",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
+      "path": "files/roai-2025-national-anonymized-final.pdf"
+    },
+    {
+      "id": "roai-2025-qualified-9-10",
+      "title": "ROAI 2025 OJIA IX-X qualified list PDF",
+      "originalUrl": "https://olimpiada.nitro-ai.org/2025/ojia/calificati-9-10.pdf",
+      "finalUrl": "https://olimpiada.nitro-ai.org/2025/ojia/calificati-9-10.pdf",
+      "statusCode": 200,
+      "contentType": "application/pdf",
+      "bytes": 427718,
+      "sha256": "36c6d31fb6e2464e55f5f88d37836fb8f10486ccf32a389be6ed1d26f5f064b4",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
+      "path": "files/roai-2025-qualified-9-10.pdf"
+    },
+    {
+      "id": "roai-2025-qualified-11-12",
+      "title": "ROAI 2025 OJIA XI-XII qualified list PDF",
+      "originalUrl": "https://olimpiada.nitro-ai.org/2025/ojia/calificati-11-12.pdf",
+      "finalUrl": "https://olimpiada.nitro-ai.org/2025/ojia/calificati-11-12.pdf",
+      "statusCode": 200,
+      "contentType": "application/pdf",
+      "bytes": 670170,
+      "sha256": "a270f9a82002dae68c92034b88e43865c771e3c6820b9c95e43df23805cc5974",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
+      "path": "files/roai-2025-qualified-11-12.pdf"
+    },
+    {
+      "id": "roai-2025-county-9-10-judge",
+      "title": "ROAI 2025 OJIA IX-X complete Nitro leaderboard",
+      "originalUrl": "https://judge.nitro-ai.org/competitions/roai-2025/ojia-9-10/leaderboard/complete?page=1&page_size=100",
+      "finalUrl": "https://judge.nitro-ai.org/competitions/roai-2025/ojia-9-10/leaderboard/complete?page=1&page_size=100",
+      "statusCode": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 87194,
+      "sha256": "65c6052338e18b94d35d3c800145646ec485bf5d357f0cefc97f229231b44c40",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
+      "path": "files/roai-2025-county-9-10-judge.html"
+    },
+    {
+      "id": "roai-2025-county-11-12-judge",
+      "title": "ROAI 2025 OJIA XI-XII complete Nitro leaderboard",
+      "originalUrl": "https://judge.nitro-ai.org/competitions/roai-2025/ojia/leaderboard/complete?page=1&page_size=100",
+      "finalUrl": "https://judge.nitro-ai.org/competitions/roai-2025/ojia/leaderboard/complete?page=1&page_size=100",
+      "statusCode": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 87107,
+      "sha256": "041420f25baa6487f079a5fb5158b364b3129d7b1f1261a78dcaa6600307655a",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
+      "path": "files/roai-2025-county-11-12-judge.html"
     },
     {
       "id": "roai-2025-national-judge",
@@ -215,8 +401,8 @@
       "statusCode": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 97951,
-      "sha256": "979966ddb0ec7c67d1b483fc19b3208d64e54fcd90fbf8548546a33d960a4d26",
-      "archivedAt": "2026-06-18T13:37:58.547Z",
+      "sha256": "f64ea6c0f8af785d2b83539cabdfff9fe61a9b2999378ff7e74bb836dd1ddd63",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
       "path": "files/roai-2025-national-judge.html"
     },
     {
@@ -228,7 +414,7 @@
       "contentType": "text/html; charset=utf-8",
       "bytes": 191794,
       "sha256": "cbc64ac1e22909b236d3a194dd024d7b52a79b489241c58f3dfe862804b1ffe0",
-      "archivedAt": "2026-06-18T13:37:58.547Z",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
       "path": "files/onia-hall-of-fame.html"
     },
     {
@@ -238,9 +424,9 @@
       "finalUrl": "https://ioai-official.org/china-2025/results-2025/",
       "statusCode": 200,
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 204688,
-      "sha256": "ab43ce7291c5ebe4068e92c0b4444f2a158fff61d4df7395815fe2f8351587df",
-      "archivedAt": "2026-06-18T13:37:58.547Z",
+      "bytes": 206639,
+      "sha256": "a1af37a6f5dbbb4392fdaf7b42bb92349597fdfd4059421fdb760369975cc97a",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
       "path": "files/ioai-2025-official-results.html"
     },
     {
@@ -250,9 +436,9 @@
       "finalUrl": "https://ioai-official.org/bulgaria-2024/results/",
       "statusCode": 200,
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 180965,
-      "sha256": "166fb4a81ece91b83ac42bedd72e9576b05f3ea443f8eea5ef634fa68a56ba53",
-      "archivedAt": "2026-06-18T13:37:58.547Z",
+      "bytes": 182916,
+      "sha256": "b6cb1a8aa2bcdf2ef7bf354852929299749a7daa17afa85f1207caecd511ed7e",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
       "path": "files/ioai-2024-official-results.html"
     },
     {
@@ -263,8 +449,8 @@
       "statusCode": 200,
       "contentType": "text/html; charset=UTF-8",
       "bytes": 158847,
-      "sha256": "609417b3b5802f9004a17d1088ac34b5a931e1811841816d8ba78a479fbcb9a7",
-      "archivedAt": "2026-06-18T13:37:58.547Z",
+      "sha256": "056535bf8f8c7d21868cc6491c01cda0c1240ddcc7adb820429758af02e24bc4",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
       "path": "files/iaio-2026-official-results.html"
     },
     {
@@ -275,57 +461,9 @@
       "statusCode": 200,
       "contentType": "text/html; charset=UTF-8",
       "bytes": 179713,
-      "sha256": "809ce57b702a2a16e773a2f1e352a476ee93d42b9f5ff070b02ec8c12e655776",
-      "archivedAt": "2026-06-18T13:37:58.547Z",
+      "sha256": "6e096585b628f8732ee68fa1af427b851b8d05c92e9719e6e42f97d35cf57c79",
+      "archivedAt": "2026-06-19T17:26:30.350Z",
       "path": "files/iaio-2024-official-results.html"
-    },
-    {
-      "id": "mlcompete-17-final",
-      "title": "ONIA 2026 IX-X mlcompete final leaderboard",
-      "originalUrl": "https://platform.olimpiada-ai.ro/ro/competitions/17?tab=final",
-      "finalUrl": "https://platform.olimpiada-ai.ro/ro/competitions/17?tab=final",
-      "statusCode": 200,
-      "contentType": "text/html; charset=utf-8",
-      "bytes": 405205,
-      "sha256": "a925e59cb6342024ef794ecc24df7bcb95f63187d6068d6daaf1033f84480cfe",
-      "archivedAt": "2026-06-18T13:37:58.547Z",
-      "path": "files/mlcompete-17-final.html"
-    },
-    {
-      "id": "mlcompete-18-final",
-      "title": "ONIA 2026 XI-XII mlcompete final leaderboard",
-      "originalUrl": "https://platform.olimpiada-ai.ro/ro/competitions/18?tab=final",
-      "finalUrl": "https://platform.olimpiada-ai.ro/ro/competitions/18?tab=final",
-      "statusCode": 200,
-      "contentType": "text/html; charset=utf-8",
-      "bytes": 432966,
-      "sha256": "b6d1af477353c4cbf7e8dd3632a3cecc8fa4243df0dac90e2732b82c3bbd052a",
-      "archivedAt": "2026-06-18T13:37:58.547Z",
-      "path": "files/mlcompete-18-final.html"
-    },
-    {
-      "id": "mlcompete-23-final",
-      "title": "ONIA 2026 Lot mlcompete final leaderboard 23",
-      "originalUrl": "https://platform.olimpiada-ai.ro/ro/competitions/23?tab=final",
-      "finalUrl": "https://platform.olimpiada-ai.ro/ro/competitions/23?tab=final",
-      "statusCode": 200,
-      "contentType": "text/html; charset=utf-8",
-      "bytes": 316768,
-      "sha256": "5e6b8a7a3810a06e6b790af74719db70265748718beecb4307451666da1ea498",
-      "archivedAt": "2026-06-18T13:37:58.547Z",
-      "path": "files/mlcompete-23-final.html"
-    },
-    {
-      "id": "mlcompete-24-final",
-      "title": "ONIA 2026 Lot mlcompete final leaderboard 24",
-      "originalUrl": "https://platform.olimpiada-ai.ro/ro/competitions/24?tab=final",
-      "finalUrl": "https://platform.olimpiada-ai.ro/ro/competitions/24?tab=final",
-      "statusCode": 200,
-      "contentType": "text/html; charset=utf-8",
-      "bytes": 316964,
-      "sha256": "1bca424f3f286fa924805eaec189ebd8177c2a1ee346de702e26e2054faa3c8c",
-      "archivedAt": "2026-06-18T13:37:58.547Z",
-      "path": "files/mlcompete-24-final.html"
     }
   ]
 }

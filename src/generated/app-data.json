@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T00:15:33Z",
+  "generatedAt": "2026-06-19T20:10:34Z",
   "summary": {
     "people": 255,
     "schools": 102,
@@ -36,13 +36,6 @@
       "id": "onia-lot-largit-2026",
       "title": "ONIA 2026 - lot lărgit Top 12",
       "url": "https://olimpiada-ai.ro/data/rezultate-lot-largit-2026.json",
-      "accessedAt": "2026-06-18",
-      "status": "ok"
-    },
-    {
-      "id": "onia-lot-scoreboard-2026",
-      "title": "ONIA 2026 - Lot final leaderboard, rounds 1+2",
-      "url": "https://platform.olimpiada-ai.ro/ro/competitions/23?tab=final",
       "accessedAt": "2026-06-18",
       "status": "ok"
     },
@@ -303,7 +296,7 @@
     {
       "id": "onia-2026-national",
       "title": "ONIA 2026 national + Lot",
-      "status": "validate",
+      "status": "ok",
       "detail": "Imported from official ONIA 2026 national results, participant-sheet recovery data, mlcompete final leaderboards, and Lot scoreboards.",
       "url": "https://olimpiada-ai.ro/ro/rezultate/nationala",
       "checked": "2026-06-18"
@@ -343,7 +336,7 @@
     {
       "id": "roai-2025-national",
       "title": "ROAI 2025 national",
-      "status": "validate",
+      "status": "ok",
       "detail": "Imported from official ROAI 2025 task/results pages, class final PDFs, qualified participant lists, Nitro judge leaderboards, and recovered anonymized national scoreboard rows.",
       "url": "https://olimpiada.nitro-ai.org/ro/2025/onia?section=tasks",
       "checked": "2026-06-18"
@@ -365,22 +358,7 @@
       "checked": "2026-06-18"
     }
   ],
-  "sourceTodos": [
-    {
-      "id": "roai-2025",
-      "title": "ROAI 2025",
-      "status": "validate",
-      "detail": "Recovered national matches are inferred from anonymized scoreboards and public participant data; manually review names, schools, counties, and judge usernames.",
-      "url": "https://olimpiada.nitro-ai.org/ro/2025/onia?section=tasks"
-    },
-    {
-      "id": "onia-2026",
-      "title": "ONIA 2026",
-      "status": "validate",
-      "detail": "Recovered national matches are inferred from anonymous scoreboard rows and public participant data; manually review names, schools, counties, and mlcompete usernames.",
-      "url": "https://olimpiada-ai.ro/ro/rezultate/nationala"
-    }
-  ],
+  "sourceTodos": [],
   "people": [
     {
       "id": "petrean-roland",
@@ -8741,8 +8719,8 @@
       }
     },
     {
-      "id": "durduman-burtescu-t-udor",
-      "name": "Durduman-Burtescu T udor",
+      "id": "durduman-burtescu-tudor",
+      "name": "Durduman-Burtescu Tudor",
       "externalUsernames": {
         "judge": [
           "tudor_db"
@@ -15079,7 +15057,7 @@
       "place": 1,
       "score": 335.11,
       "qualification": "IOAI",
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15099,7 +15077,7 @@
       "place": 2,
       "score": 307.71,
       "qualification": "IOAI",
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15119,7 +15097,7 @@
       "place": 3,
       "score": 278.54,
       "qualification": "IOAI",
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15139,7 +15117,7 @@
       "place": 4,
       "score": 261.65,
       "qualification": "IOAI",
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15159,7 +15137,7 @@
       "place": 5,
       "score": 202.81,
       "qualification": "IOAI",
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15179,7 +15157,7 @@
       "place": 6,
       "score": 197.06,
       "qualification": "IOAI",
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15199,7 +15177,7 @@
       "place": 7,
       "score": 196.6,
       "qualification": "IOAI",
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15219,7 +15197,7 @@
       "place": 8,
       "score": 189.8,
       "qualification": "IOAI",
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15239,7 +15217,7 @@
       "place": 9,
       "score": 187.5,
       "qualification": "CEOAI",
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15259,7 +15237,7 @@
       "place": 10,
       "score": 178.47,
       "qualification": "CEOAI",
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15279,7 +15257,7 @@
       "place": 11,
       "score": 177.7,
       "qualification": "CEOAI",
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15299,7 +15277,7 @@
       "place": 12,
       "score": 176.19,
       "qualification": "CEOAI",
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15318,7 +15296,7 @@
       "grade": "10",
       "place": 13,
       "score": 171.51,
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15337,7 +15315,7 @@
       "grade": "12",
       "place": 14,
       "score": 171.02,
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15356,7 +15334,7 @@
       "grade": "12",
       "place": 15,
       "score": 152.2,
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15375,7 +15353,7 @@
       "grade": "11",
       "place": 16,
       "score": 146.47,
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15394,7 +15372,7 @@
       "grade": "12",
       "place": 17,
       "score": 146.38,
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15413,7 +15391,7 @@
       "grade": "11",
       "place": 18,
       "score": 145.47,
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15432,7 +15410,7 @@
       "grade": "11",
       "place": 19,
       "score": 135.95,
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15451,7 +15429,7 @@
       "grade": "12",
       "place": 20,
       "score": 130.05,
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15470,7 +15448,7 @@
       "grade": "11",
       "place": 21,
       "score": 127.68,
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15489,7 +15467,7 @@
       "grade": "12",
       "place": 22,
       "score": 123.53,
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15508,7 +15486,7 @@
       "grade": "12",
       "place": 23,
       "score": 96.77,
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15527,7 +15505,7 @@
       "grade": "11",
       "place": 24,
       "score": 82.81,
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15546,7 +15524,7 @@
       "grade": "11",
       "place": 25,
       "score": 82.7,
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15565,7 +15543,7 @@
       "grade": "10",
       "place": 26,
       "score": 79.03,
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15584,7 +15562,7 @@
       "grade": "12",
       "place": 27,
       "score": 76.51,
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15603,7 +15581,7 @@
       "grade": "12",
       "place": 28,
       "score": 72.86,
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -15622,7 +15600,7 @@
       "grade": "12",
       "place": 29,
       "score": 71.38,
-      "sourceId": "onia-lot-scoreboard-2026",
+      "sourceId": "onia-lot-largit-2026",
       "anonymous": false
     },
     {
@@ -17053,6 +17031,7 @@
       "section": "clasa 9",
       "grade": "9",
       "place": 16,
+      "score": 0,
       "sourceId": "onia-national-2026",
       "anonymous": false
     },
@@ -17094,6 +17073,7 @@
       "section": "clasa 9",
       "grade": "9",
       "place": 17,
+      "score": 0,
       "sourceId": "onia-national-2026",
       "anonymous": false
     },
@@ -18435,6 +18415,7 @@
       "section": "clasa 12",
       "grade": "12",
       "place": 38,
+      "score": 0,
       "sourceId": "onia-national-2026",
       "anonymous": false
     },
@@ -18494,6 +18475,7 @@
       "section": "clasa 12",
       "grade": "12",
       "place": 39,
+      "score": 0,
       "sourceId": "onia-national-2026",
       "anonymous": false
     },
@@ -18553,6 +18535,7 @@
       "section": "clasa 12",
       "grade": "12",
       "place": 40,
+      "score": 0,
       "sourceId": "onia-national-2026",
       "anonymous": false
     },
@@ -18892,6 +18875,7 @@
       "section": "clasa 10",
       "grade": "10",
       "place": 52,
+      "score": 0,
       "sourceId": "onia-national-2026",
       "anonymous": false
     },
@@ -18911,6 +18895,7 @@
       "section": "clasa 10",
       "grade": "10",
       "place": 53,
+      "score": 0,
       "sourceId": "onia-national-2026",
       "anonymous": false
     },
@@ -18930,6 +18915,7 @@
       "section": "clasa 10",
       "grade": "10",
       "place": 54,
+      "score": 0,
       "sourceId": "onia-national-2026",
       "anonymous": false
     },
@@ -24654,8 +24640,8 @@
     {
       "id": "r-428",
       "contestId": "roai-2025-national-clasa-10",
-      "personId": "durduman-burtescu-t-udor",
-      "personName": "Durduman-Burtescu T udor",
+      "personId": "durduman-burtescu-tudor",
+      "personName": "Durduman-Burtescu Tudor",
       "schoolId": "school-colegiul-national-mircea-cel-batran-constanta",
       "school": "Colegiul Național \"Mircea cel Bătrân\", Constanța",
       "countyId": "constanta",
@@ -26677,6 +26663,7 @@
       "section": "Clasa 9",
       "grade": "9",
       "place": 129,
+      "score": 0,
       "scoreMax": 200,
       "sourceId": "roai-2025-national-anonymized-final",
       "anonymous": false
@@ -33244,17 +33231,15 @@
       ]
     },
     {
-      "id": "durduman-burtescu-t-udor",
+      "id": "durduman-burtescu-tudor",
       "kind": "person",
-      "title": "Durduman-Burtescu T udor",
+      "title": "Durduman-Burtescu Tudor",
       "subtitle": "1 participări · 0/0/0 medalii",
       "tokens": [
         "burtescu",
         "db",
         "durduman",
-        "t",
-        "tudor",
-        "udor"
+        "tudor"
       ],
       "usernames": [
         {

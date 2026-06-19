@@ -4,6 +4,7 @@ import http from 'node:http';
 import https from 'node:https';
 import path from 'node:path';
 import process from 'node:process';
+import zlib from 'node:zlib';
 
 const root = process.cwd();
 const datasetPath = path.join(root, 'src/generated/app-data.json');
@@ -22,6 +23,12 @@ let failures = 0;
 
 for (const source of sources) {
   try {
+    if (source.id === 'mlcompete-2026-profile-pages') {
+      const item = await archiveMLCompeteProfilePages(source, archivedAt);
+      manifest.push(item);
+      console.log(`${source.id}: archived ${item.archivedProfileCount}/${item.profileCount} profiles`);
+      continue;
+    }
     const response = await fetchBuffer(source.url);
     const extension = extensionFor(source.url, response.headers['content-type']);
     const filename = `${source.id}${extension}`;
@@ -63,6 +70,110 @@ await fs.writeFile(manifestPath, `${JSON.stringify({
 
 if (failures > 0) {
   process.exitCode = 1;
+}
+
+async function archiveMLCompeteProfilePages(source, archivedAt) {
+  const usernames = Array.from(new Set(
+    (dataset.people ?? []).flatMap((person) => person.externalUsernames?.mlcompete ?? [])
+  )).sort((left, right) => left.localeCompare(right, 'ro'));
+  const profileDirName = source.id;
+  const profileDir = path.join(filesDir, profileDirName);
+  await fs.rm(profileDir, { recursive: true, force: true });
+  await fs.mkdir(profileDir, { recursive: true });
+
+  const profiles = [];
+  const profileFailures = [];
+  const results = await mapLimit(usernames, 8, async (username) => {
+    const encoded = encodeURIComponent(username);
+    const url = `https://platform.olimpiada-ai.ro/ro/profile/${encoded}`;
+    try {
+      const response = await fetchBuffer(url);
+      const compressedBody = zlib.gzipSync(response.body, { level: 9 });
+      const filename = `${encoded}.html.gz`;
+      const filePath = path.join(profileDir, filename);
+      await fs.writeFile(filePath, compressedBody);
+      const sha256 = crypto.createHash('sha256').update(compressedBody).digest('hex');
+      const originalSha256 = crypto.createHash('sha256').update(response.body).digest('hex');
+      return {
+        ok: true,
+        username,
+        url,
+        finalUrl: response.finalUrl,
+        statusCode: response.statusCode,
+        contentType: 'application/gzip',
+        contentEncoding: 'gzip',
+        originalContentType: response.headers['content-type'] ?? '',
+        bytes: compressedBody.length,
+        originalBytes: response.body.length,
+        sha256,
+        originalSha256,
+        path: `files/${profileDirName}/${filename}`
+      };
+    } catch (error) {
+      return {
+        ok: false,
+        username,
+        url,
+        error: error instanceof Error ? error.message : String(error)
+      };
+    }
+  });
+
+  for (const result of results) {
+    if (result.ok) {
+      const { ok, ...profile } = result;
+      profiles.push(profile);
+    } else {
+      const { ok, ...failure } = result;
+      profileFailures.push(failure);
+    }
+  }
+
+  const index = {
+    id: source.id,
+    title: source.title,
+    originalUrl: source.url,
+    profileCount: usernames.length,
+    archivedProfileCount: profiles.length,
+    failedProfileCount: profileFailures.length,
+    storage: 'gzip-compressed HTML, one file per profile',
+    archivedAt,
+    profiles,
+    failures: profileFailures
+  };
+  const body = Buffer.from(`${JSON.stringify(index, null, 2)}\n`);
+  const filename = `${source.id}.json`;
+  const filePath = path.join(filesDir, filename);
+  await fs.writeFile(filePath, body);
+  const sha256 = crypto.createHash('sha256').update(body).digest('hex');
+  return {
+    id: source.id,
+    title: source.title,
+    originalUrl: source.url,
+    statusCode: profileFailures.length > 0 ? 206 : 200,
+    contentType: 'application/json',
+    bytes: body.length,
+    sha256,
+    archivedAt,
+    path: `files/${filename}`,
+    profileCount: usernames.length,
+    archivedProfileCount: profiles.length,
+    failedProfileCount: profileFailures.length
+  };
+}
+
+async function mapLimit(items, limit, mapper) {
+  const results = Array(items.length);
+  let nextIndex = 0;
+  async function worker() {
+    while (nextIndex < items.length) {
+      const index = nextIndex;
+      nextIndex += 1;
+      results[index] = await mapper(items[index], index);
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, worker));
+  return results;
 }
 
 function fetchBuffer(url, redirectCount = 0) {

@@ -87,6 +87,9 @@ function provenanceGroupKey(source: Source) {
   if (source.id === 'onia-hall-of-fame' || source.id.startsWith('ioai-') || source.id.startsWith('iaio-')) {
     return 'international';
   }
+  if (/mlcompete-(23|24)-final/.test(source.id)) {
+    return 'onia-official';
+  }
   if (source.id.startsWith('mlcompete-') || source.url.includes('platform.olimpiada-ai.ro')) {
     return 'onia-mlcompete';
   }
@@ -118,9 +121,6 @@ function provenanceBundleTitle(source: Source) {
       return 'Lot leaderboards';
     }
     return 'Leaderboards';
-  }
-  if (id === 'onia-lot-scoreboard-2026') {
-    return 'Lot leaderboards';
   }
   if (id === 'onia-2026-national-participants-sheet') {
     return 'Participant data';
@@ -183,9 +183,10 @@ function domainSummary(sources: Source[]) {
 function groupByUrl(sources: Source[]) {
   const groups = new Map<string, Source[]>();
   for (const source of sources) {
-    const urlSources = groups.get(source.url) ?? [];
+    const key = source.url;
+    const urlSources = groups.get(key) ?? [];
     urlSources.push(source);
-    groups.set(source.url, urlSources);
+    groups.set(key, urlSources);
   }
   return Array.from(groups.entries()).map(([url, urlSources]) => ({ url, sources: urlSources }));
 }
@@ -302,7 +303,7 @@ export function SourcesPage() {
                     <div className="provenance-url-list">
                       {bundle.urlGroups.map((urlGroup) => {
                         return (
-                          <a href={urlGroup.url} target="_blank" rel="noreferrer" className="provenance-row" key={urlGroup.url}>
+                          <a href={urlGroup.url} target="_blank" rel="noreferrer" className="provenance-row" key={urlGroup.sources.map((source) => source.id).join('|')}>
                             <span>
                               <strong>{provenanceUrlTitle(bundle, urlGroup)}</strong>
                               <small>

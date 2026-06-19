@@ -38,6 +38,7 @@ func newBuilder(aliases map[string]string, aliasReasons map[string]string) *buil
 		counties:      map[string]*County{},
 		contests:      map[string]*Contest{},
 		sources:       map[string]Source{},
+		sourceTodos:   []SourceTodo{},
 		schoolCounty:  map[string]string{},
 		personAliases: map[string]map[string]bool{},
 	}
@@ -109,6 +110,7 @@ func (b *builder) importONIANational(path string, recoveryPath string) error {
 				Grade:          group.grade,
 				Place:          row.Pozitie,
 				Score:          row.ScorTotal.Value,
+				ScoreKnown:     row.ScorTotal.Present,
 				Medal:          normalizeMedal(ptr(row.Medalie)),
 				Prize:          cleanPrize(ptr(row.Premiu)),
 				SourceID:       sourceONIANational,
@@ -134,6 +136,7 @@ func (b *builder) importONIANational(path string, recoveryPath string) error {
 			Section:        "clasa " + guest.Grade,
 			Grade:          guest.Grade,
 			Score:          float64(guest.Score),
+			ScoreKnown:     true,
 			Status:         guest.Status,
 			SourceID:       sourceONIANationalGuests,
 		})
@@ -305,8 +308,9 @@ func (b *builder) importONIALotSelection(nationalPath string, selectionPath stri
 			Grade:         normalizeGrade(row.Row.Clasa),
 			Place:         place,
 			Score:         row.Score,
+			ScoreKnown:    true,
 			Qualification: oniaLotQualification(place),
-			SourceID:      sourceONIALotScoreboard,
+			SourceID:      sourceONIALot,
 		}
 		b.addResult(result)
 	}
@@ -466,6 +470,7 @@ func (b *builder) importROAI(path string, roai2025NationalScoresPath string, roa
 			Grade:          identity.Grade,
 			Place:          row.Place,
 			Score:          float64(score),
+			ScoreKnown:     true,
 			ScoreMax:       float64(scoreMax),
 			Medal:          normalizeMedal(row.Medal),
 			Prize:          cleanPrize(row.Prize),
@@ -542,6 +547,7 @@ func (b *builder) importROAI(path string, roai2025NationalScoresPath string, roa
 			Grade:         normalizeGrade(identity.Grade),
 			Place:         row.Place,
 			Score:         float64(row.Score),
+			ScoreKnown:    true,
 			ScoreMax:      float64(row.ScoreMax),
 			Qualification: cleanHuman(row.Qualification),
 			SourceID:      sourceID,
@@ -1018,6 +1024,7 @@ func (b *builder) importManualInternational(path string) error {
 			Section:       row.Section,
 			Place:         row.Place,
 			Score:         float64(row.Score),
+			ScoreKnown:    true,
 			ScoreMax:      float64(row.ScoreMax),
 			Medal:         normalizeMedal(row.Medal),
 			Prize:         cleanPrize(row.Prize),
@@ -1049,6 +1056,9 @@ func (b *builder) addContest(contest Contest) {
 
 func (b *builder) addResult(result Result) {
 	result.ID = "r-" + strconv.Itoa(len(b.results)+1)
+	if !result.ScoreKnown && (result.Score != 0 || result.ScoreMax != 0) {
+		result.ScoreKnown = true
+	}
 	result.School = canonicalSchoolNameForCounty(result.School, result.County)
 	if result.County == "" && result.School != "" {
 		result.County = b.countyForSchool(result.School)

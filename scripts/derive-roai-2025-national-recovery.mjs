@@ -192,8 +192,9 @@ function parseQualifiedRows(text) {
     if (!match) continue;
 
     const beforeScores = match[4];
-    const county = extractCounty(beforeScores);
-    const beforeCounty = beforeScores.slice(0, beforeScores.lastIndexOf(county)).trimEnd();
+    const countyRaw = extractCounty(beforeScores);
+    const county = cleanHuman(countyRaw);
+    const beforeCounty = beforeScores.slice(0, beforeScores.lastIndexOf(countyRaw)).trimEnd();
     const schoolStart = schoolStartIndex(beforeCounty);
     if (schoolStart < 0) {
       throw new Error(`could not split qualified row school: ${line}`);
@@ -212,7 +213,7 @@ function parseQualifiedRows(text) {
       grade: match[1],
       ojiaGrade: match[2],
       ojiaCode: match[3],
-      name: cleanHuman(`${last} ${first}`),
+      name: cleanQualifiedName(`${last} ${first}`),
       school,
       county,
       ojiaTaskScores: [Number(match[5]), Number(match[6])],
@@ -591,6 +592,18 @@ function cleanHuman(value) {
     .replace(/[“”„]/g, '"')
     .replace(/''/g, '"')
     .replace(/[‘’]/g, "'")
+    .replace(/Ţ/g, 'Ț')
+    .replace(/ţ/g, 'ț')
+    .replace(/Ş/g, 'Ș')
+    .replace(/ş/g, 'ș')
     .replace(/\s+/g, ' ')
     .trim();
+}
+
+function cleanQualifiedName(value) {
+  const cleaned = cleanHuman(value);
+  const corrections = new Map([
+    ['Durduman-Burtescu T udor', 'Durduman-Burtescu Tudor']
+  ]);
+  return corrections.get(cleaned) ?? cleaned;
 }

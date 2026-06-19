@@ -54,18 +54,11 @@ func BuildDataset(root string) (*Dataset, error) {
 		AccessedAt: checked,
 		Status:     "ok",
 	})
-	b.addSource(Source{
-		ID:         sourceONIALotScoreboard,
-		Title:      "ONIA 2026 - Lot final leaderboard, rounds 1+2",
-		URL:        "https://platform.olimpiada-ai.ro/ro/competitions/23?tab=final",
-		AccessedAt: checked,
-		Status:     "ok",
-	})
 	b.sourceStatus = append(b.sourceStatus,
 		SourceStatus{
 			ID:      "onia-2026-national",
 			Title:   "ONIA 2026 national + Lot",
-			Status:  "validate",
+			Status:  "ok",
 			Detail:  "Imported from official ONIA 2026 national results, participant-sheet recovery data, mlcompete final leaderboards, and Lot scoreboards.",
 			URL:     "https://olimpiada-ai.ro/ro/rezultate/nationala",
 			Checked: checked,
@@ -105,7 +98,7 @@ func BuildDataset(root string) (*Dataset, error) {
 		SourceStatus{
 			ID:      "roai-2025-national",
 			Title:   "ROAI 2025 national",
-			Status:  "validate",
+			Status:  "ok",
 			Detail:  "Imported from official ROAI 2025 task/results pages, class final PDFs, qualified participant lists, Nitro judge leaderboards, and recovered anonymized national scoreboard rows.",
 			URL:     "https://olimpiada.nitro-ai.org/ro/2025/onia?section=tasks",
 			Checked: checked,
@@ -125,22 +118,6 @@ func BuildDataset(root string) (*Dataset, error) {
 			Detail:  "Imported final leaderboard usernames from ROAI 2025 and 2026 national stage; Added only where there was no ambiguity.",
 			URL:     "https://judge.nitro-ai.org/competitions",
 			Checked: checked,
-		},
-	)
-	b.sourceTodos = append(b.sourceTodos,
-		SourceTodo{
-			ID:     "roai-2025",
-			Title:  "ROAI 2025",
-			Status: "validate",
-			Detail: "Recovered national matches are inferred from anonymized scoreboards and public participant data; manually review names, schools, counties, and judge usernames.",
-			URL:    "https://olimpiada.nitro-ai.org/ro/2025/onia?section=tasks",
-		},
-		SourceTodo{
-			ID:     "onia-2026",
-			Title:  "ONIA 2026",
-			Status: "validate",
-			Detail: "Recovered national matches are inferred from anonymous scoreboard rows and public participant data; manually review names, schools, counties, and mlcompete usernames.",
-			URL:    "https://olimpiada-ai.ro/ro/rezultate/nationala",
 		},
 	)
 

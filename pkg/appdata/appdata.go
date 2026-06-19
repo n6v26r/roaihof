@@ -99,6 +99,7 @@ type Result struct {
 	Grade          string  `json:"grade,omitempty"`
 	Place          int     `json:"place,omitempty"`
 	Score          float64 `json:"score,omitempty"`
+	ScoreKnown     bool    `json:"-"`
 	ScoreMax       float64 `json:"scoreMax,omitempty"`
 	Medal          string  `json:"medal,omitempty"`
 	Prize          string  `json:"prize,omitempty"`
@@ -106,6 +107,104 @@ type Result struct {
 	Status         string  `json:"status,omitempty"`
 	SourceID       string  `json:"sourceId"`
 	Anonymous      bool    `json:"anonymous"`
+}
+
+type resultJSON struct {
+	ID             string   `json:"id"`
+	ContestID      string   `json:"contestId"`
+	PersonID       string   `json:"personId,omitempty"`
+	PersonName     string   `json:"personName"`
+	SchoolID       string   `json:"schoolId,omitempty"`
+	School         string   `json:"school,omitempty"`
+	CountyID       string   `json:"countyId,omitempty"`
+	County         string   `json:"county,omitempty"`
+	OriginalCounty string   `json:"originalCounty,omitempty"`
+	Locality       string   `json:"locality,omitempty"`
+	Year           int      `json:"year"`
+	Circuit        string   `json:"circuit"`
+	Stage          string   `json:"stage"`
+	Section        string   `json:"section,omitempty"`
+	Grade          string   `json:"grade,omitempty"`
+	Place          int      `json:"place,omitempty"`
+	Score          *float64 `json:"score,omitempty"`
+	ScoreMax       float64  `json:"scoreMax,omitempty"`
+	Medal          string   `json:"medal,omitempty"`
+	Prize          string   `json:"prize,omitempty"`
+	Qualification  string   `json:"qualification,omitempty"`
+	Status         string   `json:"status,omitempty"`
+	SourceID       string   `json:"sourceId"`
+	Anonymous      bool     `json:"anonymous"`
+}
+
+func (r Result) MarshalJSON() ([]byte, error) {
+	var score *float64
+	if r.ScoreKnown || r.Score != 0 || r.ScoreMax != 0 {
+		value := r.Score
+		score = &value
+	}
+	return json.Marshal(resultJSON{
+		ID:             r.ID,
+		ContestID:      r.ContestID,
+		PersonID:       r.PersonID,
+		PersonName:     r.PersonName,
+		SchoolID:       r.SchoolID,
+		School:         r.School,
+		CountyID:       r.CountyID,
+		County:         r.County,
+		OriginalCounty: r.OriginalCounty,
+		Locality:       r.Locality,
+		Year:           r.Year,
+		Circuit:        r.Circuit,
+		Stage:          r.Stage,
+		Section:        r.Section,
+		Grade:          r.Grade,
+		Place:          r.Place,
+		Score:          score,
+		ScoreMax:       r.ScoreMax,
+		Medal:          r.Medal,
+		Prize:          r.Prize,
+		Qualification:  r.Qualification,
+		Status:         r.Status,
+		SourceID:       r.SourceID,
+		Anonymous:      r.Anonymous,
+	})
+}
+
+func (r *Result) UnmarshalJSON(data []byte) error {
+	var value resultJSON
+	if err := json.Unmarshal(data, &value); err != nil {
+		return err
+	}
+	*r = Result{
+		ID:             value.ID,
+		ContestID:      value.ContestID,
+		PersonID:       value.PersonID,
+		PersonName:     value.PersonName,
+		SchoolID:       value.SchoolID,
+		School:         value.School,
+		CountyID:       value.CountyID,
+		County:         value.County,
+		OriginalCounty: value.OriginalCounty,
+		Locality:       value.Locality,
+		Year:           value.Year,
+		Circuit:        value.Circuit,
+		Stage:          value.Stage,
+		Section:        value.Section,
+		Grade:          value.Grade,
+		Place:          value.Place,
+		ScoreMax:       value.ScoreMax,
+		Medal:          value.Medal,
+		Prize:          value.Prize,
+		Qualification:  value.Qualification,
+		Status:         value.Status,
+		SourceID:       value.SourceID,
+		Anonymous:      value.Anonymous,
+	}
+	if value.Score != nil {
+		r.Score = *value.Score
+		r.ScoreKnown = true
+	}
+	return nil
 }
 
 type Stats struct {
