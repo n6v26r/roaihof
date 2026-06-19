@@ -371,13 +371,28 @@ func oniaLotQualification(place int) string {
 	}
 }
 
-func (b *builder) importROAI(path string, roai2025NationalScoresPath string) error {
+func (b *builder) importROAI(path string, roai2025NationalScoresPath string, roai2025NationalRecoveryPath string) error {
 	var file roaiFile
 	if err := readJSON(path, &file); err != nil {
 		return err
 	}
 	for _, source := range file.Sources {
 		b.addSource(source)
+	}
+	if roai2025NationalRecoveryPath != "" {
+		recovered, err := b.loadROAI2025NationalRecovery(roai2025NationalRecoveryPath)
+		if err != nil {
+			return err
+		}
+		national := make([]roaiNationalRow, 0, len(file.National)+len(recovered))
+		for _, row := range file.National {
+			if row.Year == 2025 {
+				continue
+			}
+			national = append(national, row)
+		}
+		national = append(national, recovered...)
+		file.National = national
 	}
 	roai2025NationalScores, err := b.loadROAI2025NationalScores(roai2025NationalScoresPath)
 	if err != nil {
@@ -454,6 +469,7 @@ func (b *builder) importROAI(path string, roai2025NationalScoresPath string) err
 			ScoreMax:       float64(scoreMax),
 			Medal:          normalizeMedal(row.Medal),
 			Prize:          cleanPrize(row.Prize),
+			Status:         cleanHuman(row.Status),
 			SourceID:       sourceID,
 		})
 	}
@@ -532,6 +548,34 @@ func (b *builder) importROAI(path string, roai2025NationalScoresPath string) err
 		})
 	}
 	return nil
+}
+
+func (b *builder) loadROAI2025NationalRecovery(path string) ([]roaiNationalRow, error) {
+	var file roaiFile
+	if err := readJSON(path, &file); err != nil {
+		return nil, err
+	}
+	for _, source := range file.Sources {
+		b.addSource(source)
+	}
+	if len(file.National) == 0 {
+		return nil, fmt.Errorf("ROAI 2025 national recovery has no national rows")
+	}
+	seenPlaces := map[int]bool{}
+	for i := range file.National {
+		row := &file.National[i]
+		if row.Year != 2025 {
+			return nil, fmt.Errorf("ROAI 2025 national recovery row for %q has year %d", row.Name, row.Year)
+		}
+		if row.Place == 0 || row.Name == "" || row.Grade == "" || row.School == "" || row.County == "" || row.Username == "" {
+			return nil, fmt.Errorf("invalid ROAI 2025 national recovery row: place=%d name=%q grade=%q school=%q county=%q username=%q", row.Place, row.Name, row.Grade, row.School, row.County, row.Username)
+		}
+		if seenPlaces[row.Place] {
+			return nil, fmt.Errorf("duplicate ROAI 2025 national recovery place %d", row.Place)
+		}
+		seenPlaces[row.Place] = true
+	}
+	return file.National, nil
 }
 
 func (b *builder) loadROAI2025NationalScores(path string) (map[int]roaiNationalScoreRow, error) {
@@ -1614,6 +1658,7 @@ func usesROAI2025ClassPlacement(result Result) bool {
 	return result.Circuit == "ROAI" &&
 		result.Year == 2025 &&
 		result.Stage == "national" &&
+		result.Status != "guest" &&
 		strings.HasPrefix(result.ContestID, "roai-2025-national-clasa-")
 }
 
@@ -1959,6 +2004,8 @@ var schoolCanonicalNames = map[string]string{
 	nameKey(`Colegiul Național "Iancu de Hunedoara" Hunedoara`):                            `Colegiul Național "Iancu de Hunedoara"`,
 	nameKey(`Colegiul Național "Ienăchiță Văcărescu" Târgoviște`):                          `Colegiul Național "Ienăchiță Văcărescu"`,
 	nameKey(`Colegiul Național "Ion C. Brătianu" Pitești`):                                 `Colegiul Național "Ion C. Brătianu"`,
+	nameKey(`Colegiul Național Decebal Deva`):                                              `Colegiul Național Decebal, Deva`,
+	nameKey(`Colegiul Național Pedagogic "Regina Maria" Deva`):                             `Colegiul Național Pedagogic "Regina Maria", Deva`,
 	nameKey(`Colegiul Național 'Radu Negru' Făgăraș`):                                      `Colegiul Național "Radu Negru", Făgăraș`,
 	nameKey(`Colegiul Național 'Mircea Cel Bătrân' Constanța`):                             `Colegiul Național "Mircea cel Bătrân", Constanța`,
 	nameKey(`Colegiul Național "Mircea Cel Bătrân", Municipiul Râmnicu Vâlcea`):            `Colegiul Național "Mircea cel Bătrân", Râmnicu Vâlcea`,
@@ -2027,19 +2074,25 @@ var schoolCanonicalNames = map[string]string{
 }
 
 var schoolCanonicalNamesByCounty = map[string]string{
-	schoolCountyKey(`Colegiul Național "Mihai Viteazul"`, "Prahova"):    `Colegiul Național "Mihai Viteazul", Ploiești`,
-	schoolCountyKey(`Colegiul Național "Unirea"`, "Vrancea"):            `Colegiul Național "Unirea", Focșani`,
-	schoolCountyKey(`Colegiul Național "Unirea"`, "Teleorman"):          `Colegiul Național "Unirea", Turnu Măgurele`,
-	schoolCountyKey(`Colegiul Național "Unirea"`, "Mureș"):              `Colegiul Național "Unirea", Târgu Mureș`,
-	schoolCountyKey(`Colegiul National Mircea cel Batran`, "Constanța"): `Colegiul Național "Mircea cel Bătrân", Constanța`,
-	schoolCountyKey(`Colegiul National Mircea cel Batran`, "Vâlcea"):    `Colegiul Național "Mircea cel Bătrân", Râmnicu Vâlcea`,
-	schoolCountyKey(`Colegiul Național "Mihai Eminescu"`, "Constanța"):  `Colegiul Național "Mihai Eminescu", Constanța`,
-	schoolCountyKey(`Colegiul Național "Mihai Eminescu"`, "Satu Mare"):  `Colegiul Național "Mihai Eminescu", Satu Mare`,
-	schoolCountyKey(`Colegiul Național "Mihai Eminescu"`, "Bihor"):      `Colegiul Național "Mihai Eminescu", Oradea`,
-	schoolCountyKey(`Liceul teoretic "Avram Iancu"`, "Cluj"):            `Liceul Teoretic "Avram Iancu", Cluj-Napoca`,
-	schoolCountyKey(`Liceul teoretic "Avram Iancu"`, "Hunedoara"):       `Liceul Teoretic "Avram Iancu", Brad`,
-	schoolCountyKey(`Liceul Teoretic "Avram Iancu"`, "Cluj"):            `Liceul Teoretic "Avram Iancu", Cluj-Napoca`,
-	schoolCountyKey(`Liceul Teoretic "Avram Iancu"`, "Hunedoara"):       `Liceul Teoretic "Avram Iancu", Brad`,
+	schoolCountyKey(`Colegiul Național "Ion Luca Caragiale"`, "Prahova"):       `Colegiul Național "Ion Luca Caragiale", Ploiești`,
+	schoolCountyKey(`Colegiul Național "Mihai Viteazul"`, "Prahova"):           `Colegiul Național "Mihai Viteazul", Ploiești`,
+	schoolCountyKey(`Colegiul Național "Unirea"`, "Vrancea"):                   `Colegiul Național "Unirea", Focșani`,
+	schoolCountyKey(`Colegiul Național "Unirea"`, "Teleorman"):                 `Colegiul Național "Unirea", Turnu Măgurele`,
+	schoolCountyKey(`Colegiul Național "Unirea"`, "Mureș"):                     `Colegiul Național "Unirea", Târgu Mureș`,
+	schoolCountyKey(`Colegiul National Mircea cel Batran`, "Constanța"):        `Colegiul Național "Mircea cel Bătrân", Constanța`,
+	schoolCountyKey(`Colegiul National Mircea cel Batran`, "Vâlcea"):           `Colegiul Național "Mircea cel Bătrân", Râmnicu Vâlcea`,
+	schoolCountyKey(`Colegiul Național "Mihai Eminescu"`, "Constanța"):         `Colegiul Național "Mihai Eminescu", Constanța`,
+	schoolCountyKey(`Colegiul Național "Mihai Eminescu"`, "Satu Mare"):         `Colegiul Național "Mihai Eminescu", Satu Mare`,
+	schoolCountyKey(`Colegiul Național "Mihai Eminescu"`, "Bihor"):             `Colegiul Național "Mihai Eminescu", Oradea`,
+	schoolCountyKey(`Colegiul Național "Decebal"`, "Hunedoara"):                `Colegiul Național Decebal, Deva`,
+	schoolCountyKey(`Colegiul Național Decebal`, "Hunedoara"):                  `Colegiul Național Decebal, Deva`,
+	schoolCountyKey(`Colegiul Național de Informatică`, "Neamț"):               `Colegiul Național de Informatică, Piatra-Neamț`,
+	schoolCountyKey(`Colegiul Național Pedagogic "Regina Maria"`, "Hunedoara"): `Colegiul Național Pedagogic "Regina Maria", Deva`,
+	schoolCountyKey(`Liceul "Regina Maria"`, "Botoșani"):                       `Liceul "Regina Maria", Dorohoi`,
+	schoolCountyKey(`Liceul teoretic "Avram Iancu"`, "Cluj"):                   `Liceul Teoretic "Avram Iancu", Cluj-Napoca`,
+	schoolCountyKey(`Liceul teoretic "Avram Iancu"`, "Hunedoara"):              `Liceul Teoretic "Avram Iancu", Brad`,
+	schoolCountyKey(`Liceul Teoretic "Avram Iancu"`, "Cluj"):                   `Liceul Teoretic "Avram Iancu", Cluj-Napoca`,
+	schoolCountyKey(`Liceul Teoretic "Avram Iancu"`, "Hunedoara"):              `Liceul Teoretic "Avram Iancu", Brad`,
 }
 
 func schoolCountyKey(school string, county string) string {

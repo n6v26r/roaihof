@@ -209,19 +209,22 @@ type roaiFile struct {
 }
 
 type roaiNationalRow struct {
-	Section  string    `json:"section"`
-	Year     int       `json:"year,omitempty"`
-	SourceID string    `json:"sourceId,omitempty"`
-	Username string    `json:"username"`
-	Name     string    `json:"name"`
-	Grade    string    `json:"grade"`
-	School   string    `json:"school"`
-	County   string    `json:"county"`
-	Place    int       `json:"place"`
-	Score    flexFloat `json:"score"`
-	ScoreMax flexFloat `json:"scoreMax"`
-	Prize    string    `json:"prize"`
-	Medal    string    `json:"medal"`
+	Section      string    `json:"section"`
+	Year         int       `json:"year,omitempty"`
+	SourceID     string    `json:"sourceId,omitempty"`
+	Username     string    `json:"username"`
+	NationalCode string    `json:"nationalCode,omitempty"`
+	OJIACode     string    `json:"ojiaCode,omitempty"`
+	Name         string    `json:"name"`
+	Grade        string    `json:"grade"`
+	School       string    `json:"school"`
+	County       string    `json:"county"`
+	Place        int       `json:"place"`
+	Score        flexFloat `json:"score"`
+	ScoreMax     flexFloat `json:"scoreMax"`
+	Prize        string    `json:"prize"`
+	Medal        string    `json:"medal"`
+	Status       string    `json:"status,omitempty"`
 }
 
 type roaiNationalScoresFile struct {

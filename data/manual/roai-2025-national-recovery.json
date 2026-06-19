@@ -1,0 +1,4466 @@
+{
+  "sources": [
+    {
+      "id": "roai-2025-national-anonymized-final",
+      "title": "ROAI 2025 national anonymized final ranking PDF",
+      "url": "https://olimpiada.nitro-ai.org/2025/onia/finale.pdf",
+      "accessedAt": "2026-06-19",
+      "status": "text-pdf"
+    },
+    {
+      "id": "roai-2025-qualified-9-10",
+      "title": "ROAI 2025 OJIA IX-X qualified list PDF",
+      "url": "https://olimpiada.nitro-ai.org/2025/ojia/calificati-9-10.pdf",
+      "accessedAt": "2026-06-19",
+      "status": "text-pdf"
+    },
+    {
+      "id": "roai-2025-qualified-11-12",
+      "title": "ROAI 2025 OJIA XI-XII qualified list PDF",
+      "url": "https://olimpiada.nitro-ai.org/2025/ojia/calificati-11-12.pdf",
+      "accessedAt": "2026-06-19",
+      "status": "text-pdf"
+    },
+    {
+      "id": "roai-2025-county-9-10-judge",
+      "title": "ROAI 2025 OJIA IX-X complete Nitro leaderboard",
+      "url": "https://judge.nitro-ai.org/competitions/roai-2025/ojia-9-10/leaderboard/complete?page=1&page_size=100",
+      "accessedAt": "2026-06-19",
+      "status": "archived-html"
+    },
+    {
+      "id": "roai-2025-county-11-12-judge",
+      "title": "ROAI 2025 OJIA XI-XII complete Nitro leaderboard",
+      "url": "https://judge.nitro-ai.org/competitions/roai-2025/ojia/leaderboard/complete?page=1&page_size=100",
+      "accessedAt": "2026-06-19",
+      "status": "archived-html"
+    }
+  ],
+  "note": "Recovered ROAI 2025 national identities by assigning national anonymization codes alphabetically within each OJIA grade group from the official qualified lists. National usernames are joined by exact national task-score groups from the Nitro final leaderboard, with county-stage Nitro score/name evidence used only to resolve tied national username blocks. Official absent rows are excluded because they did not participate in the national contest.",
+  "national": [
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-10",
+      "username": "rolandpetrean",
+      "nationalCode": "1029",
+      "ojiaGrade": "10",
+      "ojiaCode": "SJ-4",
+      "name": "Petrean Roland",
+      "grade": "10",
+      "school": "Colegiul Național \"Silvania\"",
+      "county": "Sălaj",
+      "place": 1,
+      "score": 199,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        100,
+        99
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "Premiul I",
+      "medal": "aur",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:478;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 12",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-12",
+      "username": "RaresFelix",
+      "nationalCode": "1221",
+      "ojiaGrade": "12",
+      "ojiaCode": "B-S3-11",
+      "name": "Tudose Rareș Felix",
+      "grade": "12",
+      "school": "Liceul Teoretic Internațional de Informatică București",
+      "county": "București, sector 3",
+      "place": 2,
+      "score": 140,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        68,
+        72
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "Premiul I",
+      "medal": "aur",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:255;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-11",
+      "username": "mircea_007",
+      "nationalCode": "1145",
+      "ojiaGrade": "11",
+      "ojiaCode": "B-S1-44",
+      "name": "Rebengiuc Mircea Maxim",
+      "grade": "11",
+      "school": "Colegiul Național de Informatică \"Tudor Vianu\"",
+      "county": "București, sector 1",
+      "place": 3,
+      "score": 116,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        65,
+        51
+      ],
+      "ojiaTaskScores": [
+        100,
+        93
+      ],
+      "ojiaScore": 193,
+      "prize": "Premiul I",
+      "medal": "aur",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:86;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-10",
+      "username": "dvdtsb",
+      "nationalCode": "1039",
+      "ojiaGrade": "10",
+      "ojiaCode": "BV-2",
+      "name": "Tache David Ștefan",
+      "grade": "10",
+      "school": "Colegiul Național \"Andrei Șaguna\"",
+      "county": "Braşov",
+      "place": 4,
+      "score": 104,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        100,
+        4
+      ],
+      "ojiaTaskScores": [
+        94,
+        100
+      ],
+      "ojiaScore": 194,
+      "prize": "Premiul II",
+      "medal": "aur",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "national-score-unique"
+      ]
+    },
+    {
+      "section": "Clasa 12",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-12",
+      "username": "Rareshika",
+      "nationalCode": "1219",
+      "ojiaGrade": "12",
+      "ojiaCode": "CT-16",
+      "name": "Stanciu Rareș-Ștefan",
+      "grade": "12",
+      "school": "Liceul Teoretic Internațional de Informatică Constanța",
+      "county": "Constanţa",
+      "place": 5,
+      "score": 104,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        70,
+        34
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "Premiul II",
+      "medal": "aur",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:85;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-11",
+      "username": "stefanasandei",
+      "nationalCode": "1104",
+      "ojiaGrade": "11",
+      "ojiaCode": "IS-1",
+      "name": "Asandei Ștefan-Alexandru",
+      "grade": "11",
+      "school": "Colegiul Național Iași",
+      "county": "Iaşi",
+      "place": 6,
+      "score": 103,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        100,
+        3
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "Premiul II",
+      "medal": "aur",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:308;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-10",
+      "username": "savarares",
+      "nationalCode": "1035",
+      "ojiaGrade": "10",
+      "ojiaCode": "VS-4",
+      "name": "Sava Rareș-George",
+      "grade": "10",
+      "school": "Liceul Teoretic \"Mihail Kogălniceanu\"",
+      "county": "Vaslui",
+      "place": 7,
+      "score": 97,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        94,
+        3
+      ],
+      "ojiaTaskScores": [
+        99,
+        100
+      ],
+      "ojiaScore": 199,
+      "prize": "Premiul III",
+      "medal": "aur",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:254;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-10",
+      "username": "Xx_GuysILiterallyHaveDementia_xX",
+      "nationalCode": "1022",
+      "ojiaGrade": "10",
+      "ojiaCode": "VN-6",
+      "name": "Moldoveanu Ștefan",
+      "grade": "10",
+      "school": "Colegiul Național \"Unirea\"",
+      "county": "Vrancea",
+      "place": 8,
+      "score": 95,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        86,
+        9
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "Mențiune",
+      "medal": "aur",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "national-score-unique"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-10",
+      "username": "morariutudor",
+      "nationalCode": "1023",
+      "ojiaGrade": "10",
+      "ojiaCode": "CJ-5",
+      "name": "Morariu Tudor",
+      "grade": "10",
+      "school": "Colegiul Național \"Emil Racoviță\"",
+      "county": "Cluj",
+      "place": 9,
+      "score": 94,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        57,
+        37
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "Mențiune",
+      "medal": "argint",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:477;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-11",
+      "username": "lensu",
+      "nationalCode": "1129",
+      "ojiaGrade": "11",
+      "ojiaCode": "VN-4",
+      "name": "Lensu Alexandru",
+      "grade": "11",
+      "school": "Colegiul Național \"Unirea\"",
+      "county": "Vrancea",
+      "place": 10,
+      "score": 92,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        92,
+        0
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "Premiul III",
+      "medal": "aur",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:250;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 12",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-12",
+      "username": "Tudor006",
+      "nationalCode": "1212",
+      "ojiaGrade": "12",
+      "ojiaCode": "B-S1-48",
+      "name": "Mușat Tudor Ștefan",
+      "grade": "12",
+      "school": "Colegiul Național de Informatică \"Tudor Vianu\"",
+      "county": "București, sector 1",
+      "place": 11,
+      "score": 92,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        46,
+        46
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "Premiul III",
+      "medal": "argint",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:85;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-11",
+      "username": "Dulea_Andrei",
+      "nationalCode": "1120",
+      "ojiaGrade": "11",
+      "ojiaCode": "DB-9",
+      "name": "Dulea Andrei-Lucian",
+      "grade": "11",
+      "school": "Colegiul Național \"Ienăchiță Văcărescu\"",
+      "county": "Dâmboviţa",
+      "place": 12,
+      "score": 91,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        82,
+        9
+      ],
+      "ojiaTaskScores": [
+        100,
+        99
+      ],
+      "ojiaScore": 199,
+      "prize": "Mențiune",
+      "medal": "aur",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:256;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-10",
+      "username": "tudorbadea",
+      "nationalCode": "1004",
+      "ojiaGrade": "10",
+      "ojiaCode": "TM-1",
+      "name": "Badea Tudor",
+      "grade": "10",
+      "school": "Colegiul Naţional \"Ana Aslan\"",
+      "county": "Timiş",
+      "place": 13,
+      "score": 90,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        87,
+        3
+      ],
+      "ojiaTaskScores": [
+        88,
+        81
+      ],
+      "ojiaScore": 169,
+      "prize": "Mențiune",
+      "medal": "argint",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-11",
+      "username": "qraulz",
+      "nationalCode": "1141",
+      "ojiaGrade": "11",
+      "ojiaCode": "MM-6",
+      "name": "Perhaița Raul-Cosmin",
+      "grade": "11",
+      "school": "Liceul Teoretic \"Petru Rareș\"",
+      "county": "Maramureş",
+      "place": 14,
+      "score": 90,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        81,
+        9
+      ],
+      "ojiaTaskScores": [
+        100,
+        95
+      ],
+      "ojiaScore": 195,
+      "prize": "Mențiune",
+      "medal": "aur",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-11",
+      "username": "RaduCiocirlan",
+      "nationalCode": "1112",
+      "ojiaGrade": "11",
+      "ojiaCode": "B-S1-35",
+      "name": "Ciocîrlan Radu-Ioan",
+      "grade": "11",
+      "school": "Colegiul Național de Informatică \"Tudor Vianu\"",
+      "county": "București, sector 1",
+      "place": 15,
+      "score": 89,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        89,
+        0
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "Mențiune",
+      "medal": "argint",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:258;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-11",
+      "username": "AlexCorto",
+      "nationalCode": "1115",
+      "ojiaGrade": "11",
+      "ojiaCode": "HD-9",
+      "name": "Cortojan Alexandru",
+      "grade": "11",
+      "school": "Colegiul Național Pedagogic \"Regina Maria\"",
+      "county": "Hunedoara",
+      "place": 16,
+      "score": 89,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        88,
+        1
+      ],
+      "ojiaTaskScores": [
+        89,
+        99
+      ],
+      "ojiaScore": 188,
+      "prize": "Mențiune",
+      "medal": "argint",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-10",
+      "username": "Tudor12",
+      "nationalCode": "1033",
+      "ojiaGrade": "10",
+      "ojiaCode": "VS-3",
+      "name": "Radu Tudor-Cristian",
+      "grade": "10",
+      "school": "Liceul Teoretic \"Mihail Kogălniceanu\"",
+      "county": "Vaslui",
+      "place": 17,
+      "score": 89,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        88,
+        1
+      ],
+      "ojiaTaskScores": [
+        99,
+        100
+      ],
+      "ojiaScore": 199,
+      "prize": "Mențiune",
+      "medal": "argint",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:85;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-10",
+      "username": "AlexGB56",
+      "nationalCode": "1003",
+      "ojiaGrade": "10",
+      "ojiaCode": "BH-1",
+      "name": "Ardelean Alexandru-Dumitru",
+      "grade": "10",
+      "school": "Colegiul Național \"Emanuil Gojdu\"",
+      "county": "Bihor",
+      "place": 18,
+      "score": 89,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        80,
+        9
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "Mențiune",
+      "medal": "argint",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "national-score-unique"
+      ]
+    },
+    {
+      "section": "Clasa 12",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-12",
+      "username": "Kirkos",
+      "nationalCode": "1218",
+      "ojiaGrade": "12",
+      "ojiaCode": "B-S1-2",
+      "name": "Slănină Simon",
+      "grade": "12",
+      "school": "Colegiul Național \"I. L. Caragiale\"",
+      "county": "București, sector 1",
+      "place": 19,
+      "score": 88,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        87,
+        1
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "Mențiune",
+      "medal": "argint",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "national-score-unique"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-10",
+      "username": "tega_george",
+      "nationalCode": "1040",
+      "ojiaGrade": "10",
+      "ojiaCode": "CT-11",
+      "name": "Tega George-Mihai",
+      "grade": "10",
+      "school": "Colegiul Național \"Mircea cel Bătrân\"",
+      "county": "Constanţa",
+      "place": 20,
+      "score": 88,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        79,
+        9
+      ],
+      "ojiaTaskScores": [
+        91,
+        100
+      ],
+      "ojiaScore": 191,
+      "prize": "Mențiune",
+      "medal": "argint",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:255;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-10",
+      "username": "bagae",
+      "nationalCode": "1007",
+      "ojiaGrade": "10",
+      "ojiaCode": "PH-21",
+      "name": "Burlacu Andrei-Valentin",
+      "grade": "10",
+      "school": "Colegiul Național \"Mihai Viteazul\"",
+      "county": "Prahova",
+      "place": 21,
+      "score": 86,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        86,
+        0
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "",
+      "medal": "argint",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "national-score-last-remaining"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-10",
+      "username": "Ioanacl",
+      "nationalCode": "1011",
+      "ojiaGrade": "10",
+      "ojiaCode": "PH-22",
+      "name": "Dinulescu Ioana-Claudia",
+      "grade": "10",
+      "school": "Colegiul Național \"Mihai Viteazul\"",
+      "county": "Prahova",
+      "place": 22,
+      "score": 86,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        86,
+        0
+      ],
+      "ojiaTaskScores": [
+        47,
+        100
+      ],
+      "ojiaScore": 147,
+      "prize": "",
+      "medal": "argint",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 12",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-12",
+      "username": "iLaurian",
+      "nationalCode": "1209",
+      "ojiaGrade": "12",
+      "ojiaCode": "GL-19",
+      "name": "Iacob Laurian",
+      "grade": "12",
+      "school": "Colegiul Național \"Vasile Alecsandri\"",
+      "county": "Galaţi",
+      "place": 23,
+      "score": 86,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        79,
+        7
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "Mențiune",
+      "medal": "argint",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:317;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 9",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-9",
+      "username": "Goga",
+      "nationalCode": "912",
+      "ojiaGrade": "9",
+      "ojiaCode": "B-S1-13",
+      "name": "Ilie-Goga Radu",
+      "grade": "9",
+      "school": "Colegiul Național de Informatică \"Tudor Vianu\"",
+      "county": "București, sector 1",
+      "place": 24,
+      "score": 86,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        78,
+        8
+      ],
+      "ojiaTaskScores": [
+        93,
+        100
+      ],
+      "ojiaScore": 193,
+      "prize": "Premiul I",
+      "medal": "aur",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:248;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-11",
+      "username": "Sashaaa_2326",
+      "nationalCode": "1116",
+      "ojiaGrade": "11",
+      "ojiaCode": "B-S1-37",
+      "name": "Costea Sasha",
+      "grade": "11",
+      "school": "Colegiul Național de Informatică \"Tudor Vianu\"",
+      "county": "București, sector 1",
+      "place": 25,
+      "score": 84,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        81,
+        3
+      ],
+      "ojiaTaskScores": [
+        100,
+        92
+      ],
+      "ojiaScore": 192,
+      "prize": "Mențiune",
+      "medal": "argint",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:85;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 12",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-12",
+      "username": "alexsd06",
+      "nationalCode": "1206",
+      "ojiaGrade": "12",
+      "ojiaCode": "TM-10",
+      "name": "Dumitrașcu Ștefan-Alexandru",
+      "grade": "12",
+      "school": "Liceul Teoretic \"Grigore Moisil\"",
+      "county": "Timiş",
+      "place": 26,
+      "score": 84,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        76,
+        8
+      ],
+      "ojiaTaskScores": [
+        100,
+        97
+      ],
+      "ojiaScore": 197,
+      "prize": "Mențiune",
+      "medal": "argint",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "national-score-unique"
+      ]
+    },
+    {
+      "section": "Clasa 9",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-9",
+      "username": "mateias",
+      "nationalCode": "916",
+      "ojiaGrade": "9",
+      "ojiaCode": "B-S1-16",
+      "name": "Mateiș David Andrei",
+      "grade": "9",
+      "school": "Colegiul Național de Informatică \"Tudor Vianu\"",
+      "county": "București, sector 1",
+      "place": 27,
+      "score": 84,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        75,
+        9
+      ],
+      "ojiaTaskScores": [
+        95,
+        100
+      ],
+      "ojiaScore": 195,
+      "prize": "Premiul II",
+      "medal": "aur",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "national-score-unique"
+      ]
+    },
+    {
+      "section": "Clasa 12",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-12",
+      "username": "MihaiMocanu",
+      "nationalCode": "1210",
+      "ojiaGrade": "12",
+      "ojiaCode": "B-S1-47",
+      "name": "Mocanu Mihai-Adrian",
+      "grade": "12",
+      "school": "Colegiul Național de Informatică \"Tudor Vianu\"",
+      "county": "București, sector 1",
+      "place": 28,
+      "score": 84,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        53,
+        31
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:256;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-11",
+      "username": "octavianboji",
+      "nationalCode": "1108",
+      "ojiaGrade": "11",
+      "ojiaCode": "BH-2",
+      "name": "Boji Octavian-Andrei",
+      "grade": "11",
+      "school": "Colegiul Național \"Emanuil Gojdu\"",
+      "county": "Bihor",
+      "place": 29,
+      "score": 83,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        80,
+        3
+      ],
+      "ojiaTaskScores": [
+        80,
+        87
+      ],
+      "ojiaScore": 167,
+      "prize": "Mențiune",
+      "medal": "argint",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-10",
+      "username": "davidgi23200",
+      "nationalCode": "1014",
+      "ojiaGrade": "10",
+      "ojiaCode": "CT-8",
+      "name": "Gheorghică Istrate David",
+      "grade": "10",
+      "school": "Colegiul Național \"Mircea cel Bătrân\"",
+      "county": "Constanţa",
+      "place": 30,
+      "score": 83,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        72,
+        11
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:135;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-11",
+      "username": "lorenaster",
+      "nationalCode": "1118",
+      "ojiaGrade": "11",
+      "ojiaCode": "IS-2",
+      "name": "Danțoş Lorena",
+      "grade": "11",
+      "school": "Colegiul Național Iași",
+      "county": "Iaşi",
+      "place": 31,
+      "score": 82,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        81,
+        1
+      ],
+      "ojiaTaskScores": [
+        100,
+        90
+      ],
+      "ojiaScore": 190,
+      "prize": "Mențiune",
+      "medal": "argint",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:86;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 12",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-12",
+      "username": "rarespetrisor1",
+      "nationalCode": "1214",
+      "ojiaGrade": "12",
+      "ojiaCode": "MS-2",
+      "name": "Petrişor Rareş-Andrei",
+      "grade": "12",
+      "school": "Colegiul Național \"Alexandru Papiu Ilarian\"",
+      "county": "Mureş",
+      "place": 32,
+      "score": 82,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        81,
+        1
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:223;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 12",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-12",
+      "username": "ed3iv",
+      "nationalCode": "1216",
+      "ojiaGrade": "12",
+      "ojiaCode": "AG-4",
+      "name": "Sandu-Popa Eduard-Octavian",
+      "grade": "12",
+      "school": "Colegiul Naţional \"Zinca Golescu\"",
+      "county": "Argeş",
+      "place": 33,
+      "score": 82,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        73,
+        9
+      ],
+      "ojiaTaskScores": [
+        100,
+        99
+      ],
+      "ojiaScore": 199,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "national-score-unique"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-10",
+      "username": "davidgeo",
+      "nationalCode": "1013",
+      "ojiaGrade": "10",
+      "ojiaCode": "TM-5",
+      "name": "Georgescu David",
+      "grade": "10",
+      "school": "Colegiul Național \"Constantin Diaconovici Loga\"",
+      "county": "Timiş",
+      "place": 34,
+      "score": 82,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        58,
+        24
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:170;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 9",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-9",
+      "username": "MihneaStoica",
+      "nationalCode": "924",
+      "ojiaGrade": "9",
+      "ojiaCode": "B-S3-6",
+      "name": "Stoica Mihnea-Teodor",
+      "grade": "9",
+      "school": "Liceul Teoretic Internațional de Informatică București",
+      "county": "București, sector 3",
+      "place": 35,
+      "score": 81,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        78,
+        3
+      ],
+      "ojiaTaskScores": [
+        99,
+        100
+      ],
+      "ojiaScore": 199,
+      "prize": "Premiul III",
+      "medal": "aur",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:257;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 12",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-12",
+      "username": "GBVlad",
+      "nationalCode": "1208",
+      "ojiaGrade": "12",
+      "ojiaCode": "SJ-7",
+      "name": "Gurău Bogdan-Vlad",
+      "grade": "12",
+      "school": "Colegiul Național \"Silvania\"",
+      "county": "Sălaj",
+      "place": 36,
+      "score": 81,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        78,
+        3
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:84;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 9",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-9",
+      "username": "Luciannk",
+      "nationalCode": "901",
+      "ojiaGrade": "9",
+      "ojiaCode": "CL-1",
+      "name": "Blidar George-Lucian",
+      "grade": "9",
+      "school": "Colegiul Național \"Barbu Ştirbei\"",
+      "county": "Călăraşi",
+      "place": 37,
+      "score": 81,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        78,
+        3
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "Mențiune",
+      "medal": "argint",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:86;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 9",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-9",
+      "username": "Fabi",
+      "nationalCode": "925",
+      "ojiaGrade": "9",
+      "ojiaCode": "SV-8",
+      "name": "Tipa Fabian Alexandru",
+      "grade": "9",
+      "school": "Colegiul Național \"Ștefan cel Mare\"",
+      "county": "Suceava",
+      "place": 38,
+      "score": 81,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        72,
+        9
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "Mențiune",
+      "medal": "argint",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:60;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 9",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-9",
+      "username": "razv",
+      "nationalCode": "908",
+      "ojiaGrade": "9",
+      "ojiaCode": "CL-2",
+      "name": "Dedu Răzvan Matei",
+      "grade": "9",
+      "school": "Liceul Teoretic \"Mihai Eminescu\"",
+      "county": "Călăraşi",
+      "place": 39,
+      "score": 81,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        72,
+        9
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "Mențiune",
+      "medal": "argint",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:60;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-10",
+      "username": "mihai",
+      "nationalCode": "1015",
+      "ojiaGrade": "10",
+      "ojiaCode": "TM-8",
+      "name": "Gorunescu Mihai",
+      "grade": "10",
+      "school": "Liceul Teoretic \"Grigore Moisil\"",
+      "county": "Timiş",
+      "place": 40,
+      "score": 80,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        76,
+        4
+      ],
+      "ojiaTaskScores": [
+        91,
+        100
+      ],
+      "ojiaScore": 191,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:250;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-10",
+      "username": "Warrior_exe",
+      "nationalCode": "1041",
+      "ojiaGrade": "10",
+      "ojiaCode": "AG-5",
+      "name": "Zgorcea Mihai-Alexandru",
+      "grade": "10",
+      "school": "Colegiul Național \"Alexandru Odobescu\"",
+      "county": "Argeş",
+      "place": 41,
+      "score": 79,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        78,
+        1
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "national-score-unique"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-10",
+      "username": "Gibonul",
+      "nationalCode": "1008",
+      "ojiaGrade": "10",
+      "ojiaCode": "HD-12",
+      "name": "Bușoi Alexandru David",
+      "grade": "10",
+      "school": "Colegiul Național \"Iancu de Hunedoara\"",
+      "county": "Hunedoara",
+      "place": 42,
+      "score": 79,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        70,
+        9
+      ],
+      "ojiaTaskScores": [
+        99,
+        100
+      ],
+      "ojiaScore": 199,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "national-score-unique"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-11",
+      "username": "alextigau",
+      "nationalCode": "1148",
+      "ojiaGrade": "11",
+      "ojiaCode": "B-S6-8",
+      "name": "Țigău Alexandru",
+      "grade": "11",
+      "school": "Colegiul Național \"Grigore Moisil\"",
+      "county": "București, sector 6",
+      "place": 43,
+      "score": 78,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        77,
+        1
+      ],
+      "ojiaTaskScores": [
+        100,
+        79
+      ],
+      "ojiaScore": 179,
+      "prize": "Mențiune",
+      "medal": "argint",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:85;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-11",
+      "username": "nusuntvictor",
+      "nationalCode": "1125",
+      "ojiaGrade": "11",
+      "ojiaCode": "AG-2",
+      "name": "Grigore Victor Ștefan",
+      "grade": "11",
+      "school": "Colegiul Naţional \"Zinca Golescu\"",
+      "county": "Argeş",
+      "place": 44,
+      "score": 78,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        71,
+        7
+      ],
+      "ojiaTaskScores": [
+        100,
+        99
+      ],
+      "ojiaScore": 199,
+      "prize": "",
+      "medal": "argint",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:86;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 9",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-9",
+      "username": "raresc",
+      "nationalCode": "906",
+      "ojiaGrade": "9",
+      "ojiaCode": "SB-1",
+      "name": "Cosma Rareș-Gabriel",
+      "grade": "9",
+      "school": "Colegiul National \"Octavian Goga\"",
+      "county": "Sibiu",
+      "place": 45,
+      "score": 77,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        75,
+        2
+      ],
+      "ojiaTaskScores": [
+        90,
+        89
+      ],
+      "ojiaScore": 179,
+      "prize": "Mențiune",
+      "medal": "argint",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 12",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-12",
+      "username": "dariuschifor",
+      "nationalCode": "1204",
+      "ojiaGrade": "12",
+      "ojiaCode": "HD-1",
+      "name": "Chifor Darius-Octavian",
+      "grade": "12",
+      "school": "Liceul Teoretic \"Avram Iancu\"",
+      "county": "Hunedoara",
+      "place": 46,
+      "score": 77,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        68,
+        9
+      ],
+      "ojiaTaskScores": [
+        100,
+        99
+      ],
+      "ojiaScore": 199,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:257;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-11",
+      "username": "george2701",
+      "nationalCode": "1107",
+      "ojiaGrade": "11",
+      "ojiaCode": "DB-5",
+      "name": "Bobirică George-Emil",
+      "grade": "11",
+      "school": "Colegiul Național \"Constantin Carabella\"",
+      "county": "Dâmboviţa",
+      "place": 47,
+      "score": 77,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        68,
+        9
+      ],
+      "ojiaTaskScores": [
+        100,
+        93
+      ],
+      "ojiaScore": 193,
+      "prize": "",
+      "medal": "argint",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:86;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-11",
+      "username": "robert_m",
+      "nationalCode": "1135",
+      "ojiaGrade": "11",
+      "ojiaCode": "VL-31",
+      "name": "Monceanu Robert",
+      "grade": "11",
+      "school": "Colegiul Național de Informatică \"Matei Basarab\"",
+      "county": "Vâlcea",
+      "place": 48,
+      "score": 76,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        73,
+        3
+      ],
+      "ojiaTaskScores": [
+        89,
+        71
+      ],
+      "ojiaScore": 160,
+      "prize": "",
+      "medal": "argint",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-10",
+      "username": "tmi",
+      "nationalCode": "1037",
+      "ojiaGrade": "10",
+      "ojiaCode": "B-S1-31",
+      "name": "Stupariu Teodor-Mihai",
+      "grade": "10",
+      "school": "Colegiul Național de Informatică \"Tudor Vianu\"",
+      "county": "București, sector 1",
+      "place": 49,
+      "score": 76,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        73,
+        3
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "national-score-last-remaining"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-10",
+      "username": "AneaRares",
+      "nationalCode": "1002",
+      "ojiaGrade": "10",
+      "ojiaCode": "VS-2",
+      "name": "Anea Rareș",
+      "grade": "10",
+      "school": "Liceul Teoretic \"Mihail Kogălniceanu\"",
+      "county": "Vaslui",
+      "place": 50,
+      "score": 75,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        72,
+        3
+      ],
+      "ojiaTaskScores": [
+        99,
+        100
+      ],
+      "ojiaScore": 199,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:474;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-11",
+      "username": "mateid",
+      "nationalCode": "1119",
+      "ojiaGrade": "11",
+      "ojiaCode": "TR-7",
+      "name": "Dorcea Matei-Cornel",
+      "grade": "11",
+      "school": "Colegiul Național \"Unirea\"",
+      "county": "Teleorman",
+      "place": 51,
+      "score": 75,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        66,
+        9
+      ],
+      "ojiaTaskScores": [
+        100,
+        89
+      ],
+      "ojiaScore": 189,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:350;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 9",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-9",
+      "username": "divad",
+      "nationalCode": "907",
+      "ojiaGrade": "9",
+      "ojiaCode": "DJ-1",
+      "name": "Curcă David-Ioan",
+      "grade": "9",
+      "school": "Colegiul Național \"Carol I\"",
+      "county": "Dolj",
+      "place": 52,
+      "score": 75,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        44,
+        31
+      ],
+      "ojiaTaskScores": [
+        89,
+        80
+      ],
+      "ojiaScore": 169,
+      "prize": "",
+      "medal": "argint",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-10",
+      "username": "sarass286",
+      "nationalCode": "1036",
+      "ojiaGrade": "10",
+      "ojiaCode": "PH-24",
+      "name": "Savu Sara-Elena",
+      "grade": "10",
+      "school": "Colegiul Național \"Mihai Viteazul\"",
+      "county": "Prahova",
+      "place": 53,
+      "score": 74,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        71,
+        3
+      ],
+      "ojiaTaskScores": [
+        96,
+        79
+      ],
+      "ojiaScore": 175,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-11",
+      "username": "CReaper1116",
+      "nationalCode": "1146",
+      "ojiaGrade": "11",
+      "ojiaCode": "B-S3-10",
+      "name": "Shang Chenglin",
+      "grade": "11",
+      "school": "Liceul Teoretic Internațional de Informatică București",
+      "county": "București, sector 3",
+      "place": 54,
+      "score": 74,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        65,
+        9
+      ],
+      "ojiaTaskScores": [
+        100,
+        79
+      ],
+      "ojiaScore": 179,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "national-score-last-remaining"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-11",
+      "username": "bucurici",
+      "nationalCode": "1109",
+      "ojiaGrade": "11",
+      "ojiaCode": "BV-4",
+      "name": "Bucur Ștefan",
+      "grade": "11",
+      "school": "Colegiul Național \"Dr. Ioan Mesota\"",
+      "county": "Braşov",
+      "place": 55,
+      "score": 74,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        65,
+        9
+      ],
+      "ojiaTaskScores": [
+        100,
+        92
+      ],
+      "ojiaScore": 192,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:85;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-11",
+      "username": "raduk",
+      "nationalCode": "1114",
+      "ojiaGrade": "11",
+      "ojiaCode": "MS-7",
+      "name": "Cornea Radu-Andrei",
+      "grade": "11",
+      "school": "Colegiul Național \"Unirea\"",
+      "county": "Mureş",
+      "place": 56,
+      "score": 73,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        66,
+        7
+      ],
+      "ojiaTaskScores": [
+        85,
+        91
+      ],
+      "ojiaScore": 176,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-10",
+      "username": "Ploscaru",
+      "nationalCode": "1032",
+      "ojiaGrade": "10",
+      "ojiaCode": "VN-7",
+      "name": "Ploscaru Radu-Aurelian",
+      "grade": "10",
+      "school": "Colegiul Național \"Unirea\"",
+      "county": "Vrancea",
+      "place": 57,
+      "score": 72,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        69,
+        3
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:256;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 9",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-9",
+      "username": "Merien",
+      "nationalCode": "910",
+      "ojiaGrade": "9",
+      "ojiaCode": "BT-1",
+      "name": "Gasparel Marian-Ștefan",
+      "grade": "9",
+      "school": "Liceul \"Regina Maria\"",
+      "county": "Botoşani",
+      "place": 58,
+      "score": 72,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        65,
+        7
+      ],
+      "ojiaTaskScores": [
+        91,
+        100
+      ],
+      "ojiaScore": 191,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "national-score-unique"
+      ]
+    },
+    {
+      "section": "Clasa 12",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "Raiku",
+      "nationalCode": "1215",
+      "ojiaGrade": "12",
+      "ojiaCode": "GL-20",
+      "name": "Pintilie Sebastian Marian",
+      "grade": "12",
+      "school": "Colegiul Național \"Vasile Alecsandri\"",
+      "county": "Galaţi",
+      "place": 59,
+      "score": 71,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        71,
+        0
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "national-score-last-remaining"
+      ]
+    },
+    {
+      "section": "Clasa 12",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "ecaterina",
+      "nationalCode": "1220",
+      "ojiaGrade": "12",
+      "ojiaCode": "B-S1-51",
+      "name": "Ștefănescu Ecaterina",
+      "grade": "12",
+      "school": "Colegiul Național de Informatică \"Tudor Vianu\"",
+      "county": "București, sector 1",
+      "place": 60,
+      "score": 71,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        71,
+        0
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:258;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-11",
+      "username": "Lora",
+      "nationalCode": "1134",
+      "ojiaGrade": "11",
+      "ojiaCode": "B-S1-41",
+      "name": "Moldovan Laura",
+      "grade": "11",
+      "school": "Colegiul Național de Informatică \"Tudor Vianu\"",
+      "county": "București, sector 1",
+      "place": 61,
+      "score": 71,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        62,
+        9
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "national-score-unique"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-11",
+      "username": "NistorIulian",
+      "nationalCode": "1138",
+      "ojiaGrade": "11",
+      "ojiaCode": "CJ-7",
+      "name": "Nistor Iulian",
+      "grade": "11",
+      "school": "Liceul de Informatica \"Tiberiu Popoviciu\"",
+      "county": "Cluj",
+      "place": 62,
+      "score": 70,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        69,
+        1
+      ],
+      "ojiaTaskScores": [
+        100,
+        97
+      ],
+      "ojiaScore": 197,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:477;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-11",
+      "username": "Daniel26",
+      "nationalCode": "1132",
+      "ojiaGrade": "11",
+      "ojiaCode": "VL-30",
+      "name": "Mihai Daniel Valentin",
+      "grade": "11",
+      "school": "Colegiul Național de Informatică \"Matei Basarab\"",
+      "county": "Vâlcea",
+      "place": 63,
+      "score": 68,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        59,
+        9
+      ],
+      "ojiaTaskScores": [
+        100,
+        94
+      ],
+      "ojiaScore": 194,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:86;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-10",
+      "username": "Rares_Petruse",
+      "nationalCode": "1030",
+      "ojiaGrade": "10",
+      "ojiaCode": "HD-6",
+      "name": "Petruse Rareș Stelian",
+      "grade": "10",
+      "school": "Colegiul Național \"Decebal\"",
+      "county": "Hunedoara",
+      "place": 64,
+      "score": 68,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        59,
+        9
+      ],
+      "ojiaTaskScores": [
+        89,
+        100
+      ],
+      "ojiaScore": 189,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:257;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-11",
+      "username": "lucad",
+      "nationalCode": "1130",
+      "ojiaGrade": "11",
+      "ojiaCode": "VL-28",
+      "name": "Marinescu Luca Daniel",
+      "grade": "11",
+      "school": "Colegiul Național de Informatică \"Matei Basarab\"",
+      "county": "Vâlcea",
+      "place": 65,
+      "score": 67,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        58,
+        9
+      ],
+      "ojiaTaskScores": [
+        100,
+        94
+      ],
+      "ojiaScore": 194,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:349;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "codber",
+      "nationalCode": "1005",
+      "ojiaGrade": "10",
+      "ojiaCode": "PH-5",
+      "name": "Bercea Codrin-Constantin",
+      "grade": "10",
+      "school": "Colegiul Național \"Ion Luca Caragiale\"",
+      "county": "Prahova",
+      "place": 66,
+      "score": 65,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        65,
+        0
+      ],
+      "ojiaTaskScores": [
+        99,
+        100
+      ],
+      "ojiaScore": 199,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "national-score-last-remaining"
+      ]
+    },
+    {
+      "section": "Clasa 12",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "radu122",
+      "nationalCode": "1202",
+      "ojiaGrade": "12",
+      "ojiaCode": "GL-18",
+      "name": "Bulearcă Radu Mihai",
+      "grade": "12",
+      "school": "Colegiul Național \"Vasile Alecsandri\"",
+      "county": "Galaţi",
+      "place": 67,
+      "score": 65,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        65,
+        0
+      ],
+      "ojiaTaskScores": [
+        100,
+        93
+      ],
+      "ojiaScore": 193,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:84;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-11",
+      "username": "eduard14",
+      "nationalCode": "1151",
+      "ojiaGrade": "11",
+      "ojiaCode": "VL-33",
+      "name": "Vlăduț Eduard-Gabriel",
+      "grade": "11",
+      "school": "Colegiul Național de Informatică \"Matei Basarab\"",
+      "county": "Vâlcea",
+      "place": 68,
+      "score": 65,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        62,
+        3
+      ],
+      "ojiaTaskScores": [
+        100,
+        93
+      ],
+      "ojiaScore": 193,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:86;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 9",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-9",
+      "username": "ianstefancazacu",
+      "nationalCode": "923",
+      "ojiaGrade": "9",
+      "ojiaCode": "CJ-2",
+      "name": "Ștefan-Cazacu Ian",
+      "grade": "9",
+      "school": "Colegiul Național \"Emil Racoviță\"",
+      "county": "Cluj",
+      "place": 69,
+      "score": 65,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        62,
+        3
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:295;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 12",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "tibinyte",
+      "nationalCode": "1205",
+      "ojiaGrade": "12",
+      "ojiaCode": "IS-7",
+      "name": "Cozma Tiberiu-Ștefan",
+      "grade": "12",
+      "school": "Liceul Teoretic de Informatică \"Grigore Moisil\" Iaşi",
+      "county": "Iaşi",
+      "place": 70,
+      "score": 64,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        55,
+        9
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "national-score-unique"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-11",
+      "username": "GGStefan",
+      "nationalCode": "1123",
+      "ojiaGrade": "11",
+      "ojiaCode": "MH-1",
+      "name": "Gașpăr-Gâru Ștefan",
+      "grade": "11",
+      "school": "Colegiul Național \"Traian\"",
+      "county": "Mehedinţi",
+      "place": 71,
+      "score": 63,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        62,
+        1
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "national-score-unique"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-11",
+      "username": "Wzukay",
+      "nationalCode": "1152",
+      "ojiaGrade": "11",
+      "ojiaCode": "CT-3",
+      "name": "Zamă Adrian-Robert",
+      "grade": "11",
+      "school": "Colegiul Național \"Mihai Eminescu\"",
+      "county": "Constanţa",
+      "place": 72,
+      "score": 62,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        62,
+        0
+      ],
+      "ojiaTaskScores": [
+        100,
+        98
+      ],
+      "ojiaScore": 198,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 9",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-9",
+      "username": "Isidor",
+      "nationalCode": "911",
+      "ojiaGrade": "9",
+      "ojiaCode": "SV-4",
+      "name": "Herea Isidor",
+      "grade": "9",
+      "school": "Colegiul Național \"Petru Rareș\"",
+      "county": "Suceava",
+      "place": 73,
+      "score": 62,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        53,
+        9
+      ],
+      "ojiaTaskScores": [
+        95,
+        100
+      ],
+      "ojiaScore": 195,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:252;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-11",
+      "username": "Andrew",
+      "nationalCode": "1121",
+      "ojiaGrade": "11",
+      "ojiaCode": "B-S3-4",
+      "name": "Florea Andrei Șerban",
+      "grade": "11",
+      "school": "Liceul Teoretic \"Alexandru Ioan Cuza\"",
+      "county": "București, sector 3",
+      "place": 74,
+      "score": 61,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        58,
+        3
+      ],
+      "ojiaTaskScores": [
+        100,
+        72
+      ],
+      "ojiaScore": 172,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-11",
+      "username": "Omu_Planta",
+      "nationalCode": "1117",
+      "ojiaGrade": "11",
+      "ojiaCode": "BT-3",
+      "name": "Damian Tudor Constantin",
+      "grade": "11",
+      "school": "Liceul \"Regina Maria\"",
+      "county": "Botoşani",
+      "place": 75,
+      "score": 61,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        52,
+        9
+      ],
+      "ojiaTaskScores": [
+        33,
+        63
+      ],
+      "ojiaScore": 96,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "luca_lazar",
+      "nationalCode": "1018",
+      "ojiaGrade": "10",
+      "ojiaCode": "VL-15",
+      "name": "Lazăr Luca Ștefan",
+      "grade": "10",
+      "school": "Colegiul Naţional \"Mircea cel Bătrân\"",
+      "county": "Vâlcea",
+      "place": 76,
+      "score": 60,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        57,
+        3
+      ],
+      "ojiaTaskScores": [
+        89,
+        100
+      ],
+      "ojiaScore": 189,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:254;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "Delia2025",
+      "nationalCode": "1010",
+      "ojiaGrade": "10",
+      "ojiaCode": "VL-26",
+      "name": "Deaconeasa Delia Nicoleta",
+      "grade": "10",
+      "school": "Colegiul Național de Informatică \"Matei Basarab\"",
+      "county": "Vâlcea",
+      "place": 77,
+      "score": 60,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        51,
+        9
+      ],
+      "ojiaTaskScores": [
+        88,
+        82
+      ],
+      "ojiaScore": 170,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "Alexandrescu",
+      "nationalCode": "1102",
+      "ojiaGrade": "11",
+      "ojiaCode": "B-S2-5",
+      "name": "Alexandrescu Luca",
+      "grade": "11",
+      "school": "Colegiul Național Bilingv \"George Coșbuc\"",
+      "county": "București, sector 2",
+      "place": 78,
+      "score": 59,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        59,
+        0
+      ],
+      "ojiaTaskScores": [
+        100,
+        93
+      ],
+      "ojiaScore": 193,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:264;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "obucata",
+      "nationalCode": "1131",
+      "ojiaGrade": "11",
+      "ojiaCode": "B-S1-40",
+      "name": "Melintioi George Alexandru",
+      "grade": "11",
+      "school": "Colegiul Național de Informatică \"Tudor Vianu\"",
+      "county": "București, sector 1",
+      "place": 79,
+      "score": 59,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        56,
+        3
+      ],
+      "ojiaTaskScores": [
+        84,
+        88
+      ],
+      "ojiaScore": 172,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "Lucas_R4",
+      "nationalCode": "1034",
+      "ojiaGrade": "10",
+      "ojiaCode": "SM-3",
+      "name": "Rus Lucas",
+      "grade": "10",
+      "school": "Colegiul Național \"Mihai Eminescu\"",
+      "county": "Satu Mare",
+      "place": 80,
+      "score": 59,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        56,
+        3
+      ],
+      "ojiaTaskScores": [
+        20,
+        79
+      ],
+      "ojiaScore": 99,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "Teodor5030",
+      "nationalCode": "1020",
+      "ojiaGrade": "10",
+      "ojiaCode": "DB-2",
+      "name": "Marina Teodor",
+      "grade": "10",
+      "school": "Colegiul Național \"Nicolae Titulescu\"",
+      "county": "Dâmboviţa",
+      "place": 81,
+      "score": 59,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        56,
+        3
+      ],
+      "ojiaTaskScores": [
+        89,
+        100
+      ],
+      "ojiaScore": 189,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:86;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "Popu",
+      "nationalCode": "1143",
+      "ojiaGrade": "11",
+      "ojiaCode": "CJ-9",
+      "name": "Pop Matei-Tudor",
+      "grade": "11",
+      "school": "Liceul Teoretic \"Avram Iancu\"",
+      "county": "Cluj",
+      "place": 82,
+      "score": 59,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        52,
+        7
+      ],
+      "ojiaTaskScores": [
+        100,
+        99
+      ],
+      "ojiaScore": 199,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:73;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "trbf",
+      "nationalCode": "1144",
+      "ojiaGrade": "11",
+      "ojiaCode": "CJ-10",
+      "name": "Râpă-Bălan Tudor-Florin",
+      "grade": "11",
+      "school": "Colegiul Național \"Emil Racoviță\"",
+      "county": "Cluj",
+      "place": 83,
+      "score": 59,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        52,
+        7
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "national-score-last-remaining"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "Fomni",
+      "nationalCode": "1017",
+      "ojiaGrade": "10",
+      "ojiaCode": "DJ-7",
+      "name": "Iancu Ștefan Constantin",
+      "grade": "10",
+      "school": "Liceul Teoretic \"Tudor Arghezi\"",
+      "county": "Dolj",
+      "place": 84,
+      "score": 58,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        57,
+        1
+      ],
+      "ojiaTaskScores": [
+        93,
+        100
+      ],
+      "ojiaScore": 193,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "national-score-unique"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "tihocandrei",
+      "nationalCode": "1150",
+      "ojiaGrade": "11",
+      "ojiaCode": "BV-10",
+      "name": "Tihoc Andrei",
+      "grade": "11",
+      "school": "Colegiul Național de Informatică \"Grigore Moisil\"",
+      "county": "Braşov",
+      "place": 85,
+      "score": 58,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        55,
+        3
+      ],
+      "ojiaTaskScores": [
+        100,
+        96
+      ],
+      "ojiaScore": 196,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "evanastase",
+      "nationalCode": "1024",
+      "ojiaGrade": "10",
+      "ojiaCode": "PH-6",
+      "name": "Năstase Eva",
+      "grade": "10",
+      "school": "Colegiul Național \"Ion Luca Caragiale\"",
+      "county": "Prahova",
+      "place": 86,
+      "score": 58,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        55,
+        3
+      ],
+      "ojiaTaskScores": [
+        96,
+        100
+      ],
+      "ojiaScore": 196,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "David181",
+      "nationalCode": "1124",
+      "ojiaGrade": "11",
+      "ojiaCode": "BZ-10",
+      "name": "Gavriloiu David",
+      "grade": "11",
+      "school": "Colegiul Național \"B.P. Hasdeu\"",
+      "county": "Buzău",
+      "place": 87,
+      "score": 57,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        57,
+        0
+      ],
+      "ojiaTaskScores": [
+        79,
+        73
+      ],
+      "ojiaScore": 152,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "VoltVector",
+      "nationalCode": "1103",
+      "ojiaGrade": "11",
+      "ojiaCode": "GL-17",
+      "name": "Andrei-Nicoară Daniel",
+      "grade": "11",
+      "school": "Colegiul Național \"Vasile Alecsandri\"",
+      "county": "Galaţi",
+      "place": 88,
+      "score": 57,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        54,
+        3
+      ],
+      "ojiaTaskScores": [
+        100,
+        86
+      ],
+      "ojiaScore": 186,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "Deivid",
+      "nationalCode": "1136",
+      "ojiaGrade": "11",
+      "ojiaCode": "GJ-9",
+      "name": "Negoiță Deivid-Bogdan",
+      "grade": "11",
+      "school": "Colegiul Național \"Tudor Vladimirescu\"",
+      "county": "Gorj",
+      "place": 89,
+      "score": 57,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        53,
+        4
+      ],
+      "ojiaTaskScores": [
+        100,
+        71
+      ],
+      "ojiaScore": 171,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 9",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-9",
+      "username": "Cata154",
+      "nationalCode": "913",
+      "ojiaGrade": "9",
+      "ojiaCode": "CT-2",
+      "name": "Iordache Cătălin",
+      "grade": "9",
+      "school": "Colegiul Național \"Mihai Eminescu\"",
+      "county": "Constanţa",
+      "place": 90,
+      "score": 55,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        52,
+        3
+      ],
+      "ojiaTaskScores": [
+        90,
+        100
+      ],
+      "ojiaScore": 190,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "national-score-last-remaining"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "FabianOTL",
+      "nationalCode": "1139",
+      "ojiaGrade": "11",
+      "ojiaCode": "AR-2",
+      "name": "Otlăcan Fabian",
+      "grade": "11",
+      "school": "Colegiul Național \"Moise Nicoară\"",
+      "county": "Arad",
+      "place": 91,
+      "score": 55,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        52,
+        3
+      ],
+      "ojiaTaskScores": [
+        100,
+        93
+      ],
+      "ojiaScore": 193,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:171;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "radubirceanu",
+      "nationalCode": "1006",
+      "ojiaGrade": "10",
+      "ojiaCode": "GJ-5",
+      "name": "Birceanu Radu-Petrișor",
+      "grade": "10",
+      "school": "Colegiul Național \"Tudor Vladimirescu\"",
+      "county": "Gorj",
+      "place": 92,
+      "score": 54,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        54,
+        0
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:257;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "VvLlAaDd05",
+      "nationalCode": "1016",
+      "ojiaGrade": "10",
+      "ojiaCode": "CT-9",
+      "name": "Hagimasuri Vlad Dimitri",
+      "grade": "10",
+      "school": "Colegiul Național \"Mircea cel Bătrân\"",
+      "county": "Constanţa",
+      "place": 93,
+      "score": 53,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        53,
+        0
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "national-score-unique"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "Db123",
+      "nationalCode": "1105",
+      "ojiaGrade": "11",
+      "ojiaCode": "B-S3-7",
+      "name": "Balaban David",
+      "grade": "11",
+      "school": "Liceul Teoretic Internațional de Informatică București",
+      "county": "București, sector 3",
+      "place": 94,
+      "score": 53,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        52,
+        1
+      ],
+      "ojiaTaskScores": [
+        100,
+        97
+      ],
+      "ojiaScore": 197,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "national-score-last-remaining"
+      ]
+    },
+    {
+      "section": "Clasa 9",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-9",
+      "username": "Andrei0016",
+      "nationalCode": "904",
+      "ojiaGrade": "9",
+      "ojiaCode": "SJ-1",
+      "name": "Ciortea Suciu Andrei",
+      "grade": "9",
+      "school": "Colegiul Național \"Silvania\"",
+      "county": "Sălaj",
+      "place": 95,
+      "score": 53,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        52,
+        1
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "national-score-name-similarity:86"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "Karo",
+      "nationalCode": "1111",
+      "ojiaGrade": "11",
+      "ojiaCode": "BV-9",
+      "name": "Cazacu Christian-Matei",
+      "grade": "11",
+      "school": "Colegiul Național de Informatică \"Grigore Moisil\"",
+      "county": "Braşov",
+      "place": 96,
+      "score": 52,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        52,
+        0
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "national-score-unique"
+      ]
+    },
+    {
+      "section": "Clasa 12",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "Palamida",
+      "nationalCode": "1213",
+      "ojiaGrade": "12",
+      "ojiaCode": "B-S1-49",
+      "name": "Nicola Victor-Teodor",
+      "grade": "12",
+      "school": "Colegiul Național de Informatică \"Tudor Vianu\"",
+      "county": "București, sector 1",
+      "place": 97,
+      "score": 52,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        51,
+        1
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "national-score-unique"
+      ]
+    },
+    {
+      "section": "Clasa 9",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-9",
+      "username": "andrei",
+      "nationalCode": "903",
+      "ojiaGrade": "9",
+      "ojiaCode": "CT-4",
+      "name": "Bucur Andrei",
+      "grade": "9",
+      "school": "Colegiul Național \"Mircea cel Bătrân\"",
+      "county": "Constanţa",
+      "place": 98,
+      "score": 51,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        51,
+        0
+      ],
+      "ojiaTaskScores": [
+        93,
+        100
+      ],
+      "ojiaScore": 193,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:252;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "GulaMihaiOvidiu",
+      "nationalCode": "1126",
+      "ojiaGrade": "11",
+      "ojiaCode": "SV-14",
+      "name": "Gula Mihai-Ovidiu",
+      "grade": "11",
+      "school": "Colegiul Național \"Petru Rareș\"",
+      "county": "Suceava",
+      "place": 99,
+      "score": 51,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        50,
+        1
+      ],
+      "ojiaTaskScores": [
+        82,
+        20
+      ],
+      "ojiaScore": 102,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "PDarius02",
+      "nationalCode": "1027",
+      "ojiaGrade": "10",
+      "ojiaCode": "GJ-8",
+      "name": "Păunescu Darius",
+      "grade": "10",
+      "school": "Colegiul Național \"Tudor Vladimirescu\"",
+      "county": "Gorj",
+      "place": 100,
+      "score": 51,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        48,
+        3
+      ],
+      "ojiaTaskScores": [
+        90,
+        100
+      ],
+      "ojiaScore": 190,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:136;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 9",
+      "year": 2025,
+      "sourceId": "roai-2025-final-clasa-9",
+      "username": "AlbertMolocea09",
+      "nationalCode": "917",
+      "ojiaGrade": "9",
+      "ojiaCode": "TM-7",
+      "name": "Molocea Albert",
+      "grade": "9",
+      "school": "Liceul Teoretic \"Grigore Moisil\"",
+      "county": "Timiş",
+      "place": 101,
+      "score": 43,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        43,
+        0
+      ],
+      "ojiaTaskScores": [
+        69,
+        89
+      ],
+      "ojiaScore": 158,
+      "prize": "",
+      "medal": "bronz",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 9",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "ItsRaffalix",
+      "nationalCode": "909",
+      "ojiaGrade": "9",
+      "ojiaCode": "B-S4-2",
+      "name": "Dumitrașcu Rafael",
+      "grade": "9",
+      "school": "Liceul Tehnologic de Metrologie \"Traian Vuia\"",
+      "county": "București, sector 4",
+      "place": 102,
+      "score": 42,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        42,
+        0
+      ],
+      "ojiaTaskScores": [
+        83,
+        59
+      ],
+      "ojiaScore": 142,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "LucaTana",
+      "nationalCode": "1147",
+      "ojiaGrade": "11",
+      "ojiaCode": "AG-9",
+      "name": "Tănăsescu Luca-Ioan",
+      "grade": "11",
+      "school": "Colegiul Național \"Ion C. Brătianu\"",
+      "county": "Argeş",
+      "place": 103,
+      "score": 35,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        35,
+        0
+      ],
+      "ojiaTaskScores": [
+        100,
+        90
+      ],
+      "ojiaScore": 190,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:169;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "SebastianAlexandru",
+      "nationalCode": "1101",
+      "ojiaGrade": "11",
+      "ojiaCode": "PH-7",
+      "name": "Aldoiu Sebastian-Alexandru",
+      "grade": "11",
+      "school": "Colegiul Național \"Ion Luca Caragiale\"",
+      "county": "Prahova",
+      "place": 104,
+      "score": 34,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        34,
+        0
+      ],
+      "ojiaTaskScores": [
+        100,
+        89
+      ],
+      "ojiaScore": 189,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:313;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 9",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "MarinMihaita",
+      "nationalCode": "915",
+      "ojiaGrade": "9",
+      "ojiaCode": "VL-7",
+      "name": "Marin Mihăiță",
+      "grade": "9",
+      "school": "Colegiul Național \"Mircea cel Bătrân\"",
+      "county": "Vâlcea",
+      "place": 105,
+      "score": 26,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        25,
+        1
+      ],
+      "ojiaTaskScores": [
+        85,
+        100
+      ],
+      "ojiaScore": 185,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "TheExothermicR",
+      "nationalCode": "1142",
+      "ojiaGrade": "11",
+      "ojiaCode": "PH-25",
+      "name": "Perșinaru Robert",
+      "grade": "11",
+      "school": "Colegiul Național \"Mihai Viteazul\"",
+      "county": "Prahova",
+      "place": 106,
+      "score": 14,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        5,
+        9
+      ],
+      "ojiaTaskScores": [
+        73,
+        86
+      ],
+      "ojiaScore": 159,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 7",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "Blinstrike",
+      "nationalCode": "918",
+      "ojiaGrade": "9",
+      "ojiaCode": "TM-6",
+      "name": "Muntean Matei",
+      "grade": "7",
+      "school": "Liceul Teoretic \"Grigore Moisil\"",
+      "county": "Timiş",
+      "place": 107,
+      "score": 14,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        5,
+        9
+      ],
+      "ojiaTaskScores": [
+        94,
+        100
+      ],
+      "ojiaScore": 194,
+      "prize": "",
+      "medal": "",
+      "status": "guest",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "national-score-last-remaining"
+      ]
+    },
+    {
+      "section": "Clasa 9",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "maia_pricop",
+      "nationalCode": "922",
+      "ojiaGrade": "9",
+      "ojiaCode": "BR-4",
+      "name": "Pricop Maia-Oana",
+      "grade": "9",
+      "school": "Colegiul Național \"Gheorghe Munteanu Murgoci\"",
+      "county": "Brăila",
+      "place": 108,
+      "score": 14,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        5,
+        9
+      ],
+      "ojiaTaskScores": [
+        69,
+        80
+      ],
+      "ojiaScore": 149,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "TYTH",
+      "nationalCode": "1009",
+      "ojiaGrade": "10",
+      "ojiaCode": "B-S4-1",
+      "name": "Chirilă Mihnea-Ștefan",
+      "grade": "10",
+      "school": "Colegiul Național \"Octav Onicescu\"",
+      "county": "București, sector 4",
+      "place": 109,
+      "score": 14,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        5,
+        9
+      ],
+      "ojiaTaskScores": [
+        65,
+        35
+      ],
+      "ojiaScore": 100,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 9",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "DanielPaun",
+      "nationalCode": "921",
+      "ojiaGrade": "9",
+      "ojiaCode": "B-S6-3",
+      "name": "Păun Daniel Marcus",
+      "grade": "9",
+      "school": "Colegiul Național \"Elena Cuza\"",
+      "county": "București, sector 6",
+      "place": 110,
+      "score": 12,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        12,
+        0
+      ],
+      "ojiaTaskScores": [
+        88,
+        85
+      ],
+      "ojiaScore": 173,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "Oprea_Tudor",
+      "nationalCode": "1025",
+      "ojiaGrade": "10",
+      "ojiaCode": "BH-11",
+      "name": "Oprea Tudor",
+      "grade": "10",
+      "school": "Colegiul Național \"Avram Iancu\"",
+      "county": "Bihor",
+      "place": 111,
+      "score": 10,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        5,
+        5
+      ],
+      "ojiaTaskScores": [
+        91,
+        85
+      ],
+      "ojiaScore": 176,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:475;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 9",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "Adrian_Tota",
+      "nationalCode": "926",
+      "ojiaGrade": "9",
+      "ojiaCode": "BH-6",
+      "name": "Tota Adrian",
+      "grade": "9",
+      "school": "Colegiul Național \"Avram Iancu\"",
+      "county": "Bihor",
+      "place": 112,
+      "score": 8,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        5,
+        3
+      ],
+      "ojiaTaskScores": [
+        73,
+        81
+      ],
+      "ojiaScore": 154,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "Albert",
+      "nationalCode": "1122",
+      "ojiaGrade": "11",
+      "ojiaCode": "HD-8",
+      "name": "Gabor Albert-Andrei",
+      "grade": "11",
+      "school": "Colegiul Național \"Decebal\"",
+      "county": "Hunedoara",
+      "place": 113,
+      "score": 8,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        5,
+        3
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:252;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "alexandruabrudan0",
+      "nationalCode": "1001",
+      "ojiaGrade": "10",
+      "ojiaCode": "MM-1",
+      "name": "Abrudan Alexandru",
+      "grade": "10",
+      "school": "Colegiul Național \"Gheorghe Șincai\"",
+      "county": "Maramureş",
+      "place": 114,
+      "score": 8,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        5,
+        3
+      ],
+      "ojiaTaskScores": [
+        55,
+        89
+      ],
+      "ojiaScore": 144,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "PaveleDavid",
+      "nationalCode": "1140",
+      "ojiaGrade": "11",
+      "ojiaCode": "VN-5",
+      "name": "Pavel David-Marian",
+      "grade": "11",
+      "school": "Colegiul Național \"Unirea\"",
+      "county": "Vrancea",
+      "place": 115,
+      "score": 8,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        5,
+        3
+      ],
+      "ojiaTaskScores": [
+        100,
+        93
+      ],
+      "ojiaScore": 193,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:170;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "rarycuh",
+      "nationalCode": "1026",
+      "ojiaGrade": "10",
+      "ojiaCode": "NT-7",
+      "name": "Pascaru Rareș-Dumitru",
+      "grade": "10",
+      "school": "Colegiul Național de Informatică",
+      "county": "Neamţ",
+      "place": 116,
+      "score": 8,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        5,
+        3
+      ],
+      "ojiaTaskScores": [
+        87,
+        60
+      ],
+      "ojiaScore": 147,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 9",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "saranegrila",
+      "nationalCode": "919",
+      "ojiaGrade": "9",
+      "ojiaCode": "B-S1-17",
+      "name": "Negrilă Sara Anastasia",
+      "grade": "9",
+      "school": "Colegiul Național de Informatică \"Tudor Vianu\"",
+      "county": "București, sector 1",
+      "place": 117,
+      "score": 8,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        5,
+        3
+      ],
+      "ojiaTaskScores": [
+        89,
+        100
+      ],
+      "ojiaScore": 189,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:256;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "Sughit",
+      "nationalCode": "1128",
+      "ojiaGrade": "11",
+      "ojiaCode": "IS-11",
+      "name": "Irimia-Sorici Andrei",
+      "grade": "11",
+      "school": "Liceul Teoretic \"Miron Costin\"",
+      "county": "Iaşi",
+      "place": 118,
+      "score": 8,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        5,
+        3
+      ],
+      "ojiaTaskScores": [
+        100,
+        69
+      ],
+      "ojiaScore": 169,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "TeoP",
+      "nationalCode": "1031",
+      "ojiaGrade": "10",
+      "ojiaCode": "CT-18",
+      "name": "Pîrvu Mihai Teodor",
+      "grade": "10",
+      "school": "Liceul Teoretic \"Ovidius\"",
+      "county": "Constanţa",
+      "place": 119,
+      "score": 8,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        5,
+        3
+      ],
+      "ojiaTaskScores": [
+        71,
+        75
+      ],
+      "ojiaScore": 146,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 9",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "vlader",
+      "nationalCode": "920",
+      "ojiaGrade": "9",
+      "ojiaCode": "BC-1",
+      "name": "Neştian Vlad-Ioan",
+      "grade": "9",
+      "school": "Colegiul Național \"Ferdinand I\"",
+      "county": "Bacău",
+      "place": 120,
+      "score": 8,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        5,
+        3
+      ],
+      "ojiaTaskScores": [
+        74,
+        100
+      ],
+      "ojiaScore": 174,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 10",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "tudor_db",
+      "nationalCode": "1012",
+      "ojiaGrade": "10",
+      "ojiaCode": "CT-6",
+      "name": "Durduman-Burtescu T udor",
+      "grade": "10",
+      "school": "Colegiul Național \"Mircea cel Bătrân\"",
+      "county": "Constanţa",
+      "place": 121,
+      "score": 7,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        7,
+        0
+      ],
+      "ojiaTaskScores": [
+        92,
+        100
+      ],
+      "ojiaScore": 192,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 12",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "cristirvn",
+      "nationalCode": "1201",
+      "ojiaGrade": "12",
+      "ojiaCode": "BZ-16",
+      "name": "Anghel Cristian-Răzvan",
+      "grade": "12",
+      "school": "Colegiul Național \"B.P. Hasdeu\"",
+      "county": "Buzău",
+      "place": 122,
+      "score": 5,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        5,
+        0
+      ],
+      "ojiaTaskScores": [
+        100,
+        85
+      ],
+      "ojiaScore": 185,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "Gianluigi",
+      "nationalCode": "1113",
+      "ojiaGrade": "11",
+      "ojiaCode": "OT-1",
+      "name": "Coconu Călin-Nicolas",
+      "grade": "11",
+      "school": "Colegiul National \"Ion Minulescu\"",
+      "county": "Olt",
+      "place": 123,
+      "score": 5,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        5,
+        0
+      ],
+      "ojiaTaskScores": [
+        61,
+        79
+      ],
+      "ojiaScore": 140,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "Ionescu_David",
+      "nationalCode": "1127",
+      "ojiaGrade": "11",
+      "ojiaCode": "AG-6",
+      "name": "Ionescu David-Gabriel",
+      "grade": "11",
+      "school": "Colegiul Național \"Alexandru Odobescu\"",
+      "county": "Argeş",
+      "place": 124,
+      "score": 5,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        5,
+        0
+      ],
+      "ojiaTaskScores": [
+        100,
+        99
+      ],
+      "ojiaScore": 199,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:257;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "MateInfinit",
+      "nationalCode": "1106",
+      "ojiaGrade": "11",
+      "ojiaCode": "CJ-3",
+      "name": "Barbat Matei",
+      "grade": "11",
+      "school": "Colegiul Național \"Emil Racoviță\"",
+      "county": "Cluj",
+      "place": 125,
+      "score": 5,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        5,
+        0
+      ],
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:85;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 11",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "RaduM",
+      "nationalCode": "1133",
+      "ojiaGrade": "11",
+      "ojiaCode": "B-S2-3",
+      "name": "Mocănașu Radu",
+      "grade": "11",
+      "school": "Colegiul Național \"Mihai Viteazul\"",
+      "county": "București, sector 2",
+      "place": 126,
+      "score": 5,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        5,
+        0
+      ],
+      "ojiaTaskScores": [
+        100,
+        77
+      ],
+      "ojiaScore": 177,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 9",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "Yustin",
+      "nationalCode": "914",
+      "ojiaGrade": "9",
+      "ojiaCode": "BC-2",
+      "name": "Marian Yustin",
+      "grade": "9",
+      "school": "Colegiul Național \"Ferdinand I\"",
+      "county": "Bacău",
+      "place": 127,
+      "score": 5,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        5,
+        0
+      ],
+      "ojiaTaskScores": [
+        63,
+        100
+      ],
+      "ojiaScore": 163,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 9",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "cboabes",
+      "nationalCode": "902",
+      "ojiaGrade": "9",
+      "ojiaCode": "B-S1-7",
+      "name": "Boabeș Cristina Ioana",
+      "grade": "9",
+      "school": "Colegiul Național de Informatică \"Tudor Vianu\"",
+      "county": "București, sector 1",
+      "place": 128,
+      "score": 3,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        0,
+        3
+      ],
+      "ojiaTaskScores": [
+        77,
+        88
+      ],
+      "ojiaScore": 165,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-unique;national-score-group"
+      ]
+    },
+    {
+      "section": "Clasa 9",
+      "year": 2025,
+      "sourceId": "roai-2025-national-anonymized-final",
+      "username": "Circi",
+      "nationalCode": "905",
+      "ojiaGrade": "9",
+      "ojiaCode": "B-S3-2",
+      "name": "Circiumaru Alexandru Radu",
+      "grade": "9",
+      "school": "Liceul Teoretic \"Alexandru Ioan Cuza\"",
+      "county": "București, sector 3",
+      "place": 129,
+      "score": 0,
+      "scoreMax": 200,
+      "finalTaskScores": [
+        0,
+        0
+      ],
+      "ojiaTaskScores": [
+        91,
+        85
+      ],
+      "ojiaScore": 176,
+      "prize": "",
+      "medal": "",
+      "status": "",
+      "evidence": [
+        "national-anonymized-code",
+        "qualified-list-alphabetical-code-order",
+        "county-score-name-similarity:70;national-score-group"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "nationalCode": "1019",
+      "grade": "10",
+      "ojiaGrade": "10",
+      "ojiaCode": "AG-13",
+      "name": "Luca Bogdan Alexandru",
+      "school": "Colegiul Național \"Ion C. Bratianu\"",
+      "county": "Argeş",
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "reason": "official national source marks the row absent"
+    },
+    {
+      "nationalCode": "1021",
+      "grade": "10",
+      "ojiaGrade": "10",
+      "ojiaCode": "SB-2",
+      "name": "Milea Matei",
+      "school": "Colegiul National \"Samuel von Brukenthal\"",
+      "county": "Sibiu",
+      "ojiaTaskScores": [
+        0,
+        100
+      ],
+      "ojiaScore": 100,
+      "reason": "official national source marks the row absent"
+    },
+    {
+      "nationalCode": "1028",
+      "grade": "10",
+      "ojiaGrade": "10",
+      "ojiaCode": "MM-3",
+      "name": "Petran Raul Francesco",
+      "school": "Colegiul Național \"Vasile Lucaciu\"",
+      "county": "Maramureş",
+      "ojiaTaskScores": [
+        94,
+        78
+      ],
+      "ojiaScore": 172,
+      "reason": "official national source marks the row absent"
+    },
+    {
+      "nationalCode": "1038",
+      "grade": "10",
+      "ojiaGrade": "10",
+      "ojiaCode": "SB-3",
+      "name": "Suciu Cristian-Albert",
+      "school": "Colegiul National \"Samuel von Brukenthal\"",
+      "county": "Sibiu",
+      "ojiaTaskScores": [
+        79,
+        76
+      ],
+      "ojiaScore": 155,
+      "reason": "official national source marks the row absent"
+    },
+    {
+      "nationalCode": "1110",
+      "grade": "11",
+      "ojiaGrade": "11",
+      "ojiaCode": "BN-1",
+      "name": "Căldărea Ciprian-Iulian",
+      "school": "Colegiul Național \"George Coșbuc\"",
+      "county": "Bistriţa-Năsăud",
+      "ojiaTaskScores": [
+        100,
+        90
+      ],
+      "ojiaScore": 190,
+      "reason": "official national source marks the row absent"
+    },
+    {
+      "nationalCode": "1137",
+      "grade": "11",
+      "ojiaGrade": "11",
+      "ojiaCode": "B-S3-9",
+      "name": "Nicolae Luca Stefan",
+      "school": "Liceul Teoretic Internațional de Informatică București",
+      "county": "București, sector 3",
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "reason": "official national source marks the row absent"
+    },
+    {
+      "nationalCode": "1149",
+      "grade": "11",
+      "ojiaGrade": "11",
+      "ojiaCode": "BR-5",
+      "name": "Tihanov Victor",
+      "school": "Colegiul Național \"Gheorghe Munteanu Murgoci\"",
+      "county": "Brăila",
+      "ojiaTaskScores": [
+        64,
+        89
+      ],
+      "ojiaScore": 153,
+      "reason": "official national source marks the row absent"
+    },
+    {
+      "nationalCode": "1203",
+      "grade": "12",
+      "ojiaGrade": "12",
+      "ojiaCode": "B-S1-45",
+      "name": "Burac Vlad-Alexandru",
+      "school": "Colegiul Național de Informatică \"Tudor Vianu\"",
+      "county": "București, sector 1",
+      "ojiaTaskScores": [
+        100,
+        100
+      ],
+      "ojiaScore": 200,
+      "reason": "official national source marks the row absent"
+    },
+    {
+      "nationalCode": "1207",
+      "grade": "12",
+      "ojiaGrade": "12",
+      "ojiaCode": "SB-6",
+      "name": "Eminovici Ștefan",
+      "school": "Colegiul National \"Samuel von Brukenthal\"",
+      "county": "Sibiu",
+      "ojiaTaskScores": [
+        80,
+        86
+      ],
+      "ojiaScore": 166,
+      "reason": "official national source marks the row absent"
+    },
+    {
+      "nationalCode": "1211",
+      "grade": "12",
+      "ojiaGrade": "12",
+      "ojiaCode": "PH-27",
+      "name": "Moșu David-Luca",
+      "school": "Colegiul Național \"Mihai Viteazul\"",
+      "county": "Prahova",
+      "ojiaTaskScores": [
+        100,
+        88
+      ],
+      "ojiaScore": 188,
+      "reason": "official national source marks the row absent"
+    },
+    {
+      "nationalCode": "1217",
+      "grade": "12",
+      "ojiaGrade": "12",
+      "ojiaCode": "MS-9",
+      "name": "Șerban Radu",
+      "school": "Colegiul Național \"Unirea\"",
+      "county": "Mureş",
+      "ojiaTaskScores": [
+        100,
+        91
+      ],
+      "ojiaScore": 191,
+      "reason": "official national source marks the row absent"
+    }
+  ]
+}

@@ -7,56 +7,29 @@ func TestBuildDatasetCountsOfficialRows(t *testing.T) {
 	if err != nil {
 		t.Fatalf("BuildDataset: %v", err)
 	}
-	if dataset.Summary.Results != 515 {
-		t.Fatalf("results = %d, want 515 after excluding ONIA absent rows", dataset.Summary.Results)
+	if dataset.Summary.Results != 570 {
+		t.Fatalf("results = %d, want 570 after ONIA and ROAI 2025 recovery", dataset.Summary.Results)
 	}
-	if dataset.Summary.NamedResults != 515 {
-		t.Fatalf("named results = %d, want 515 after ONIA recovery", dataset.Summary.NamedResults)
+	if dataset.Summary.NamedResults != 570 {
+		t.Fatalf("named results = %d, want 570 after ONIA and ROAI 2025 recovery", dataset.Summary.NamedResults)
 	}
 	if dataset.Summary.AnonymousResults != 0 {
-		t.Fatalf("anonymous results = %d, want 0 after ONIA recovery", dataset.Summary.AnonymousResults)
+		t.Fatalf("anonymous results = %d, want 0 after ONIA and ROAI 2025 recovery", dataset.Summary.AnonymousResults)
 	}
-	if dataset.Summary.People != 222 {
-		t.Fatalf("people = %d, want 222 after ONIA recovery, guests, and missing-name alias merges", dataset.Summary.People)
+	if dataset.Summary.People != 255 {
+		t.Fatalf("people = %d, want 255 after ONIA and ROAI 2025 recovery", dataset.Summary.People)
 	}
-	if dataset.Summary.Schools != 101 {
-		t.Fatalf("schools = %d, want 101 after school canonicalization", dataset.Summary.Schools)
+	if dataset.Summary.Schools != 102 {
+		t.Fatalf("schools = %d, want 102 after school canonicalization", dataset.Summary.Schools)
 	}
 	if dataset.Summary.Counties != 37 {
 		t.Fatalf("counties = %d, want 37", dataset.Summary.Counties)
 	}
-	if len(dataset.Contests) != 17 {
-		t.Fatalf("contests = %d, want 17", len(dataset.Contests))
+	if len(dataset.Contests) != 18 {
+		t.Fatalf("contests = %d, want 18", len(dataset.Contests))
 	}
 	if dataset.Summary.Years[0] != 2024 || dataset.Summary.LatestYear != 2026 {
 		t.Fatalf("years = %v latest = %d", dataset.Summary.Years, dataset.Summary.LatestYear)
-	}
-}
-
-func TestONIA2026MarkedForValidation(t *testing.T) {
-	dataset, err := BuildDataset("../..")
-	if err != nil {
-		t.Fatalf("BuildDataset: %v", err)
-	}
-	var sourceStatus SourceStatus
-	for _, status := range dataset.SourceStatuses {
-		if status.ID == "onia-2026-national" {
-			sourceStatus = status
-			break
-		}
-	}
-	if sourceStatus.Status != "validate" || sourceStatus.Detail != "Anonymous recovered results should be broadly manually checked." {
-		t.Fatalf("ONIA source status = %q/%q, want validate with manual-check detail", sourceStatus.Status, sourceStatus.Detail)
-	}
-	var sourceTodo SourceTodo
-	for _, todo := range dataset.SourceTodos {
-		if todo.ID == "onia-2026" {
-			sourceTodo = todo
-			break
-		}
-	}
-	if sourceTodo.Status != "validate" || sourceTodo.Detail != "Anonymous recovered results should be broadly manually checked." {
-		t.Fatalf("ONIA source todo = %q/%q, want validate with manual-check detail", sourceTodo.Status, sourceTodo.Detail)
 	}
 }
 
@@ -271,6 +244,7 @@ func TestSchoolSuffixVariantsMergeIntoCanonicalSchools(t *testing.T) {
 		"school-liceul-teoretic-international-de-informatica":       `Liceul Teoretic Internațional de Informatică`,
 		"school-colegiul-national-petru-rares":                      `Colegiul Național "Petru Rareș"`,
 		"school-colegiul-national-mihai-viteazul-ploiesti":          `Colegiul Național "Mihai Viteazul", Ploiești`,
+		"school-colegiul-national-ion-luca-caragiale-ploiesti":      `Colegiul Național "Ion Luca Caragiale", Ploiești`,
 		"school-colegiul-national-unirea-focsani":                   `Colegiul Național "Unirea", Focșani`,
 		"school-colegiul-national-unirea-turnu-magurele":            `Colegiul Național "Unirea", Turnu Măgurele`,
 		"school-colegiul-national-unirea-targu-mures":               `Colegiul Național "Unirea", Târgu Mureș`,
@@ -281,6 +255,10 @@ func TestSchoolSuffixVariantsMergeIntoCanonicalSchools(t *testing.T) {
 		"school-liceul-teoretic-avram-iancu-cluj-napoca":            `Liceul Teoretic "Avram Iancu", Cluj-Napoca`,
 		"school-liceul-teoretic-avram-iancu-brad":                   `Liceul Teoretic "Avram Iancu", Brad`,
 		"school-colegiul-national-b-p-hasdeu":                       `Colegiul Național "B. P. Hasdeu"`,
+		"school-liceul-regina-maria-dorohoi":                        `Liceul "Regina Maria", Dorohoi`,
+		"school-colegiul-national-de-informatica-piatra-neamt":      `Colegiul Național de Informatică, Piatra-Neamț`,
+		"school-colegiul-national-pedagogic-regina-maria-deva":      `Colegiul Național Pedagogic "Regina Maria", Deva`,
+		"school-colegiul-national-decebal-deva":                     `Colegiul Național Decebal, Deva`,
 	}
 	for id, name := range expected {
 		school := findSchool(dataset, id)
@@ -310,6 +288,11 @@ func TestSchoolSuffixVariantsMergeIntoCanonicalSchools(t *testing.T) {
 		"school-colegiul-national-mihai-viteazul-ploiesti-ph",
 		"school-c-n-mihai-viteazul-ploiesti",
 		"school-c-n-b-p-hasdeu",
+		"school-colegiul-national-ion-luca-caragiale",
+		"school-liceul-regina-maria",
+		"school-colegiul-national-de-informatica",
+		"school-colegiul-national-pedagogic-regina-maria",
+		"school-colegiul-national-decebal",
 		"school-colegiul-national-unirea",
 		"school-colegiul-national-mircea-cel-batran",
 		"school-colegiul-national-mihai-eminescu",
@@ -817,10 +800,11 @@ func TestROAI2025NationalImportedByClass(t *testing.T) {
 		t.Fatalf("BuildDataset: %v", err)
 	}
 	expectedCounts := map[string]int{
-		"roai-2025-national-clasa-9":  15,
-		"roai-2025-national-clasa-10": 21,
-		"roai-2025-national-clasa-11": 27,
-		"roai-2025-national-clasa-12": 11,
+		"roai-2025-national-clasa-7":  1,
+		"roai-2025-national-clasa-9":  25,
+		"roai-2025-national-clasa-10": 37,
+		"roai-2025-national-clasa-11": 49,
+		"roai-2025-national-clasa-12": 17,
 	}
 	for id, count := range expectedCounts {
 		contest := findContest(dataset, id)
@@ -830,6 +814,19 @@ func TestROAI2025NationalImportedByClass(t *testing.T) {
 		if contest.Stage != "national" || contest.ResultsCount != count {
 			t.Fatalf("%s stage/count = %s/%d, want national/%d", id, contest.Stage, contest.ResultsCount, count)
 		}
+	}
+	recoveredRows := 0
+	for _, result := range dataset.Results {
+		if result.Year != 2025 || result.Circuit != "ROAI" || result.Stage != "national" {
+			continue
+		}
+		recoveredRows++
+		if result.Anonymous {
+			t.Fatalf("ROAI 2025 national result is still anonymous: %#v", result)
+		}
+	}
+	if recoveredRows != 129 {
+		t.Fatalf("ROAI 2025 national rows = %d, want 129 recovered scored rows", recoveredRows)
 	}
 
 	petrean := findPerson(dataset, "petrean-roland")
@@ -869,6 +866,72 @@ func TestROAI2025NationalImportedByClass(t *testing.T) {
 	}
 	if deduNational.Place != 39 || deduNational.Score != 81 || deduNational.ScoreMax != 200 {
 		t.Fatalf("Dedu ROAI 2025 national = place %d score %v/%v, want place 39 score 81/200", deduNational.Place, deduNational.Score, deduNational.ScoreMax)
+	}
+
+	recoveredCases := []struct {
+		personID  string
+		contestID string
+		judge     string
+		place     int
+		score     float64
+		grade     string
+		sourceID  string
+		status    string
+	}{
+		{"aldoiu-sebastian-alexandru", "roai-2025-national-clasa-11", "SebastianAlexandru", 104, 34, "11", "roai-2025-national-anonymized-final", ""},
+		{"alexandrescu-luca", "roai-2025-national-clasa-11", "Alexandrescu", 78, 59, "11", "roai-2025-national-anonymized-final", ""},
+		{"pintilie-sebastian-marian", "roai-2025-national-clasa-12", "Raiku", 59, 71, "12", "roai-2025-national-anonymized-final", ""},
+		{"mocanasu-radu", "roai-2025-national-clasa-11", "RaduM", 126, 5, "11", "roai-2025-national-anonymized-final", ""},
+		{"marian-yustin", "roai-2025-national-clasa-9", "Yustin", 127, 5, "9", "roai-2025-national-anonymized-final", ""},
+		{"tache-david-stefan", "roai-2025-national-clasa-10", "dvdtsb", 4, 104, "10", "roai-2025-final-clasa-10", ""},
+		{"stanciu-rares-stefan", "roai-2025-national-clasa-12", "Rareshika", 5, 104, "12", "roai-2025-final-clasa-12", ""},
+		{"muntean-matei", "roai-2025-national-clasa-7", "Blinstrike", 107, 14, "7", "roai-2025-national-anonymized-final", "guest"},
+	}
+	for _, tc := range recoveredCases {
+		person := findPerson(dataset, tc.personID)
+		if person == nil {
+			t.Fatalf("missing recovered ROAI 2025 person %s", tc.personID)
+		}
+		if person.ExternalUsernames == nil || !contains(person.ExternalUsernames.Judge, tc.judge) {
+			t.Fatalf("%s judge usernames = %v, want %q", person.Name, person.ExternalUsernames, tc.judge)
+		}
+		result := findResult(dataset, tc.personID, tc.contestID)
+		if result == nil {
+			t.Fatalf("missing recovered ROAI 2025 result for %s", tc.personID)
+		}
+		if result.Place != tc.place || result.Score != tc.score || result.ScoreMax != 200 || result.Grade != tc.grade || result.SourceID != tc.sourceID || result.Status != tc.status {
+			t.Fatalf("%s ROAI 2025 national = place %d score %v/%v grade %s source %q status %q, want place %d score %v/200 grade %s source %q status %q",
+				tc.personID, result.Place, result.Score, result.ScoreMax, result.Grade, result.SourceID, result.Status, tc.place, tc.score, tc.grade, tc.sourceID, tc.status)
+		}
+	}
+
+	guest := findPerson(dataset, "muntean-matei")
+	if guest == nil {
+		t.Fatal("missing ROAI 2025 grade 7 guest profile")
+	}
+	if guest.Stats.NationalParticipations != 1 || guest.Stats.BestPlace != 107 {
+		t.Fatalf("Muntean Matei stats = %#v, want one national participation and best place 107", guest.Stats)
+	}
+
+	absentIDs := []string{
+		"luca-bogdan-alexandru",
+		"milea-matei",
+		"petran-raul-francesco",
+		"suciu-cristian-albert",
+		"caldarea-ciprian-iulian",
+		"nicolae-luca-stefan",
+		"tihanov-victor",
+		"burac-vlad-alexandru",
+		"eminovici-stefan",
+		"mosu-david-luca",
+		"serban-radu",
+	}
+	for _, personID := range absentIDs {
+		for _, result := range dataset.Results {
+			if result.PersonID == personID && result.Year == 2025 && result.Circuit == "ROAI" && result.Stage == "national" {
+				t.Fatalf("ROAI 2025 absent row was imported for %s: %#v", personID, result)
+			}
+		}
 	}
 }
 
@@ -942,8 +1005,8 @@ func TestExternalUsernamesAddedOnlyWhenConfirmed(t *testing.T) {
 	if dantos == nil {
 		t.Fatal("missing Danțoș Lorena")
 	}
-	if dantos.ExternalUsernames != nil {
-		t.Fatalf("Danțoș Lorena external usernames = %v, want none because ROAI 2025 tied-score rows do not identify handles", *dantos.ExternalUsernames)
+	if dantos.ExternalUsernames == nil || !contains(dantos.ExternalUsernames.Judge, "lorenaster") {
+		t.Fatalf("Danțoș Lorena judge usernames = %v, want recovered anonymized-final username %q", dantos.ExternalUsernames, "lorenaster")
 	}
 }
 
@@ -1007,6 +1070,15 @@ func findContest(dataset *Dataset, id string) *Contest {
 	for _, contest := range dataset.Contests {
 		if contest.ID == id {
 			return contest
+		}
+	}
+	return nil
+}
+
+func findResult(dataset *Dataset, personID string, contestID string) *Result {
+	for i := range dataset.Results {
+		if dataset.Results[i].PersonID == personID && dataset.Results[i].ContestID == contestID {
+			return &dataset.Results[i]
 		}
 	}
 	return nil

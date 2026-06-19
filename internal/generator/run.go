@@ -66,7 +66,7 @@ func BuildDataset(root string) (*Dataset, error) {
 			ID:      "onia-2026-national",
 			Title:   "ONIA 2026 national + Lot",
 			Status:  "validate",
-			Detail:  "Anonymous recovered results should be broadly manually checked.",
+			Detail:  "Imported from official ONIA 2026 national results, participant-sheet recovery data, mlcompete final leaderboards, and Lot scoreboards.",
 			URL:     "https://olimpiada-ai.ro/ro/rezultate/nationala",
 			Checked: checked,
 		},
@@ -105,8 +105,8 @@ func BuildDataset(root string) (*Dataset, error) {
 		SourceStatus{
 			ID:      "roai-2025-national",
 			Title:   "ROAI 2025 national",
-			Status:  "partial",
-			Detail:  "Imported from the official ROAI 2025 ONIA task/results page, using the Clasamente Finale PDFs split by class and the Nitro complete judge leaderboard for cumulative scores.",
+			Status:  "validate",
+			Detail:  "Imported from official ROAI 2025 task/results pages, class final PDFs, qualified participant lists, Nitro judge leaderboards, and recovered anonymized national scoreboard rows.",
 			URL:     "https://olimpiada.nitro-ai.org/ro/2025/onia?section=tasks",
 			Checked: checked,
 		},
@@ -131,15 +131,15 @@ func BuildDataset(root string) (*Dataset, error) {
 		SourceTodo{
 			ID:     "roai-2025",
 			Title:  "ROAI 2025",
-			Status: "partial",
-			Detail: "Partial: only medal information is tracked so far.",
+			Status: "validate",
+			Detail: "Recovered national matches are inferred from anonymized scoreboards and public participant data; manually review names, schools, counties, and judge usernames.",
 			URL:    "https://olimpiada.nitro-ai.org/ro/2025/onia?section=tasks",
 		},
 		SourceTodo{
 			ID:     "onia-2026",
 			Title:  "ONIA 2026",
 			Status: "validate",
-			Detail: "Anonymous recovered results should be broadly manually checked.",
+			Detail: "Recovered national matches are inferred from anonymous scoreboard rows and public participant data; manually review names, schools, counties, and mlcompete usernames.",
 			URL:    "https://olimpiada-ai.ro/ro/rezultate/nationala",
 		},
 	)
@@ -163,6 +163,7 @@ func BuildDataset(root string) (*Dataset, error) {
 	if err := b.importROAI(
 		filepath.Join(root, "data/manual/roai-2026-results.json"),
 		filepath.Join(root, "data/manual/roai-2025-national-scores.json"),
+		filepath.Join(root, "data/manual/roai-2025-national-recovery.json"),
 	); err != nil {
 		return nil, err
 	}
