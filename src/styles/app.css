@@ -960,6 +960,11 @@ code {
   display: grid;
 }
 
+.provenance-list {
+  gap: 10px;
+  padding: 12px;
+}
+
 .family-grid,
 .scoreboard-grid {
   display: grid;
@@ -1102,6 +1107,133 @@ code {
   margin-top: 4px;
   color: var(--muted);
   font-size: 0.78rem;
+}
+
+.provenance-group {
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.provenance-group[open] {
+  border-color: var(--line-strong);
+}
+
+.provenance-group-summary {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  min-height: 58px;
+  padding: 12px 14px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.provenance-group-summary::-webkit-details-marker {
+  display: none;
+}
+
+.provenance-group-summary:hover {
+  background: var(--hover-bg);
+}
+
+.provenance-group-chevron {
+  color: var(--muted);
+  transition: transform 160ms ease;
+}
+
+.provenance-group[open] .provenance-group-chevron {
+  transform: rotate(90deg);
+}
+
+.provenance-group-title strong,
+.provenance-group-title small {
+  display: block;
+}
+
+.provenance-group-title strong {
+  font-size: 0.98rem;
+}
+
+.provenance-group-title small {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.provenance-group-count {
+  display: inline-grid;
+  place-items: center;
+  min-height: 28px;
+  padding: 0 9px;
+  border: 1px solid var(--line);
+  color: var(--green-2);
+  background: var(--accent-bg);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.provenance-bundle-list {
+  display: grid;
+  gap: 10px;
+  padding: 0 12px 12px;
+}
+
+.provenance-bundle {
+  border: 1px solid var(--line);
+  background: var(--panel-2);
+}
+
+.provenance-bundle-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.provenance-bundle-heading h3 {
+  margin: 0;
+  font-size: 0.86rem;
+}
+
+.provenance-bundle-heading span {
+  color: var(--muted);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+
+.provenance-url-list {
+  display: grid;
+}
+
+.provenance-url-list .provenance-row:last-child {
+  border-bottom: 0;
+}
+
+.provenance-row:hover {
+  background: var(--hover-bg);
+}
+
+.provenance-id-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.provenance-id-list code {
+  padding: 3px 6px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  background: var(--panel);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.68rem;
+  line-height: 1.15;
 }
 
 .contest-row code {
@@ -1344,6 +1476,33 @@ code {
 
   .source-todo-status {
     justify-self: start;
+  }
+
+  .provenance-list {
+    padding: 8px;
+  }
+
+  .provenance-group-summary {
+    grid-template-columns: 18px minmax(0, 1fr);
+  }
+
+  .provenance-group-count {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .provenance-bundle-list {
+    padding: 0 8px 8px;
+  }
+
+  .provenance-bundle-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .provenance-bundle-heading span {
+    white-space: normal;
   }
 
   .entity-heading .stat-grid {
