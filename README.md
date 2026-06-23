@@ -1,7 +1,7 @@
 # ROAIHOF
 
 >[!NOTE]
-> this site was mostly vibecoded. don't look to much into it besides functionality and data.
+> this site was partially vibecoded. don't look to much into it besides functionality and data.
 
 Romanian AI Hall Of Fame
 

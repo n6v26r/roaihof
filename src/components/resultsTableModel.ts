@@ -58,6 +58,10 @@ export function displaySchoolName(school?: string, county?: string): string {
 
 export function scoreboardHrefForResult(result: Result, contest: Contest): string {
   const fallback = scoreboardRouteForContest(contest.id);
+  if (result.stage === 'baraj') {
+    if (result.circuit === 'ROAI' && result.year === 2026) return '/scoreboards/roai-2026-baraj';
+    return fallback;
+  }
   if (result.stage === 'lot') {
     if (result.circuit === 'ONIA' && result.year === 2026) return '/scoreboards/onia-2026-lot';
     if (result.circuit === 'ROAI' && (result.year === 2025 || result.year === 2026)) return `/scoreboards/roai-${result.year}-lot`;
@@ -140,6 +144,9 @@ function unique(values: string[]): string[] {
 
 function contestContext(result: Result, contest?: Contest): ContestContext {
   const circuit = result.circuit || contest?.circuit || result.contestId.toUpperCase();
+  if (result.stage === 'baraj') {
+    return { label: `${circuit} Baraj`, key: `${circuit}-baraj` };
+  }
   if (result.stage === 'lot') {
     return { label: `${circuit} Lot`, key: `${circuit}-lot` };
   }

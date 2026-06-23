@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import dataset from '../generated/app-data.json';
 import type { Dataset, Result, Stats } from './types';
-import { aggregateRanking, emptyStats, filteredResults, searchItems } from './stats';
+import { aggregateRanking, emptyStats, entityResults, filteredResults, searchItems } from './stats';
 
 const data = dataset as Dataset;
 
@@ -20,6 +20,19 @@ describe('stats helpers', () => {
 
     expect(ranking.length).toBeGreaterThan(0);
     expect(ranking.some((row) => row.name.startsWith('Participant'))).toBe(false);
+  });
+
+  it('excludes Baraj from aggregate rankings but keeps it on person profiles', () => {
+    const barajOnly = rankingDataset([
+      rankingResult('alpha-baraj', 'alpha', 'Alpha', 'ROAI', 'baraj', { qualification: 'Lot' })
+    ]);
+
+    expect(aggregateRanking('people', barajOnly, { circuit: 'merged', stage: 'all' })).toHaveLength(0);
+    expect(aggregateRanking('schools', barajOnly, { circuit: 'merged', stage: 'all' })).toHaveLength(0);
+    expect(aggregateRanking('counties', barajOnly, { circuit: 'merged', stage: 'all' })).toHaveLength(0);
+    expect(entityResults('person', 'alpha', barajOnly).map((result) => result.id)).toEqual(['alpha-baraj']);
+    expect(entityResults('school', 'school-alpha', barajOnly)).toHaveLength(0);
+    expect(entityResults('county', 'county-alpha', barajOnly)).toHaveLength(0);
   });
 
   it('keeps international medals out of Romanian entity ranking stats', () => {

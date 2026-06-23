@@ -10,11 +10,11 @@ func TestBuildDatasetCountsOfficialRows(t *testing.T) {
 	if err != nil {
 		t.Fatalf("BuildDataset: %v", err)
 	}
-	if dataset.Summary.Results != 570 {
-		t.Fatalf("results = %d, want 570 after ONIA and ROAI 2025 recovery", dataset.Summary.Results)
+	if dataset.Summary.Results != 630 {
+		t.Fatalf("results = %d, want 630 after ROAI Baraj import", dataset.Summary.Results)
 	}
-	if dataset.Summary.NamedResults != 570 {
-		t.Fatalf("named results = %d, want 570 after ONIA and ROAI 2025 recovery", dataset.Summary.NamedResults)
+	if dataset.Summary.NamedResults != 630 {
+		t.Fatalf("named results = %d, want 630 after ROAI Baraj import", dataset.Summary.NamedResults)
 	}
 	if dataset.Summary.AnonymousResults != 0 {
 		t.Fatalf("anonymous results = %d, want 0 after ONIA and ROAI 2025 recovery", dataset.Summary.AnonymousResults)
@@ -28,8 +28,8 @@ func TestBuildDatasetCountsOfficialRows(t *testing.T) {
 	if dataset.Summary.Counties != 37 {
 		t.Fatalf("counties = %d, want 37", dataset.Summary.Counties)
 	}
-	if len(dataset.Contests) != 18 {
-		t.Fatalf("contests = %d, want 18", len(dataset.Contests))
+	if len(dataset.Contests) != 19 {
+		t.Fatalf("contests = %d, want 19", len(dataset.Contests))
 	}
 	if dataset.Summary.Years[0] != 2024 || dataset.Summary.LatestYear != 2026 {
 		t.Fatalf("years = %v latest = %d", dataset.Summary.Years, dataset.Summary.LatestYear)
@@ -487,6 +487,53 @@ func TestROAI2026Imported(t *testing.T) {
 	}
 	if person.Stats.BestPlace != 1 {
 		t.Fatalf("best place = %d, want 1", person.Stats.BestPlace)
+	}
+}
+
+func TestROAI2026BarajImportedAsDisplayOnly(t *testing.T) {
+	dataset, err := BuildDataset("../..")
+	if err != nil {
+		t.Fatalf("BuildDataset: %v", err)
+	}
+	baraj := findContest(dataset, "roai-2026-baraj")
+	if baraj == nil {
+		t.Fatal("missing ROAI 2026 Baraj contest")
+	}
+	if baraj.Stage != "baraj" || baraj.ResultsCount != 60 {
+		t.Fatalf("baraj stage/count = %s/%d, want baraj/60", baraj.Stage, baraj.ResultsCount)
+	}
+	qualified := 0
+	for _, result := range dataset.Results {
+		if result.ContestID != "roai-2026-baraj" {
+			continue
+		}
+		if result.PersonID == "" || result.SchoolID == "" || result.CountyID == "" {
+			t.Fatalf("ROAI Baraj result missing identity: %#v", result)
+		}
+		if result.SourceID != sourceROAI2026Baraj {
+			t.Fatalf("%s Baraj source = %q, want %q", result.PersonName, result.SourceID, sourceROAI2026Baraj)
+		}
+		if result.Qualification == "Lot" {
+			qualified++
+		}
+	}
+	if qualified != 25 {
+		t.Fatalf("ROAI Baraj qualified rows = %d, want 25", qualified)
+	}
+	dedu := findPerson(dataset, "dedu-razvan-matei")
+	if dedu == nil {
+		t.Fatal("missing Dedu Răzvan-Matei")
+	}
+	if dedu.Stats.Participations != 3 || dedu.Stats.NationalParticipations != 3 || dedu.Stats.Selections != 2 {
+		t.Fatalf("Dedu stats after Baraj = %#v, want Baraj excluded from aggregate stats", dedu.Stats)
+	}
+	imRazvanBaraj := findResult(dataset, "iacob-razvan-mihai", "roai-2026-baraj")
+	if imRazvanBaraj == nil {
+		t.Fatal("missing Baraj row for Iacob Răzvan-Mihai")
+	}
+	if imRazvanBaraj.Place != 17 || imRazvanBaraj.Score != 198 || imRazvanBaraj.Qualification != "Lot" {
+		t.Fatalf("Iacob Răzvan-Mihai Baraj = place %d score %.2f qualification %q, want 17/198/Lot",
+			imRazvanBaraj.Place, imRazvanBaraj.Score, imRazvanBaraj.Qualification)
 	}
 }
 

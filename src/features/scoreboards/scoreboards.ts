@@ -44,6 +44,7 @@ export function buildScoreboards(data: Dataset): Scoreboard[] {
 
   add('roai-2026-ix-x', 'ROAI', 2026, 'IX-X', 'national', 'IX-X', data.results.filter((result) => result.contestId === 'roai-2026-national-ix-x'));
   add('roai-2026-xi-xii', 'ROAI', 2026, 'XI-XII', 'national', 'XI-XII', data.results.filter((result) => result.contestId === 'roai-2026-national-xi-xii'));
+  add('roai-2026-baraj', 'ROAI', 2026, 'Baraj', 'baraj', 'Lot qualifier', data.results.filter((result) => result.contestId === 'roai-2026-baraj'));
   add('roai-2026-lot', 'ROAI', 2026, 'Lot', 'lot', 'Lot', data.results.filter((result) => result.circuit === 'ROAI' && result.year === 2026 && result.stage === 'lot'));
   const roai2025National = data.results.filter((result) => result.circuit === 'ROAI' && result.year === 2025 && result.stage === 'national');
   add('roai-2025-national-ranking', 'ROAI', 2025, 'National Ranking', 'national', 'toate clasele', roai2025National);
@@ -142,6 +143,7 @@ export function scoreboardOrder(scoreboard: Scoreboard): number {
   if (title === 'xi-xii') return 2;
   if (title === 'clasa 8') return 7;
   if (title.startsWith('clasa')) return 3 + Number(title.replace('clasa ', '')) - 9;
+  if (title === 'baraj') return 9;
   if (title === 'lot') return 10;
   if (title === 'teoretică') return 0;
   if (title === 'practică') return 1;

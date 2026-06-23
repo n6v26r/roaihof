@@ -131,14 +131,14 @@ function provenanceBundleTitle(source: Source) {
   if (id === 'roai-2026-page' || id === 'roai-2025-lot-page' || id === 'roai-2026-lot-page') {
     return 'Task/results pages';
   }
-  if (id.startsWith('roai-2026-national') || id === 'roai-2025-national-judge' || (id.includes('county') && id.includes('judge'))) {
+  if (id.startsWith('roai-2026-national') || id === 'roai-2026-baraj-judge' || id === 'roai-2025-national-judge' || (id.includes('county') && id.includes('judge'))) {
     return 'Nitro judge leaderboards';
-  }
-  if (id.includes('lot')) {
-    return 'Lot sources';
   }
   if (id.includes('qualified')) {
     return 'Qualified lists';
+  }
+  if (id.includes('lot')) {
+    return 'Lot sources';
   }
   if (id.includes('anonymized')) {
     return 'Anonymized national final';

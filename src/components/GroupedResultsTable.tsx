@@ -18,6 +18,7 @@ export function GroupedResultsTable({
   const forceContestant = distinctContestants(results) > 1;
   const groups = [
     { stage: 'national', title: 'Națională' },
+    { stage: 'baraj', title: 'Baraj' },
     { stage: 'lot', title: 'Lot' },
     { stage: 'international', title: 'Internațional' }
   ];

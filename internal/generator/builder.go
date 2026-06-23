@@ -436,8 +436,8 @@ func (b *builder) importROAI(path string, roai2025NationalScoresPath string, roa
 			School: cleanHuman(row.School),
 			County: normalizeCounty(row.County),
 		}
-		if row.Username != "" {
-			identities[nameKey(row.Username)] = identity
+		if row.Username != "" && year == 2026 {
+			identities[usernameKey(row.Username)] = identity
 		}
 		identitiesByName[nameKey(identity.Name)] = identity
 		identitiesByNameAndYear[identityYearKey(year, identity.Name)] = identity
@@ -501,6 +501,90 @@ func (b *builder) importROAI(path string, roai2025NationalScoresPath string, roa
 		identitiesByName[nameKey(identity.Name)] = identity
 	}
 
+	barajQualifiedUsernames, err := b.roaiBarajQualifiedUsernames(file.BarajQualified)
+	if err != nil {
+		return err
+	}
+	if len(file.Baraj) > 0 {
+		if len(barajQualifiedUsernames) == 0 {
+			return fmt.Errorf("ROAI Baraj has rows but no official qualified usernames")
+		}
+		b.addContest(Contest{
+			ID:          "roai-2026-baraj",
+			Name:        "ROAI 2026 Baraj",
+			Year:        2026,
+			Circuit:     "ROAI",
+			Stage:       "baraj",
+			Section:     "Lot qualifier",
+			Date:        roaiBarajDate(2026),
+			City:        "București",
+			Country:     "România",
+			OfficialURL: b.sources[sourceROAI2026Baraj].URL,
+			SourceID:    sourceROAI2026Baraj,
+		})
+	}
+	seenBarajUsernames := map[string]bool{}
+	for _, row := range file.Baraj {
+		if row.Year == 0 {
+			row.Year = 2026
+		}
+		sourceID := cleanHuman(row.SourceID)
+		if sourceID == "" {
+			sourceID = sourceROAI2026Baraj
+		}
+		if _, ok := b.sources[sourceID]; !ok {
+			return fmt.Errorf("ROAI Baraj row for %q references missing source %q", row.Username, sourceID)
+		}
+		username := cleanHuman(row.Username)
+		userKey := usernameKey(username)
+		identity, ok := identities[userKey]
+		if !ok {
+			return fmt.Errorf("ROAI Baraj username %q has no matching national identity", username)
+		}
+		seenBarajUsernames[userKey] = true
+		if row.Year != 2026 || username == "" || row.Place == 0 || row.ScoreMax == 0 {
+			return fmt.Errorf("invalid ROAI Baraj row: year=%d username=%q place=%d scoreMax=%.2f", row.Year, username, row.Place, float64(row.ScoreMax))
+		}
+		if len(row.TaskScores) != 2 {
+			return fmt.Errorf("ROAI Baraj row for %q has %d task scores, want 2", username, len(row.TaskScores))
+		}
+		var taskTotal float64
+		for _, score := range row.TaskScores {
+			taskTotal += float64(score)
+		}
+		if roundScore(taskTotal) != roundScore(float64(row.Score)) {
+			return fmt.Errorf("ROAI Baraj row for %q task score sum %.2f != total %.2f", username, taskTotal, float64(row.Score))
+		}
+		qualification := ""
+		if _, ok := barajQualifiedUsernames[userKey]; ok {
+			qualification = "Lot"
+		}
+		b.addExternalUsername(identity.Name, "judge", username)
+		b.addResult(Result{
+			ContestID:      "roai-2026-baraj",
+			PersonName:     identity.Name,
+			School:         cleanHuman(identity.School),
+			County:         normalizeCounty(identity.County),
+			OriginalCounty: cleanHuman(identity.County),
+			Year:           row.Year,
+			Circuit:        "ROAI",
+			Stage:          "baraj",
+			Section:        "Lot qualifier",
+			Grade:          normalizeGrade(identity.Grade),
+			Place:          row.Place,
+			Score:          float64(row.Score),
+			ScoreKnown:     true,
+			ScoreMax:       float64(row.ScoreMax),
+			Qualification:  qualification,
+			SourceID:       sourceID,
+		})
+	}
+	for key, username := range barajQualifiedUsernames {
+		if !seenBarajUsernames[key] {
+			return fmt.Errorf("official ROAI Baraj qualified username %q has no matching Baraj row", username)
+		}
+	}
+
 	addedLotRankingContests := map[string]bool{}
 	for _, row := range file.LotRankings {
 		if row.Year == 0 {
@@ -554,6 +638,33 @@ func (b *builder) importROAI(path string, roai2025NationalScoresPath string, roa
 		})
 	}
 	return nil
+}
+
+func (b *builder) roaiBarajQualifiedUsernames(rows []roaiBarajQualifiedRow) (map[string]string, error) {
+	qualified := map[string]string{}
+	for _, row := range rows {
+		year := row.Year
+		if year == 0 {
+			year = 2026
+		}
+		sourceID := cleanHuman(row.SourceID)
+		if sourceID == "" {
+			sourceID = sourceROAI2026Qualified
+		}
+		if _, ok := b.sources[sourceID]; !ok {
+			return nil, fmt.Errorf("ROAI Baraj qualified username %q references missing source %q", row.Username, sourceID)
+		}
+		username := cleanHuman(row.Username)
+		if year != 2026 || username == "" {
+			return nil, fmt.Errorf("invalid ROAI Baraj qualified row: year=%d username=%q", year, username)
+		}
+		key := usernameKey(username)
+		if existing, ok := qualified[key]; ok {
+			return nil, fmt.Errorf("duplicate ROAI Baraj qualified username %q and %q", existing, username)
+		}
+		qualified[key] = username
+	}
+	return qualified, nil
 }
 
 func (b *builder) loadROAI2025NationalRecovery(path string) ([]roaiNationalRow, error) {
@@ -991,6 +1102,15 @@ func roaiLotDate(year int) string {
 	}
 }
 
+func roaiBarajDate(year int) string {
+	switch year {
+	case 2026:
+		return "2026-04-08"
+	default:
+		return fmt.Sprintf("%d-01-01", year)
+	}
+}
+
 func (b *builder) importManualInternational(path string) error {
 	var file manualInternationalFile
 	if err := readJSON(path, &file); err != nil {
@@ -1322,8 +1442,8 @@ func (b *builder) finalize() *Dataset {
 		Years:                 years,
 		Circuits:              circuits,
 		MergedByDefault:       true,
-		ROAIStatus:            "ROAI 2025 national, ROAI 2026 national, and 2025-2026 Lot imported from official Nitro pages, ranking PDFs, and judge standings.",
-		NationalCoverageScope: "National finals, Lot, and international results.",
+		ROAIStatus:            "ROAI 2025 national, ROAI 2026 national, ROAI 2026 Baraj, and 2025-2026 Lot imported from official Nitro pages, ranking PDFs, and judge standings.",
+		NationalCoverageScope: "National finals, Baraj, Lot, and international results.",
 	}
 	if len(years) > 0 {
 		summary.LatestYear = years[len(years)-1]
@@ -1673,7 +1793,7 @@ func usesROAI2025ClassPlacement(result Result) bool {
 }
 
 func contributesToRomanianEntityStats(result Result) bool {
-	return result.Stage != "international"
+	return result.Stage != "international" && result.Stage != "baraj"
 }
 
 func isSelectionStage(stage string) bool {

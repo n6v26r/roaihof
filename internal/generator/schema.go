@@ -7,6 +7,8 @@ const (
 	sourceONIANationalGuests = "onia-2026-national-participants-sheet"
 	sourceONIALot            = "onia-lot-largit-2026"
 	sourceROAI2026           = "roai-2026"
+	sourceROAI2026Baraj      = "roai-2026-baraj-judge"
+	sourceROAI2026Qualified  = "roai-2026-qualified-lot-pdf"
 )
 
 const oniaLotParticipantCount = 30

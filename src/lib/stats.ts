@@ -193,6 +193,7 @@ export function contestResults(contest: Contest, dataset: Dataset): Result[] {
 export function entityResults(kind: 'person' | 'school' | 'county', id: string, dataset: Dataset): Result[] {
   return dataset.results
     .filter((result) => {
+      if (kind !== 'person' && result.stage === 'baraj') return false;
       if (kind === 'person') return result.personId === id;
       if (kind === 'school') return result.schoolId === id;
       return result.countyId === id;
@@ -269,7 +270,7 @@ function contributesToRankingStats(result: Result, scope: RankingScope): boolean
 }
 
 function contributesToRomanianEntityStats(result: Result): boolean {
-  return result.stage !== 'international';
+  return result.stage !== 'international' && result.stage !== 'baraj';
 }
 
 function isSelectionStage(stage: string): boolean {

@@ -38,6 +38,16 @@ describe('scoreboards', () => {
     expect(scoreboardOrder(scoreboard!)).toBeGreaterThan(scoreboardOrder(scoreboards.get('onia-2026-clasa-12')!));
   });
 
+  it('builds ROAI 2026 Baraj as a display-only scoreboard before Lot', () => {
+    const scoreboard = scoreboards.get('roai-2026-baraj');
+
+    expect(scoreboard).toBeDefined();
+    expect(scoreboard?.stage).toBe('baraj');
+    expect(scoreboard?.results).toHaveLength(60);
+    expect(scoreboard?.results.filter((result) => result.qualification === 'Lot')).toHaveLength(25);
+    expect(scoreboardOrder(scoreboard!)).toBeLessThan(scoreboardOrder(scoreboards.get('roai-2026-lot')!));
+  });
+
   it('keeps ONIA grade 8 guests in score order on IX-X', () => {
     const scoreboard = scoreboards.get('onia-2026-ix-x');
     const guestRows = scoreboard?.results.filter((result) => result.status === 'guest') ?? [];
@@ -73,6 +83,11 @@ describe('scoreboards', () => {
     expect(scoreboardOfficialLinks(scoreboards.get('roai-2026-lot')!)).toEqual([{
       label: 'official sources',
       href: 'https://olimpiada.nitro-ai.org/ro/2026/lot?section=tasks',
+      external: true
+    }]);
+    expect(scoreboardOfficialLinks(scoreboards.get('roai-2026-baraj')!)).toEqual([{
+      label: 'official source',
+      href: 'https://judge.nitro-ai.org/competitions/roai-2025/baraj-nationala-2026/leaderboard/complete?participant_name=razv&page=1&page_size=100',
       external: true
     }]);
   });

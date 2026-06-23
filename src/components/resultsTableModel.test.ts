@@ -7,10 +7,12 @@ const contests = new Map(dataset.contests.map((contest) => [contest.id, contest]
 describe('results table model', () => {
   it('routes result contest links to scoreboards', () => {
     const roaiResult = dataset.results.find((result) => result.contestId === 'roai-2026-national-ix-x' && result.grade === '9');
+    const roaiBaraj = dataset.results.find((result) => result.contestId === 'roai-2026-baraj');
     const oniaResult = dataset.results.find((result) => result.contestId === 'onia-2026-nationala' && result.grade === '10');
     const oniaGuest = dataset.results.find((result) => result.contestId === 'onia-2026-nationala' && result.status === 'guest');
 
     expect(scoreboardHrefForResult(roaiResult!, contests.get(roaiResult!.contestId)!)).toBe('/scoreboards/roai-2026-ix-x');
+    expect(scoreboardHrefForResult(roaiBaraj!, contests.get(roaiBaraj!.contestId)!)).toBe('/scoreboards/roai-2026-baraj');
     expect(scoreboardHrefForResult(oniaResult!, contests.get(oniaResult!.contestId)!)).toBe('/scoreboards/onia-2026-clasa-10');
     expect(scoreboardHrefForResult(oniaGuest!, contests.get(oniaGuest!.contestId)!)).toBe('/scoreboards/onia-2026-clasa-8');
   });
@@ -38,5 +40,18 @@ describe('results table model', () => {
     expect(displayRows).toHaveLength(1);
     expect(displayRows[0].context.label).toBe('ROAI Lot');
     expect(displayRows[0].placeDetails.map((detail) => detail.target)).toEqual(['IAIO', 'CEOAI']);
+  });
+
+  it('shows ROAI Baraj as its own profile result context', () => {
+    const row = dataset.results.find((result) =>
+      result.contestId === 'roai-2026-baraj' &&
+      result.personId === 'dedu-razvan-matei'
+    );
+    const displayRows = mergeDisplayRows([row!], contests);
+
+    expect(displayRows[0].context.label).toBe('ROAI Baraj');
+    expect(displayRows[0].placeLabel).toBe('#1');
+    expect(displayRows[0].scoreLabel).toBe('200/200');
+    expect(displayRows[0].outcome).toEqual({ label: 'Lot', kind: 'qualification' });
   });
 });

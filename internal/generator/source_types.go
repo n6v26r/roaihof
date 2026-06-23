@@ -202,10 +202,12 @@ type manualResult struct {
 }
 
 type roaiFile struct {
-	Sources     []Source            `json:"sources"`
-	National    []roaiNationalRow   `json:"national"`
-	Lot         []roaiQualifiedRow  `json:"lot"`
-	LotRankings []roaiLotRankingRow `json:"lotRankings"`
+	Sources        []Source                `json:"sources"`
+	National       []roaiNationalRow       `json:"national"`
+	Lot            []roaiQualifiedRow      `json:"lot"`
+	Baraj          []roaiBarajRow          `json:"baraj"`
+	BarajQualified []roaiBarajQualifiedRow `json:"barajQualified"`
+	LotRankings    []roaiLotRankingRow     `json:"lotRankings"`
 }
 
 type roaiNationalRow struct {
@@ -278,6 +280,22 @@ type roaiQualifiedRow struct {
 	Grade  string `json:"grade"`
 	School string `json:"school"`
 	County string `json:"county"`
+}
+
+type roaiBarajRow struct {
+	Year       int         `json:"year"`
+	Username   string      `json:"username"`
+	Place      int         `json:"place"`
+	TaskScores []flexFloat `json:"taskScores"`
+	Score      flexFloat   `json:"score"`
+	ScoreMax   flexFloat   `json:"scoreMax"`
+	SourceID   string      `json:"sourceId"`
+}
+
+type roaiBarajQualifiedRow struct {
+	Year     int    `json:"year"`
+	Username string `json:"username"`
+	SourceID string `json:"sourceId"`
 }
 
 type roaiLotRankingRow struct {

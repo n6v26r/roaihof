@@ -36,6 +36,8 @@ export function stageLabel(stage: string): string {
       return 'Națională';
     case 'lot':
       return 'Lot';
+    case 'baraj':
+      return 'Baraj';
     case 'international':
       return 'Internațional';
     default:
@@ -64,6 +66,7 @@ const contestScoreboardIds: Record<string, string> = {
   'onia-2026-lot': 'onia-2026-lot',
   'roai-2026-national-ix-x': 'roai-2026-ix-x',
   'roai-2026-national-xi-xii': 'roai-2026-xi-xii',
+  'roai-2026-baraj': 'roai-2026-baraj',
   'roai-2026-lot-ceoai': 'roai-2026-lot',
   'roai-2026-lot-iaio': 'roai-2026-lot',
   'roai-2025-national-clasa-9': 'roai-2025-clasa-9',
