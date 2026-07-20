@@ -84,7 +84,7 @@ function compactSourceUrl(url: string) {
 }
 
 function provenanceGroupKey(source: Source) {
-  if (source.id === 'onia-hall-of-fame' || source.id.startsWith('ioai-') || source.id.startsWith('iaio-')) {
+  if (source.id === 'onia-hall-of-fame' || source.id.startsWith('ioai-') || source.id.startsWith('iaio-') || source.id.startsWith('ceoai-')) {
     return 'international';
   }
   if (/mlcompete-(23|24)-final/.test(source.id)) {
@@ -152,7 +152,7 @@ function provenanceBundleTitle(source: Source) {
   if (id === 'onia-hall-of-fame') {
     return 'Hall of Fame';
   }
-  if (id.startsWith('ioai-') || id.startsWith('iaio-')) {
+  if (id.startsWith('ioai-') || id.startsWith('iaio-') || id.startsWith('ceoai-')) {
     return 'Official result pages';
   }
   return 'Source files';

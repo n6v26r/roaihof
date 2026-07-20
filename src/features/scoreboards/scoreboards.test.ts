@@ -48,6 +48,21 @@ describe('scoreboards', () => {
     expect(scoreboardOrder(scoreboard!)).toBeLessThan(scoreboardOrder(scoreboards.get('roai-2026-lot')!));
   });
 
+  it('builds CEOAI 2026 as an international scoreboard', () => {
+    const scoreboard = scoreboards.get('ceoai-2026-global');
+
+    expect(scoreboard).toBeDefined();
+    expect(scoreboard?.family).toBe('CEOAI');
+    expect(scoreboard?.stage).toBe('international');
+    expect(scoreboard?.results).toHaveLength(11);
+    expect(scoreboard?.results[0].personId).toBe('burloi-emil-andrei');
+    expect(scoreboardOfficialLinks(scoreboard!)).toEqual([{
+      label: 'official source',
+      href: 'https://euroai-official.org/2026/results/',
+      external: true
+    }]);
+  });
+
   it('keeps ONIA grade 8 guests in score order on IX-X', () => {
     const scoreboard = scoreboards.get('onia-2026-ix-x');
     const guestRows = scoreboard?.results.filter((result) => result.status === 'guest') ?? [];

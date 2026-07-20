@@ -75,6 +75,7 @@ const contestScoreboardIds: Record<string, string> = {
   'roai-2025-national-clasa-12': 'roai-2025-clasa-12',
   'roai-2025-lot-iaio': 'roai-2025-lot',
   'roai-2025-lot-ioai': 'roai-2025-lot',
+  'ceoai-2026': 'ceoai-2026-global',
   'iaio-2026': 'iaio-2026-global',
   'iaio-2024': 'iaio-2024-global',
   'ioai-2025': 'ioai-2025-individual',

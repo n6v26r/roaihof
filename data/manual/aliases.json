@@ -144,6 +144,21 @@
       "alias": "Negut Vlad",
       "canonical": "Neguț Vlad-Mihai",
       "reason": "ONIA national ranking omits the second first name and diacritic; the national participant sheet has the full name."
+    },
+    {
+      "alias": "Dedu Razvan Matei",
+      "canonical": "Dedu Răzvan-Matei",
+      "reason": "CEOAI 2026 official results omit Romanian diacritics and the first-name separator."
+    },
+    {
+      "alias": "Nicolae Luca Stefan",
+      "canonical": "Nicolae Luca-Ștefan",
+      "reason": "CEOAI 2026 official results omit Romanian diacritics and the first-name separator."
+    },
+    {
+      "alias": "Gheorghica Istrate David",
+      "canonical": "Gheorghică Istrate David",
+      "reason": "CEOAI 2026 official results omit the surname diacritic."
     }
   ]
 }

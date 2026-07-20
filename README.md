@@ -33,6 +33,7 @@ The current dataset includes:
 - ROAI 2025 national rankings and Lot IOAI/IAIO rankings
 - 2024-2025 international results from the official ONIA Hall of Fame
 - Official IOAI 2024 team scoreboard ranks/scores and IOAI 2025 individual scoreboard ranks/scores
+- Official IAIO 2024/2026 and CEOAI 2026 international results
 
 Result rows track `score`, `scoreMax`, `place`, `prize`, `medal`, and international `qualification`. Rankings are sorted by medal table, prizes, best place, selections, and international results by filter.
 

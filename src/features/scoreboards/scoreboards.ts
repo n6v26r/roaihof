@@ -66,6 +66,11 @@ export function buildScoreboards(data: Dataset): Scoreboard[] {
     add(`iaio-${year}-global`, 'IAIO', year, 'Global', 'international', 'Global', data.results.filter((result) => result.circuit === 'IAIO' && result.year === year));
   }
 
+  const ceoaiYears = Array.from(new Set(data.results.filter((result) => result.circuit === 'CEOAI').map((result) => result.year)));
+  for (const year of ceoaiYears) {
+    add(`ceoai-${year}-global`, 'CEOAI', year, 'Global', 'international', 'Global', data.results.filter((result) => result.circuit === 'CEOAI' && result.year === year));
+  }
+
   const ioaiYears = Array.from(new Set(data.results.filter((result) => result.circuit === 'IOAI').map((result) => result.year)));
   for (const year of ioaiYears) {
     const yearResults = data.results.filter((result) => result.circuit === 'IOAI' && result.year === year);

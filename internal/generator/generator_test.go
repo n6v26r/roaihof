@@ -10,11 +10,11 @@ func TestBuildDatasetCountsOfficialRows(t *testing.T) {
 	if err != nil {
 		t.Fatalf("BuildDataset: %v", err)
 	}
-	if dataset.Summary.Results != 630 {
-		t.Fatalf("results = %d, want 630 after ROAI Baraj import", dataset.Summary.Results)
+	if dataset.Summary.Results != 641 {
+		t.Fatalf("results = %d, want 641 after CEOAI 2026 import", dataset.Summary.Results)
 	}
-	if dataset.Summary.NamedResults != 630 {
-		t.Fatalf("named results = %d, want 630 after ROAI Baraj import", dataset.Summary.NamedResults)
+	if dataset.Summary.NamedResults != 641 {
+		t.Fatalf("named results = %d, want 641 after CEOAI 2026 import", dataset.Summary.NamedResults)
 	}
 	if dataset.Summary.AnonymousResults != 0 {
 		t.Fatalf("anonymous results = %d, want 0 after ONIA and ROAI 2025 recovery", dataset.Summary.AnonymousResults)
@@ -28,8 +28,8 @@ func TestBuildDatasetCountsOfficialRows(t *testing.T) {
 	if dataset.Summary.Counties != 37 {
 		t.Fatalf("counties = %d, want 37", dataset.Summary.Counties)
 	}
-	if len(dataset.Contests) != 19 {
-		t.Fatalf("contests = %d, want 19", len(dataset.Contests))
+	if len(dataset.Contests) != 20 {
+		t.Fatalf("contests = %d, want 20", len(dataset.Contests))
 	}
 	if dataset.Summary.Years[0] != 2024 || dataset.Summary.LatestYear != 2026 {
 		t.Fatalf("years = %v latest = %d", dataset.Summary.Years, dataset.Summary.LatestYear)
@@ -771,6 +771,55 @@ func TestIAIO2024OfficialResultsImported(t *testing.T) {
 	}
 }
 
+func TestCEOAI2026OfficialResultsImported(t *testing.T) {
+	dataset, err := BuildDataset("../..")
+	if err != nil {
+		t.Fatalf("BuildDataset: %v", err)
+	}
+	contest := findContest(dataset, "ceoai-2026")
+	if contest == nil {
+		t.Fatal("missing CEOAI 2026 contest")
+	}
+	if contest.Circuit != "CEOAI" || contest.Stage != "international" || contest.OfficialURL != "https://euroai-official.org/2026/results/" || contest.ResultsCount != 11 {
+		t.Fatalf("CEOAI 2026 contest = circuit %q stage %q source %q count %d, want CEOAI/international/official source/11",
+			contest.Circuit, contest.Stage, contest.OfficialURL, contest.ResultsCount)
+	}
+
+	expected := map[string]struct {
+		place int
+		score float64
+		medal string
+	}{
+		"burloi-emil-andrei":       {place: 4, score: 274, medal: "gold"},
+		"dedu-razvan-matei":        {place: 9, score: 253, medal: "silver"},
+		"ciortea-suciu-andrei":     {place: 12, score: 235, medal: "silver"},
+		"morariu-tudor":            {place: 15, score: 232, medal: "silver"},
+		"ilie-goga-radu":           {place: 16, score: 229, medal: "silver"},
+		"dobre-darius-adrian":      {place: 20, score: 218, medal: "silver"},
+		"apostol-mihnea-petru":     {place: 21, score: 211, medal: "silver"},
+		"nistor-iulian":            {place: 23, score: 206, medal: "silver"},
+		"nicolae-luca-stefan":      {place: 24, score: 205, medal: "silver"},
+		"asandei-stefan-alexandru": {place: 25, score: 204, medal: "silver"},
+		"gheorghica-istrate-david": {place: 36, score: 166, medal: "bronze"},
+	}
+	for personID, want := range expected {
+		var found Result
+		for _, result := range dataset.Results {
+			if result.ContestID == "ceoai-2026" && result.PersonID == personID {
+				found = result
+				break
+			}
+		}
+		if found.ContestID == "" {
+			t.Fatalf("missing CEOAI 2026 result for %s", personID)
+		}
+		if found.Place != want.place || found.Score != want.score || found.ScoreMax != 600 || found.Medal != want.medal || found.SourceID != "ceoai-2026-official-results" {
+			t.Fatalf("%s CEOAI 2026 = place %d score %v/%v medal %q source %q, want place %d score %v/600 medal %q official source",
+				personID, found.Place, found.Score, found.ScoreMax, found.Medal, found.SourceID, want.place, want.score, want.medal)
+		}
+	}
+}
+
 func TestEntityStatsIgnoreInternationalRepresentations(t *testing.T) {
 	dataset, err := BuildDataset("../..")
 	if err != nil {
@@ -825,8 +874,8 @@ func TestGeneratedDefaultRankingsUseInternationalCriterionAfterMergedCriteria(t 
 	if petreanIndex < 0 || ilieIndex < 0 {
 		t.Fatalf("missing Petrean/Ilie in generated people rankings: %d/%d", petreanIndex, ilieIndex)
 	}
-	if petreanIndex > ilieIndex {
-		t.Fatalf("Petrean ranking index = %d, Ilie-Goga index = %d, want Petrean first by international ranking criterion", petreanIndex, ilieIndex)
+	if ilieIndex > petreanIndex {
+		t.Fatalf("Ilie-Goga ranking index = %d, Petrean index = %d, want Ilie-Goga first by international ranking criterion", ilieIndex, petreanIndex)
 	}
 	petrean := findPerson(dataset, "petrean-roland")
 	if petrean == nil {

@@ -80,6 +80,14 @@ func BuildDataset(root string) (*Dataset, error) {
 			Checked: checked,
 		},
 		SourceStatus{
+			ID:      "ceoai-2026-official-results",
+			Title:   "CEOAI 2026 official results",
+			Status:  "ok",
+			Detail:  "Medals, total scores, and derived overall score ranks imported for the 11 Romanian-side contestants from the official CEOAI 2026 results page.",
+			URL:     "https://euroai-official.org/2026/results/",
+			Checked: "2026-07-20",
+		},
+		SourceStatus{
 			ID:      "roai-2026",
 			Title:   "ROAI 2026",
 			Status:  "ok",

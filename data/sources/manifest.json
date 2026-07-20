@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-19T17:26:30.350Z",
-  "sourceCount": 38,
-  "archivedCount": 38,
+  "generatedAt": "2026-07-20T21:09:52.000Z",
+  "sourceCount": 39,
+  "archivedCount": 39,
   "sources": [
     {
       "id": "onia-national-2026",
@@ -464,6 +464,18 @@
       "sha256": "6e096585b628f8732ee68fa1af427b851b8d05c92e9719e6e42f97d35cf57c79",
       "archivedAt": "2026-06-19T17:26:30.350Z",
       "path": "files/iaio-2024-official-results.html"
+    },
+    {
+      "id": "ceoai-2026-official-results",
+      "title": "CEOAI 2026 official results",
+      "originalUrl": "https://euroai-official.org/2026/results/",
+      "finalUrl": "https://euroai-official.org/2026/results/",
+      "statusCode": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 159543,
+      "sha256": "735f10c62cc79e5fc7131710010b115456a2739456ab11735ac1d4cda8fa7f63",
+      "archivedAt": "2026-07-20T21:09:52.000Z",
+      "path": "files/ceoai-2026-official-results.html"
     }
   ]
 }
