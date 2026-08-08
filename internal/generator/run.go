@@ -72,6 +72,14 @@ func BuildDataset(root string) (*Dataset, error) {
 			Checked: checked,
 		},
 		SourceStatus{
+			ID:      "ioai-2026-official-results",
+			Title:   "IOAI 2026 official results",
+			Status:  "ok",
+			Detail:  "Medals, total scores, and overall ranks imported for the eight Romanian contestants from the official IOAI 2026 results page.",
+			URL:     "https://ioai2026.kz/results/",
+			Checked: "2026-08-08",
+		},
+		SourceStatus{
 			ID:      "iaio-2024-official-results",
 			Title:   "IAIO 2024 official results",
 			Status:  "ok",

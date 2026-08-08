@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-20T21:09:52.000Z",
-  "sourceCount": 39,
-  "archivedCount": 39,
+  "generatedAt": "2026-08-08T20:13:57.000Z",
+  "sourceCount": 42,
+  "archivedCount": 42,
   "sources": [
     {
       "id": "onia-national-2026",
@@ -214,6 +214,30 @@
       "path": "files/roai-2026-national-xi-xii-judge.html"
     },
     {
+      "id": "roai-2026-baraj-judge",
+      "title": "ROAI 2026 Baraj judge standings",
+      "originalUrl": "https://judge.nitro-ai.org/competitions/roai-2025/baraj-nationala-2026/leaderboard/complete?participant_name=razv&page=1&page_size=100",
+      "finalUrl": "https://judge.nitro-ai.org/competitions/roai-2025/baraj-nationala-2026/leaderboard/complete?participant_name=razv&page=1&page_size=100",
+      "statusCode": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 77393,
+      "sha256": "1fe80e6595841cca04c146844579e1fdbb6c9ac2204fcf94229853b0828f662e",
+      "archivedAt": "2026-08-08T20:13:57.000Z",
+      "path": "files/roai-2026-baraj-judge.html"
+    },
+    {
+      "id": "roai-2026-qualified-lot-pdf",
+      "title": "ROAI 2026 qualified to Lot PDF",
+      "originalUrl": "https://olimpiada.nitro-ai.org/2026/onia/calificati-lot.pdf",
+      "finalUrl": "https://olimpiada.nitro-ai.org/2026/onia/calificati-lot.pdf",
+      "statusCode": 200,
+      "contentType": "application/pdf",
+      "bytes": 248649,
+      "sha256": "435f41d32a430ce556ac58bbb610d9b59e6f08a1cef16b9612dcd3d7f5c254d4",
+      "archivedAt": "2026-08-08T20:13:57.000Z",
+      "path": "files/roai-2026-qualified-lot-pdf.pdf"
+    },
+    {
       "id": "roai-2026-lot-page",
       "title": "ROAI 2026 Lot task/results page",
       "originalUrl": "https://olimpiada.nitro-ai.org/ro/2026/lot?section=tasks",
@@ -416,6 +440,34 @@
       "sha256": "cbc64ac1e22909b236d3a194dd024d7b52a79b489241c58f3dfe862804b1ffe0",
       "archivedAt": "2026-06-19T17:26:30.350Z",
       "path": "files/onia-hall-of-fame.html"
+    },
+    {
+      "id": "ioai-2026-official-results",
+      "title": "IOAI 2026 official results",
+      "originalUrl": "https://ioai2026.kz/results/",
+      "finalUrl": "https://ioai2026.kz/results/",
+      "statusCode": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 4997,
+      "sha256": "e00a423f17a8f0065b24a32e9d413a04297f35c72838a50635912b6bb6164334",
+      "archivedAt": "2026-08-08T20:09:29.000Z",
+      "path": "files/ioai-2026-official-results/index.html",
+      "companionAssets": [
+        {
+          "url": "https://ioai2026.kz/results/script.js",
+          "contentType": "text/javascript; charset=UTF-8",
+          "bytes": 6418,
+          "sha256": "9d89e714e1311086101b29e2d1d7b41525cbb3eb4d67663e3a824e8b846cb2e1",
+          "path": "files/ioai-2026-official-results/script.js"
+        },
+        {
+          "url": "https://ioai2026.kz/results/results.json",
+          "contentType": "application/json; charset=UTF-8",
+          "bytes": 148251,
+          "sha256": "ea093767b0f7e01cb6b0835a46b486007b14651c104a9108f5d0f6421dc9a646",
+          "path": "files/ioai-2026-official-results/results.json"
+        }
+      ]
     },
     {
       "id": "ioai-2025-official-results",

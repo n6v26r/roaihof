@@ -11,6 +11,11 @@
       "reason": "ONIA lot selection page uses first-name order and omits the national list order."
     },
     {
+      "alias": "Thury-Burileanu Alexandru",
+      "canonical": "Thury Burileanu Alexandru",
+      "reason": "IOAI 2026 official standings hyphenate the family name while ONIA uses the unhyphenated canonical spelling."
+    },
+    {
       "alias": "Darius-Adrian Dobre",
       "canonical": "Dobre Darius-Adrian",
       "reason": "ONIA lot selection page uses first-name order."

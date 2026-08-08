@@ -1,0 +1,7013 @@
+{
+  "title": "IOAI 2026 Final Results",
+  "tasks": [
+    "Task 1",
+    "Task 2",
+    "Task 3",
+    "Task 4",
+    "Task 5",
+    "Task 6"
+  ],
+  "tracks": {
+    "individual": {
+      "label": "Individual contest",
+      "rows": [
+        {
+          "rank": 1,
+          "name": "Artem Gorokhov",
+          "country": "Russia",
+          "tasks": [
+            88.6853,
+            51.913,
+            85.513,
+            97.2039,
+            5.1714,
+            100.0
+          ],
+          "total": 428.4866,
+          "award": "Gold + 1st Place Trophy"
+        },
+        {
+          "rank": 2,
+          "name": "Dauzhan Beketov",
+          "country": "Kazakhstan",
+          "tasks": [
+            92.4257,
+            49.6699,
+            68.0383,
+            98.3273,
+            51.2266,
+            45.8881
+          ],
+          "total": 405.5759,
+          "award": "Gold + 2nd Place Trophy"
+        },
+        {
+          "rank": 3,
+          "name": "Shao Zixi",
+          "country": "China",
+          "tasks": [
+            87.1587,
+            51.5286,
+            66.9955,
+            96.4927,
+            49.9989,
+            23.2763
+          ],
+          "total": 375.4507,
+          "award": "Gold + 3rd Place Trophy"
+        },
+        {
+          "rank": 4,
+          "name": "Michał Masny",
+          "country": "Poland",
+          "tasks": [
+            91.8538,
+            47.1705,
+            0.0,
+            95.5439,
+            91.059,
+            44.392
+          ],
+          "total": 370.0192,
+          "award": "Gold"
+        },
+        {
+          "rank": 5,
+          "name": "Kirill Labzin",
+          "country": "Russia",
+          "tasks": [
+            87.3727,
+            50.8877,
+            65.0225,
+            70.6716,
+            20.4503,
+            71.3571
+          ],
+          "total": 365.7619,
+          "award": "Gold"
+        },
+        {
+          "rank": 6,
+          "name": "Anango Dev Prabhat",
+          "country": "United Kingdom",
+          "tasks": [
+            82.2621,
+            0.0,
+            79.1995,
+            92.7878,
+            51.8919,
+            44.3111
+          ],
+          "total": 350.4524,
+          "award": "Gold"
+        },
+        {
+          "rank": 7,
+          "name": "Ian Bobrus",
+          "country": "Kyrgyzstan",
+          "tasks": [
+            83.3516,
+            50.7594,
+            45.0958,
+            92.5994,
+            42.264,
+            24.1468
+          ],
+          "total": 338.217,
+          "award": "Gold"
+        },
+        {
+          "rank": 8,
+          "name": "Nguyen Viet Trung Nhan",
+          "country": "Vietnam",
+          "tasks": [
+            68.6029,
+            86.2012,
+            22.1815,
+            93.6663,
+            25.1333,
+            38.643
+          ],
+          "total": 334.4282,
+          "award": "Gold"
+        },
+        {
+          "rank": 9,
+          "name": "Cheng Lai Yin",
+          "country": "Hong Kong",
+          "tasks": [
+            27.8418,
+            48.8368,
+            66.77,
+            93.7589,
+            65.0533,
+            24.7981
+          ],
+          "total": 327.0589,
+          "award": "Gold"
+        },
+        {
+          "rank": 10,
+          "name": "Shi Zhenghang",
+          "country": "China",
+          "tasks": [
+            83.3516,
+            0.0,
+            32.6099,
+            82.0445,
+            97.538,
+            18.0008
+          ],
+          "total": 313.5448,
+          "award": "Gold"
+        },
+        {
+          "rank": 11,
+          "name": "Krzysztof Rojek",
+          "country": "Poland",
+          "tasks": [
+            85.3987,
+            77.8056,
+            59.301,
+            69.4446,
+            1.5673,
+            19.3937
+          ],
+          "total": 312.9109,
+          "award": "Gold"
+        },
+        {
+          "rank": 12,
+          "name": "Luvidi Pranawa Alghari",
+          "country": "Indonesia",
+          "tasks": [
+            89.1274,
+            28.5201,
+            0.0,
+            95.5399,
+            36.3003,
+            62.2415
+          ],
+          "total": 311.7292,
+          "award": "Gold"
+        },
+        {
+          "rank": 13,
+          "name": "Samik Goyal",
+          "country": "India",
+          "tasks": [
+            83.3516,
+            41.8509,
+            39.2334,
+            54.1826,
+            53.4105,
+            35.7929
+          ],
+          "total": 307.8219,
+          "award": "Gold"
+        },
+        {
+          "rank": 14,
+          "name": "Mikhail Vershinin",
+          "country": "Russia",
+          "tasks": [
+            87.0911,
+            57.489,
+            11.6685,
+            86.2976,
+            44.8489,
+            19.4945
+          ],
+          "total": 306.8896,
+          "award": "Gold"
+        },
+        {
+          "rank": 15,
+          "name": "Nguyen Huu Tuan",
+          "country": "Vietnam",
+          "tasks": [
+            83.3516,
+            29.033,
+            52.3957,
+            99.0209,
+            16.787,
+            15.5589
+          ],
+          "total": 296.1471,
+          "award": "Gold"
+        },
+        {
+          "rank": 16,
+          "name": "Feodor Yevtushenko",
+          "country": "United States",
+          "tasks": [
+            11.0946,
+            47.1705,
+            75.6764,
+            100.0,
+            53.2957,
+            8.1403
+          ],
+          "total": 295.3775,
+          "award": "Gold"
+        },
+        {
+          "rank": 17,
+          "name": "Karl Teo Lovmar",
+          "country": "Sweden",
+          "tasks": [
+            88.9387,
+            62.4239,
+            57.2717,
+            75.3725,
+            0.0,
+            8.4376
+          ],
+          "total": 292.4444,
+          "award": "Gold"
+        },
+        {
+          "rank": 18,
+          "name": "Nikita Pudovkin",
+          "country": "Russia",
+          "tasks": [
+            8.6643,
+            32.7502,
+            50.5073,
+            87.1506,
+            100.0,
+            12.7611
+          ],
+          "total": 291.8335,
+          "award": "Gold"
+        },
+        {
+          "rank": 19,
+          "name": "Thury-Burileanu Alexandru",
+          "country": "Romania",
+          "tasks": [
+            83.3516,
+            49.4777,
+            75.0846,
+            8.1935,
+            39.3064,
+            32.2331
+          ],
+          "total": 287.6469,
+          "award": "Gold"
+        },
+        {
+          "rank": 20,
+          "name": "Petrean Roland",
+          "country": "Romania",
+          "tasks": [
+            93.7665,
+            58.7067,
+            0.0,
+            52.9169,
+            36.369,
+            40.4877
+          ],
+          "total": 282.2468,
+          "award": "Gold"
+        },
+        {
+          "rank": 21,
+          "name": "Semen Rodionov",
+          "country": "Russia",
+          "tasks": [
+            90.1153,
+            0.0,
+            33.7373,
+            87.1331,
+            32.1725,
+            35.835
+          ],
+          "total": 278.9932,
+          "award": "Gold"
+        },
+        {
+          "rank": 22,
+          "name": "Hong Ze",
+          "country": "China",
+          "tasks": [
+            82.4069,
+            14.3564,
+            36.4149,
+            92.9073,
+            2.0328,
+            43.2171
+          ],
+          "total": 271.3354,
+          "award": "Gold"
+        },
+        {
+          "rank": 23,
+          "name": "Alexander Povarov",
+          "country": "Russia",
+          "tasks": [
+            0.0,
+            49.2214,
+            0.0,
+            94.5583,
+            92.6254,
+            33.1059
+          ],
+          "total": 269.511,
+          "award": "Gold"
+        },
+        {
+          "rank": 24,
+          "name": "Xi Fanglong",
+          "country": "China",
+          "tasks": [
+            83.3516,
+            50.8235,
+            41.4882,
+            55.2771,
+            12.8349,
+            25.2018
+          ],
+          "total": 268.9771,
+          "award": "Gold"
+        },
+        {
+          "rank": 25,
+          "name": "Shayan Rezazadeh",
+          "country": "Iran",
+          "tasks": [
+            8.1082,
+            53.6435,
+            51.4938,
+            88.2167,
+            50.7856,
+            15.5589
+          ],
+          "total": 267.8067,
+          "award": "Gold"
+        },
+        {
+          "rank": 26,
+          "name": "Nikoloz Gegenava",
+          "country": "Georgia",
+          "tasks": [
+            12.3288,
+            34.865,
+            11.6685,
+            92.9063,
+            72.5599,
+            33.1861
+          ],
+          "total": 257.5146,
+          "award": "Gold"
+        },
+        {
+          "rank": 27,
+          "name": "Elisei Kirpichenko",
+          "country": "Russia",
+          "tasks": [
+            14.3597,
+            29.033,
+            0.0,
+            87.8576,
+            88.0192,
+            38.141
+          ],
+          "total": 257.4105,
+          "award": "Gold"
+        },
+        {
+          "rank": 28,
+          "name": "Zane Kumar",
+          "country": "United Kingdom",
+          "tasks": [
+            83.3516,
+            50.9518,
+            0.0,
+            80.5972,
+            3.5696,
+            33.1236
+          ],
+          "total": 251.5938,
+          "award": "Gold"
+        },
+        {
+          "rank": 29,
+          "name": "Haoxuan Zhang",
+          "country": "Sweden",
+          "tasks": [
+            12.9285,
+            11.9208,
+            33.8782,
+            81.8895,
+            73.5716,
+            37.1193
+          ],
+          "total": 251.3079,
+          "award": "Gold"
+        },
+        {
+          "rank": 30,
+          "name": "Zhang Renze",
+          "country": "China",
+          "tasks": [
+            83.3516,
+            42.684,
+            3.8613,
+            22.0191,
+            83.6866,
+            14.6259
+          ],
+          "total": 250.2285,
+          "award": "Gold"
+        },
+        {
+          "rank": 31,
+          "name": "Zhang Jerry Li",
+          "country": "United States",
+          "tasks": [
+            83.3516,
+            39.6719,
+            0.0,
+            91.6006,
+            0.5779,
+            34.4279
+          ],
+          "total": 249.6299,
+          "award": "Gold"
+        },
+        {
+          "rank": 32,
+          "name": "Mikołaj Źrałek",
+          "country": "Poland",
+          "tasks": [
+            0.0,
+            31.5966,
+            17.1928,
+            95.3135,
+            58.8052,
+            43.4073
+          ],
+          "total": 246.3154,
+          "award": "Gold"
+        },
+        {
+          "rank": 33,
+          "name": "Sultanbi Issatay",
+          "country": "Kazakhstan",
+          "tasks": [
+            0.0,
+            35.2496,
+            26.9729,
+            91.4893,
+            88.1233,
+            0.0
+          ],
+          "total": 241.8351,
+          "award": "Gold"
+        },
+        {
+          "rank": 34,
+          "name": "Tomasz Kuczko",
+          "country": "Poland",
+          "tasks": [
+            0.0,
+            55.1176,
+            0.0,
+            82.6081,
+            70.4666,
+            32.0112
+          ],
+          "total": 240.2035,
+          "award": "Gold"
+        },
+        {
+          "rank": 35,
+          "name": "Giorgi Maisuradze",
+          "country": "Georgia",
+          "tasks": [
+            0.0,
+            74.665,
+            31.9899,
+            84.1645,
+            17.0379,
+            25.5418
+          ],
+          "total": 233.3991,
+          "award": "Gold"
+        },
+        {
+          "rank": 36,
+          "name": "Georgescu David",
+          "country": "Romania",
+          "tasks": [
+            83.3516,
+            70.5634,
+            32.8072,
+            16.6423,
+            0.0,
+            25.6221
+          ],
+          "total": 228.9866,
+          "award": "Gold"
+        },
+        {
+          "rank": 37,
+          "name": "Wang Enrun Matthias",
+          "country": "Singapore",
+          "tasks": [
+            8.2807,
+            53.8359,
+            35.5693,
+            82.011,
+            3.2579,
+            39.5504
+          ],
+          "total": 222.5052,
+          "award": "Gold"
+        },
+        {
+          "rank": 38,
+          "name": "Antoni Ingorokva",
+          "country": "Georgia",
+          "tasks": [
+            0.0,
+            45.0554,
+            14.5716,
+            91.1778,
+            40.5568,
+            29.6431
+          ],
+          "total": 221.0047,
+          "award": "Silver"
+        },
+        {
+          "rank": 39,
+          "name": "Popescu Alin",
+          "country": "Moldova",
+          "tasks": [
+            85.1764,
+            52.4259,
+            5.2706,
+            42.2459,
+            21.0976,
+            14.2044
+          ],
+          "total": 220.4208,
+          "award": "Silver"
+        },
+        {
+          "rank": 40,
+          "name": "Ihor Kolisnyk",
+          "country": "Sweden",
+          "tasks": [
+            77.6239,
+            47.6832,
+            3.8613,
+            88.4542,
+            0.0,
+            0.0
+          ],
+          "total": 217.6226,
+          "award": "Silver"
+        },
+        {
+          "rank": 41,
+          "name": "Lepp Kristjan",
+          "country": "Estonia",
+          "tasks": [
+            81.278,
+            0.0,
+            41.4882,
+            78.5152,
+            0.0,
+            16.0685
+          ],
+          "total": 217.3499,
+          "award": "Silver"
+        },
+        {
+          "rank": 42,
+          "name": "Zhu Bryan Rui",
+          "country": "United States",
+          "tasks": [
+            0.0,
+            40.9536,
+            13.2469,
+            93.9338,
+            50.3537,
+            17.0183
+          ],
+          "total": 215.5063,
+          "award": "Silver"
+        },
+        {
+          "rank": 43,
+          "name": "Soham Sen",
+          "country": "India",
+          "tasks": [
+            15.7747,
+            37.6852,
+            0.0,
+            49.1588,
+            60.2142,
+            50.0218
+          ],
+          "total": 212.8547,
+          "award": "Silver"
+        },
+        {
+          "rank": 44,
+          "name": "Hung Chun-Jui",
+          "country": "Chinese Taipei",
+          "tasks": [
+            81.278,
+            23.9697,
+            15.4171,
+            45.7223,
+            30.2982,
+            13.9584
+          ],
+          "total": 210.6437,
+          "award": "Silver"
+        },
+        {
+          "rank": 45,
+          "name": "Mak Chon Hei",
+          "country": "Macau",
+          "tasks": [
+            0.0,
+            59.6679,
+            0.0,
+            87.3881,
+            50.62,
+            12.2949
+          ],
+          "total": 209.9709,
+          "award": "Silver"
+        },
+        {
+          "rank": 46,
+          "name": "Tédi Bálint",
+          "country": "Hungary",
+          "tasks": [
+            5.6302,
+            46.081,
+            0.0,
+            93.4113,
+            41.0321,
+            20.9461
+          ],
+          "total": 207.1007,
+          "award": "Silver"
+        },
+        {
+          "rank": 47,
+          "name": "Wen En-Han",
+          "country": "Chinese Taipei",
+          "tasks": [
+            85.6463,
+            11.9208,
+            75.5355,
+            20.4828,
+            0.0,
+            7.1001
+          ],
+          "total": 200.6855,
+          "award": "Silver"
+        },
+        {
+          "rank": 48,
+          "name": "Abu Kanabek",
+          "country": "Kazakhstan",
+          "tasks": [
+            0.0,
+            47.619,
+            0.5637,
+            39.9415,
+            78.6344,
+            33.82
+          ],
+          "total": 200.5786,
+          "award": "Silver"
+        },
+        {
+          "rank": 49,
+          "name": "Fan Tingxuan",
+          "country": "China",
+          "tasks": [
+            0.0,
+            17.048,
+            0.0,
+            87.1506,
+            79.7758,
+            14.4037
+          ],
+          "total": 198.3781,
+          "award": "Silver"
+        },
+        {
+          "rank": 50,
+          "name": "Kishan Balamurugan",
+          "country": "Singapore",
+          "tasks": [
+            0.0,
+            41.8509,
+            0.0,
+            96.5467,
+            14.2541,
+            43.5
+          ],
+          "total": 196.1517,
+          "award": "Silver"
+        },
+        {
+          "rank": 51,
+          "name": "Marcel Kosmala",
+          "country": "Poland",
+          "tasks": [
+            35.7625,
+            20.3808,
+            23.3089,
+            87.2887,
+            0.0,
+            27.1325
+          ],
+          "total": 193.8734,
+          "award": "Silver"
+        },
+        {
+          "rank": 52,
+          "name": "Yousef Fareed Alkhalawi",
+          "country": "Saudi Arabia",
+          "tasks": [
+            11.0946,
+            46.9142,
+            0.0,
+            15.3621,
+            92.8716,
+            20.1714
+          ],
+          "total": 186.4139,
+          "award": "Silver"
+        },
+        {
+          "rank": 53,
+          "name": "Michał Karp",
+          "country": "Poland",
+          "tasks": [
+            0.0,
+            42.6201,
+            0.0,
+            97.5916,
+            0.0,
+            33.8513
+          ],
+          "total": 174.063,
+          "award": "Silver"
+        },
+        {
+          "rank": 54,
+          "name": "Mohamed Alaa Eddine Khelifi",
+          "country": "Algeria",
+          "tasks": [
+            0.0,
+            0.0,
+            48.3089,
+            82.1123,
+            3.4132,
+            38.3339
+          ],
+          "total": 172.1683,
+          "award": "Silver"
+        },
+        {
+          "rank": 55,
+          "name": "Dimitrije Atanaskovic",
+          "country": "Serbia",
+          "tasks": [
+            84.7704,
+            0.0,
+            21.1105,
+            25.6036,
+            0.0,
+            40.5161
+          ],
+          "total": 172.0006,
+          "award": "Silver"
+        },
+        {
+          "rank": 56,
+          "name": "Miguel Cyrineu Vale",
+          "country": "Brazil",
+          "tasks": [
+            0.0,
+            39.0951,
+            56.7926,
+            20.4828,
+            26.4588,
+            28.2721
+          ],
+          "total": 171.1014,
+          "award": "Silver"
+        },
+        {
+          "rank": 57,
+          "name": "Liu Dale Ansheng",
+          "country": "United States",
+          "tasks": [
+            9.0571,
+            0.0,
+            52.7057,
+            7.169,
+            94.0078,
+            7.5585
+          ],
+          "total": 170.4981,
+          "award": "Silver"
+        },
+        {
+          "rank": 58,
+          "name": "Arjun Tyagi",
+          "country": "India",
+          "tasks": [
+            0.0,
+            68.5767,
+            0.3382,
+            11.0095,
+            47.7993,
+            39.0533
+          ],
+          "total": 166.777,
+          "award": "Silver"
+        },
+        {
+          "rank": 59,
+          "name": "Israël Matan",
+          "country": "France",
+          "tasks": [
+            11.0946,
+            11.9208,
+            42.1082,
+            8.1931,
+            71.281,
+            22.0177
+          ],
+          "total": 166.6154,
+          "award": "Silver"
+        },
+        {
+          "rank": 60,
+          "name": "Stoica Mihnea-Teodor",
+          "country": "Romania",
+          "tasks": [
+            7.4911,
+            46.5937,
+            45.2368,
+            21.763,
+            0.0,
+            44.6787
+          ],
+          "total": 165.7633,
+          "award": "Silver"
+        },
+        {
+          "rank": 61,
+          "name": "Chintan Bhat",
+          "country": "India",
+          "tasks": [
+            83.3516,
+            47.2985,
+            12.3732,
+            21.2509,
+            1.1276,
+            0.0
+          ],
+          "total": 165.4018,
+          "award": "Silver"
+        },
+        {
+          "rank": 62,
+          "name": "Alem Amenov",
+          "country": "Kazakhstan",
+          "tasks": [
+            12.8372,
+            48.3883,
+            33.8782,
+            19.4587,
+            35.3807,
+            13.8959
+          ],
+          "total": 163.839,
+          "award": "Silver"
+        },
+        {
+          "rank": 63,
+          "name": "Mohammad Reza Darvishi",
+          "country": "Iran",
+          "tasks": [
+            6.9121,
+            0.0,
+            27.3957,
+            81.481,
+            0.0,
+            46.2662
+          ],
+          "total": 162.055,
+          "award": "Silver"
+        },
+        {
+          "rank": 64,
+          "name": "Semenov Henri-Alexander Spencer",
+          "country": "Spain",
+          "tasks": [
+            70.9332,
+            7.819,
+            49.7182,
+            16.6423,
+            2.2509,
+            13.2738
+          ],
+          "total": 160.6374,
+          "award": "Silver"
+        },
+        {
+          "rank": 65,
+          "name": "Matthew Hutama Pramana",
+          "country": "Indonesia",
+          "tasks": [
+            0.0,
+            46.5295,
+            46.8997,
+            18.4346,
+            4.9857,
+            43.5264
+          ],
+          "total": 160.3759,
+          "award": "Silver"
+        },
+        {
+          "rank": 66,
+          "name": "Yang Qifei",
+          "country": "China",
+          "tasks": [
+            0.0,
+            50.1187,
+            53.6922,
+            36.8691,
+            0.0,
+            19.0449
+          ],
+          "total": 159.7249,
+          "award": "Silver"
+        },
+        {
+          "rank": 67,
+          "name": "Martin Nedkov Nedev",
+          "country": "Bulgaria",
+          "tasks": [
+            83.3516,
+            29.4174,
+            0.0,
+            21.2509,
+            0.0,
+            24.7234
+          ],
+          "total": 158.7433,
+          "award": "Silver"
+        },
+        {
+          "rank": 68,
+          "name": "Jakub Ptaszkiewicz",
+          "country": "Poland",
+          "tasks": [
+            0.0,
+            53.5154,
+            0.0,
+            82.6302,
+            0.0,
+            15.5589
+          ],
+          "total": 151.7045,
+          "award": "Silver"
+        },
+        {
+          "rank": 69,
+          "name": "Simon Harry Kasper Persson Holm",
+          "country": "Sweden",
+          "tasks": [
+            11.0946,
+            77.6774,
+            40.7272,
+            18.9466,
+            0.0,
+            3.1534
+          ],
+          "total": 151.5992,
+          "award": "Silver"
+        },
+        {
+          "rank": 70,
+          "name": "Ayaan Erik Bari Wolvén",
+          "country": "Sweden",
+          "tasks": [
+            0.9505,
+            22.6881,
+            32.2435,
+            21.2509,
+            50.4375,
+            23.862
+          ],
+          "total": 151.4325,
+          "award": "Silver"
+        },
+        {
+          "rank": 71,
+          "name": "Teoman Ata Korkmaz",
+          "country": "Turkey",
+          "tasks": [
+            60.7266,
+            0.0,
+            20.0113,
+            10.2414,
+            36.4347,
+            21.2698
+          ],
+          "total": 148.6838,
+          "award": "Silver"
+        },
+        {
+          "rank": 72,
+          "name": "Schleret Swan",
+          "country": "France",
+          "tasks": [
+            0.0,
+            41.915,
+            0.0,
+            93.7044,
+            0.0,
+            11.9325
+          ],
+          "total": 147.5519,
+          "award": "Silver"
+        },
+        {
+          "rank": 73,
+          "name": "Ungár Vince",
+          "country": "Hungary",
+          "tasks": [
+            11.0946,
+            25.8926,
+            0.0,
+            89.693,
+            0.0,
+            17.9025
+          ],
+          "total": 144.5827,
+          "award": "Silver"
+        },
+        {
+          "rank": 74,
+          "name": "Mohammad Amin Nazmfar",
+          "country": "Iran",
+          "tasks": [
+            0.0,
+            52.4898,
+            0.0,
+            20.7389,
+            22.8511,
+            46.0152
+          ],
+          "total": 142.095,
+          "award": "Silver"
+        },
+        {
+          "rank": 75,
+          "name": "Anton Edwin Aronsson",
+          "country": "Sweden",
+          "tasks": [
+            0.0,
+            45.3118,
+            18.7148,
+            76.8837,
+            0.0,
+            0.0
+          ],
+          "total": 140.9103,
+          "award": "Silver"
+        },
+        {
+          "rank": 76,
+          "name": "Daniel Mineev",
+          "country": "Norway",
+          "tasks": [
+            0.0,
+            28.7125,
+            0.0,
+            92.9433,
+            0.0,
+            17.8599
+          ],
+          "total": 139.5157,
+          "award": "Silver"
+        },
+        {
+          "rank": 77,
+          "name": "Sabyr Alymbekov",
+          "country": "Kyrgyzstan",
+          "tasks": [
+            0.0,
+            34.737,
+            16.4882,
+            87.0923,
+            0.0,
+            0.0
+          ],
+          "total": 138.3175,
+          "award": "Silver"
+        },
+        {
+          "rank": 78,
+          "name": "Nicholas Ardi Tirta",
+          "country": "Indonesia",
+          "tasks": [
+            0.0,
+            40.8256,
+            0.0,
+            93.8486,
+            0.0,
+            3.0098
+          ],
+          "total": 137.684,
+          "award": "Silver"
+        },
+        {
+          "rank": 79,
+          "name": "Nikoloz Kipshidze",
+          "country": "Georgia",
+          "tasks": [
+            5.5539,
+            18.1375,
+            48.6189,
+            23.5553,
+            0.0,
+            41.2402
+          ],
+          "total": 137.1058,
+          "award": "Silver"
+        },
+        {
+          "rank": 80,
+          "name": "Theo Lorenzo Tardecilla Bustamante",
+          "country": "Philippines",
+          "tasks": [
+            0.0,
+            61.2062,
+            3.8613,
+            51.2071,
+            0.0,
+            18.3781
+          ],
+          "total": 134.6527,
+          "award": "Silver"
+        },
+        {
+          "rank": 81,
+          "name": "Georgios Tzovairis",
+          "country": "Greece",
+          "tasks": [
+            7.8988,
+            0.0,
+            17.8129,
+            61.006,
+            3.2579,
+            42.8332
+          ],
+          "total": 132.8088,
+          "award": "Silver"
+        },
+        {
+          "rank": 82,
+          "name": "Yuldoshkhujaev Bilolbek Sardor Ugli",
+          "country": "Uzbekistan",
+          "tasks": [
+            0.0,
+            34.737,
+            0.0,
+            82.1123,
+            0.0,
+            15.913
+          ],
+          "total": 132.7623,
+          "award": "Silver"
+        },
+        {
+          "rank": 83,
+          "name": "Theodoros Sarras",
+          "country": "Greece",
+          "tasks": [
+            0.0,
+            0.0,
+            19.0248,
+            91.6038,
+            3.2805,
+            16.9474
+          ],
+          "total": 130.8565,
+          "award": "Silver"
+        },
+        {
+          "rank": 84,
+          "name": "Chan Cary Sirui",
+          "country": "Hong Kong",
+          "tasks": [
+            88.7322,
+            19.6757,
+            0.0,
+            9.4733,
+            0.0,
+            11.9746
+          ],
+          "total": 129.8558,
+          "award": "Silver"
+        },
+        {
+          "rank": 85,
+          "name": "Roumak Das",
+          "country": "India",
+          "tasks": [
+            12.2906,
+            13.3949,
+            31.9899,
+            57.5786,
+            3.2579,
+            9.3658
+          ],
+          "total": 127.8777,
+          "award": "Silver"
+        },
+        {
+          "rank": 86,
+          "name": "Tomàs Lázaro Danoni Mazurek",
+          "country": "Spain",
+          "tasks": [
+            82.691,
+            0.0,
+            10.0056,
+            21.2509,
+            0.0,
+            12.5866
+          ],
+          "total": 126.5341,
+          "award": "Silver"
+        },
+        {
+          "rank": 87,
+          "name": "Miao Ruichen",
+          "country": "Singapore",
+          "tasks": [
+            0.0,
+            0.0,
+            57.2717,
+            20.7389,
+            1.1305,
+            45.8518
+          ],
+          "total": 124.9929,
+          "award": "Silver"
+        },
+        {
+          "rank": 88,
+          "name": "Ahmet Alp Orakçı",
+          "country": "Turkey",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            87.1835,
+            0.0,
+            37.4205
+          ],
+          "total": 124.604,
+          "award": "Silver"
+        },
+        {
+          "rank": 89,
+          "name": "Filip Kilibarda",
+          "country": "Serbia",
+          "tasks": [
+            15.5864,
+            0.0,
+            33.54,
+            4.8647,
+            18.4156,
+            50.8869
+          ],
+          "total": 123.2936,
+          "award": "Silver"
+        },
+        {
+          "rank": 90,
+          "name": "Sasuke Kondo",
+          "country": "Japan",
+          "tasks": [
+            0.0,
+            69.1535,
+            0.0,
+            6.6569,
+            0.0,
+            46.3263
+          ],
+          "total": 122.1367,
+          "award": "Silver"
+        },
+        {
+          "rank": 91,
+          "name": "Lee Jehan",
+          "country": "South Korea",
+          "tasks": [
+            12.0849,
+            0.0,
+            47.1251,
+            21.2509,
+            31.5672,
+            8.0246
+          ],
+          "total": 120.0527,
+          "award": "Silver"
+        },
+        {
+          "rank": 92,
+          "name": "Ernest Tan Jia Teng",
+          "country": "Singapore",
+          "tasks": [
+            0.0,
+            36.3391,
+            32.2717,
+            16.3863,
+            15.7996,
+            17.8425
+          ],
+          "total": 118.6392,
+          "award": "Silver"
+        },
+        {
+          "rank": 93,
+          "name": "Lee Yan Zee",
+          "country": "Malaysia",
+          "tasks": [
+            9.5216,
+            20.1245,
+            0.0,
+            86.2965,
+            2.2098,
+            0.4414
+          ],
+          "total": 118.5938,
+          "award": "Silver"
+        },
+        {
+          "rank": 94,
+          "name": "Nguyen Anh Hung",
+          "country": "Vietnam",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            19.9708,
+            82.5858,
+            15.6422
+          ],
+          "total": 118.1988,
+          "award": "Silver"
+        },
+        {
+          "rank": 95,
+          "name": "Cheung Che Wah Joshua",
+          "country": "Hong Kong",
+          "tasks": [
+            0.0,
+            0.0,
+            11.0485,
+            92.0869,
+            1.0192,
+            13.0577
+          ],
+          "total": 117.2123,
+          "award": "Silver"
+        },
+        {
+          "rank": 96,
+          "name": "Savyasachi Singh",
+          "country": "India",
+          "tasks": [
+            11.0946,
+            43.9018,
+            34.1037,
+            0.0,
+            0.0,
+            24.7234
+          ],
+          "total": 113.8235,
+          "award": "Silver"
+        },
+        {
+          "rank": 97,
+          "name": "Wang Hong-Min",
+          "country": "Chinese Taipei",
+          "tasks": [
+            83.3516,
+            23.9056,
+            0.0,
+            4.8647,
+            1.4409,
+            0.0
+          ],
+          "total": 113.5628,
+          "award": "Silver"
+        },
+        {
+          "rank": 98,
+          "name": "Tessé Malo",
+          "country": "France",
+          "tasks": [
+            2.6973,
+            0.0,
+            0.0,
+            82.2518,
+            0.0,
+            28.5824
+          ],
+          "total": 113.5315,
+          "award": "Silver"
+        },
+        {
+          "rank": 99,
+          "name": "Mate Rekhviashvili",
+          "country": "Georgia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            96.9017,
+            0.0,
+            16.3135
+          ],
+          "total": 113.2152,
+          "award": "Silver"
+        },
+        {
+          "rank": 100,
+          "name": "Dobre Darius-Adrian",
+          "country": "Romania",
+          "tasks": [
+            0.0,
+            0.0,
+            39.7125,
+            16.6423,
+            40.9723,
+            15.5589
+          ],
+          "total": 112.886,
+          "award": "Silver"
+        },
+        {
+          "rank": 101,
+          "name": "Mustafa Selim Özekinci",
+          "country": "Turkey",
+          "tasks": [
+            0.0,
+            3.5892,
+            50.9301,
+            19.2027,
+            14.4822,
+            24.414
+          ],
+          "total": 112.6182,
+          "award": "Silver"
+        },
+        {
+          "rank": 102,
+          "name": "Andrea Rosso",
+          "country": "Italy",
+          "tasks": [
+            0.0,
+            0.0,
+            25.3382,
+            21.2509,
+            42.8939,
+            23.051
+          ],
+          "total": 112.534,
+          "award": "Silver"
+        },
+        {
+          "rank": 103,
+          "name": "Jan Herza",
+          "country": "Czechia",
+          "tasks": [
+            0.0,
+            22.8161,
+            0.0,
+            0.0,
+            47.1669,
+            39.5984
+          ],
+          "total": 109.5814,
+          "award": "Silver"
+        },
+        {
+          "rank": 104,
+          "name": "Tsimur Siuko",
+          "country": "Belarus",
+          "tasks": [
+            0.3305,
+            49.6699,
+            0.1127,
+            20.9949,
+            18.644,
+            19.7448
+          ],
+          "total": 109.4968,
+          "award": "Silver"
+        },
+        {
+          "rank": 105,
+          "name": "Kamal Alfaker",
+          "country": "Syria",
+          "tasks": [
+            0.0,
+            41.9792,
+            4.7632,
+            22.5311,
+            3.0302,
+            36.7776
+          ],
+          "total": 109.0813,
+          "award": "Silver"
+        },
+        {
+          "rank": 106,
+          "name": "Kaden R Wu",
+          "country": "United States",
+          "tasks": [
+            0.0,
+            31.3402,
+            0.1127,
+            60.1703,
+            0.0,
+            15.5878
+          ],
+          "total": 107.211,
+          "award": "Silver"
+        },
+        {
+          "rank": 107,
+          "name": "Liu Richie Tiancheng",
+          "country": "New Zealand",
+          "tasks": [
+            89.2601,
+            5.4476,
+            5.3269,
+            3.0754,
+            3.2579,
+            0.0
+          ],
+          "total": 106.3679,
+          "award": "Silver"
+        },
+        {
+          "rank": 108,
+          "name": "Maksym Kaminskyi",
+          "country": "Poland",
+          "tasks": [
+            0.0,
+            61.5266,
+            0.0,
+            0.0,
+            0.0,
+            44.301
+          ],
+          "total": 105.8276,
+          "award": "Silver"
+        },
+        {
+          "rank": 109,
+          "name": "Zhang Yichen",
+          "country": "China",
+          "tasks": [
+            0.0,
+            18.8426,
+            11.133,
+            18.1785,
+            49.2099,
+            7.9441
+          ],
+          "total": 105.3081,
+          "award": "Silver"
+        },
+        {
+          "rank": 110,
+          "name": "Andris Jānis Rozenbergs",
+          "country": "Latvia",
+          "tasks": [
+            11.8415,
+            11.9208,
+            69.0248,
+            1.2802,
+            0.0,
+            10.5705
+          ],
+          "total": 104.6378,
+          "award": "Silver"
+        },
+        {
+          "rank": 111,
+          "name": "Aadvik Jain",
+          "country": "India",
+          "tasks": [
+            1.4183,
+            57.9375,
+            0.0,
+            21.2509,
+            1.3739,
+            21.9508
+          ],
+          "total": 103.9314,
+          "award": "Bronze"
+        },
+        {
+          "rank": 112,
+          "name": "Aleksei Kolegov",
+          "country": "Russia",
+          "tasks": [
+            12.3445,
+            39.9283,
+            26.212,
+            0.256,
+            0.0,
+            23.6456
+          ],
+          "total": 102.3864,
+          "award": "Bronze"
+        },
+        {
+          "rank": 113,
+          "name": "Yan Kang-Yu",
+          "country": "Chinese Taipei",
+          "tasks": [
+            0.0,
+            0.3846,
+            2.8185,
+            91.3235,
+            0.0,
+            6.8721
+          ],
+          "total": 101.3987,
+          "award": "Bronze"
+        },
+        {
+          "rank": 114,
+          "name": "Mani Monji Pour",
+          "country": "Iran",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            67.7216,
+            0.0,
+            31.4335
+          ],
+          "total": 99.1551,
+          "award": "Bronze"
+        },
+        {
+          "rank": 115,
+          "name": "Wang Yicheng",
+          "country": "New Zealand",
+          "tasks": [
+            5.3528,
+            32.6219,
+            20.2931,
+            0.256,
+            1.6427,
+            38.8596
+          ],
+          "total": 99.0261,
+          "award": "Bronze"
+        },
+        {
+          "rank": 116,
+          "name": "Matthew Lloyd Williams",
+          "country": "Jamaica",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            24.3234,
+            64.8456,
+            9.0319
+          ],
+          "total": 98.2009,
+          "award": "Bronze"
+        },
+        {
+          "rank": 117,
+          "name": "Phan Dinh Triet",
+          "country": "Vietnam",
+          "tasks": [
+            7.5939,
+            25.5721,
+            16.2627,
+            8.7052,
+            0.0,
+            39.0411
+          ],
+          "total": 97.175,
+          "award": "Bronze"
+        },
+        {
+          "rank": 118,
+          "name": "Patapati Santosh Varma",
+          "country": "United States",
+          "tasks": [
+            0.0,
+            25.9565,
+            0.0,
+            55.5772,
+            14.1577,
+            0.0
+          ],
+          "total": 95.6914,
+          "award": "Bronze"
+        },
+        {
+          "rank": 119,
+          "name": "Juan Mateo Jarantilla Desuasido",
+          "country": "Philippines",
+          "tasks": [
+            83.3516,
+            1.6024,
+            4.7069,
+            0.0,
+            2.1304,
+            2.5113
+          ],
+          "total": 94.3026,
+          "award": "Bronze"
+        },
+        {
+          "rank": 120,
+          "name": "Samuele Benassai",
+          "country": "Italy",
+          "tasks": [
+            69.8828,
+            0.0,
+            0.0,
+            19.9708,
+            0.0,
+            4.2752
+          ],
+          "total": 94.1288,
+          "award": "Bronze"
+        },
+        {
+          "rank": 121,
+          "name": "Fabrizio Giacomi",
+          "country": "Italy",
+          "tasks": [
+            9.5543,
+            0.0,
+            39.8816,
+            15.1061,
+            16.1813,
+            12.6927
+          ],
+          "total": 93.416,
+          "award": "Bronze"
+        },
+        {
+          "rank": 122,
+          "name": "Harcel Octavian",
+          "country": "Moldova",
+          "tasks": [
+            5.4531,
+            0.0,
+            0.0,
+            20.4828,
+            47.6351,
+            19.6753
+          ],
+          "total": 93.2463,
+          "award": "Bronze"
+        },
+        {
+          "rank": 123,
+          "name": "Ali Ayman Alkhabbaz",
+          "country": "Saudi Arabia",
+          "tasks": [
+            9.5543,
+            28.8406,
+            4.3687,
+            24.0673,
+            1.4082,
+            24.7234
+          ],
+          "total": 92.9625,
+          "award": "Bronze"
+        },
+        {
+          "rank": 124,
+          "name": "Zhanibek Kassymkan",
+          "country": "Kazakhstan",
+          "tasks": [
+            12.1165,
+            4.8708,
+            0.0,
+            0.0,
+            69.3843,
+            5.0393
+          ],
+          "total": 91.4109,
+          "award": "Bronze"
+        },
+        {
+          "rank": 125,
+          "name": "Huang Pin-Hsun",
+          "country": "Chinese Taipei",
+          "tasks": [
+            0.0,
+            37.621,
+            0.0,
+            21.2509,
+            6.3285,
+            25.7355
+          ],
+          "total": 90.9359,
+          "award": "Bronze"
+        },
+        {
+          "rank": 126,
+          "name": "Ido Kfir",
+          "country": "Israel",
+          "tasks": [
+            0.0,
+            0.0,
+            24.1545,
+            66.6864,
+            0.0,
+            0.0
+          ],
+          "total": 90.8409,
+          "award": "Bronze"
+        },
+        {
+          "rank": 127,
+          "name": "Llúria Torras Arcusa",
+          "country": "Spain",
+          "tasks": [
+            0.0,
+            19.0348,
+            0.0,
+            16.3863,
+            17.2014,
+            36.2988
+          ],
+          "total": 88.9213,
+          "award": "Bronze"
+        },
+        {
+          "rank": 128,
+          "name": "Kai Masujima",
+          "country": "Japan",
+          "tasks": [
+            11.0946,
+            0.0,
+            12.3732,
+            16.6423,
+            6.3784,
+            41.3148
+          ],
+          "total": 87.8033,
+          "award": "Bronze"
+        },
+        {
+          "rank": 129,
+          "name": "Le Minh Quan",
+          "country": "Vietnam",
+          "tasks": [
+            0.0,
+            26.9821,
+            13.0778,
+            10.2414,
+            0.0,
+            36.9428
+          ],
+          "total": 87.2441,
+          "award": "Bronze"
+        },
+        {
+          "rank": 130,
+          "name": "Entela Mirena",
+          "country": "Kosovo",
+          "tasks": [
+            83.3516,
+            0.0,
+            0.0,
+            0.0,
+            3.2579,
+            0.0
+          ],
+          "total": 86.6095,
+          "award": "Bronze"
+        },
+        {
+          "rank": 131,
+          "name": "Avner Maxwell Lim",
+          "country": "Indonesia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            18.6906,
+            23.2845,
+            43.5704
+          ],
+          "total": 85.5455,
+          "award": "Bronze"
+        },
+        {
+          "rank": 132,
+          "name": "George Yazaji",
+          "country": "Syria",
+          "tasks": [
+            0.0,
+            0.0,
+            34.301,
+            20.9949,
+            0.8789,
+            29.0541
+          ],
+          "total": 85.2289,
+          "award": "Bronze"
+        },
+        {
+          "rank": 133,
+          "name": "Jhareign Segura Solidum",
+          "country": "Philippines",
+          "tasks": [
+            0.0,
+            21.4062,
+            0.0,
+            21.2509,
+            5.189,
+            37.0352
+          ],
+          "total": 84.8813,
+          "award": "Bronze"
+        },
+        {
+          "rank": 134,
+          "name": "Umirzok Ochilov Askarjon Ugli",
+          "country": "Uzbekistan",
+          "tasks": [
+            0.0,
+            25.636,
+            0.0,
+            2.8164,
+            55.7136,
+            0.0
+          ],
+          "total": 84.166,
+          "award": "Bronze"
+        },
+        {
+          "rank": 135,
+          "name": "Ulugbek Osmanov",
+          "country": "Kazakhstan",
+          "tasks": [
+            0.0,
+            29.4174,
+            0.0,
+            16.6423,
+            0.0,
+            37.7646
+          ],
+          "total": 83.8243,
+          "award": "Bronze"
+        },
+        {
+          "rank": 136,
+          "name": "Erkhes Unentugs",
+          "country": "Mongolia",
+          "tasks": [
+            0.0,
+            0.0,
+            18.0947,
+            21.2509,
+            29.6414,
+            14.4166
+          ],
+          "total": 83.4036,
+          "award": "Bronze"
+        },
+        {
+          "rank": 137,
+          "name": "Rens van der Avoird",
+          "country": "Netherlands",
+          "tasks": [
+            13.4825,
+            1.6024,
+            49.0135,
+            3.0232,
+            0.0,
+            15.974
+          ],
+          "total": 83.0956,
+          "award": "Bronze"
+        },
+        {
+          "rank": 138,
+          "name": "Weragama Arachchilage Dilina Viduraka Weragama",
+          "country": "Sri Lanka",
+          "tasks": [
+            0.0,
+            0.0,
+            49.7182,
+            16.6423,
+            0.0,
+            16.6594
+          ],
+          "total": 83.0199,
+          "award": "Bronze"
+        },
+        {
+          "rank": 139,
+          "name": "Julius Schmid",
+          "country": "Germany",
+          "tasks": [
+            3.628,
+            19.5477,
+            0.0,
+            0.0,
+            43.9732,
+            15.0573
+          ],
+          "total": 82.2062,
+          "award": "Bronze"
+        },
+        {
+          "rank": 140,
+          "name": "Aboubacar Diarra",
+          "country": "Mali",
+          "tasks": [
+            7.5251,
+            0.0,
+            18.3766,
+            21.2509,
+            4.5435,
+            29.9733
+          ],
+          "total": 81.6694,
+          "award": "Bronze"
+        },
+        {
+          "rank": 141,
+          "name": "Nistor Iulian",
+          "country": "Romania",
+          "tasks": [
+            11.822,
+            49.2214,
+            5.4115,
+            10.4975,
+            0.0,
+            4.4125
+          ],
+          "total": 81.3649,
+          "award": "Bronze"
+        },
+        {
+          "rank": 142,
+          "name": "Low Yu Xuan",
+          "country": "Malaysia",
+          "tasks": [
+            11.0946,
+            30.6351,
+            15.4735,
+            0.0,
+            3.1067,
+            20.046
+          ],
+          "total": 80.3559,
+          "award": "Bronze"
+        },
+        {
+          "rank": 143,
+          "name": "Amir Daiyrov",
+          "country": "Cyprus",
+          "tasks": [
+            0.0,
+            54.4766,
+            0.0,
+            3.0724,
+            4.781,
+            17.6077
+          ],
+          "total": 79.9377,
+          "award": "Bronze"
+        },
+        {
+          "rank": 144,
+          "name": "Sidant Chaturbedi",
+          "country": "Nepal",
+          "tasks": [
+            0.0,
+            24.4824,
+            21.9842,
+            0.0,
+            0.0,
+            32.7637
+          ],
+          "total": 79.2303,
+          "award": "Bronze"
+        },
+        {
+          "rank": 145,
+          "name": "Ivar Lee Fevang",
+          "country": "Norway",
+          "tasks": [
+            7.5483,
+            0.0,
+            44.9267,
+            15.6182,
+            0.0,
+            9.6504
+          ],
+          "total": 77.7436,
+          "award": "Bronze"
+        },
+        {
+          "rank": 146,
+          "name": "Ha Gia Minh",
+          "country": "Vietnam",
+          "tasks": [
+            18.0449,
+            48.5804,
+            0.0,
+            0.0,
+            0.0,
+            10.7826
+          ],
+          "total": 77.4079,
+          "award": "Bronze"
+        },
+        {
+          "rank": 147,
+          "name": "Emmanouil Dragasakis",
+          "country": "Greece",
+          "tasks": [
+            0.0,
+            42.2355,
+            0.0,
+            13.8259,
+            0.0,
+            20.738
+          ],
+          "total": 76.7994,
+          "award": "Bronze"
+        },
+        {
+          "rank": 148,
+          "name": "Daniel-Antoniu Bence-Muk",
+          "country": "Romania",
+          "tasks": [
+            0.0,
+            47.1063,
+            0.0,
+            1.0033,
+            0.0,
+            27.1827
+          ],
+          "total": 75.2923,
+          "award": "Bronze"
+        },
+        {
+          "rank": 149,
+          "name": "Mario Mitkov Petkov",
+          "country": "Bulgaria",
+          "tasks": [
+            16.1836,
+            15.51,
+            0.0,
+            0.0,
+            0.0,
+            43.5514
+          ],
+          "total": 75.245,
+          "award": "Bronze"
+        },
+        {
+          "rank": 150,
+          "name": "Ho In Hei",
+          "country": "Macau",
+          "tasks": [
+            0.0,
+            34.2243,
+            3.8613,
+            19.9708,
+            0.0,
+            16.6811
+          ],
+          "total": 74.7375,
+          "award": "Bronze"
+        },
+        {
+          "rank": 151,
+          "name": "Pop Matei-Tudor",
+          "country": "Romania",
+          "tasks": [
+            0.0,
+            0.0,
+            4.0586,
+            21.2509,
+            16.1085,
+            33.2837
+          ],
+          "total": 74.7017,
+          "award": "Bronze"
+        },
+        {
+          "rank": 152,
+          "name": "Yijun Wang",
+          "country": "United Kingdom",
+          "tasks": [
+            11.0946,
+            45.4401,
+            0.0,
+            0.0,
+            1.2528,
+            16.4068
+          ],
+          "total": 74.1943,
+          "award": "Bronze"
+        },
+        {
+          "rank": 153,
+          "name": "Jesus Nicolas Bravo Serrudo",
+          "country": "Bolivia",
+          "tasks": [
+            0.0,
+            43.9018,
+            0.0,
+            21.2509,
+            3.2579,
+            4.8624
+          ],
+          "total": 73.273,
+          "award": "Bronze"
+        },
+        {
+          "rank": 154,
+          "name": "Qusai Emad Jadallah",
+          "country": "Saudi Arabia",
+          "tasks": [
+            0.0,
+            47.3627,
+            0.0,
+            10.7535,
+            0.0,
+            15.1314
+          ],
+          "total": 73.2476,
+          "award": "Bronze"
+        },
+        {
+          "rank": 155,
+          "name": "Liang Eddie",
+          "country": "Hong Kong",
+          "tasks": [
+            8.3512,
+            4.6145,
+            12.3732,
+            13.3138,
+            0.0,
+            34.0794
+          ],
+          "total": 72.7321,
+          "award": "Bronze"
+        },
+        {
+          "rank": 156,
+          "name": "Hsieh Meng-Shan",
+          "country": "Chinese Taipei",
+          "tasks": [
+            0.0,
+            18.3299,
+            0.0,
+            9.4923,
+            3.8342,
+            41.0634
+          ],
+          "total": 72.7198,
+          "award": "Bronze"
+        },
+        {
+          "rank": 157,
+          "name": "Aleksandra Streltsova",
+          "country": "Norway",
+          "tasks": [
+            0.0,
+            25.636,
+            0.0,
+            20.7389,
+            0.0,
+            26.2745
+          ],
+          "total": 72.6494,
+          "award": "Bronze"
+        },
+        {
+          "rank": 158,
+          "name": "Presiyan Ivaylov Georgiev",
+          "country": "Bulgaria",
+          "tasks": [
+            10.1387,
+            0.0,
+            0.0,
+            19.7147,
+            0.5657,
+            41.7629
+          ],
+          "total": 72.182,
+          "award": "Bronze"
+        },
+        {
+          "rank": 159,
+          "name": "He Andy Yue",
+          "country": "Australia",
+          "tasks": [
+            0.0,
+            12.6899,
+            0.0,
+            21.2509,
+            1.7189,
+            35.8886
+          ],
+          "total": 71.5483,
+          "award": "Bronze"
+        },
+        {
+          "rank": 160,
+          "name": "Anton Robert Curpas",
+          "country": "Sweden",
+          "tasks": [
+            2.7542,
+            0.0,
+            0.0,
+            0.0,
+            57.2126,
+            11.2157
+          ],
+          "total": 71.1825,
+          "award": "Bronze"
+        },
+        {
+          "rank": 161,
+          "name": "Md. Shaidozzaman Araf",
+          "country": "Bangladesh",
+          "tasks": [
+            6.1026,
+            32.8783,
+            14.3461,
+            0.7274,
+            3.2579,
+            13.6756
+          ],
+          "total": 70.9879,
+          "award": "Bronze"
+        },
+        {
+          "rank": 162,
+          "name": "Chiu Yen-Sung",
+          "country": "Chinese Taipei",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            21.2509,
+            25.0931,
+            23.6023
+          ],
+          "total": 69.9463,
+          "award": "Bronze"
+        },
+        {
+          "rank": 163,
+          "name": "Brodie Millar",
+          "country": "Isle of Man",
+          "tasks": [
+            0.0,
+            0.0,
+            26.4092,
+            5.8888,
+            0.0,
+            37.6038
+          ],
+          "total": 69.9018,
+          "award": "Bronze"
+        },
+        {
+          "rank": 164,
+          "name": "Labib Shahriar",
+          "country": "Bangladesh",
+          "tasks": [
+            6.3643,
+            23.0725,
+            0.0,
+            21.2509,
+            0.0,
+            17.8378
+          ],
+          "total": 68.5255,
+          "award": "Bronze"
+        },
+        {
+          "rank": 165,
+          "name": "Aram Amirkhanyan",
+          "country": "Armenia",
+          "tasks": [
+            0.0,
+            8.7805,
+            3.6359,
+            17.4104,
+            0.0,
+            38.6062
+          ],
+          "total": 68.433,
+          "award": "Bronze"
+        },
+        {
+          "rank": 166,
+          "name": "Fabio Cigaina",
+          "country": "Italy",
+          "tasks": [
+            0.0,
+            0.0,
+            14.5716,
+            21.2509,
+            2.7308,
+            26.7544
+          ],
+          "total": 65.3077,
+          "award": "Bronze"
+        },
+        {
+          "rank": 167,
+          "name": "Viraj Verma",
+          "country": "Netherlands",
+          "tasks": [
+            0.0,
+            0.0,
+            3.8613,
+            20.2268,
+            0.0,
+            40.6255
+          ],
+          "total": 64.7136,
+          "award": "Bronze"
+        },
+        {
+          "rank": 168,
+          "name": "Andrejs Zikovs",
+          "country": "Latvia",
+          "tasks": [
+            11.0946,
+            24.0339,
+            0.0,
+            11.5216,
+            0.0,
+            17.8347
+          ],
+          "total": 64.4848,
+          "award": "Bronze"
+        },
+        {
+          "rank": 169,
+          "name": "Vong Hou Kei",
+          "country": "Macau",
+          "tasks": [
+            11.0946,
+            0.0,
+            12.5423,
+            21.2509,
+            3.3592,
+            16.2018
+          ],
+          "total": 64.4488,
+          "award": "Bronze"
+        },
+        {
+          "rank": 170,
+          "name": "Jozef Steinhubl",
+          "country": "Slovakia",
+          "tasks": [
+            8.3309,
+            19.3553,
+            0.0,
+            20.9949,
+            0.0,
+            15.6245
+          ],
+          "total": 64.3056,
+          "award": "Bronze"
+        },
+        {
+          "rank": 171,
+          "name": "Park / Jinwoo",
+          "country": "South Korea",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            16.6423,
+            1.2441,
+            45.7234
+          ],
+          "total": 63.6098,
+          "award": "Bronze"
+        },
+        {
+          "rank": 172,
+          "name": "Nikolaos Fouskitakis",
+          "country": "Greece",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            47.7882,
+            0.0,
+            15.6381
+          ],
+          "total": 63.4263,
+          "award": "Bronze"
+        },
+        {
+          "rank": 173,
+          "name": "Pavelescu Ion",
+          "country": "Moldova",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            19.4587,
+            0.0,
+            43.6137
+          ],
+          "total": 63.0724,
+          "award": "Bronze"
+        },
+        {
+          "rank": 174,
+          "name": "Ahsan Saleem",
+          "country": "United Kingdom",
+          "tasks": [
+            8.1903,
+            0.0,
+            26.3529,
+            21.2509,
+            0.0,
+            6.3773
+          ],
+          "total": 62.1714,
+          "award": "Bronze"
+        },
+        {
+          "rank": 175,
+          "name": "Razmik Yepremyan",
+          "country": "Armenia",
+          "tasks": [
+            0.0,
+            5.8964,
+            23.3089,
+            21.2509,
+            0.0,
+            11.3306
+          ],
+          "total": 61.7868,
+          "award": "Bronze"
+        },
+        {
+          "rank": 176,
+          "name": "Martim António de Oliveira Carmelo e Santos",
+          "country": "Portugal",
+          "tasks": [
+            16.1359,
+            0.0,
+            0.0,
+            22.2751,
+            2.2509,
+            20.9321
+          ],
+          "total": 61.594,
+          "award": "Bronze"
+        },
+        {
+          "rank": 177,
+          "name": "Lento Nakanose",
+          "country": "Japan",
+          "tasks": [
+            35.7625,
+            0.0,
+            0.0,
+            9.4733,
+            0.0,
+            16.3497
+          ],
+          "total": 61.5855,
+          "award": "Bronze"
+        },
+        {
+          "rank": 178,
+          "name": "Huang Un Kit",
+          "country": "Macau",
+          "tasks": [
+            0.0,
+            26.5975,
+            0.0,
+            21.2509,
+            0.0,
+            13.7192
+          ],
+          "total": 61.5676,
+          "award": "Bronze"
+        },
+        {
+          "rank": 179,
+          "name": "Patrik Řezníček",
+          "country": "Czechia",
+          "tasks": [
+            0.0,
+            0.0,
+            50.0,
+            0.0,
+            3.2579,
+            6.6392
+          ],
+          "total": 59.8971,
+          "award": "Bronze"
+        },
+        {
+          "rank": 180,
+          "name": "Guidimadjegbe Degnon Emmanuel Christiano",
+          "country": "Benin",
+          "tasks": [
+            6.8217,
+            0.0,
+            0.1127,
+            12.2897,
+            0.0,
+            40.0609
+          ],
+          "total": 59.285,
+          "award": "Bronze"
+        },
+        {
+          "rank": 181,
+          "name": "Yauheni Shkumat",
+          "country": "Belarus",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            21.2509,
+            0.0,
+            37.7327
+          ],
+          "total": 58.9836,
+          "award": "Bronze"
+        },
+        {
+          "rank": 182,
+          "name": "Konstabel Karl Markus",
+          "country": "Estonia",
+          "tasks": [
+            0.0,
+            0.0,
+            23.8162,
+            8.5382,
+            26.5794,
+            0.0
+          ],
+          "total": 58.9338,
+          "award": "Bronze"
+        },
+        {
+          "rank": 183,
+          "name": "Austin Liu Zi Rui",
+          "country": "Singapore",
+          "tasks": [
+            0.0,
+            29.802,
+            0.0,
+            14.338,
+            0.0,
+            14.681
+          ],
+          "total": 58.821,
+          "award": "Bronze"
+        },
+        {
+          "rank": 184,
+          "name": "Niklas Ruf",
+          "country": "Germany",
+          "tasks": [
+            0.0,
+            0.0,
+            32.9481,
+            0.0,
+            3.2579,
+            22.0387
+          ],
+          "total": 58.2447,
+          "award": "Bronze"
+        },
+        {
+          "rank": 185,
+          "name": "Henry Alejandro Riera Loza",
+          "country": "Ecuador",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            16.6423,
+            16.6227,
+            24.6349
+          ],
+          "total": 57.8999,
+          "award": "Bronze"
+        },
+        {
+          "rank": 186,
+          "name": "Haruki Katayama",
+          "country": "Japan",
+          "tasks": [
+            7.5404,
+            21.983,
+            0.0,
+            16.6423,
+            1.4525,
+            9.6406
+          ],
+          "total": 57.2588,
+          "award": "Bronze"
+        },
+        {
+          "rank": 187,
+          "name": "Dion Peshtanaku",
+          "country": "Albania",
+          "tasks": [
+            0.0,
+            16.8558,
+            0.0,
+            21.2509,
+            0.0,
+            18.8354
+          ],
+          "total": 56.9421,
+          "award": "Bronze"
+        },
+        {
+          "rank": 188,
+          "name": "Ícaro Silva da Rosa Linck Fróes",
+          "country": "Brazil",
+          "tasks": [
+            2.5804,
+            27.9433,
+            2.3112,
+            0.0,
+            18.7597,
+            4.9349
+          ],
+          "total": 56.5295,
+          "award": "Bronze"
+        },
+        {
+          "rank": 189,
+          "name": "Erik van Kemenade",
+          "country": "Netherlands",
+          "tasks": [
+            0.0,
+            0.0,
+            10.0056,
+            0.0,
+            0.229,
+            46.2799
+          ],
+          "total": 56.5145,
+          "award": "Bronze"
+        },
+        {
+          "rank": 190,
+          "name": "Alfonso Julio Vasquez",
+          "country": "Peru",
+          "tasks": [
+            0.0,
+            11.9208,
+            0.0,
+            16.6423,
+            0.0,
+            27.5836
+          ],
+          "total": 56.1467,
+          "award": "Bronze"
+        },
+        {
+          "rank": 191,
+          "name": "Petros Vourmas",
+          "country": "Cyprus",
+          "tasks": [
+            17.2366,
+            15.6381,
+            0.0,
+            0.0,
+            0.0374,
+            22.9703
+          ],
+          "total": 55.8824,
+          "award": "Bronze"
+        },
+        {
+          "rank": 192,
+          "name": "Lan Zooey Shan",
+          "country": "United States",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            20.7389,
+            0.0,
+            34.6472
+          ],
+          "total": 55.3861,
+          "award": "Bronze"
+        },
+        {
+          "rank": 193,
+          "name": "Huzaifa Rehman",
+          "country": "Pakistan",
+          "tasks": [
+            0.0,
+            31.9171,
+            0.0,
+            21.2509,
+            2.2169,
+            0.0
+          ],
+          "total": 55.3849,
+          "award": "Bronze"
+        },
+        {
+          "rank": 194,
+          "name": "Gonçalo Franke Franco",
+          "country": "Brazil",
+          "tasks": [
+            0.0,
+            11.9208,
+            0.0,
+            16.1302,
+            0.0,
+            27.0133
+          ],
+          "total": 55.0643,
+          "award": "Bronze"
+        },
+        {
+          "rank": 195,
+          "name": "Zhang Andy",
+          "country": "United States",
+          "tasks": [
+            0.0,
+            26.5975,
+            0.0,
+            12.054,
+            0.0,
+            15.5589
+          ],
+          "total": 54.2104,
+          "award": "Bronze"
+        },
+        {
+          "rank": 196,
+          "name": "Mobtasim Chowdhury Priom",
+          "country": "Bangladesh",
+          "tasks": [
+            1.6435,
+            1.6024,
+            0.0,
+            16.6423,
+            2.6361,
+            31.1374
+          ],
+          "total": 53.6617,
+          "award": "Bronze"
+        },
+        {
+          "rank": 197,
+          "name": "Ellison Matthew Siajuat Ang",
+          "country": "Philippines",
+          "tasks": [
+            0.0,
+            6.7295,
+            14.8534,
+            21.2509,
+            0.0,
+            10.6962
+          ],
+          "total": 53.53,
+          "award": "Bronze"
+        },
+        {
+          "rank": 198,
+          "name": "Swaagat Bikash Saikia",
+          "country": "Singapore",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            12.2958,
+            0.0,
+            41.2269
+          ],
+          "total": 53.5227,
+          "award": "Bronze"
+        },
+        {
+          "rank": 199,
+          "name": "Dilovar Ikromov",
+          "country": "Tajikistan",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            22.0191,
+            0.0,
+            31.1795
+          ],
+          "total": 53.1986,
+          "award": "Bronze"
+        },
+        {
+          "rank": 200,
+          "name": "Islamnur Khussainov",
+          "country": "Kazakhstan",
+          "tasks": [
+            9.5543,
+            0.0,
+            0.0,
+            18.6906,
+            1.3739,
+            23.4823
+          ],
+          "total": 53.1011,
+          "award": "Bronze"
+        },
+        {
+          "rank": 201,
+          "name": "Chon Feng Qi",
+          "country": "Malaysia",
+          "tasks": [
+            2.6832,
+            20.0603,
+            0.1127,
+            8.4492,
+            0.0,
+            21.368
+          ],
+          "total": 52.6734,
+          "award": "Bronze"
+        },
+        {
+          "rank": 202,
+          "name": "Dinmukhammed Yntykbay",
+          "country": "Kazakhstan",
+          "tasks": [
+            11.0946,
+            0.0,
+            0.0,
+            21.2509,
+            0.0,
+            19.1303
+          ],
+          "total": 51.4758,
+          "award": "Bronze"
+        },
+        {
+          "rank": 203,
+          "name": "Noah Schittenhelm",
+          "country": "Germany",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            21.2509,
+            0.0,
+            29.2368
+          ],
+          "total": 50.4877,
+          "award": "Bronze"
+        },
+        {
+          "rank": 204,
+          "name": "Kabel Cisse",
+          "country": "Mali",
+          "tasks": [
+            11.0946,
+            10.1263,
+            7.8072,
+            16.6423,
+            0.0,
+            4.4287
+          ],
+          "total": 50.0991,
+          "award": "Bronze"
+        },
+        {
+          "rank": 205,
+          "name": "Tan Choon Yong",
+          "country": "Singapore",
+          "tasks": [
+            0.0,
+            30.443,
+            11.6685,
+            1.0689,
+            0.0,
+            6.8095
+          ],
+          "total": 49.9899,
+          "award": "Bronze"
+        },
+        {
+          "rank": 206,
+          "name": "Mohammed Abdallatif Ribhi Kord",
+          "country": "Palestine",
+          "tasks": [
+            1.5598,
+            0.0,
+            25.3382,
+            4.3526,
+            0.0,
+            18.176
+          ],
+          "total": 49.4266,
+          "award": "Bronze"
+        },
+        {
+          "rank": 207,
+          "name": "Harrod Yip",
+          "country": "Hong Kong",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            16.6423,
+            0.5517,
+            31.1612
+          ],
+          "total": 48.3552,
+          "award": "Bronze"
+        },
+        {
+          "rank": 208,
+          "name": "Juan Fernando Navas Piamonte",
+          "country": "Colombia",
+          "tasks": [
+            0.0,
+            1.6024,
+            0.0,
+            16.6423,
+            0.0,
+            28.3545
+          ],
+          "total": 46.5992,
+          "award": "Bronze"
+        },
+        {
+          "rank": 209,
+          "name": "Jemeljanov Artjom",
+          "country": "Estonia",
+          "tasks": [
+            0.0,
+            16.0868,
+            0.0,
+            8.4492,
+            1.4899,
+            20.5595
+          ],
+          "total": 46.5854,
+          "award": "Bronze"
+        },
+        {
+          "rank": 210,
+          "name": "Bat-Erdene Budkhand",
+          "country": "Mongolia",
+          "tasks": [
+            0.0,
+            0.0,
+            4.566,
+            16.6423,
+            2.0635,
+            22.2738
+          ],
+          "total": 45.5456,
+          "award": "Bronze"
+        },
+        {
+          "rank": 211,
+          "name": "Christos Alexandrou",
+          "country": "Cyprus",
+          "tasks": [
+            4.6262,
+            0.0,
+            0.1127,
+            0.0,
+            0.0,
+            40.472
+          ],
+          "total": 45.2109,
+          "award": "Bronze"
+        },
+        {
+          "rank": 212,
+          "name": "Nikoloz Kiladze",
+          "country": "Georgia",
+          "tasks": [
+            0.0,
+            44.7991,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 44.7991,
+          "award": "Bronze"
+        },
+        {
+          "rank": 213,
+          "name": "Deckmyn Max Malo Daniel",
+          "country": "France",
+          "tasks": [
+            8.4097,
+            16.279,
+            0.0,
+            19.9708,
+            0.0,
+            0.0
+          ],
+          "total": 44.6595,
+          "award": "Bronze"
+        },
+        {
+          "rank": 214,
+          "name": "Jinxuan Zhu",
+          "country": "Sweden",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            19.2027,
+            10.1588,
+            15.2205
+          ],
+          "total": 44.582,
+          "award": "Bronze"
+        },
+        {
+          "rank": 215,
+          "name": "Kim Minjun",
+          "country": "South Korea",
+          "tasks": [
+            11.3036,
+            0.0,
+            16.7418,
+            1.2803,
+            1.1278,
+            13.1813
+          ],
+          "total": 43.6348,
+          "award": "Bronze"
+        },
+        {
+          "rank": 216,
+          "name": "Sayitjonov Muhammadziyo Azamat Ugli",
+          "country": "Uzbekistan",
+          "tasks": [
+            0.0,
+            24.4185,
+            0.0,
+            0.3385,
+            0.0,
+            18.626
+          ],
+          "total": 43.383,
+          "award": "Bronze"
+        },
+        {
+          "rank": 217,
+          "name": "Alexandros Ktoris",
+          "country": "Cyprus",
+          "tasks": [
+            0.0,
+            15.7022,
+            0.0,
+            0.0,
+            24.105,
+            3.3666
+          ],
+          "total": 43.1738,
+          "award": "Bronze"
+        },
+        {
+          "rank": 218,
+          "name": "Nguyen Le Duy Khang",
+          "country": "Vietnam",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            9.9854,
+            0.0,
+            33.151
+          ],
+          "total": 43.1364,
+          "award": "Bronze"
+        },
+        {
+          "rank": 219,
+          "name": "Luka Berikelashvili",
+          "country": "Georgia",
+          "tasks": [
+            9.9724,
+            0.0,
+            0.0,
+            19.4587,
+            1.8164,
+            11.6144
+          ],
+          "total": 42.8619,
+          "award": "Bronze"
+        },
+        {
+          "rank": 220,
+          "name": "Bater Ayman Faisal Habtoosh",
+          "country": "Jordan",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            2.6958,
+            40.1377
+          ],
+          "total": 42.8335,
+          "award": "Bronze"
+        },
+        {
+          "rank": 221,
+          "name": "Vadim Vozmitel",
+          "country": "Belarus",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            20.7389,
+            0.0,
+            21.97
+          ],
+          "total": 42.7089,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 222,
+          "name": "Ayan Zeeshan",
+          "country": "Pakistan",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            21.2509,
+            0.0,
+            21.1429
+          ],
+          "total": 42.3938,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 223,
+          "name": "Varun Sharma",
+          "country": "India",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            23.5553,
+            2.9146,
+            15.5589
+          ],
+          "total": 42.0288,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 224,
+          "name": "Rastsislau Svechnikau",
+          "country": "Belarus",
+          "tasks": [
+            0.0,
+            22.0471,
+            0.0,
+            16.1302,
+            0.0,
+            3.7568
+          ],
+          "total": 41.9341,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 225,
+          "name": "Artyom Hovhannisyan",
+          "country": "Armenia",
+          "tasks": [
+            0.0,
+            29.3535,
+            0.0,
+            12.0337,
+            0.0,
+            0.0
+          ],
+          "total": 41.3872,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 226,
+          "name": "Aivar Tynchtykbekov",
+          "country": "Kyrgyzstan",
+          "tasks": [
+            0.0,
+            5.8323,
+            0.0,
+            7.169,
+            3.1243,
+            25.0927
+          ],
+          "total": 41.2183,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 227,
+          "name": "Li Chunting",
+          "country": "Australia",
+          "tasks": [
+            0.0,
+            1.6024,
+            0.0,
+            16.6423,
+            0.0,
+            22.4349
+          ],
+          "total": 40.6796,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 228,
+          "name": "Gurgen Bayburdyan",
+          "country": "Armenia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            21.2509,
+            1.2441,
+            17.6909
+          ],
+          "total": 40.1859,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 229,
+          "name": "Troi Qendro",
+          "country": "Albania",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            7.169,
+            3.2579,
+            29.7057
+          ],
+          "total": 40.1326,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 230,
+          "name": "Soteris Savva",
+          "country": "Cyprus",
+          "tasks": [
+            0.0,
+            0.641,
+            8.3709,
+            0.5799,
+            3.2579,
+            27.124
+          ],
+          "total": 39.9737,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 231,
+          "name": "Nguebou Newa-Kamga Raphael",
+          "country": "Benin",
+          "tasks": [
+            0.0,
+            11.2799,
+            0.0,
+            0.0,
+            0.0,
+            28.6213
+          ],
+          "total": 39.9012,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 232,
+          "name": "Wang Suilun",
+          "country": "Macau",
+          "tasks": [
+            0.0,
+            1.6024,
+            27.593,
+            1.0287,
+            3.0052,
+            6.0415
+          ],
+          "total": 39.2708,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 233,
+          "name": "Kouonang Jules Simon",
+          "country": "Cameroon",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            17.1544,
+            0.0,
+            21.7957
+          ],
+          "total": 38.9501,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 234,
+          "name": "Kadirbergenov Atabek Tangirbergenovich",
+          "country": "Uzbekistan",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            21.2509,
+            3.2579,
+            14.2277
+          ],
+          "total": 38.7365,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 235,
+          "name": "Felipe Rivera Durango",
+          "country": "Ecuador",
+          "tasks": [
+            0.0,
+            6.281,
+            0.1127,
+            9.4733,
+            0.4128,
+            22.4349
+          ],
+          "total": 38.7147,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 236,
+          "name": "Prasiddha Mainali",
+          "country": "Nepal",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            16.6423,
+            0.0,
+            21.8432
+          ],
+          "total": 38.4855,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 237,
+          "name": "Mugisha Pacifique",
+          "country": "Rwanda",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            21.2509,
+            0.9934,
+            16.0812
+          ],
+          "total": 38.3255,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 238,
+          "name": "Nazar Korshomnyi",
+          "country": "Ukraine",
+          "tasks": [
+            0.0,
+            0.0,
+            11.6685,
+            0.0,
+            0.0,
+            26.2607
+          ],
+          "total": 37.9292,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 239,
+          "name": "Ilknur Yaren Karakoc",
+          "country": "Germany",
+          "tasks": [
+            0.0,
+            0.0,
+            0.1127,
+            14.338,
+            2.2843,
+            21.0949
+          ],
+          "total": 37.8299,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 240,
+          "name": "Abdurakhimov Asliddin Adkhamjon Ugli",
+          "country": "Uzbekistan",
+          "tasks": [
+            0.0,
+            12.754,
+            7.7508,
+            8.9612,
+            0.125,
+            8.1855
+          ],
+          "total": 37.7765,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 241,
+          "name": "Vincenzo Ribeiro da Cunha Caserta",
+          "country": "Portugal",
+          "tasks": [
+            6.2266,
+            0.0,
+            0.0,
+            16.3863,
+            0.0,
+            14.8943
+          ],
+          "total": 37.5072,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 242,
+          "name": "Cesar Murat Cepeda Beltran",
+          "country": "Mexico",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            20.9949,
+            2.7722,
+            12.8091
+          ],
+          "total": 36.5762,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 243,
+          "name": "Luka Jovanovic",
+          "country": "Serbia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            20.4828,
+            0.0,
+            15.5154
+          ],
+          "total": 35.9982,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 244,
+          "name": "Varun Aditya Agarwal",
+          "country": "Spain",
+          "tasks": [
+            0.0,
+            11.6004,
+            0.0,
+            5.6328,
+            0.0,
+            18.4889
+          ],
+          "total": 35.7221,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 245,
+          "name": "Kaloyan Kalinov Ivanov",
+          "country": "Bulgaria",
+          "tasks": [
+            0.0,
+            17.689,
+            0.0,
+            0.0,
+            0.0,
+            17.4495
+          ],
+          "total": 35.1385,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 246,
+          "name": "Abedalaziz (Mohammad Saeed) M. Alzghoul",
+          "country": "Jordan",
+          "tasks": [
+            8.4524,
+            0.0,
+            0.0,
+            0.0,
+            3.3017,
+            23.3654
+          ],
+          "total": 35.1195,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 247,
+          "name": "Mohamed Nimaga",
+          "country": "Mali",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            34.6829
+          ],
+          "total": 34.6829,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 248,
+          "name": "Andrii Bilan",
+          "country": "Ukraine",
+          "tasks": [
+            1.4457,
+            0.0,
+            0.0,
+            21.2509,
+            2.4993,
+            9.0159
+          ],
+          "total": 34.2118,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 249,
+          "name": "Sebastian Hugo Ochoa Machaca",
+          "country": "Peru",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            21.2509,
+            0.0,
+            12.2866
+          ],
+          "total": 33.5375,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 250,
+          "name": "Emma Sotomayor Cepeda",
+          "country": "Mexico",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            6.6569,
+            0.0,
+            26.1264
+          ],
+          "total": 32.7833,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 251,
+          "name": "Kareem Imad Omar Kayid",
+          "country": "Palestine",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            22.5311,
+            0.0873,
+            9.8462
+          ],
+          "total": 32.4646,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 252,
+          "name": "Artyom Konukhov",
+          "country": "Cyprus",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.5112,
+            31.9091,
+            0.0
+          ],
+          "total": 32.4203,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 253,
+          "name": "Rostom Mohamed Kamel Bouabdallah",
+          "country": "Algeria",
+          "tasks": [
+            0.0,
+            0.0,
+            4.9042,
+            8.1931,
+            3.1341,
+            16.1159
+          ],
+          "total": 32.3473,
+          "award": ""
+        },
+        {
+          "rank": 254,
+          "name": "Itay Karny",
+          "country": "Israel",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            18.9466,
+            3.0302,
+            10.352
+          ],
+          "total": 32.3288,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 255,
+          "name": "Hector Villanueva Davila",
+          "country": "Spain",
+          "tasks": [
+            0.0,
+            0.0,
+            0.1127,
+            5.9537,
+            0.0,
+            26.0509
+          ],
+          "total": 32.1173,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 256,
+          "name": "Abdallah Mohammed Mahmoud Sherbini",
+          "country": "Palestine",
+          "tasks": [
+            0.0,
+            0.0,
+            3.0722,
+            20.7389,
+            0.0,
+            7.8797
+          ],
+          "total": 31.6908,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 257,
+          "name": "Rukundo Promesse",
+          "country": "Rwanda",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            16.6423,
+            0.0,
+            14.9529
+          ],
+          "total": 31.5952,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 258,
+          "name": "Davit Ghazaryan",
+          "country": "Armenia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            21.2509,
+            0.0,
+            10.3227
+          ],
+          "total": 31.5736,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 259,
+          "name": "Albert Rodrigo Alvarez Jove",
+          "country": "Peru",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            21.2509,
+            0.0,
+            10.0385
+          ],
+          "total": 31.2894,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 260,
+          "name": "Giorgi Tskitishvili",
+          "country": "Georgia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            20.2268,
+            10.9753,
+            0.0
+          ],
+          "total": 31.2021,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 261,
+          "name": "Pitambar Lamichhane",
+          "country": "Nepal",
+          "tasks": [
+            0.0,
+            1.9868,
+            0.0,
+            7.6811,
+            2.2843,
+            18.8545
+          ],
+          "total": 30.8067,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 262,
+          "name": "Julian Berg-Larsen",
+          "country": "Norway",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            21.2509,
+            9.3609,
+            0.0
+          ],
+          "total": 30.6118,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 263,
+          "name": "Nyan Lin Pyae",
+          "country": "Myanmar",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            3.0554,
+            25.9899
+          ],
+          "total": 29.0453,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 264,
+          "name": "Alexandar Lyubomirov Slavov",
+          "country": "Bulgaria",
+          "tasks": [
+            0.0,
+            0.0,
+            11.6685,
+            0.0,
+            3.1758,
+            13.8779
+          ],
+          "total": 28.7222,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 265,
+          "name": "Kodiraliev Abrorjon Ikboljon-Ugli",
+          "country": "Uzbekistan",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.4128,
+            27.6456
+          ],
+          "total": 28.0584,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 266,
+          "name": "Matus Polak",
+          "country": "Slovakia",
+          "tasks": [
+            6.1026,
+            0.0,
+            0.1127,
+            16.6423,
+            0.0,
+            5.0413
+          ],
+          "total": 27.8989,
+          "award": ""
+        },
+        {
+          "rank": 267,
+          "name": "Phutawan Pho-Kao",
+          "country": "Thailand",
+          "tasks": [
+            3.7951,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            23.936
+          ],
+          "total": 27.7311,
+          "award": ""
+        },
+        {
+          "rank": 268,
+          "name": "Sebastian Enrique Somoza Portillo",
+          "country": "El Salvador",
+          "tasks": [
+            6.6691,
+            0.0,
+            0.0,
+            0.8375,
+            0.0,
+            20.1819
+          ],
+          "total": 27.6885,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 269,
+          "name": "Gateretse Edith",
+          "country": "Rwanda",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            16.6423,
+            0.0,
+            10.974
+          ],
+          "total": 27.6163,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 270,
+          "name": "Ahmad Sadaan Tariq",
+          "country": "Pakistan",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            26.3717,
+            1.2441,
+            0.0
+          ],
+          "total": 27.6158,
+          "award": ""
+        },
+        {
+          "rank": 271,
+          "name": "Roberto Lloréns Dueñas",
+          "country": "Spain",
+          "tasks": [
+            0.0,
+            9.4214,
+            0.0,
+            0.0,
+            3.2579,
+            14.4117
+          ],
+          "total": 27.091,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 272,
+          "name": "Chen Vincent Yingxi",
+          "country": "Australia",
+          "tasks": [
+            0.0,
+            11.9208,
+            0.0,
+            0.0,
+            0.0,
+            15.1208
+          ],
+          "total": 27.0416,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 273,
+          "name": "Samuel Sandor",
+          "country": "Slovakia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            26.9011
+          ],
+          "total": 26.9011,
+          "award": ""
+        },
+        {
+          "rank": 274,
+          "name": "Dossou Tchègun Exaucé",
+          "country": "Benin",
+          "tasks": [
+            0.0,
+            1.6024,
+            0.0,
+            5.3783,
+            0.0,
+            19.0823
+          ],
+          "total": 26.063,
+          "award": ""
+        },
+        {
+          "rank": 275,
+          "name": "Fanny Chryssie Irishura",
+          "country": "Burundi",
+          "tasks": [
+            0.0,
+            0.0,
+            13.726,
+            12.2897,
+            0.0,
+            0.0
+          ],
+          "total": 26.0157,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 276,
+          "name": "Yang Jerry Shunqi",
+          "country": "New Zealand",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            21.2509,
+            0.0,
+            4.7361
+          ],
+          "total": 25.987,
+          "award": ""
+        },
+        {
+          "rank": 277,
+          "name": "Vahe Pluzyan",
+          "country": "Armenia",
+          "tasks": [
+            0.0,
+            1.6024,
+            0.0,
+            1.0287,
+            1.1835,
+            21.8539
+          ],
+          "total": 25.6685,
+          "award": ""
+        },
+        {
+          "rank": 278,
+          "name": "Ahouansou Dona Christ Hansmaut",
+          "country": "Benin",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.8375,
+            0.0,
+            24.5289
+          ],
+          "total": 25.3664,
+          "award": ""
+        },
+        {
+          "rank": 279,
+          "name": "Muhammad Saad Munir",
+          "country": "Pakistan",
+          "tasks": [
+            0.0,
+            0.0,
+            3.805,
+            5.8888,
+            0.0374,
+            15.5589
+          ],
+          "total": 25.2901,
+          "award": ""
+        },
+        {
+          "rank": 280,
+          "name": "Alen Gevorgyan",
+          "country": "Armenia",
+          "tasks": [
+            4.6449,
+            0.0,
+            0.0,
+            4.0966,
+            0.0,
+            16.0107
+          ],
+          "total": 24.7522,
+          "award": ""
+        },
+        {
+          "rank": 281,
+          "name": "Mory Adama Dembele",
+          "country": "Mali",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            24.6088
+          ],
+          "total": 24.6088,
+          "award": ""
+        },
+        {
+          "rank": 282,
+          "name": "Rahandrisoa Andotiana Kanto Fitiavana",
+          "country": "Madagascar",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            24.5289
+          ],
+          "total": 24.5289,
+          "award": ""
+        },
+        {
+          "rank": 283,
+          "name": "Joel Esteban Pérez Canal",
+          "country": "Colombia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            3.2579,
+            20.6057
+          ],
+          "total": 23.8636,
+          "award": ""
+        },
+        {
+          "rank": 284,
+          "name": "Lazar Nikic",
+          "country": "Serbia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            21.507,
+            0.0,
+            2.3422
+          ],
+          "total": 23.8492,
+          "award": ""
+        },
+        {
+          "rank": 285,
+          "name": "Artem Iankin",
+          "country": "Cyprus",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            3.5979,
+            19.9059
+          ],
+          "total": 23.5038,
+          "award": ""
+        },
+        {
+          "rank": 286,
+          "name": "Jegors Moskvins",
+          "country": "Latvia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            23.388
+          ],
+          "total": 23.388,
+          "award": ""
+        },
+        {
+          "rank": 287,
+          "name": "Amine Ben Ameur",
+          "country": "Tunisia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.1127,
+            0.8237,
+            0.0,
+            22.4349
+          ],
+          "total": 23.3713,
+          "award": ""
+        },
+        {
+          "rank": 288,
+          "name": "Ahmed Sidian Mohamed",
+          "country": "Niger",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            3.2579,
+            20.0566
+          ],
+          "total": 23.3145,
+          "award": ""
+        },
+        {
+          "rank": 289,
+          "name": "Nir Afek",
+          "country": "Israel",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            22.7872,
+            0.0,
+            0.0
+          ],
+          "total": 22.7872,
+          "award": ""
+        },
+        {
+          "rank": 290,
+          "name": "Abdessamad el Mohammady",
+          "country": "Morocco",
+          "tasks": [
+            0.0,
+            0.0,
+            2.9312,
+            7.6827,
+            3.2579,
+            8.6597
+          ],
+          "total": 22.5315,
+          "award": ""
+        },
+        {
+          "rank": 291,
+          "name": "Sun Qiyuan",
+          "country": "South Africa",
+          "tasks": [
+            0.0,
+            0.0,
+            8.0045,
+            0.0,
+            0.0,
+            13.96
+          ],
+          "total": 21.9645,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 292,
+          "name": "Lokossou Dossou Kajarnak",
+          "country": "Benin",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            21.8215
+          ],
+          "total": 21.8215,
+          "award": ""
+        },
+        {
+          "rank": 293,
+          "name": "Luo Junlin",
+          "country": "Macau",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            3.2579,
+            18.3976
+          ],
+          "total": 21.6555,
+          "award": ""
+        },
+        {
+          "rank": 294,
+          "name": "Khydyr-Ali Yerlan",
+          "country": "Mongolia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            3.2579,
+            18.0725
+          ],
+          "total": 21.3304,
+          "award": ""
+        },
+        {
+          "rank": 295,
+          "name": "Vesa Greiçevci",
+          "country": "Kosovo",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            21.2509,
+            0.0374,
+            0.0
+          ],
+          "total": 21.2883,
+          "award": ""
+        },
+        {
+          "rank": 296,
+          "name": "Karla Margarita Ayala Tobar",
+          "country": "El Salvador",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            21.2509,
+            0.0,
+            0.0
+          ],
+          "total": 21.2509,
+          "award": ""
+        },
+        {
+          "rank": 297,
+          "name": "Thiramate Ouwuthipong",
+          "country": "Thailand",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            21.2509,
+            0.0,
+            0.0
+          ],
+          "total": 21.2509,
+          "award": ""
+        },
+        {
+          "rank": 298,
+          "name": "Jiang Jasper",
+          "country": "Australia",
+          "tasks": [
+            0.0,
+            6.0244,
+            0.0,
+            0.0,
+            0.0,
+            15.0524
+          ],
+          "total": 21.0768,
+          "award": ""
+        },
+        {
+          "rank": 299,
+          "name": "Nathawat Youngyim",
+          "country": "Thailand",
+          "tasks": [
+            0.0,
+            0.0,
+            0.1127,
+            0.0,
+            3.2583,
+            17.6321
+          ],
+          "total": 21.0031,
+          "award": ""
+        },
+        {
+          "rank": 300,
+          "name": "Rakotoarisoa Andrianina Harivelo",
+          "country": "Madagascar",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            20.9949,
+            0.0,
+            0.0
+          ],
+          "total": 20.9949,
+          "award": ""
+        },
+        {
+          "rank": 301,
+          "name": "Denagama Vidanelage Chanitha Sendinu Denagama",
+          "country": "Sri Lanka",
+          "tasks": [
+            0.0,
+            16.6636,
+            0.0,
+            2.8239,
+            1.4962,
+            0.0
+          ],
+          "total": 20.9837,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 302,
+          "name": "Maksym Gongalo",
+          "country": "Ukraine",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            9.4733,
+            0.0,
+            11.0825
+          ],
+          "total": 20.5558,
+          "award": ""
+        },
+        {
+          "rank": 303,
+          "name": "Tuna Orhan",
+          "country": "Turkey",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            20.4264
+          ],
+          "total": 20.4264,
+          "award": ""
+        },
+        {
+          "rank": 304,
+          "name": "Zeng Hou Hin",
+          "country": "Macau",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            3.3017,
+            17.0931
+          ],
+          "total": 20.3948,
+          "award": ""
+        },
+        {
+          "rank": 305,
+          "name": "Youssef Aoun",
+          "country": "Tunisia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            20.0348
+          ],
+          "total": 20.0348,
+          "award": ""
+        },
+        {
+          "rank": 306,
+          "name": "Szekeres Linda",
+          "country": "Hungary",
+          "tasks": [
+            0.0,
+            1.4741,
+            0.0,
+            2.9119,
+            0.0,
+            15.5589
+          ],
+          "total": 19.9449,
+          "award": ""
+        },
+        {
+          "rank": 307,
+          "name": "Aayush Yadav",
+          "country": "Nepal",
+          "tasks": [
+            11.0946,
+            1.6024,
+            0.0,
+            1.3468,
+            0.0,
+            5.7811
+          ],
+          "total": 19.8249,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 308,
+          "name": "Maria de Lourdes Vazquez Carrillo",
+          "country": "Mexico",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            3.2579,
+            16.5518
+          ],
+          "total": 19.8097,
+          "award": ""
+        },
+        {
+          "rank": 309,
+          "name": "Danil Vorobyev",
+          "country": "Israel",
+          "tasks": [
+            0.0,
+            0.0,
+            19.2221,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 19.2221,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 310,
+          "name": "Tan Zen Ee",
+          "country": "Malaysia",
+          "tasks": [
+            7.8988,
+            1.6024,
+            0.0,
+            9.4733,
+            0.0,
+            0.0
+          ],
+          "total": 18.9745,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 311,
+          "name": "Fanxi Xiang",
+          "country": "Spain",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            18.7249
+          ],
+          "total": 18.7249,
+          "award": ""
+        },
+        {
+          "rank": 312,
+          "name": "Rosalie Schrijvers",
+          "country": "Netherlands",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            8.9612,
+            2.1434,
+            7.4988
+          ],
+          "total": 18.6034,
+          "award": ""
+        },
+        {
+          "rank": 313,
+          "name": "Maamoune Ben Ameur",
+          "country": "Tunisia",
+          "tasks": [
+            0.0,
+            0.0,
+            13.9515,
+            0.6462,
+            0.0,
+            3.6619
+          ],
+          "total": 18.2596,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 314,
+          "name": "Rafael da Silva Pulcinelli",
+          "country": "Brazil",
+          "tasks": [
+            0.0,
+            11.9208,
+            0.0,
+            2.8239,
+            3.2579,
+            0.0
+          ],
+          "total": 18.0026,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 315,
+          "name": "Miguel Alejandro Somoza Portillo",
+          "country": "El Salvador",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            14.594,
+            3.374,
+            0.0
+          ],
+          "total": 17.968,
+          "award": ""
+        },
+        {
+          "rank": 316,
+          "name": "Kaung Sitt Yan",
+          "country": "Myanmar",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            17.6665,
+            0.0,
+            0.0
+          ],
+          "total": 17.6665,
+          "award": ""
+        },
+        {
+          "rank": 317,
+          "name": "Ruiwen Zheng",
+          "country": "Spain",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            16.6423,
+            0.0374,
+            0.6884
+          ],
+          "total": 17.3681,
+          "award": ""
+        },
+        {
+          "rank": 318,
+          "name": "Linn Htut Zaw",
+          "country": "Myanmar",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            16.6423,
+            0.0,
+            0.2131
+          ],
+          "total": 16.8554,
+          "award": ""
+        },
+        {
+          "rank": 319,
+          "name": "Affou Pierre-Ambroise Alex",
+          "country": "Côte d'Ivoire",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            16.6423,
+            0.042,
+            0.0
+          ],
+          "total": 16.6843,
+          "award": ""
+        },
+        {
+          "rank": 320,
+          "name": "David Arturo Vega Molina",
+          "country": "Ecuador",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            16.6423,
+            0.0,
+            0.0
+          ],
+          "total": 16.6423,
+          "award": ""
+        },
+        {
+          "rank": 321,
+          "name": "Jozanne Alexia Thompson",
+          "country": "Jamaica",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            16.6423,
+            0.0,
+            0.0
+          ],
+          "total": 16.6423,
+          "award": ""
+        },
+        {
+          "rank": 322,
+          "name": "Amari Bjorn Cross",
+          "country": "Jamaica",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            16.363
+          ],
+          "total": 16.363,
+          "award": ""
+        },
+        {
+          "rank": 323,
+          "name": "Isroilov Shohjahon Anvarovich",
+          "country": "Uzbekistan",
+          "tasks": [
+            5.7024,
+            0.0,
+            0.0,
+            0.0,
+            10.3162,
+            0.0
+          ],
+          "total": 16.0186,
+          "award": ""
+        },
+        {
+          "rank": 324,
+          "name": "Rayan Deyanov Kamarinchev",
+          "country": "Bulgaria",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            15.5588
+          ],
+          "total": 15.5588,
+          "award": ""
+        },
+        {
+          "rank": 325,
+          "name": "Li Serena Linzi",
+          "country": "Australia",
+          "tasks": [
+            0.0,
+            0.0,
+            5.8343,
+            0.0,
+            3.2579,
+            6.0923
+          ],
+          "total": 15.1845,
+          "award": ""
+        },
+        {
+          "rank": 326,
+          "name": "Kunakorn Chaiyara",
+          "country": "Thailand",
+          "tasks": [
+            0.0,
+            0.0,
+            12.3732,
+            0.0,
+            2.6361,
+            0.0
+          ],
+          "total": 15.0093,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 327,
+          "name": "Jesus Alejandro Aguirre Vasquez",
+          "country": "Venezuela",
+          "tasks": [
+            7.8988,
+            0.0,
+            0.1127,
+            0.0,
+            0.0,
+            6.8095
+          ],
+          "total": 14.821,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 328,
+          "name": "Mohammed Ward",
+          "country": "Syria",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            1.0246,
+            0.0,
+            13.5795
+          ],
+          "total": 14.6041,
+          "award": ""
+        },
+        {
+          "rank": 329,
+          "name": "Khairakov Murodjon",
+          "country": "Tajikistan",
+          "tasks": [
+            5.4295,
+            0.0,
+            1.1274,
+            0.0,
+            0.0374,
+            8.0016
+          ],
+          "total": 14.5959,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 330,
+          "name": "Kanan Karimzade",
+          "country": "Azerbaijan",
+          "tasks": [
+            5.2524,
+            0.0,
+            0.0,
+            7.6811,
+            0.0,
+            1.6206
+          ],
+          "total": 14.5541,
+          "award": ""
+        },
+        {
+          "rank": 331,
+          "name": "Jerjomenko Alan",
+          "country": "Estonia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.1127,
+            0.0,
+            0.0,
+            14.2834
+          ],
+          "total": 14.3961,
+          "award": ""
+        },
+        {
+          "rank": 332,
+          "name": "Tomáš Řádek",
+          "country": "Czechia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0374,
+            14.1185
+          ],
+          "total": 14.1559,
+          "award": ""
+        },
+        {
+          "rank": 333,
+          "name": "Bozhidara Filipova Puhaleva",
+          "country": "Bulgaria",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            8.7052,
+            0.0,
+            4.9369
+          ],
+          "total": 13.6421,
+          "award": ""
+        },
+        {
+          "rank": 334,
+          "name": "Modibo Abdoulaye Coulibaly",
+          "country": "Mali",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            13.1704
+          ],
+          "total": 13.1704,
+          "award": ""
+        },
+        {
+          "rank": 335,
+          "name": "Nurlybayev Assylbek",
+          "country": "Uzbekistan",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            10.7535,
+            2.2843,
+            0.0
+          ],
+          "total": 13.0378,
+          "award": ""
+        },
+        {
+          "rank": 336,
+          "name": "Gbagoule Hilarus Molihior Mahougnon",
+          "country": "Benin",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            11.8507
+          ],
+          "total": 11.8507,
+          "award": ""
+        },
+        {
+          "rank": 337,
+          "name": "Do Quoc Binh",
+          "country": "Vietnam",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.4327,
+            10.3063
+          ],
+          "total": 11.739,
+          "award": ""
+        },
+        {
+          "rank": 338,
+          "name": "Arseni Ivanou",
+          "country": "Latvia",
+          "tasks": [
+            9.1657,
+            0.0,
+            0.0,
+            0.0,
+            1.378,
+            0.0
+          ],
+          "total": 10.5437,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 339,
+          "name": "Tunar Ahmadzade",
+          "country": "Azerbaijan",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            3.2579,
+            7.2262
+          ],
+          "total": 10.4841,
+          "award": ""
+        },
+        {
+          "rank": 340,
+          "name": "Anas Mohammed",
+          "country": "Botswana",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            10.433
+          ],
+          "total": 10.433,
+          "award": ""
+        },
+        {
+          "rank": 341,
+          "name": "Hamad Mohammed Alkalbani",
+          "country": "Saudi Arabia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.256,
+            0.0,
+            9.1469
+          ],
+          "total": 9.4029,
+          "award": ""
+        },
+        {
+          "rank": 342,
+          "name": "Sobdjolbo Lene Wassou Cedric",
+          "country": "Cameroon",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            9.1555
+          ],
+          "total": 9.1555,
+          "award": ""
+        },
+        {
+          "rank": 343,
+          "name": "Khalil Théo",
+          "country": "Lebanon",
+          "tasks": [
+            9.0367,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 9.0367,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 344,
+          "name": "Rakotondrazaka Irintsoa Omban'Ny Avo",
+          "country": "Madagascar",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            8.8502
+          ],
+          "total": 8.8502,
+          "award": ""
+        },
+        {
+          "rank": 345,
+          "name": "Poon Yik Cheung",
+          "country": "Hong Kong",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            3.3286,
+            1.5508,
+            3.952
+          ],
+          "total": 8.8314,
+          "award": ""
+        },
+        {
+          "rank": 346,
+          "name": "Tang Zachary Justin",
+          "country": "Australia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            8.7482
+          ],
+          "total": 8.7482,
+          "award": ""
+        },
+        {
+          "rank": 347,
+          "name": "Kandikov Sinan",
+          "country": "Tajikistan",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            8.56
+          ],
+          "total": 8.56,
+          "award": ""
+        },
+        {
+          "rank": 348,
+          "name": "Allex Manoj",
+          "country": "Botswana",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            8.1865
+          ],
+          "total": 8.1865,
+          "award": ""
+        },
+        {
+          "rank": 349,
+          "name": "Kamohelo Pompo",
+          "country": "Lesotho",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            4.3526,
+            0.0,
+            3.6139
+          ],
+          "total": 7.9665,
+          "award": ""
+        },
+        {
+          "rank": 350,
+          "name": "Hsu Wutt Yee Lin",
+          "country": "Myanmar",
+          "tasks": [
+            7.8988,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 7.8988,
+          "award": "Honourable Mention"
+        },
+        {
+          "rank": 351,
+          "name": "Aïssatou Diop",
+          "country": "Senegal",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            6.903
+          ],
+          "total": 6.903,
+          "award": ""
+        },
+        {
+          "rank": 352,
+          "name": "Martin Senkyr",
+          "country": "Slovakia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            6.8095
+          ],
+          "total": 6.8095,
+          "award": ""
+        },
+        {
+          "rank": 353,
+          "name": "Ghaddar Fadl",
+          "country": "Lebanon",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            3.2579,
+            3.3783
+          ],
+          "total": 6.6362,
+          "award": ""
+        },
+        {
+          "rank": 354,
+          "name": "M'Po Yeti Déreck",
+          "country": "Benin",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.7275,
+            0.0,
+            5.6421
+          ],
+          "total": 6.3696,
+          "award": ""
+        },
+        {
+          "rank": 355,
+          "name": "Braven Seet Ti Jin",
+          "country": "Singapore",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            2.3043,
+            0.0,
+            3.7897
+          ],
+          "total": 6.094,
+          "award": ""
+        },
+        {
+          "rank": 356,
+          "name": "Li Yueci",
+          "country": "Australia",
+          "tasks": [
+            0.0,
+            1.6024,
+            0.0,
+            0.7605,
+            3.3017,
+            0.0
+          ],
+          "total": 5.6646,
+          "award": ""
+        },
+        {
+          "rank": 357,
+          "name": "Chan Pak Hei",
+          "country": "Hong Kong",
+          "tasks": [
+            5.6626,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 5.6626,
+          "award": ""
+        },
+        {
+          "rank": 358,
+          "name": "Zhang Tianze",
+          "country": "New Zealand",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            2.3236,
+            0.0,
+            3.0615
+          ],
+          "total": 5.3851,
+          "award": ""
+        },
+        {
+          "rank": 359,
+          "name": "Mariia Shylo",
+          "country": "Cyprus",
+          "tasks": [
+            0.0,
+            4.935,
+            0.0,
+            0.0,
+            0.0,
+            0.337
+          ],
+          "total": 5.272,
+          "award": ""
+        },
+        {
+          "rank": 360,
+          "name": "Oto Sládek",
+          "country": "Czechia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            5.1977
+          ],
+          "total": 5.1977,
+          "award": ""
+        },
+        {
+          "rank": 361,
+          "name": "Emmanuel Temitope Oluwayomi",
+          "country": "Botswana",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0374,
+            4.8968
+          ],
+          "total": 4.9342,
+          "award": ""
+        },
+        {
+          "rank": 362,
+          "name": "Brid Zeida Huaylla Huillca",
+          "country": "Peru",
+          "tasks": [
+            0.0,
+            0.0,
+            0.6764,
+            0.7701,
+            3.2579,
+            0.0
+          ],
+          "total": 4.7044,
+          "award": ""
+        },
+        {
+          "rank": 363,
+          "name": "Petar Raič",
+          "country": "Bosnia and Herzegovina",
+          "tasks": [
+            4.0327,
+            0.0,
+            0.0,
+            0.0,
+            0.449,
+            0.0
+          ],
+          "total": 4.4817,
+          "award": ""
+        },
+        {
+          "rank": 364,
+          "name": "Francisco Céphas Karl Richy",
+          "country": "Benin",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            4.2752
+          ],
+          "total": 4.2752,
+          "award": ""
+        },
+        {
+          "rank": 365,
+          "name": "Haitova Farangis",
+          "country": "Tajikistan",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.5342,
+            2.6205
+          ],
+          "total": 4.1547,
+          "award": ""
+        },
+        {
+          "rank": 366,
+          "name": "Binthily Diallo",
+          "country": "Mali",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0374,
+            4.0178
+          ],
+          "total": 4.0552,
+          "award": ""
+        },
+        {
+          "rank": 367,
+          "name": "Jay Charmant Ririkumutima",
+          "country": "Burundi",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            3.7938
+          ],
+          "total": 3.7938,
+          "award": ""
+        },
+        {
+          "rank": 368,
+          "name": "Zhong Tin Kin",
+          "country": "Macau",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            3.6689
+          ],
+          "total": 3.6689,
+          "award": ""
+        },
+        {
+          "rank": 369,
+          "name": "Shahla Ahmadzade",
+          "country": "Azerbaijan",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            3.2579,
+            0.0
+          ],
+          "total": 3.2579,
+          "award": ""
+        },
+        {
+          "rank": 370,
+          "name": "Moussa Adama Toure",
+          "country": "Mali",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            3.2579,
+            0.0
+          ],
+          "total": 3.2579,
+          "award": ""
+        },
+        {
+          "rank": 371,
+          "name": "Aruke Sulaimanova",
+          "country": "Kyrgyzstan",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            2.8164,
+            0.0,
+            0.0
+          ],
+          "total": 2.8164,
+          "award": ""
+        },
+        {
+          "rank": 372,
+          "name": "Sai Han Myo Shane",
+          "country": "Myanmar",
+          "tasks": [
+            0.0,
+            0.0,
+            2.3675,
+            0.0,
+            0.0762,
+            0.0
+          ],
+          "total": 2.4437,
+          "award": ""
+        },
+        {
+          "rank": 373,
+          "name": "Zhang Muyao",
+          "country": "Australia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.7034,
+            0.0
+          ],
+          "total": 1.7034,
+          "award": ""
+        },
+        {
+          "rank": 374,
+          "name": "Mugunga Roger",
+          "country": "Rwanda",
+          "tasks": [
+            0.0,
+            1.6024,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 1.6024,
+          "award": ""
+        },
+        {
+          "rank": 375,
+          "name": "Ibounoluwa Ezekhias Gaius Koba",
+          "country": "Senegal",
+          "tasks": [
+            0.0,
+            1.6024,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 1.6024,
+          "award": ""
+        },
+        {
+          "rank": 376,
+          "name": "Cristian Santiago Soto Cardona",
+          "country": "Bolivia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.7181,
+            0.0
+          ],
+          "total": 0.7181,
+          "award": ""
+        },
+        {
+          "rank": 377,
+          "name": "Andrii Shobotenko",
+          "country": "Ukraine",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.4616
+          ],
+          "total": 0.4616,
+          "award": ""
+        },
+        {
+          "rank": 378,
+          "name": "Isabel Patricia Rivas Morantes",
+          "country": "Venezuela",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.3787,
+            0.0
+          ],
+          "total": 0.3787,
+          "award": ""
+        },
+        {
+          "rank": 379,
+          "name": "Joshua Mathews Kuttamathayathu",
+          "country": "Botswana",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.3274
+          ],
+          "total": 0.3274,
+          "award": ""
+        },
+        {
+          "rank": 380,
+          "name": "Iva Tomić",
+          "country": "Bosnia and Herzegovina",
+          "tasks": [
+            0.0,
+            0.0,
+            0.1127,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.1127,
+          "award": ""
+        },
+        {
+          "rank": 381,
+          "name": "Makhotla Moeti",
+          "country": "Lesotho",
+          "tasks": [
+            0.0,
+            0.0,
+            0.1127,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.1127,
+          "award": ""
+        },
+        {
+          "rank": 382,
+          "name": "Hsu Labb Naing",
+          "country": "Myanmar",
+          "tasks": [
+            0.0,
+            0.0,
+            0.1127,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.1127,
+          "award": ""
+        },
+        {
+          "rank": 383,
+          "name": "Olawuyi Ibrahim Olayiwola",
+          "country": "Nigeria",
+          "tasks": [
+            0.0,
+            0.0,
+            0.1127,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.1127,
+          "award": ""
+        },
+        {
+          "rank": 384,
+          "name": "Mirmehdi Azizli",
+          "country": "Azerbaijan",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0374,
+            0.0
+          ],
+          "total": 0.0374,
+          "award": ""
+        },
+        {
+          "rank": 385,
+          "name": "Mladen Ralević",
+          "country": "Montenegro",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0374,
+            0.0
+          ],
+          "total": 0.0374,
+          "award": ""
+        },
+        {
+          "rank": 386,
+          "name": "Aboubacar M Chekaraou Mohamed Amine",
+          "country": "Niger",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0374,
+            0.0
+          ],
+          "total": 0.0374,
+          "award": ""
+        },
+        {
+          "rank": 387,
+          "name": "Cheung Ka Shing",
+          "country": "Hong Kong",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0002
+          ],
+          "total": 0.0002,
+          "award": ""
+        },
+        {
+          "rank": 388,
+          "name": "Nazaryan Seryozha",
+          "country": "Armenia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 389,
+          "name": "Dom Helder Murinzi",
+          "country": "Burundi",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 390,
+          "name": "Anniella Jaspe Kezimana",
+          "country": "Burundi",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 391,
+          "name": "Anonyo Zarif Akand",
+          "country": "Bangladesh",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 392,
+          "name": "Spas Kroumov Stoimenov",
+          "country": "Bulgaria",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 393,
+          "name": "Karla Marković",
+          "country": "Bosnia and Herzegovina",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 394,
+          "name": "Mateo Primorac",
+          "country": "Bosnia and Herzegovina",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 395,
+          "name": "Marco Aurelio Riveros Sarmiento",
+          "country": "Colombia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 396,
+          "name": "Esteban Zeyu Cai Chen",
+          "country": "Ecuador",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 397,
+          "name": "Adoniyas Shimelis Azmeraw",
+          "country": "Ethiopia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 398,
+          "name": "Temesgen Mekonenn Tadesse",
+          "country": "Ethiopia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 399,
+          "name": "Eyosiyas Abebe Tekelu",
+          "country": "Ethiopia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 400,
+          "name": "Cindy Gyamfuaa-Yeboah",
+          "country": "Ghana",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 401,
+          "name": "Adriel Senam Koku Amedji",
+          "country": "Ghana",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 402,
+          "name": "Princess Morrison",
+          "country": "Ghana",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 403,
+          "name": "Mawulolo Tornyi",
+          "country": "Ghana",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 404,
+          "name": "Aboubacar Bangoura",
+          "country": "Guinea",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 405,
+          "name": "Saidina Alya Bangoura",
+          "country": "Guinea",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 406,
+          "name": "Jurácsik Marcell",
+          "country": "Hungary",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 407,
+          "name": "Tori Antonia Senior",
+          "country": "Jamaica",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 408,
+          "name": "Omar Ibraheem Wajeeh Al-Khateeb",
+          "country": "Jordan",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 409,
+          "name": "Hashem Mohammad Marwan Marzouqah",
+          "country": "Jordan",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 410,
+          "name": "Oh Seungyeun",
+          "country": "South Korea",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 411,
+          "name": "Nabhan Pietro",
+          "country": "Lebanon",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 412,
+          "name": "Anass Zakar",
+          "country": "Morocco",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 413,
+          "name": "Manandraibe Soamihantanandrasana Ainafinaritra Fiderana",
+          "country": "Madagascar",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 414,
+          "name": "Alier Sanchez y Sanchez",
+          "country": "Mexico",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 415,
+          "name": "Cheick Hamala Doucoure",
+          "country": "Mali",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 416,
+          "name": "Angel Khin Maung Htwe",
+          "country": "Myanmar",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 417,
+          "name": "Qiu Ai Lin Xiao",
+          "country": "Myanmar",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 418,
+          "name": "Balša Radulović",
+          "country": "Montenegro",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 419,
+          "name": "Mina Radović",
+          "country": "Montenegro",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 420,
+          "name": "Vanja Lazarević",
+          "country": "Montenegro",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 421,
+          "name": "Tsengeg Nyamsukh",
+          "country": "Mongolia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 422,
+          "name": "Moussa Ousmane Fatouma",
+          "country": "Niger",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 423,
+          "name": "Harouna Dan Malam Mariama",
+          "country": "Niger",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 424,
+          "name": "Dinyelu Naetochwu Anthonia",
+          "country": "Nigeria",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 425,
+          "name": "Mariam Titilope Salami",
+          "country": "Nigeria",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 426,
+          "name": "Maryam Gogohaja Mohammed",
+          "country": "Nigeria",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 427,
+          "name": "Ivan Kushnir",
+          "country": "Portugal",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 428,
+          "name": "Miguel Gomes Cordeiro",
+          "country": "Portugal",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 429,
+          "name": "Bara Ayman Abdelmoghni Wazwaz",
+          "country": "Palestine",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 430,
+          "name": "El Hadji Cheikhou Top",
+          "country": "Senegal",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 431,
+          "name": "Talla Diop",
+          "country": "Senegal",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 432,
+          "name": "Hadje Halime Ali Fadonougbo",
+          "country": "Chad",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 433,
+          "name": "Adam Slimane",
+          "country": "Tunisia",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 434,
+          "name": "Wu Yi-Rou",
+          "country": "Chinese Taipei",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 435,
+          "name": "Antonella Alejandra Gonzalez Salazar",
+          "country": "Venezuela",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 436,
+          "name": "Alejandro Jose Gonzalez Salazar",
+          "country": "Venezuela",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 437,
+          "name": "Anesa Kiçmari",
+          "country": "Kosovo",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 438,
+          "name": "Parid Haxholli",
+          "country": "Kosovo",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 439,
+          "name": "Ravolen Chetty",
+          "country": "South Africa",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        },
+        {
+          "rank": 440,
+          "name": "Alonzo Thebus",
+          "country": "South Africa",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": ""
+        }
+      ]
+    },
+    "gaite": {
+      "label": "GAITE contest",
+      "rows": [
+        {
+          "rank": 1,
+          "name": "Kadanga Essognim Elisee",
+          "country": "Togo",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            19.5977,
+            89.2486
+          ],
+          "total": 108.8463,
+          "award": "Level 1 Award"
+        },
+        {
+          "rank": 2,
+          "name": "Solevo Essaie Henoc Winner",
+          "country": "Togo",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            18.6238,
+            19.5977,
+            45.2839
+          ],
+          "total": 83.5054,
+          "award": "Level 1 Award"
+        },
+        {
+          "rank": 3,
+          "name": "Elizabeth Kaylin Chiou",
+          "country": "Puerto Rico",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            18.6238,
+            38.3871,
+            1.6988
+          ],
+          "total": 58.7097,
+          "award": "Level 1 Award"
+        },
+        {
+          "rank": 4,
+          "name": "Lompo Yendiboua Pascaline",
+          "country": "Burkina Faso",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0435,
+            56.3135
+          ],
+          "total": 56.357,
+          "award": "Level 2 Award"
+        },
+        {
+          "rank": 5,
+          "name": "Manuel Alejandro Rodriguez Rosario",
+          "country": "Puerto Rico",
+          "tasks": [
+            0.0,
+            16.4712,
+            0.0,
+            0.0,
+            0.0,
+            39.2461
+          ],
+          "total": 55.7173,
+          "award": "Level 2 Award"
+        },
+        {
+          "rank": 6,
+          "name": "Anointed Panashe Mandirewa",
+          "country": "Zimbabwe",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            3.8436,
+            50.255
+          ],
+          "total": 54.0986,
+          "award": "Level 2 Award"
+        },
+        {
+          "rank": 7,
+          "name": "Poutouli Kibalou-Samtou Lionel",
+          "country": "Togo",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            1.5071,
+            0.0,
+            50.3739
+          ],
+          "total": 51.881,
+          "award": "Level 2 Award"
+        },
+        {
+          "rank": 8,
+          "name": "Tapiwa Tanatsiwa Makandigona",
+          "country": "Zimbabwe",
+          "tasks": [
+            0.0,
+            17.2404,
+            0.1127,
+            0.0,
+            0.0,
+            27.8033
+          ],
+          "total": 45.1564,
+          "award": "Level 3 Award"
+        },
+        {
+          "rank": 9,
+          "name": "Zoe Faith Gumise",
+          "country": "Zimbabwe",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            2.6592,
+            35.3522
+          ],
+          "total": 38.0114,
+          "award": "Level 3 Award"
+        },
+        {
+          "rank": 10,
+          "name": "He Shan",
+          "country": "Puerto Rico",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            9.1686,
+            22.6343,
+            0.0
+          ],
+          "total": 31.8029,
+          "award": "Level 3 Award"
+        },
+        {
+          "rank": 11,
+          "name": "Brandon Tavonga Sande",
+          "country": "Zimbabwe",
+          "tasks": [
+            0.0,
+            21.983,
+            7.8072,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 29.7902,
+          "award": "Level 3 Award"
+        },
+        {
+          "rank": 12,
+          "name": "Nilson Aica Marta Leite",
+          "country": "Cape Verde",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            2.8687,
+            22.6343,
+            0.0
+          ],
+          "total": 25.503,
+          "award": "Level 3 Award"
+        },
+        {
+          "rank": 13,
+          "name": "Alexandre Alberto Monteiro Nascimento",
+          "country": "Cape Verde",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            23.8536
+          ],
+          "total": 23.8536,
+          "award": "Level 3 Award"
+        },
+        {
+          "rank": 14,
+          "name": "Tumaini Makena Kathenya",
+          "country": "Kenya",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            18.8716,
+            0.0
+          ],
+          "total": 18.8716,
+          "award": "GAITE Honorable Mention"
+        },
+        {
+          "rank": 15,
+          "name": "Emmanuel Muthami Jones",
+          "country": "Kenya",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            16.9197
+          ],
+          "total": 16.9197,
+          "award": "GAITE Honorable Mention"
+        },
+        {
+          "rank": 16,
+          "name": "Masa de Man",
+          "country": "Puerto Rico",
+          "tasks": [
+            10.0988,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            4.5735
+          ],
+          "total": 14.6723,
+          "award": "GAITE Honorable Mention"
+        },
+        {
+          "rank": 17,
+          "name": "José Carlos Pimenta Aguiar",
+          "country": "Cape Verde",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            6.8765,
+            0.0,
+            0.0
+          ],
+          "total": 6.8765,
+          "award": "GAITE Honorable Mention"
+        },
+        {
+          "rank": 18,
+          "name": "Shahd Abdalnassir Hassan Slman",
+          "country": "Sudan",
+          "tasks": [
+            0.0,
+            2.2433,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 2.2433,
+          "award": "GAITE Honorable Mention"
+        },
+        {
+          "rank": 19,
+          "name": "Divor Kokou Joseph",
+          "country": "Togo",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.9928
+          ],
+          "total": 1.9928,
+          "award": "GAITE Honorable Mention"
+        },
+        {
+          "rank": 20,
+          "name": "Toe Assitan Madina",
+          "country": "Burkina Faso",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": "GAITE Honorable Mention"
+        },
+        {
+          "rank": 21,
+          "name": "Anmar Mohamed",
+          "country": "Comoros",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": "GAITE Honorable Mention"
+        },
+        {
+          "rank": 22,
+          "name": "Hafsoit Idrisse Ibroihima",
+          "country": "Comoros",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": "GAITE Honorable Mention"
+        },
+        {
+          "rank": 23,
+          "name": "Pedro da Cruz dos Santos",
+          "country": "Cape Verde",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": "GAITE Honorable Mention"
+        },
+        {
+          "rank": 24,
+          "name": "Mongare Mike Gift",
+          "country": "Kenya",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": "GAITE Honorable Mention"
+        },
+        {
+          "rank": 25,
+          "name": "Faith Wanja Kiige",
+          "country": "Kenya",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": "GAITE Honorable Mention"
+        },
+        {
+          "rank": 26,
+          "name": "Ahmed Elkhabir",
+          "country": "Sudan",
+          "tasks": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "total": 0.0,
+          "award": "GAITE Honorable Mention"
+        }
+      ]
+    }
+  }
+}

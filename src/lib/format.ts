@@ -78,6 +78,7 @@ const contestScoreboardIds: Record<string, string> = {
   'ceoai-2026': 'ceoai-2026-global',
   'iaio-2026': 'iaio-2026-global',
   'iaio-2024': 'iaio-2024-global',
+  'ioai-2026': 'ioai-2026-individual',
   'ioai-2025': 'ioai-2025-individual',
   'ioai-2024-practical': 'ioai-2024-practical',
   'ioai-2024-theory': 'ioai-2024-theory'

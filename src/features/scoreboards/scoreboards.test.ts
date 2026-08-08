@@ -63,6 +63,21 @@ describe('scoreboards', () => {
     }]);
   });
 
+  it('builds IOAI 2026 as an international scoreboard', () => {
+    const scoreboard = scoreboards.get('ioai-2026-individual');
+
+    expect(scoreboard).toBeDefined();
+    expect(scoreboard?.family).toBe('IOAI');
+    expect(scoreboard?.stage).toBe('international');
+    expect(scoreboard?.results).toHaveLength(8);
+    expect(scoreboard?.results[0].personId).toBe('thury-burileanu-alexandru');
+    expect(scoreboardOfficialLinks(scoreboard!)).toEqual([{
+      label: 'official source',
+      href: 'https://ioai2026.kz/results/',
+      external: true
+    }]);
+  });
+
   it('keeps ONIA grade 8 guests in score order on IX-X', () => {
     const scoreboard = scoreboards.get('onia-2026-ix-x');
     const guestRows = scoreboard?.results.filter((result) => result.status === 'guest') ?? [];
